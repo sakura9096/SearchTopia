@@ -26,11 +26,12 @@ public class StoreWrapper {
 	
 	public static StoreWrapper getInstance (String envHome) {
 		if (myStoreWrapper == null) {
-			myStoreWrapper = new StoreWrapper (envHome);
 			File file = new File(envHome);
 			if (!file.exists() || !file.isDirectory()) {
 				file.mkdir();
 			}
+			myStoreWrapper = new StoreWrapper (envHome);
+			
 		}
 		
 		return myStoreWrapper;
@@ -83,16 +84,17 @@ public class StoreWrapper {
 	 public void putCrawledURL (String crawledURL, long lastModified) {
 		 Crawled crawled = new Crawled ();
 		 crawled.setUrl(crawledURL);
-		 crawled.setLastModified(lastModified);
+		
 		 crawledByURL.put(crawled);
 		 
 		 myEnv.sync();
 		 myStore.sync();
 	 }
 	 
-	 public void putDoumentContent (String hashedContent) {
+	 public void putDoumentContent (String hashedContent, String url) {
 		 Document document = new Document ();
 		 document.setHasedContent(hashedContent);
+		 document.setUrl(url);
 		 documentsByHashedContent.put(document);
 		 
 		 myEnv.sync();
@@ -122,19 +124,13 @@ public class StoreWrapper {
 		 return crawledByURL.contains(url);
 	 }
 	 
-	 public boolean newFileNeeded (String url, long lastModified) {
-		 if (!crawledByURL.contains(url)) {
-			 return true;
-		 } else {
-			 return crawledByURL.get(url).getLastModified() < lastModified;
-		 }
-	 }
 	 
 	 public void addAllFroniters(List<String> list) {
 		 for (String lis: list) {
 			 this.putFrontierURL(lis);
 		 }
 	 }
+	 
 	 
 	 
 }

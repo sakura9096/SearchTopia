@@ -31,6 +31,7 @@ public class HttpClient {
 		this.isValid = true;
 		this.url = url;
 		init(this.url);
+		this.url = normalize(this.url);
 		try {
 			this.myurl = new URL(this.url);
 		} catch (MalformedURLException e) {
@@ -38,6 +39,14 @@ public class HttpClient {
 			this.isValid = false;
 		}
 		
+	}
+	
+	public String normalize(String url) {
+		if (!url.toLowerCase().startsWith("http") && !url.toLowerCase().startsWith("https")) {
+			return "http://" + url;
+		} else {
+			return url;
+		}
 	}
 	
 	public void init(String str) {
@@ -162,14 +171,14 @@ public class HttpClient {
 			if (url.startsWith("https")) {
 				URL hpsUrl = this.myurl;
 				HttpsURLConnection hpsConnection = (HttpsURLConnection)hpsUrl.openConnection();
-				hpsConnection.setRequestMethod("HEAD");
+				hpsConnection.setRequestMethod("GET");
 				hpsConnection.setRequestProperty("User-Agent", "cis455crawler");
 				in = hpsConnection.getInputStream();
 				
 			} else if (url.startsWith("http")) {
 				URL hpUrl = this.myurl;
 				HttpURLConnection hpConnection = (HttpURLConnection)hpUrl.openConnection();
-				hpConnection.setRequestMethod("HEAD");
+				hpConnection.setRequestMethod("GET");
 				hpConnection.setRequestProperty("User-Agent", "cis455crawler");
 				in = hpConnection.getInputStream();
 				

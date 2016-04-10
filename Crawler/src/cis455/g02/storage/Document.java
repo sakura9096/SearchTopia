@@ -8,6 +8,15 @@ public class Document {
 	
 	@PrimaryKey
 	private String hasedContent;
+	private String url;
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
 	public String getHasedContent() {
 		return hasedContent;
