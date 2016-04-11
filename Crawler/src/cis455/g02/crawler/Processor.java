@@ -11,6 +11,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.cybozu.labs.langdetect.Detector;
+import com.cybozu.labs.langdetect.DetectorFactory;
+import com.cybozu.labs.langdetect.LangDetectException;
+
 import cis455.g02.storage.StoreWrapper;
 
 public class Processor {
@@ -19,6 +23,7 @@ public class Processor {
 	private String outputDir;
 	private double maxSize;
 	private String selfId;
+	private Detector detector;
 
 	public Processor(StoreWrapper db, String output, double maxSize, int selfId) {
 		this.db = db;
@@ -33,13 +38,7 @@ public class Processor {
 	 */
 	public void download(String url) {
 		HttpClient client = new HttpClient(url);
-		client.excuteHead();
-		if (client.getStatusCode() == -1 || client.getStatusCode() >= 400) return;
 		
-		long lastChecked = System.currentTimeMillis();
-		String type = client.getContentType();
-		int contentLength = client.getContentLength();
-		if (!"text/html".equals(type) || contentLength > this.maxSize * 1024 * 1024) return;
 		client.executeGet();
 		String body = client.getBody();
 		File file = new File(this.outputDir + this.selfId + "_" + System.currentTimeMillis());
@@ -50,7 +49,7 @@ public class Processor {
 			out.print(body);
 			out.flush();
 			out.close();
-			this.db.putCrawledURL(url, lastChecked);
+			this.db.putCrawledURL(url, System.currentTimeMillis());
 		} catch (IOException e) {
 			System.out.println("error in writing!");
 		}
@@ -91,6 +90,18 @@ public class Processor {
 	public boolean isTooDeep(String url) {
 		String[] parts = url.split("/");
 		return parts.length > 5;
+	}
+	
+	public boolean isEnglish(String body) {
+		try {
+			detector = DetectorFactory.create();
+			detector.append(body);
+			if ("en".equals(detector.detect())) return true;
+			else return false;
+		} catch (LangDetectException e1) {
+			return false;
+		}
+		
 	}
 	
 

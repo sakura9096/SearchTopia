@@ -24,13 +24,11 @@ public class Robot {
 	private boolean errorFlag;
 	
 	
-	public Robot(String name) {
-		String robotUrl = generateUrl(name);
-		this.client = new HttpClient(robotUrl);
+	public Robot(String host, String protocol) throws Exception {
+		client = new HttpClient(protocol + "://" + host + "/robots.txt");
 		client.executeGet();
-		if (client == null || client.getStatusCode() >= 400) {
-			this.errorFlag = true;
-			return;
+		if (client == null || client.getStatusCode() != 200) {
+			throw new Exception();
 		}
 		
 		this.disallowList = new HashSet<String>();
@@ -97,14 +95,7 @@ public class Robot {
 		
 	}
 	
-	/*
-	 * Generate the robot.txt url
-	 */
-	public String generateUrl(String name) {
-		
-		return "http://" + name + "/robots.txt";
-			
-	}
+	
 	
 	/*
 	 * Check if this robots.txt exsits and no error when parsing it

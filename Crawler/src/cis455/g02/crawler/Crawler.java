@@ -5,11 +5,14 @@ import java.math.BigInteger;
 import java.net.Socket;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
+
+import com.cybozu.labs.langdetect.LangDetectException;
 
 import cis455.g02.storage.StoreWrapper;
 
@@ -27,17 +30,19 @@ public class Crawler implements Runnable {
 	StoreWrapper db;
 	Map<String, Integer> hostCount;
 	Set<String> seedHost;
-	RobotChecker robotChecker;
+	//RobotChecker robotChecker;
 	String currentUrl;
 	Processor processor;
 	Map<Integer, BigInteger> rangeMap;
 	int allWorkersSize;
+	Map<String, Long> crawTimeMap;
+	Map<String, Robot> robotMap;
 
 	
 	public Crawler(double maxSize, AtomicLong count, AtomicLong backup,
 			Frontier frontier, Map<Integer, String> workersIP, 
 			String selfIP, int selfID, String outputDir, String dbDir, long maxCount, 
-			Set<String> seedHost, Map<String, Integer> hostCount, RobotChecker checker) {
+			Set<String> seedHost, Map<String, Integer> hostCount) {
 
 		this.maxSize = maxSize;
 		this.workersIP = workersIP;
@@ -52,7 +57,8 @@ public class Crawler implements Runnable {
 		this.db = StoreWrapper.getInstance(dbDir);
 		this.hostCount = hostCount;
 		this.seedHost = seedHost;
-		this.robotChecker = checker;
+		this.robotMap = new HashMap<String, Robot>();
+		this.crawTimeMap = new HashMap<String, Long>();
 		this.processor = new Processor(this.db, outputDir, this.maxSize, this.selfID);
 		String min = "0000000000000000000000000000000000000000";
 		String max = "ffffffffffffffffffffffffffffffffffffffff";
@@ -74,23 +80,21 @@ public class Crawler implements Runnable {
 			while (true) {
 				synchronized (frontier) {
 					while (frontier.size() == 0) {
+						System.out.println("frontier is size 0");
 						frontier.wait(10000);
 						if (count.get() >= maxCount) {
 							return;
 						}
 					}
 				}
+				
 				synchronized (frontier) {
 					startUrl = frontier.deQueue();
 					frontier.notifyAll();
 				}
+				System.out.println("dequeue fron frontier: " + startUrl);
 				
-				while (!this.robotChecker.checkDelay(startUrl)) {
-					synchronized (frontier) {
-						frontier.enQueue(currentUrl);
-						continue;
-					}
-				}
+			
 				
 				if (db.urlCrawled(startUrl) || startUrl.length() >= 500) {
 					System.out.println(startUrl + " is crawled before! or is too long!");
@@ -109,6 +113,7 @@ public class Crawler implements Runnable {
 					}
 					int who = chooseWorker(host);
 					if (who == selfID) {
+						System.out.println(startUrl + "---> is for worker ifself " + who);
 						this.selfWork(host, startUrl);
 					} else {
 						System.out.println(startUrl + "---> is for worker " + who);
@@ -148,11 +153,29 @@ public class Crawler implements Runnable {
 	}
 	
 	public void selfWork(String host, String url) {
+		if (processor == null) return;
 		System.out.println("Do the selfwork: " + url);
 		this.currentUrl = url;
-		this.robotChecker.getRobot(currentUrl);
-	    this.robotChecker.updateCurrentTime(currentUrl);
-	    this.processor.download(currentUrl);
+		
+		HttpClient client = new HttpClient(currentUrl);
+		client.excuteHead();
+		if (client.getStatusCode() == -1 || client.getStatusCode() >= 400) return;
+		
+	//	long lastChecked = System.currentTimeMillis();
+		String type = client.getContentType();
+		int contentLength = client.getContentLength();
+		if (!"text/html".equals(type) || contentLength > this.maxSize * 1024 * 1024) return;
+	    
+		Long last = this.crawTimeMap.get(host);
+		long lastC;
+		if (last == null) {
+			lastC = 0;
+		} else {
+			lastC = last;
+		}
+		if (!this.checkValid(url, lastC)) return;
+		
+		this.processor.download(currentUrl);
 	    System.out.println(currentUrl + ":Downloading");
 	    count.incrementAndGet();
 	   
@@ -166,12 +189,12 @@ public class Crawler implements Runnable {
 	    if (frontier.size() < 1000000) {
 	    	 for (String link: links) {
 	  		   System.out.println(link + ":Extracting link");
-	  		   synchronized (frontier) {	  			   
-	  			   if (this.robotChecker.checkValid(link)) {	
-	  				   frontier.enQueue(link);
-	  				   frontier.notifyAll();
-	  				   backup.incrementAndGet();
-	  			   }
+	  		   synchronized (frontier) {	  			  
+	  			   frontier.enQueue(link);
+	  			   System.out.println(link + ":Pushing to the frontier");
+	  			   frontier.notifyAll();
+	  			   backup.incrementAndGet();
+	  			  
 	  		   }
 	  	    }
 	    }
@@ -215,6 +238,60 @@ public class Crawler implements Runnable {
 			sb.append(Integer.toString((b[i] & 0xff) + 0x100, 16).substring(1));
 		}
 		return sb.toString();
+	}
+	
+	
+	public boolean checkValid(String url, long lastCrawled) {
+		Robot robot = getRobot(url);
+		if (robot == null) return true;
+		long currentTime = System.currentTimeMillis();
+		int delay = robot.getDelay() * 1000;
+		if (currentTime - lastCrawled < delay) {
+			synchronized (frontier) {
+				frontier.enQueue(url);;
+			}
+			return false;
+		} 
+		HttpClient urlInfo = new HttpClient(url);
+		String path = urlInfo.getPath();
+		Set<String> allows = robot.getAllows();
+		Set<String> disallows = robot.getDisallows();
+		for (String allow: allows) {
+			if (path.startsWith(allow)) {
+				if (allow.endsWith("/")) {
+					return true;
+				}
+				if (allow.length() == path.length()) {
+					return true;
+				}
+			}
+		}
+		for (String disallow: disallows) {
+			if (path.startsWith(disallow)) {
+				if (disallow.endsWith("/")) {
+					return false;
+				}
+				if (disallow.length() == path.length()) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	
+	public Robot getRobot(String url) {
+		HttpClient urlInfo = new HttpClient(url);
+		String host = urlInfo.getHost();
+		String protocol = urlInfo.getProtocol();
+		Robot robot = this.robotMap.get(host);
+		if (robot != null) return robot;
+		Robot newRobot = null;
+		try {
+			newRobot = new Robot(host, protocol);
+		} catch (Exception e) {
+			newRobot = null;
+		}
+		return newRobot;
 	}
 		
 		
