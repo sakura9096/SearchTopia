@@ -105,8 +105,9 @@ public class FileParser {
 	 */
 	public void parse() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(fileToRead));
-		
+
 		this.url = br.readLine();
+		System.out.println(this.url);
 		this.hostName = new URL(URLDecoder.decode(url, "UTF-8")).getHost();
 		String html = br.readLine();
 		Document doc = Jsoup.parse(html, url);
@@ -142,7 +143,7 @@ public class FileParser {
 		//then read from possible links and build the anchor file
 		Elements links = doc.select("a[href]");
 		if (links != null) {
-			StringBuilder linksb = new StringBuilder();
+			StringBuilder anchorsb = new StringBuilder();
 			for (Element link : links) {
 				String outLink = link.attr("abs:href").trim();
 				if (outLink.length() == 0) continue;
@@ -154,8 +155,36 @@ public class FileParser {
 					outLink = URLDecoder.decode(outLink, "UTF-8");
 					this.outLinks.add(outLink);
 				}
+				
+				String anchor = link.text().trim();
+				anchorsb.append(anchor + " ");
 			}
+			parseString(anchorsb.toString(), 0);
 		}
+	}
+	
+	public String wordOccurenceToString() {
+		StringBuilder sb = new StringBuilder();
+		for (Map.Entry<String, List<WordOccurence>> entry : wordMap.entrySet()) {
+			String key = entry.getKey();
+			List<WordOccurence> value = entry.getValue();
+			sb.append(key + " ");
+			for (WordOccurence wordOccurence : value) {
+				sb.append(wordOccurence + " ");
+			}
+			sb.append("\n");
+		}
+		return sb.toString();
+	}
+	
+	public String outLinksToString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(this.url);
+		for (String outLink : outLinks) {
+			sb.append(outLink + " ");
+		}
+		sb.append("\n");
+		return sb.toString();
 	}
 	
 	
