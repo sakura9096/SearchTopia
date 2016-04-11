@@ -10,6 +10,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.atomic.AtomicLong;
 
+import com.cybozu.labs.langdetect.DetectorFactory;
+import com.cybozu.labs.langdetect.LangDetectException;
+
 import cis455.g02.storage.StoreWrapper;
 
 public class CrawlerMain {
@@ -18,6 +21,13 @@ public class CrawlerMain {
 
 		if (args.length != 8) {
 			System.err.println("need 8 arguments: maxSize, numThread, selfFileDir, workersFileDir, output, countMax, dbDir, seedsFileDir");
+			return;
+		}
+		try {
+			DetectorFactory.loadProfile("profiles");
+		} catch (LangDetectException e) {
+			// TODO Auto-generated catch block
+			System.out.println("error in loading profiles");
 			return;
 		}
 		AtomicLong backup = new AtomicLong();
@@ -99,13 +109,13 @@ public class CrawlerMain {
 	   
 	   count.set(0);
 	   
-	   RobotChecker checker = new RobotChecker();
+	//   RobotChecker checker = new RobotChecker();
 		
 	   // start the crawlers
 	  
 	   Thread[] threadsCrawler = new Thread[threadsSize];
 	   for(int i = 0; i < threadsSize;i++){
-		  threadsCrawler[i] = new Thread(new Crawler(maxSize, count, backup, frontier, workerIP, selfIP, selfID, outputDir, dbDir, maxCount, seedHost, hostCount, checker), selfID + "-Crawler" + i);
+		  threadsCrawler[i] = new Thread(new Crawler(maxSize, count, backup, frontier, workerIP, selfIP, selfID, outputDir, dbDir, maxCount, seedHost, hostCount), selfID + "-Crawler" + i);
 		  threadsCrawler[i].start();
 	   }
 	   System.out.println("start all crawlers-----------------");
