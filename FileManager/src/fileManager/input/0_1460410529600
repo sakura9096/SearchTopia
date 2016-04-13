@@ -1,0 +1,942 @@
+http://www.bbc.com/food/
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB" lang="en-GB">
+
+    <head>
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Find recipes from your favourite BBC programmes and chefs, or browse by ingredient or dish. With over 13000 recipes you&amp;#39;re sure to find the perfect dish." />
+<meta name="keyword" content="bbc, food, recipes, recipe, chef" /><title>BBC - Food</title>       <meta property="fb:admins" content="100004154058350" />    
+<!--[if (gt IE 8) | (IEMobile)]><!-->
+<link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/style/orb-fixed.min.css">
+<!--<![endif]-->
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/style/orb-ie.min.css">
+<![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/modules/me/0.1.26/style/module/cta.css"  />  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/modules/me/0.1.26/style/module/updates.css"  />  <!--orb.ws.require.lib--> <script type="text/javascript">/*<![CDATA[*/ if (typeof window.define !== 'function' || typeof window.require !== 'function') { document.write('<script class="js-require-lib" src="http://static.bbci.co.uk/frameworks/requirejs/lib.js"><'+'/script>'); } /*]]>*/</script> <script type="text/javascript">  bbcRequireMap = {"jquery-1":"http://static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.7.2", "jquery-1.4":"http://static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.4", "jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.9.1", "jquery-1.12":"http://static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.12.0.min", "jquery-2.2":"http://static.bbci.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-2.2.0.min", "istats-1":"//nav.files.bbci.co.uk/nav-analytics/0.1.0-43/js/istats-1", "swfobject-2":"http://static.bbci.co.uk/frameworks/swfobject/0.1.10/sharedmodules/swfobject-2", "demi-1":"http://static.bbci.co.uk/frameworks/demi/0.10.0/sharedmodules/demi-1", "gelui-1":"http://static.bbci.co.uk/frameworks/gelui/0.9.13/sharedmodules/gelui-1", "cssp!gelui-1/overlay":"http://static.bbci.co.uk/frameworks/gelui/0.9.13/sharedmodules/gelui-1/overlay.css", "relay-1":"http://static.bbci.co.uk/frameworks/relay/0.2.6/sharedmodules/relay-1", "clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1", "canvas-clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/canvas-clock-1", "cssp!clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1.css", "jssignals-1":"http://static.bbci.co.uk/frameworks/jssignals/0.3.6/modules/jssignals-1", "jcarousel-1":"http://static.bbci.co.uk/frameworks/jcarousel/0.1.10/modules/jcarousel-1", "bump-3":"//emp.bbci.co.uk/emp/bump-3/bump-3"}; require({ baseUrl: 'http://static.bbci.co.uk/', paths: bbcRequireMap, waitSeconds: 30 }); </script>   <script type="text/javascript">/*<![CDATA[*/ if (typeof bbccookies_flag === 'undefined') { bbccookies_flag = 'ON'; } showCTA_flag = true; cta_enabled = (showCTA_flag && (bbccookies_flag === 'ON')); (function(){var e="ckns_policy",m="Thu, 01 Jan 1970 00:00:00 GMT",k={ads:true,personalisation:true,performance:true,necessary:true};function f(p){if(f.cache[p]){return f.cache[p]}var o=p.split("/"),q=[""];do{q.unshift((o.join("/")||"/"));o.pop()}while(q[0]!=="/");f.cache[p]=q;return q}f.cache={};function a(p){if(a.cache[p]){return a.cache[p]}var q=p.split("."),o=[];while(q.length&&"|co.uk|com|".indexOf("|"+q.join(".")+"|")===-1){if(q.length){o.push(q.join("."))}q.shift()}f.cache[p]=o;return o}a.cache={};function i(o,t,p){var z=[""].concat(a(window.location.hostname)),w=f(window.location.pathname),y="",r,x;for(var s=0,v=z.length;s<v;s++){r=z[s];for(var q=0,u=w.length;q<u;q++){x=w[q];y=o+"="+t+";"+(r?"domain="+r+";":"")+(x?"path="+x+";":"")+(p?"expires="+p+";":"");bbccookies.set(y,true)}}}window.bbccookies={POLICY_REFRESH_DATE_MILLIS:new Date(2015,4,21,0,0,0,0).getTime(),POLICY_EXPIRY_COOKIENAME:"ckns_policy_exp",_setEverywhere:i,cookiesEnabled:function(){var o="ckns_testcookie"+Math.floor(Math.random()*100000);this.set(o+"=1");if(this.get().indexOf(o)>-1){g(o);return true}return false},set:function(o){return document.cookie=o},get:function(){return document.cookie},getCrumb:function(o){if(!o){return null}return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(o).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},policyRequiresRefresh:function(){var p=new Date();p.setHours(0);p.setMinutes(0);p.setSeconds(0);p.setMilliseconds(0);if(bbccookies.POLICY_REFRESH_DATE_MILLIS<=p.getTime()){var o=bbccookies.getCrumb(bbccookies.POLICY_EXPIRY_COOKIENAME);if(o){o=new Date(parseInt(o));o.setYear(o.getFullYear()-1);return bbccookies.POLICY_REFRESH_DATE_MILLIS>=o.getTime()}else{return true}}else{return false}},_setPolicy:function(o){return h.apply(this,arguments)},readPolicy:function(){return b.apply(this,arguments)},_deletePolicy:function(){i(e,"",m)},isAllowed:function(){return true},_isConfirmed:function(){return c()!==null},_acceptsAll:function(){var o=b();return o&&!(j(o).indexOf("0")>-1)},_getCookieName:function(){return d.apply(this,arguments)},_showPrompt:function(){var o=((!this._isConfirmed()||this.policyRequiresRefresh())&&window.cta_enabled&&this.cookiesEnabled()&&!window.bbccookies_disable);return(window.orb&&window.orb.fig)?o&&(window.orb.fig("no")||window.orb.fig("ck")):o}};bbccookies._getPolicy=bbccookies.readPolicy;function d(p){var o=(""+p).match(/^([^=]+)(?==)/);return(o&&o.length?o[0]:"")}function j(o){return""+(o.ads?1:0)+(o.personalisation?1:0)+(o.performance?1:0)}function h(s){if(typeof s==="undefined"){s=k}if(typeof arguments[0]==="string"){var p=arguments[0],r=arguments[1];if(p==="necessary"){r=true}s=b();s[p]=r}else{if(typeof arguments[0]==="object"){s.necessary=true}}var q=new Date();q.setYear(q.getFullYear()+1);bbccookies.set(e+"="+j(s)+";domain=bbc.co.uk;path=/;expires="+q.toUTCString()+";");bbccookies.set(e+"="+j(s)+";domain=bbc.com;path=/;expires="+q.toUTCString()+";");bbccookies.set(e+"="+j(s)+";domain=bbci.co.uk;path=/;expires="+q.toUTCString()+";");var o=new Date(q.getTime());o.setMonth(o.getMonth()+1);bbccookies.set(bbccookies.POLICY_EXPIRY_COOKIENAME+"="+q.getTime()+";domain=bbc.co.uk;path=/;expires="+o.toUTCString()+";");bbccookies.set(bbccookies.POLICY_EXPIRY_COOKIENAME+"="+q.getTime()+";domain=bbc.com;path=/;expires="+o.toUTCString()+";");bbccookies.set(bbccookies.POLICY_EXPIRY_COOKIENAME+"="+q.getTime()+";domain=bbci.co.uk;path=/;expires="+o.toUTCString()+";");return s}function l(o){if(o===null){return null}var p=o.split("");return{ads:!!+p[0],personalisation:!!+p[1],performance:!!+p[2],necessary:true}}function c(){var o=new RegExp("(?:^|; ?)"+e+"=(\\d\\d\\d)($|;)"),p=document.cookie.match(o);if(!p){return null}return p[1]}function b(o){var p=l(c());if(!p){p=k}if(o){return p[o]}else{return p}}function g(o){return document.cookie=o+"=;expires="+m+";"}function n(){var o='<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/bbccookies/0.7.1/script/bbccookies.js"><\/script>';if(window.bbccookies_flag==="ON"&&!bbccookies._acceptsAll()&&!window.bbccookies_disable){document.write(o)}}n()})();if(typeof(require)==="function"&&!require.defined("orb/cookies")){define("orb/cookies",window.bbccookies)}; /*]]>*/</script> <script type="text/javascript">/*<![CDATA[*/
+(function(){window.fig=window.fig||{};window.fig.manager={include:function(e){e=e||window;var i=e.document,j=i.cookie,h=j.match(/(?:^|; ?)ckns_orb_fig=([^;]+)/),g,b="";if(!h&&j.indexOf("ckns_orb_nofig=1")>-1){this.setFig(e,{no:1})}else{if(h){h=this.deserialise(decodeURIComponent(RegExp.$1));this.setFig(e,h)}if(window.fig.async&&typeof JSON!="undefined"){var a=(document.cookie.match("(^|; )ckns_orb_cachedfig=([^;]*)")||0)[2];g=a?JSON.parse(a):null;if(g){this.setFig(e,g);b="async"}}i.write('<script src="https://fig.bbc.co.uk/frameworks/fig/1/fig.js"'+b+"><"+"/script>")}},confirm:function(a){a=a||window;if(a.orb&&a.orb.fig&&a.orb.fig("no")){this.setNoFigCookie(a)}if(a.orb===undefined||a.orb.fig===undefined){this.setFig(a,{no:1});this.setNoFigCookie(a)}},setNoFigCookie:function(a){a.document.cookie="ckns_orb_nofig=1; expires="+new Date(new Date().getTime()+1000*60*10).toGMTString()+";"},setFig:function(a,b){(function(){var c=b;a.orb=a.orb||{};a.orb.fig=function(d){return(arguments.length)?c[d]:c}})()},deserialise:function(b){var a={};b.replace(/([a-z]{2}):([0-9]+)/g,function(){a[RegExp.$1]=+RegExp.$2});return a}}})();fig.manager.include();/*]]>*/</script>
+<!-- Nav Analytics : 50 -->
+<script type="text/javascript">window.bbcFlagpoles_istats="ON",require.config({paths:{"istats-1":"//nav.files.bbci.co.uk/nav-analytics/0.1.0-50/js/istats-1"}}),require.defined("orb/cookies")||(window.bbccookies?define("orb/cookies",function(){return window.bbccookies}):define("orb/cookies",function(){return{isAllowed:function(e){return!1}}})),require(["istats-1","orb/cookies"],function(e,o){if(o.isAllowed("s1")){var n="//sa.bbc.co.uk/bbc/bbc/s";e.addCollector({name:"default",url:n,separator:"&"});var i="food.page";i&&"unknown"!==i&&e.setCountername(i),window.istats_countername&&e.setCountername(window.istats_countername),e.addLabels("ml_name=webmodule&ml_version=50")}});</script>
+
+<script type="text/javascript">/*<![CDATA[*/
+    window.bbcFlagpoles_istats = 'ON';
+    window.orb = window.orb || {};
+
+    if (typeof bbccookies !== 'undefined' && bbccookies.isAllowed('s1')) {
+        var istatsTrackingUrl = '//sa.bbc.co.uk/bbc/bbc/s?name=food.page&pal_route=homepage&app_type=responsive&language=en-GB&pal_webapp=food&prod_name=food&app_name=food';
+        require(['istats-1'], function (istats) {
+            var counterName = (window.istats_countername) ? window.istats_countername : istatsTrackingUrl.match(/[\?&]name=([^&]*)/i)[1];
+            istats.setCountername(counterName);
+
+            istats.addLabels('pal_route=homepage&app_type=responsive&language=en-GB&pal_webapp=food&prod_name=food&app_name=food');
+            var c = (document.cookie.match(/\bckns_policy=(\d\d\d)/) || []).pop() || '';
+            istats.addLabels({
+                                        'blq_s': '4d',
+                    'blq_r': '2.7',
+                    'blq_v': 'default',
+                    'blq_e': 'pal',
+                                        'bbc_mc': (c ? 'ad' + c.charAt(0) + 'ps' + c.charAt(1) + 'pf' + c.charAt(2) : 'not_set')
+                }
+            );
+        });
+    }
+    /*]]>*/</script>
+ <script type="text/javascript">/*<![CDATA[*/ (function(undefined){if(!window.bbc){window.bbc={}}var ROLLING_PERIOD_DAYS=30;window.bbc.Mandolin=function(id,segments,opts){var now=new Date().getTime(),storedItem,DEFAULT_START=now,DEFAULT_RATE=1,COOKIE_NAME="ckpf_mandolin";opts=opts||{};this._id=id;this._segmentSet=segments;this._store=new window.window.bbc.Mandolin.Storage(COOKIE_NAME);this._opts=opts;this._rate=(opts.rate!==undefined)?+opts.rate:DEFAULT_RATE;this._startTs=(opts.start!==undefined)?new Date(opts.start).getTime():new Date(DEFAULT_START).getTime();this._endTs=(opts.end!==undefined)?new Date(opts.end).getTime():daysFromNow(ROLLING_PERIOD_DAYS);this._signupEndTs=(opts.signupEnd!==undefined)?new Date(opts.signupEnd).getTime():this._endTs;this._segment=null;if(typeof id!=="string"){throw new Error("Invalid Argument: id must be defined and be a string")}if(Object.prototype.toString.call(segments)!=="[object Array]"){throw new Error("Invalid Argument: Segments are required.")}if(opts.rate!==undefined&&(opts.rate<0||opts.rate>1)){throw new Error("Invalid Argument: Rate must be between 0 and 1.")}if(this._startTs>this._endTs){throw new Error("Invalid Argument: end date must occur after start date.")}if(!(this._startTs<this._signupEndTs&&this._signupEndTs<=this._endTs)){throw new Error("Invalid Argument: SignupEnd must be between start and end date")}removeExpired.call(this,now);var overrides=window.bbccookies.get().match(/ckns_mandolin_setSegments=([^;]+)/);if(overrides!==null){eval("overrides = "+decodeURIComponent(RegExp.$1)+";");if(overrides[this._id]&&this._segmentSet.indexOf(overrides[this._id])==-1){throw new Error("Invalid Override: overridden segment should exist in segments array")}}if(overrides!==null&&overrides[this._id]){this._segment=overrides[this._id]}else{if((storedItem=this._store.getItem(this._id))){this._segment=storedItem.segment}else{if(this._startTs<=now&&now<this._signupEndTs&&now<=this._endTs&&this._store.isEnabled()===true){this._segment=pick(segments,this._rate);if(opts.end===undefined){this._store.setItem(this._id,{segment:this._segment})}else{this._store.setItem(this._id,{segment:this._segment,end:this._endTs})}log.call(this,"mandolin_segment")}}}log.call(this,"mandolin_view")};window.bbc.Mandolin.prototype.getSegment=function(){return this._segment};function log(actionType,params){var that=this;require(["istats-1"],function(istats){istats.log(actionType,that._id+":"+that._segment,params?params:{})})}function removeExpired(expires){var items=this._store.getItems(),expiresInt=+expires;for(var key in items){if(items[key].end!==undefined&&+items[key].end<expiresInt){this._store.removeItem(key)}}}function getLastExpirationDate(data){var winner=0,rollingExpire=daysFromNow(ROLLING_PERIOD_DAYS);for(var key in data){if(data[key].end===undefined&&rollingExpire>winner){winner=rollingExpire}else{if(+data[key].end>winner){winner=+data[key].end}}}return(winner)?new Date(winner):new Date(rollingExpire)}window.bbc.Mandolin.prototype.log=function(params){log.call(this,"mandolin_log",params)};window.bbc.Mandolin.prototype.convert=function(params){log.call(this,"mandolin_convert",params);this.convert=function(){}};function daysFromNow(n){var endDate;endDate=new Date().getTime()+(n*60*60*24)*1000;return endDate}function pick(segments,rate){var picked,min=0,max=segments.length-1;if(typeof rate==="number"&&Math.random()>rate){return null}do{picked=Math.floor(Math.random()*(max-min+1))+min}while(picked>max);return segments[picked]}window.bbc.Mandolin.Storage=function(name){validateCookieName(name);this._cookieName=name;this._isEnabled=(bbccookies.isAllowed(this._cookieName)===true&&bbccookies.cookiesEnabled()===true)};window.bbc.Mandolin.Storage.prototype.setItem=function(key,value){var storeData=this.getItems();storeData[key]=value;this.save(storeData);return value};window.bbc.Mandolin.Storage.prototype.isEnabled=function(){return this._isEnabled};window.bbc.Mandolin.Storage.prototype.getItem=function(key){var storeData=this.getItems();return storeData[key]};window.bbc.Mandolin.Storage.prototype.removeItem=function(key){var storeData=this.getItems();delete storeData[key];this.save(storeData)};window.bbc.Mandolin.Storage.prototype.getItems=function(){return deserialise(this.readCookie(this._cookieName)||"")};window.bbc.Mandolin.Storage.prototype.save=function(data){window.bbccookies.set(this._cookieName+"="+encodeURIComponent(serialise(data))+"; expires="+getLastExpirationDate(data).toUTCString()+";")};window.bbc.Mandolin.Storage.prototype.readCookie=function(name){var nameEq=name+"=",ca=window.bbccookies.get().split("; "),i,c;validateCookieName(name);for(i=0;i<ca.length;i++){c=ca[i];if(c.indexOf(nameEq)===0){return decodeURIComponent(c.substring(nameEq.length,c.length))}}return null};function serialise(o){var str="";for(var p in o){if(o.hasOwnProperty(p)){str+='"'+p+'"'+":"+(typeof o[p]==="object"?(o[p]===null?"null":"{"+serialise(o[p])+"}"):'"'+o[p].toString()+'"')+","}}return str.replace(/,\}/g,"}").replace(/,$/g,"")}function deserialise(str){var o;str="{"+str+"}";if(!validateSerialisation(str)){throw"Invalid input provided for deserialisation."}eval("o = "+str);return o}var validateSerialisation=(function(){var OBJECT_TOKEN="<Object>",ESCAPED_CHAR='"\\n\\r\\u2028\\u2029\\u000A\\u000D\\u005C',ALLOWED_CHAR="([^"+ESCAPED_CHAR+"]|\\\\["+ESCAPED_CHAR+"])",KEY='"'+ALLOWED_CHAR+'+"',VALUE='(null|"'+ALLOWED_CHAR+'*"|'+OBJECT_TOKEN+")",KEY_VALUE=KEY+":"+VALUE,KEY_VALUE_SEQUENCE="("+KEY_VALUE+",)*"+KEY_VALUE,OBJECT_LITERAL="({}|{"+KEY_VALUE_SEQUENCE+"})",objectPattern=new RegExp(OBJECT_LITERAL,"g");return function(str){if(str.indexOf(OBJECT_TOKEN)!==-1){return false}while(str.match(objectPattern)){str=str.replace(objectPattern,OBJECT_TOKEN)}return str===OBJECT_TOKEN}})();function validateCookieName(name){if(name.match(/ ,;/)){throw"Illegal name provided, must be valid in browser cookie."}}})(); /*]]>*/</script>  <script type="text/javascript">  document.documentElement.className += (document.documentElement.className? ' ' : '') + 'orb-js';  fig.manager.confirm(); </script> <script src="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/script/orb/api.min.js"></script> <script type="text/javascript"> var blq = { environment: function() { return 'live'; } } </script>   <script type="text/javascript"> /*<![CDATA[*/ function oqsSurveyManager(w, flag) { if (flag !== 'OFF' && (w.orb.fig("no") || w.orb.fig("uk"))) { w.document.write('<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/script/vendor/edr.min.js"><'+'/script>'); } } oqsSurveyManager(window, 'ON'); /*]]>*/ </script>             <!-- BBCDOTCOM template: responsive webservice  -->
+        <!-- BBCDOTCOM head --><script type="text/javascript"> /*<![CDATA[*/ var _sf_startpt = (new Date()).getTime(); /*]]>*/ </script><style type="text/css">.bbccom_display_none{display:none;}</style><script type="text/javascript"> /*<![CDATA[*/ var bbcdotcomConfig, googletag = googletag || {}; googletag.cmd = googletag.cmd || []; var bbcdotcom = false; (function(){ if(typeof require !== 'undefined') { require({ paths:{ "bbcdotcom":"http://static.bbci.co.uk/bbcdotcom/1.14.0/script" } }); } })(); /*]]>*/ </script><script type="text/javascript"> /*<![CDATA[*/ var bbcdotcom = { adverts: { keyValues: { set: function() {} } }, advert: { write: function () {}, show: function () {}, isActive: function () { return false; }, layout: function() { return { reset: function() {} } } }, config: { init: function() {}, isActive: function() {}, setSections: function() {}, isAdsEnabled: function() {}, setAdsEnabled: function() {}, isAnalyticsEnabled: function() {}, setAnalyticsEnabled: function() {}, setAssetPrefix: function() {}, setVersion: function () {}, setJsPrefix: function() {}, setSwfPrefix: function() {}, setCssPrefix: function() {}, setConfig: function() {}, getAssetPrefix: function() {}, getJsPrefix: function () {}, getSwfPrefix: function () {}, getCssPrefix: function () {} }, survey: { init: function(){ return false; } }, data: {}, init: function() {}, objects: function(str) { return false; }, locale: { set: function() {}, get: function() {} }, setAdKeyValue: function() {}, utils: { addEvent: function() {}, addHtmlTagClass: function() {}, log: function () {} }, addLoadEvent: function() {} }; /*]]>*/ </script><script type="text/javascript"> /*<![CDATA[*/ (function(){ if (typeof orb !== 'undefined' && typeof orb.fig === 'function') { if (orb.fig('ad') && orb.fig('uk') == 0) { bbcdotcom.data = { ads: (orb.fig('ad') ? 1 : 0), stats: (orb.fig('uk') == 0 ? 1 : 0), statsProvider: orb.fig('ap') }; } } else { document.write('<script type="text/javascript" src="'+('https:' == document.location.protocol ? 'https://ssl.bbc.com' : 'http://tps.bbc.com')+'/wwscripts/data">\x3C/script>'); } })(); /*]]>*/ </script><script type="text/javascript"> /*<![CDATA[*/ (function(){ if (typeof orb === 'undefined' || typeof orb.fig !== 'function') { bbcdotcom.data = { ads: bbcdotcom.data.a, stats: bbcdotcom.data.b, statsProvider: bbcdotcom.data.c }; } if (bbcdotcom.data.ads == 1) { document.write('<script type="text/javascript" src="'+('https:' == document.location.protocol ? 'https://ssl.bbc.co.uk' : 'http://www.bbc.co.uk')+'/wwscripts/flag">\x3C/script>'); } })(); /*]]>*/ </script><script type="text/javascript"> /*<![CDATA[*/ (function(){ if (window.bbcdotcom && (typeof bbcdotcom.flag == 'undefined' || (typeof bbcdotcom.data.ads !== 'undefined' && bbcdotcom.flag.a != 1))) { bbcdotcom.data.ads = 0; } if (/[?|&]ads/.test(window.location.href) || /(^|; )ads=on; /.test(document.cookie) || /; ads=on(; |$)/.test(document.cookie)) { bbcdotcom.data.ads = 1; bbcdotcom.data.stats = 1; } if (window.bbcdotcom && (bbcdotcom.data.ads == 1 || bbcdotcom.data.stats == 1)) { bbcdotcom.assetPrefix = "http://static.bbci.co.uk/bbcdotcom/1.14.0/"; if (/(sandbox|int)(.dev)*.bbc.co*/.test(window.location.href) || /[?|&]ads-debug/.test(window.location.href) || document.cookie.indexOf('ads-debug=') !== -1) { document.write('<link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/bbcdotcom/1.14.0/style/orb/css/bbccom.css" />'); } else { document.write('<link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/bbcdotcom/1.14.0/style/orb/css/bbccom.min.css" />'); } (function() { var useSSL = 'https:' == document.location.protocol; var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; document.write('<scr' + 'ipt src="' + src + '">\x3C/script>'); })(); if (/(sandbox|int)(.dev)*.bbc.co*/.test(window.location.href) || /[?|&]ads-debug/.test(window.location.href) || document.cookie.indexOf('ads-debug=') !== -1) { document.write('<script type="text/javascript" src="http://static.bbci.co.uk/bbcdotcom/1.14.0/script/orb/individual.js">\x3C/script>'); } else { document.write('<script type="text/javascript" src="http://static.bbci.co.uk/bbcdotcom/1.14.0/script/orb/bbcdotcom.js">\x3C/script>'); } if(/[\\?&]ads=([^&#]*)/.test(window.location.href)) { document.write('<script type="text/javascript" src="http://static.bbci.co.uk/bbcdotcom/1.14.0/script/orb/adverts/adSuites.js">\x3C/script>'); } } })(); /*]]>*/ </script><script type="text/javascript"> /*<![CDATA[*/ (function(){ if (window.bbcdotcom && (bbcdotcom.data.ads == 1 || bbcdotcom.data.stats == 1)) { bbcdotcomConfig = {"adFormat":"standard","adKeyword":"","adMode":"smart","adsEnabled":true,"appAnalyticsSections":"","asyncEnabled":false,"disableInitialLoad":false,"advertInfoPageUrl":"http:\/\/www.bbc.co.uk\/faqs\/online\/adverts_general","advertisementText":"Advertisement","analyticsEnabled":true,"appName":"food","assetPrefix":"http:\/\/static.bbci.co.uk\/bbcdotcom\/1.14.0\/","customAdParams":[],"customStatsParams":[],"headline":"","id":"","inAssociationWithText":"in association with","keywords":"","language":"","orbTransitional":false,"outbrainEnabled":true,"palEnv":"live","productName":"","sections":[],"siteCatalystEnabled":true,"comScoreEnabled":true,"comscoreSite":"bbc","comscoreID":"19293874","comscorePageName":"","slots":"","sponsoredByText":"is sponsored by","adsByGoogleText":"Ads by Google","summary":"","type":"","staticBase":"\/bbcdotcom","staticHost":"http:\/\/static.bbci.co.uk","staticVersion":"1.14.0","staticPrefix":"http:\/\/static.bbci.co.uk\/bbcdotcom\/1.14.0","dataHttp":"tps.bbc.com","dataHttps":"ssl.bbc.com","flagHttp":"www.bbc.co.uk","flagHttps":"ssl.bbc.co.uk","analyticsHttp":"sa.bbc.com","analyticsHttps":"ssa.bbc.com"}; bbcdotcom.config.init(bbcdotcomConfig, bbcdotcom.data, window.location, window.document); bbcdotcom.config.setAssetPrefix("http://static.bbci.co.uk/bbcdotcom/1.14.0/"); bbcdotcom.config.setVersion("1.14.0"); document.write('<!--[if IE 7]><script type="text/javascript">bbcdotcom.config.setIE7(true);\x3C/script><![endif]-->'); document.write('<!--[if IE 8]><script type="text/javascript">bbcdotcom.config.setIE8(true);\x3C/script><![endif]-->'); document.write('<!--[if IE 9]><script type="text/javascript">bbcdotcom.config.setIE9(true);\x3C/script><![endif]-->'); if (/[?|&]ex-dp/.test(window.location.href) || document.cookie.indexOf('ex-dp=') !== -1) { bbcdotcom.utils.addHtmlTagClass('bbcdotcom-ex-dp'); } } })(); /*]]>*/ </script>             <!--NavID:0.2.0-130--> <link rel="stylesheet" href="//static.bbc.co.uk/id/0.34.82/style/id-cta.css" /> <!--[if IE 8]><link href="//static.bbc.co.uk/id/0.34.82/style/ie8.css" rel="stylesheet"/> <![endif]--> <script type="text/javascript"> /* <![CDATA[ */ var map = {};  if (typeof(map['jssignals-1']) == 'undefined') { map['jssignals-1'] = 'https://static.bbc.co.uk/frameworks/jssignals/0.3.6/modules/jssignals-1'; }  require({paths: map}); /* ]]> */ </script>   <script type="text/javascript"> try { require(['istats-1'], function(istats){ if (typeof(document) != 'undefined' && typeof(document.cookie) != 'undefined') { var cookieAphidMatch = document.cookie.match(/ckpf_APHID=([^;]*)/); if (cookieAphidMatch && typeof(cookieAphidMatch[1]) == 'string') { istats.addLabels({'bbc_hid': cookieAphidMatch[1]}); } } })(); } catch (err) { /* If istats can't be loaded, fail silently */ } </script>    <script type="text/javascript"> (function () { if (!window.require) { throw new Error('idcta: could not find require module'); } if(typeof(map) == 'undefined') { var map = {}; } if(!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect) { document.documentElement.className += ' id-svg'; } var ptrt = RegExp("[\\?&]ptrt=([^&#]*)").exec(document.location.href); var ENDPOINT_CONFIG = ('/idcta/config?callback&amp;locale=en-GB&ptrt=' + encodeURI((ptrt ? ptrt[1] : document.location.href))).replace(/\&amp;/g, '&'); var ENDPOINT_TRANSLATIONS = '/idcta/translations?callback&locale=en-GB'; map['idapp-1'] = '//static.bbc.co.uk/idapp/0.72.16/modules/idapp/idapp-1'; map['idcta'] = '//static.bbc.co.uk/id/0.34.82/modules/idcta'; map['idcta/config'] = ['//ssl.bbc.co.uk' + ENDPOINT_CONFIG, '//static.bbc.co.uk/id/0.34.82/modules/idcta/fallbackConfig']; map['idcta/translations'] = ['//ssl.bbc.co.uk' + ENDPOINT_TRANSLATIONS, '//static.bbc.co.uk/id/0.34.82/modules/idcta/fallbackTranslations']; require({paths: map}); /* * Temporary code * To be removed when old id-statusbar-config is no longer supported */ define('id-statusbar-config', ['idcta/id-config'], function(conf) { return conf; }); define('idcta/id-statusbar-config', ['idcta/id-config'], function(conf) { return conf; }); })(); </script> <script type="text/javascript"> try { /* Users downgraded after IDP tokens were invalidated */ require(['idcta/idCookie'], function(idCookie){ idCookie.downgradeUser(); }); } catch(error) { /* Fail silently in case idCookie is not defined */ } </script>
+
+<script type="text/javascript">
+require(['istats-1'], function(istats) {
+    if (/\bIDENTITY=/.test(document.cookie)) {
+        istats.addLabels({'bbc_identity': '1'});
+    }
+});
+</script>
+
+    <link rel="stylesheet" href="//mybbc.files.bbci.co.uk/s/notification-ui/1.4.2/css/main.min.css"/>
+                         <script type="text/javascript">
+                document.documentElement.className += ' blq-js';
+            </script>
+            
+            <link href="http://static.bbci.co.uk/food/1.37.115/css/barlesque.css" media="screen" rel="stylesheet" type="text/css" />
+            <link href="http://static.bbci.co.uk/food/1.37.115/css/main.css"       media="screen" rel="stylesheet" type="text/css" />
+            <link href="http://static.bbci.co.uk/food/1.37.115/css/homepage/homepage-main.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://static.bbci.co.uk/food/1.37.115/css/widgets/quick-recipe-finder.css" media="screen" rel="stylesheet" type="text/css" />            <link href="http://static.bbci.co.uk/food/1.37.115/css/print.css"      media="print" rel="stylesheet" type="text/css" />
+            <style type="text/css" media="screen">
+<!--
+                body{
+                    background-image:url('http://static.bbci.co.uk/food/1.37.115/css/seasons/spring/f/bgs/body.png');
+                }
+                #heading span{
+                    background-image:url('http://static.bbci.co.uk/food/1.37.115/css/seasons/spring/f/headers/food.jpg');
+                }
+                #banner-image{
+                    background-image:url('http://static.bbci.co.uk/food/1.37.115/css/seasons/spring/f/banners/banner_4.jpg');
+                }
+                .campaigns-get-baking #sub-heading span{
+                    background-image:url('');
+                }
+                #campaign-link.campaign span{
+                    background-image:url('');
+                }
+                .campaigns-get-baking .get-baking span{
+                    background-image:url('');
+                }
+                .accordion-header-open{
+                    background-image:url('http://static.bbci.co.uk/food/1.37.115/css/seasons/spring/f/bgs/resource_list_open.png');
+                }
+                .accordion-header-open-hover{
+                    background-image:url('http://static.bbci.co.uk/food/1.37.115/css/seasons/spring/f/bgs/resource_list_open_hover.png');
+                }
+        
+-->
+</style>            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Find recipes from your favourite BBC programmes and chefs, or browse by ingredient or dish. With over 13000 recipes you&amp;#39;re sure to find the perfect dish." />
+<meta name="keyword" content="bbc, food, recipes, recipe, chef" />
+<meta property="og:image" content="http://static.bbci.co.uk/food/1.37.115/assets/img/food_placeholder.jpg" />                <script type="text/javascript">
+    require(["istats-1"], function (istats) {
+        istats.setSite('food');
+    });
+</script>
+        
+    </head>
+    
+    
+    <body  class="spring homepage-homepage Pancake Day">
+
+                 <!-- BBCDOTCOM bodyFirst --><div id="bbccom_interstitial_ad" class="bbccom_display_none"></div><div id="bbccom_interstitial" class="bbccom_display_none"><script type="text/javascript"> /*<![CDATA[*/ (function() { if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { googletag.cmd.push(function() { googletag.display('bbccom_interstitial'); }); } }()); /*]]>*/ </script></div><div id="bbccom_wallpaper_ad" class="bbccom_display_none"></div><div id="bbccom_wallpaper" class="bbccom_display_none"><script type="text/javascript"> /*<![CDATA[*/ (function() { var wallpaper; if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { if (bbcdotcom.config.isAsync()) { googletag.cmd.push(function() { googletag.display('bbccom_wallpaper'); }); } else { googletag.display("wallpaper"); } wallpaper = bbcdotcom.adverts.adRegister.getAd('wallpaper'); if (wallpaper !== null && wallpaper !== undefined) { wallpaper.setDomElement('bbccom_wallpaper'); } } }()); /*]]>*/ </script></div><script type="text/javascript"> /*<![CDATA[*/ (function() { if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) { document.write(unescape('%3Cscript id="gnlAdsEnabled" class="bbccom_display_none"%3E%3C/script%3E')); } if (window.bbcdotcom && bbcdotcom.config.isActive('analytics')) { document.write(unescape('%3Cscript id="gnlAnalyticsEnabled" class="bbccom_display_none"%3E%3C/script%3E')); } }()); /*]]>*/ </script> <div id="blq-global"> <div id="blq-pre-mast">  <noscript> <div id="orb-no-js-banner" class="orb-banner-wrapper"> <p class="b-g-p b-g-m">For a better experience on your device, try our <a href="http://m.bbc.co.uk">mobile site</a>.</p> </div> </noscript>  </div> </div>  <script type="text/html" id="blq-bbccookies-tmpl"><![CDATA[ <section> <div id="bbccookies" class="bbccookies-banner orb-banner-wrapper bbccookies-d"> <div id="bbccookies-prompt" class="orb-banner b-g-p b-r b-f"> <h2 class="orb-banner-title"> Cookies on the BBC website </h2> <p class="orb-banner-content" dir="ltr"> The BBC has updated its cookie policy. We use cookies to ensure that we give you the best experience on our website. This includes cookies from third party social media websites if you visit a page which contains embedded content from social media. Such third party cookies may track your use of the BBC website.<span class="bbccookies-international-message"> We and our partners also use cookies to ensure we show you advertising that is relevant to you.</span> If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the BBC website. However, you can change your cookie settings at any time. </p> <ul class="orb-banner-options"> <li id="bbccookies-continue"> <button type="button" id="bbccookies-continue-button">Continue</button> </li> <li id="bbccookies-settings"> <a href="/privacy/cookies/managing/cookie-settings.html">Change settings</a> </li> <li id="bbccookies-more"><a href="/privacy/cookies/bbc">Find out more</a></li></ul> </div> </div> </section> ]]></script> <script type="text/javascript">/*<![CDATA[*/ (function(){if(bbccookies._showPrompt()){var g=document,b=g.getElementById("blq-pre-mast"),e=g.getElementById("blq-bbccookies-tmpl"),a,f;if(b&&g.createElement){a=g.createElement("div");f=e.innerHTML;f=f.replace("<"+"![CDATA[","").replace("]]"+">","");a.innerHTML=f;b.appendChild(a);blqCookieContinueButton=g.getElementById("bbccookies-continue-button");blqCookieContinueButton.onclick=function(){a.parentNode.removeChild(a);return false};bbccookies._setPolicy(bbccookies.readPolicy())}var c=g.getElementById("bbccookies");if(c&&!window.orb.fig("uk")){c.className=c.className.replace(/\bbbccookies-d\b/,"");c.className=c.className+(" bbccookies-w")}}})(); /*]]>*/</script>   <noscript><p style="position: absolute; top: -999em"><img src="//sa.bbc.co.uk/bbc/bbc/s?name=food.page&ml_name=webmodule&ml_version=50&blq_js_enabled=0&blq_s=4d&blq_r=2.7&blq_v=default&blq_e=pal&pal_route=homepage&app_type=responsive&language=en-GB&pal_webapp=food&prod_name=food&app_name=food" height="1" width="1" alt=""></p></noscript>  <!-- Begin iStats 20100118 (UX-CMC 1.1009.3) --> <script type="text/javascript">/*<![CDATA[*/ if (typeof bbccookies !== 'undefined' && bbccookies.isAllowed('s1')) { (function () { require(['istats-1'], function (istats) { istatsTrackingUrl = istats.getDefaultURL(); if (istats.isEnabled() && bbcFlagpoles_istats === 'ON') { sitestat(istatsTrackingUrl); } else { window.ns_pixelUrl = istatsTrackingUrl; /* used by Flash library to track */ } function sitestat(n) { var j = document, f = j.location, b = ""; if (j.cookie.indexOf("st_ux=") != -1) { var k = j.cookie.split(";"); var e = "st_ux", h = document.domain, a = "/"; if (typeof ns_ != "undefined" && typeof ns_.ux != "undefined") { e = ns_.ux.cName || e; h = ns_.ux.cDomain || h; a = ns_.ux.cPath || a } for (var g = 0, f = k.length; g < f; g++) { var m = k[g].indexOf("st_ux="); if (m != -1) { b = "&" + decodeURI(k[g].substring(m + 6)) } } bbccookies.set(e + "=; expires=" + new Date(new Date().getTime() - 60).toGMTString() + "; path=" + a + "; domain=" + h); } window.ns_pixelUrl = n;  } }); })(); } else { window.istats = {enabled: false}; } /*]]>*/</script> <!-- End iStats (UX-CMC) -->  
+ <!--[if (gt IE 8) | (IEMobile)]><!--> <header id="orb-banner" role="banner"> <!--<![endif]--> <!--[if (lt IE 9) & (!IEMobile)]> <![if (IE 8)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie8"> <![endif]> <![if (IE 7)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie7"> <![endif]> <![if (IE 6)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie6"> <![endif]> <![endif]--> <div id="orb-header"  class="orb-nav-pri orb-nav-pri-grey b-header--grey--white orb-nav-empty orb-fixed-width"  > <div class="orb-nav-pri-container b-r b-g-p"> <div class="orb-nav-section orb-nav-blocks"> <a href="/"> <img class="orb-nav-theme-dynamic" src="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/img/bbc-blocks-light.png" width="84" height="24" alt="BBC" data-activesrc="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/img/bbc-blocks-dark.png"/> </a> </div> <section> <div class="orb-skip-links"> <h2>Accessibility links</h2> <ul>  <li><a id="orb-accessibility-help" href="/accessibility/">Accessibility Help</a></li> </ul> </div> </section>  <div id="mybbc-wrapper" class="orb-nav-section orb-nav-id orb-nav-focus"> <div id="idcta-statusbar" class="orb-nav-section orb-nav-focus"> <a id="idcta-link" href="/id/status?ptrt=http%3A%2F%2Fwww.bbc.co.uk%2Ffood%2F"> <span id="idcta-username">BBC iD</span> </a> </div>  <script type="text/javascript"> require(['idcta/statusbar'], function(statusbar) { new statusbar.Statusbar({"id":"idcta-statusbar","publiclyCacheable":true}); }); </script>
+
+    <a id="notification-link" class="js-notification-link animated three" href="#">
+        <span class="hidden-span">Notifications</span>
+        <div class="notification-link--triangle"></div>
+        <div class="notification-link--triangle"></div>
+        <span id="not-num"></span>
+    </a>
+ </div>  <nav role="navigation" class="orb-nav"> <div class="orb-nav-section orb-nav-links orb-nav-focus" id="orb-nav-links"> <h2>BBC navigation</h2> <ul>    <li  class="orb-nav-news orb-d"  > <a href="http://www.bbc.co.uk/news/">News</a> </li>    <li  class="orb-nav-newsdotcom orb-w"  > <a href="http://www.bbc.com/news/">News</a> </li>    <li  class="orb-nav-sport"  > <a href="/sport/">Sport</a> </li>    <li  class="orb-nav-weather"  > <a href="/weather/">Weather</a> </li>    <li  class="orb-nav-shop orb-w"  > <a href="http://shop.bbc.com/">Shop</a> </li>    <li  class="orb-nav-earthdotcom orb-w"  > <a href="http://www.bbc.com/earth/">Earth</a> </li>    <li  class="orb-nav-travel-dotcom orb-w"  > <a href="http://www.bbc.com/travel/">Travel</a> </li>    <li  class="orb-nav-capital orb-w"  > <a href="http://www.bbc.com/capital/">Capital</a> </li>    <li  class="orb-nav-iplayer orb-d"  > <a href="/iplayer/">iPlayer</a> </li>    <li  class="orb-nav-culture orb-w"  > <a href="http://www.bbc.com/culture/">Culture</a> </li>    <li  class="orb-nav-autos orb-w"  > <a href="http://www.bbc.com/autos/">Autos</a> </li>    <li  class="orb-nav-future orb-w"  > <a href="http://www.bbc.com/future/">Future</a> </li>    <li  class="orb-nav-tv"  > <a href="/tv/">TV</a> </li>    <li  class="orb-nav-radio"  > <a href="/radio/">Radio</a> </li>    <li  class="orb-nav-cbbc"  > <a href="/cbbc">CBBC</a> </li>    <li  class="orb-nav-cbeebies"  > <a href="/cbeebies">CBeebies</a> </li>    <li  class="orb-nav-food"  > <a href="/food/">Food</a> </li>    <li  > <a href="/iwonder">iWonder</a> </li>    <li  > <a href="/education">Bitesize</a> </li>    <li  class="orb-nav-travel orb-d"  > <a href="/travel/">Travel</a> </li>    <li  class="orb-nav-music"  > <a href="/music/">Music</a> </li>    <li  class="orb-nav-earth orb-d"  > <a href="http://www.bbc.com/earth/">Earth</a> </li>    <li  class="orb-nav-arts"  > <a href="/arts/">Arts</a> </li>    <li  class="orb-nav-makeitdigital"  > <a href="/makeitdigital">Make It Digital</a> </li>    <li  > <a href="/taster">Taster</a> </li>    <li  class="orb-nav-nature orb-w"  > <a href="/nature/">Nature</a> </li>    <li  class="orb-nav-local"  > <a href="/local/">Local</a> </li>    <li id="orb-nav-more"><a href="#orb-footer" data-alt="More">Menu<span class="orb-icon orb-icon-arrow"></span></a></li> </ul> </div> </nav>  <div class="orb-nav-section orb-nav-search orb-nav-oldsearch"> <a href="http://search.bbc.co.uk/search"> <img class="orb-nav-theme-dynamic" src="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/img/orb-search-light.png" width="18" height="18" alt="Search the BBC" data-activesrc="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/img/orb-search-dark.png"/> </a> <form class="b-f" id="orb-search-form" role="search" method="get" action="//search.bbc.co.uk/search" accept-charset="utf-8"> <div>  <input type="hidden" name="uri" value="/food/" />   <label for="orb-search-q">Search the BBC</label> <input id="orb-search-q" type="text" name="q" placeholder="Search" /> <input type="image" id="orb-search-button" src="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/img/orb-search-dark.png" width="17" height="17" alt="Search the BBC" /> <input type="hidden" name="suggid" id="orb-search-suggid" /> </div> </form> </div>  </div> <div id="orb-panels"  > <script type="text/template" id="orb-panel-template"><![CDATA[ <div id="orb-panel-<%= panelname %>" class="orb-panel" aria-labelledby="orb-nav-<%= panelname %>"> <div class="orb-panel-content b-g-p b-r"> <%= panelcontent %> </div> </div> ]]></script> </div> </div> </header> <!-- Styling hook for shared modules only --> <div id="orb-modules">                     <div class="food-banner__wrapper">
+            <div class="food-banner">
+                <div class="food-banner__information">
+                    <header class="food-banner__header">
+                        We're improving BBC Food
+                    </header>
+                    <p class="food-banner__content">
+                        We are making some changes to the website over the next few months
+                    </p>
+                </div>
+                <div class="food-banner__learn-wrap">
+                    <a href="http://www.bbc.co.uk/blogs/internet/entries/5b5ea3ab-b66f-4c92-bb20-c1bdff513aef" class="food-banner__learn-button">
+                        Learn More
+                    </a>
+                </div>
+                <div class="food-banner__got-it-wrap">
+                    <button class="food-banner__got-it-button" type="button">
+                        OK, got it
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="blq-container-outer" class="blq-default-domestic blq-ltr">
+        <div id="blq-container" class="blq-lang-en-GB">
+        <div id="blq-container-inner" lang="en-GB">
+        <div id="blq-main" class="blq-clearfix">    
+        
+        <div class="gBanner" id="gBanner">
+            <p><img alt="BBC" src="http://static.bbci.co.uk/food/1.37.115/css/f/print/bbc_food_logo.gif"/></p>
+        </div>
+
+        <div id="banner">
+                            <h1 id="heading"><a href="/food/">Food<span></span></a></h1>
+                                        <div id="banner-image"></div>
+                                </div>
+        
+         <ol id="site-nav">
+                                    <li class="selected first-child">
+                        
+                                                                                
+                            <a class = "" href="/food/">Home</a>
+                            
+                                                        
+                        </li>
+                                            <li class="unselected">
+                        
+                                                                                
+                            <a class = " with-more" href="/food/recipes/">Recipes</a>
+                            
+                                                                    <ul class="sub-nav">
+                                                                                            <li class="sub-nav-item first-child"><a class="sub-nav-item first-child" href="/food/seasons">In Season</a></li>
+                                                                                                    <li class="sub-nav-item"><a class="sub-nav-item" href="/food/occasions">Occasions</a></li>
+                                                                                                    <li class="sub-nav-item"><a class="sub-nav-item" href="/food/cuisines">Cuisines</a></li>
+                                                                                                    <li class="sub-nav-item"><a class="sub-nav-item" href="/food/dishes">Dishes</a></li>
+                                                                                        </ul>
+                                                                
+                        </li>
+                                            <li class="unselected">
+                        
+                                                                                
+                            <a class = "" href="/food/chefs">Chefs</a>
+                            
+                                                        
+                        </li>
+                                            <li class="unselected">
+                        
+                                                                                
+                            <a class = "" href="/food/programmes">Programmes</a>
+                            
+                                                        
+                        </li>
+                                            <li class="unselected">
+                        
+                                                                                
+                            <a class = "" href="/food/ingredients">Ingredients</a>
+                            
+                                                        
+                        </li>
+                                            <li class="unselected">
+                        
+                                                                                
+                            <a class = "" href="/food/techniques">Techniques</a>
+                            
+                                                        
+                        </li>
+                                            <li class="unselected">
+                        
+                                                                                
+                            <a class = "" href="/food/about">FAQs</a>
+                            
+                                                        
+                        </li>
+                                                <li class="binder">
+
+<div class="my-cta"><a href="/food/my/favourites" title="See Favourite items">Your Favourites</a></div>
+
+</li>
+                    </ol>
+        
+                
+        
+<div class="page">
+      	<div id="promo-container">
+        	        		<ul id="promo-list" class="promos-count-4">
+            		    						        	
+    						        	<li class="promo-nojs open custom" id="nojs-promo-0">
+    							        
+    							        	<a class="overlay-link" href="http://www.bbc.co.uk/food/collections/5_fantastic_frittatas"><img src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/all-day_breakfast_12416_16x9.jpg" alt="image" width="608" height="344" /></a>
+    								            
+    											    								            
+    								            <div class="info">
+    								            	
+    								            	<h2><a href="http://www.bbc.co.uk/food/collections/5_fantastic_frittatas">5 fantastic frittatas</a></h2>
+    								            	
+    								            	    								                			<p class="intro">Frittatas make for a fabulously filling breakfast, but are also perfect for a quick lunch or speedy supper.</p>
+    								                		    									                		<p class="secondary-link"><a href="http://www.bbc.co.uk/food/collections/12_eggcellent_recipes">Eggcellent recipes</a></p>
+    									                	    										  </div>
+            							</li>
+            						    										
+    							        <li class="promo-nojs thumb custom" id="nojs-promo-1">
+    							        
+    							        	<a href="http://www.bbc.co.uk/guides/zqyrhv4"><img src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/fruit_tarts_45402_16x9.jpg" alt="image" width="170" height="96" /></a>
+    							            
+    											    								            
+    							            <h2><a href="http://www.bbc.co.uk/guides/zqyrhv4">Bake off pro?</a></h2>
+    							            
+    							        </li>
+            						    										
+    							        <li class="promo-nojs thumb custom" id="nojs-promo-2">
+    							        
+    							        	<a href="http://www.bbc.co.uk/food/collections/8_lovely_lemon_puds"><img src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/lemon_pavlova_50340_16x9.jpg" alt="image" width="170" height="96" /></a>
+    							            
+    											    								            
+    							            <h2><a href="http://www.bbc.co.uk/food/collections/8_lovely_lemon_puds">8 lovely lemon puds</a></h2>
+    							            
+    							        </li>
+            						    										
+    							        <li class="promo-nojs thumb custom" id="nojs-promo-3">
+    							        
+    							        	<a href="http://www.bbc.co.uk/food/collections/crack_into_crab"><img src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/crab_linguine_22025_16x9.jpg" alt="image" width="170" height="96" /></a>
+    							            
+    											    								            
+    							            <h2><a href="http://www.bbc.co.uk/food/collections/crack_into_crab">Crack into crab</a></h2>
+    							            
+    							        </li>
+            						            	
+            </ul>
+                    </div>
+    <div id="column-1" class="column">
+      <div id="subcolumn-1" class="subcolumn">
+        <div class="module" id="top-recipes">
+<h2>Find the perfect recipe</h2>
+<dl>
+               <dt id="editor-picks">Editor picks</dt>
+            <dd class="picks-list">
+                <ol>
+                                        			<li class="promo">
+                    				<h3>
+                    					<a href='/food/recipes/artichokepasta_1398'>
+                    						<img src="http://ichef.bbci.co.uk/food/ic/food_16x9_280/recipes/artichokepasta_1398_16x9.jpg" width='280' height='158' alt='artichokepasta_1398'/>
+                    						Artichoke pasta                    					</a>
+                    				</h3>
+                         		                        					<h4><strong>By</strong> Rick Stein</h4>
+                    				                    			</li>
+                		                    			<li>
+                    				<h3>
+                    					<a href='/food/recipes/chicken_in_a_creamy_84614'>
+                        					Chicken in a creamy mushroom sauce                        					<img src='http://ichef.bbci.co.uk/food/ic/food_16x9_138/recipes/chicken_in_a_creamy_84614_16x9.jpg' width="138" height="78" alt='Chicken in a creamy mushroom sauce'/>
+                        				</a>
+                    				</h3>                           				
+                    			</li>
+            		                    			<li>
+                    				<h3>
+                    					<a href='/food/recipes/sun-blushed_tomato_and_23591'>
+                        					Sun-blushed tomato and feta salad                        					<img src='http://ichef.bbci.co.uk/food/ic/food_16x9_138/recipes/sun-blushed_tomato_and_23591_16x9.jpg' width="138" height="78" alt='Sun-blushed tomato and feta salad'/>
+                        				</a>
+                    				</h3>                           				
+                    			</li>
+            		                    			<li>
+                    				<h3>
+                    					<a href='/food/recipes/buckwheat_triple_32460'>
+                        					Triple chocolate buckwheat cookies                        					<img src='http://ichef.bbci.co.uk/food/ic/food_16x9_138/recipes/buckwheat_triple_32460_16x9.jpg' width="138" height="78" alt='Triple chocolate buckwheat cookies'/>
+                        				</a>
+                    				</h3>                           				
+                    			</li>
+            		                </ol>
+            </dd>
+        
+            <dt id="user-recommended">User recommended</dt>
+            <dd class="list numbered">
+                <ol>
+                                                <li class="first-child">
+                            	<a href="/food/recipes/easy_chocolate_cake_31070">
+                            		<span class="list-number">1</span>
+                            		<span class="recipe-title">Easy chocolate cake</span>
+                            	</a>
+                            </li>
+                                                <li>
+                            	<a href="/food/recipes/shortbread_1290">
+                            		<span class="list-number">2</span>
+                            		<span class="recipe-title">Shortbread</span>
+                            	</a>
+                            </li>
+                                                <li>
+                            	<a href="/food/recipes/baileysandchocolatec_72293">
+                            		<span class="list-number">3</span>
+                            		<span class="recipe-title">Irish cream and chocolate cheesecake</span>
+                            	</a>
+                            </li>
+                                                <li>
+                            	<a href="/food/recipes/great_sausage_casserole_73010">
+                            		<span class="list-number">4</span>
+                            		<span class="recipe-title">Great sausage casserole</span>
+                            	</a>
+                            </li>
+                                                <li>
+                            	<a href="/food/recipes/fluffyamericanpancak_74828">
+                            		<span class="list-number">5</span>
+                            		<span class="recipe-title">Fluffy American pancakes</span>
+                            	</a>
+                            </li>
+                                    </ol>
+            </dd>
+    
+        
+    <dt id="special-diets">Special diets</dt>
+    <dd class="list">
+        <ol>
+                                <li class="first-child">
+                    	<a href="/food/diets/healthy">Healthy recipes</a>
+                    </li>
+        	                    <li>
+                    	<a href="/food/diets/vegetarian">Vegetarian recipes</a>
+                    </li>
+        	                    <li>
+                    	<a href="/food/diets/vegan">Vegan recipes</a>
+                    </li>
+        	                    <li>
+                    	<a href="/food/diets/gluten_free">Gluten free recipes</a>
+                    </li>
+        	                    <li>
+                    	<a href="/food/diets/nut_free">Nut free recipes</a>
+                    </li>
+        	                    <li>
+                    	<a href="/food/diets/pregnancy_friendly">Pregnancy friendly recipes</a>
+                    </li>
+        	        </ol>
+    </dd>
+    
+</dl>
+</div>        <div id="in-season" class="module padded">
+<h2><a href="/food/seasons/april">In season: April</a></h2>
+<h3>
+  	<a href="/food/cockles">
+       	<img width="216" height="127" alt="cockles" src="http://ichef.bbci.co.uk/food/ic/food_16x9_216/foods/c/cockles_16x9.jpg" />
+       	<span>Cockles</span>
+   	</a>
+</h3>
+<h4>Recipes using cockles</h4>
+   <ul>
+                    		<li><a href="/food/recipes/cockleslaverbreadand_92241">Cockles, laverbread and Welsh bacon</a></li>
+      			              		<li><a href="/food/recipes/asparagus_and_scallop_49216">Asparagus and scallop salad, with cockle tartare sauce and mint oil</a></li>
+      			  </ul>
+ 
+<h5>More <a class="more" href="/food/cockles">cockles recipes</a> (27)</h5>
+<h3 class="footer">More <a class="more" href="/food/seasons/april">seasonal ingredients and recipes for April</a></h3>
+</div>                <div id="featured-chefs" class="module padded">
+        	<h2><a href="/food/chefs">Featured chefs</a></h2>
+        	<ul>
+	        	        				<li>
+        					<h3>
+        					    <a href="/food/chefs/lisa_faulkner">
+                                    <img src="http://ichef.bbci.co.uk/food/ic/food_1x1_128/chefs/lisa_faulkner_1x1.jpg" height="128" width="128" alt="Lisa Faulkner" />
+                                    <span>Lisa Faulkner</span>
+                                </a>
+                            </h3>
+        				</li>
+    			        				<li>
+        					<h3>
+        					    <a href="/food/chefs/shelina_permalloo">
+                                    <img src="http://ichef.bbci.co.uk/food/ic/food_1x1_128/chefs/shelina_permalloo_1x1.jpg" height="128" width="128" alt="Shelina Permalloo" />
+                                    <span>Shelina Permalloo</span>
+                                </a>
+                            </h3>
+        				</li>
+    			        				<li class="last-item">
+        					<h3>
+        					    <a href="/food/chefs/paul_hollywood">
+                                    <img src="http://ichef.bbci.co.uk/food/ic/food_1x1_128/chefs/paul_hollywood_1x1.jpg" height="128" width="128" alt="Paul Hollywood" />
+                                    <span>Paul Hollywood</span>
+                                </a>
+                            </h3>
+        				</li>
+    			        	</ul>
+        	<a class="see-more" href="/food/chefs">Chefs A to Z</a>
+        </div>
+
+        
+<div id="techniques-module" class="module">
+
+    <h2>Cooking techniques</h2>
+        <ul>
+    	    			<li class="easy ">
+    			
+    				<h3 class="title">
+    				
+    				    <a href="/food/techniques/how_to_cook_perfect_rice">
+    				        How to cook perfect rice                             
+    				        <span class="image-mask">
+    				            <span class="play-icon"></span>
+    				            <img src="http://ichef.bbci.co.uk/images/ic/176x99/p019ygyl.jpg" width="181"  alt="How to cook perfect rice" />
+    				        </span>
+    				                            </a>
+    				    
+    				</h3>
+    				
+    				<h4 class="difficulty">Difficulty: Easy</h4>
+    				
+                 </li>
+		    			<li class="intermediate ">
+    			
+    				<h3 class="title">
+    				
+    				    <a href="/food/techniques/lining_tin_with_pastry">
+    				        Lining a tart tin with pastry                             
+    				        <span class="image-mask">
+    				            <span class="play-icon"></span>
+    				            <img src="http://ichef.bbci.co.uk/images/ic/176x99/p027w0my.jpg" width="181"  alt="Lining a tart tin with pastry" />
+    				        </span>
+    				                            </a>
+    				    
+    				</h3>
+    				
+    				<h4 class="difficulty">Difficulty: Intermediate</h4>
+    				
+                 </li>
+		    			<li class="easy ">
+    			
+    				<h3 class="title">
+    				
+    				    <a href="/food/techniques/how_to_make_couscous">
+    				        How to make couscous                             
+    				        <span class="image-mask">
+    				            <span class="play-icon"></span>
+    				            <img src="http://ichef.bbci.co.uk/images/ic/176x99/p019yg64.jpg" width="181"  alt="How to make couscous" />
+    				        </span>
+    				                            </a>
+    				    
+    				</h3>
+    				
+    				<h4 class="difficulty">Difficulty: Easy</h4>
+    				
+                 </li>
+		    			<li class="easy ">
+    			
+    				<h3 class="title">
+    				
+    				    <a href="/food/techniques/peeling_prawns">
+    				        Peeling prawns                             
+    				        <span class="image-mask">
+    				            <span class="play-icon"></span>
+    				            <img src="http://ichef.bbci.co.uk/images/ic/176x99/p027w6c5.jpg" width="181"  alt="Peeling prawns" />
+    				        </span>
+    				                            </a>
+    				    
+    				</h3>
+    				
+    				<h4 class="difficulty">Difficulty: Easy</h4>
+    				
+                 </li>
+		    </ul>
+    <h3 class="all"><a href="/food/techniques">All cooking techniques</a></h3>
+</div>      </div>
+      <div id="subcolumn-2" class="subcolumn">
+      
+      						<div id="social-media-links" class="module coloured">
+				<h2 class="social-media-header coloured">
+					Follow us on
+				</h2>
+				<ul>
+					<li class="with-image">
+						<a href="http://www.facebook.com/bbcfood"><img src="http://static.bbci.co.uk/food/1.37.115/assets/img/facebook.png" /><span>Facebook</span></a>
+					</li>
+					<li class="with-image">
+						<a href="http://www.twitter.com/BBCFood"><img src="http://static.bbci.co.uk/food/1.37.115/assets/img/twitter.png" /><span>Twitter</span></a>
+					</li>
+					<li class="with-image">
+						<a href="http://www.pinterest.com/bbcfood"><img src="http://static.bbci.co.uk/food/1.37.115/assets/img/pinterest.png" /><span>Pinterest</span></a>
+					</li>
+				</ul>
+			</div>
+      
+<div id="thin-promo" class="module coloured">
+        
+    <h2>Food issues</h2>
+        
+    <ul id="thin-carousel" class="carousel">
+                            <li class="carousel-item-0 news">
+                        <h3>
+                        	<a href="http://www.bbc.co.uk/news/health-35884051">
+                        		<span class="mainTitle">Should we be eating more fish?</span>
+                        		<span class="masterbrand">BBC News<span class="bbc_news"></span></span>
+                        	</a>
+                        </h3>
+                        
+                        
+                    </li>
+                            <li class="carousel-item-1 news">
+                        <h3>
+                        	<a href="http://www.bbc.co.uk/bbcthree/item/502f7e89-1f58-4c61-a084-9ff291e27e8f">
+                        		<span class="mainTitle">Is it time we stopped laughing at the 'fat bloke'?</span>
+                        		<span class="masterbrand">BBC News<span class="bbc_news"></span></span>
+                        	</a>
+                        </h3>
+                        
+                        
+                    </li>
+                            <li class="carousel-item-2 news">
+                        <h3>
+                        	<a href="http://www.bbc.co.uk/programmes/p03q93kk">
+                        		<span class="mainTitle">When is a cake not a cake?</span>
+                        		<span class="masterbrand">BBC News<span class="bbc_news"></span></span>
+                        	</a>
+                        </h3>
+                        
+                        
+                    </li>
+                            <li class="carousel-item-3 news">
+                        <h3>
+                        	<a href="http://www.bbc.co.uk/news/science-environment-35988093">
+                        		<span class="mainTitle">Cutting food and carbon waste-lines for healthy climate</span>
+                        		<span class="masterbrand">BBC News<span class="bbc_news"></span></span>
+                        	</a>
+                        </h3>
+                        
+                        
+                    </li>
+                            <li class="carousel-item-4 news">
+                        <h3>
+                        	<a href="http://www.bbc.co.uk/news/health-35990098">
+                        		<span class="mainTitle">Obesity: Exercise advice food label gets street test</span>
+                        		<span class="masterbrand">BBC News<span class="bbc_news"></span></span>
+                        	</a>
+                        </h3>
+                        
+                        
+                    </li>
+                            <li class="carousel-item-5 news">
+                        <h3>
+                        	<a href="http://www.bbc.co.uk/programmes/p03q0lnd?intc_type=singletheme&intc_location=avs&intc_campaign=bbcone_howtostayyoung&intc_linkname=vidclip_purpleveg_contentcard3">
+                        		<span class="mainTitle">Can this purple vegetable be the secret to a long life?</span>
+                        		<span class="masterbrand">BBC News<span class="bbc_news"></span></span>
+                        	</a>
+                        </h3>
+                        
+                        
+                    </li>
+                            <li class="carousel-item-6 news">
+                        <h3>
+                        	<a href="http://www.bbc.co.uk/news/health-35981098">
+                        		<span class="mainTitle">Activity icons 'could help healthy living'</span>
+                        		<span class="masterbrand">BBC News<span class="bbc_news"></span></span>
+                        	</a>
+                        </h3>
+                        
+                        
+                    </li>
+                            <li class="carousel-item-7 news">
+                        <h3>
+                        	<a href="http://www.bbc.co.uk/news/uk-politics-35976339">
+                        		<span class="mainTitle">EU referendum: Row over impact of exit on farming and food prices</span>
+                        		<span class="masterbrand">BBC News<span class="bbc_news"></span></span>
+                        	</a>
+                        </h3>
+                        
+                        
+                    </li>
+            </ul>
+        
+</div>            </div>
+
+    </div>
+
+    <div id="column-2" class="column">
+
+    
+<div id="quick-recipe-finder" class="module coloured">
+    <h2>Quick recipe finder</h2>
+    
+    <div class="search-help">
+    	<p>Type the ingredients you want to use, then click <strong class="search-text">Go</strong>.  For better results you can use quotation marks around phrases (e.g. &quot;chicken breast&quot;). Alternatively you can search by chef, programme, cuisine, diet, or dish (e.g. Lasagne).</p>
+    </div>
+    
+    <form method="get" action="/food/recipes/search">
+        <fieldset>
+        	<label for="search-keywords" id="search-keywords-label">Type ingredients, chef or programme</label>
+        	<input type="text" id="search-keywords" name="keywords" />
+        	<input type="image" id="search-submit" alt="Go" src="http://static.bbci.co.uk/food/1.37.115/css/f/buttons/quick_search.png" />
+            <label for="search-quick-filter" id="search-quick-filter-label" class="filter-label">
+                <input type="checkbox" id="search-quick-filter" class="filter" name="quickAndEasy" value="true" />
+                Quick &amp; Easy
+            </label>
+            <label for="search-vegetarian-filter" id="search-vegetarian-filter-label" class="filter-label">
+                <input type="checkbox" id="search-vegetarian-filter" class="filter" name="diets[]" value="vegetarian" />
+                Vegetarian
+            </label>
+                    </fieldset>
+    </form>
+    <a id="advanced-search-link" href="/food/recipes#quick-recipe-finder">Advanced search options</a>
+</div>
+
+
+<div id="programmes-module" class="module coloured">
+
+    <h2>Recipes from programmes</h2>
+    
+    <ul>
+                        <li class="programme" id="promoed-programme">
+                	                				<h3>
+                					<a href="/food/programmes/b06gqhlg">
+                						<span class="mainTitle">The Hairy Bikers' Northern Exposure</span>
+                						<span class="subTitle"><span class="head">Sun, 10th Apr</span><span class="tail"> (4 recipes)</span></span>
+	                										                                    	<span class="masterbrand">Array<span class="bbc_two"></span></span>
+				                                    			                        	<img src="http://ichef.bbci.co.uk/images/ic/320x180/p03457fd.jpg" width="320" height="180" alt="6. South Sweden" />
+                					</a>
+                				</h3>
+                			                </li>
+                        <li class="programme">
+                	                				<h3>
+                					<a href="/food/programmes/b021n02l">
+                						<span class="mainTitle">Saturday Kitchen Best Bites</span>
+                						<span class="subTitle"><span class="head">Sun, 10th Apr</span><span class="tail"> (5 recipes)</span></span>
+	                									                        	<img src="http://ichef.bbci.co.uk/images/ic/128x72/p01l603k.jpg" width="128" height="72" alt="82. Saturday Kitchen Best Bites" />
+                					</a>
+                				</h3>
+                			                </li>
+                        <li class="programme">
+                	                				<h3>
+                					<a href="/food/programmes/b0685005">
+                						<span class="mainTitle">Rick Stein: From Venice to Istanbul</span>
+                						<span class="subTitle"><span class="head">Sat, 9th Apr</span><span class="tail"> (3 recipes)</span></span>
+	                									                        	<img src="http://ichef.bbci.co.uk/images/ic/128x72/p0305z49.jpg" width="128" height="72" alt="4. Rick Stein: From Venice to Istanbul" />
+                					</a>
+                				</h3>
+                			                </li>
+                        <li class="programme">
+                	                				<h3>
+                					<a href="/food/programmes/b077rh7t">
+                						<span class="mainTitle">Saturday Kitchen</span>
+                						<span class="subTitle"><span class="head">Sat, 9th Apr</span><span class="tail"> (5 recipes)</span></span>
+	                									                        	<img src="http://ichef.bbci.co.uk/images/ic/128x72/p03qjl9d.jpg" width="128" height="72" alt="Saturday Kitchen" />
+                					</a>
+                				</h3>
+                			                </li>
+                        <li class="programme">
+                	                				<h3>
+                					<a href="/food/programmes/b03bsh73">
+                						<span class="mainTitle">James Martin's Food Map of Britain</span>
+                						<span class="subTitle"><span class="head">Thu, 7th Apr</span><span class="tail"> (2 recipes)</span></span>
+	                									                        	<img src="http://ichef.bbci.co.uk/images/ic/128x72/p01k0zz1.jpg" width="128" height="72" alt="6. South Coast" />
+                					</a>
+                				</h3>
+                			                </li>
+                        <li class="programme">
+                	                				<h3>
+                					<a href="/food/programmes/b0755lnw">
+                						<span class="mainTitle">Mary Berry's Easter Feast</span>
+                						<span class="subTitle"><span class="head">Sun, 27th Mar</span><span class="tail"> (6 recipes)</span></span>
+	                									                        	<img src="http://ichef.bbci.co.uk/images/ic/128x72/p03ms4hv.jpg" width="128" height="72" alt="2. Mary Berry's Easter Feast" />
+                					</a>
+                				</h3>
+                			                </li>
+                        <li class="programme">
+                	                				<h3>
+                					<a href="/food/programmes/b03vzwcf">
+                						<span class="mainTitle">James Martin: Home Comforts</span>
+                						<span class="subTitle"><span class="head">Sat, 19th Mar</span><span class="tail"> (3 recipes)</span></span>
+	                									                        	<img src="http://ichef.bbci.co.uk/images/ic/128x72/p01s1vf9.jpg" width="128" height="72" alt="1. Lazy Days" />
+                					</a>
+                				</h3>
+                			                </li>
+                        <li class="programme">
+                	                				<h3>
+                					<a href="/food/programmes/b07259r4">
+                						<span class="mainTitle">The Great Sport Relief Bake Off</span>
+                						<span class="subTitle"><span class="head">Thu, 17th Mar</span><span class="tail"> (1 recipes)</span></span>
+	                									                        	<img src="http://ichef.bbci.co.uk/images/ic/128x72/p03jqxg4.jpg" width="128" height="72" alt="4. The Great Sport Relief Bake Off" />
+                					</a>
+                				</h3>
+                			                </li>
+                        <li class="programme">
+                	                				<h3>
+                					<a href="/food/programmes/b073gy95">
+                						<span class="mainTitle">Mary Berry's Foolproof Cooking</span>
+                						<span class="subTitle"><span class="head">Mon, 14th Mar</span><span class="tail"> (3 recipes)</span></span>
+	                									                        	<img src="http://ichef.bbci.co.uk/images/ic/128x72/p03l5t5b.jpg" width="128" height="72" alt="6. Mary Berry's Foolproof Cooking" />
+                					</a>
+                				</h3>
+                			                </li>
+            </ul>
+    <a class="see-more" href="/food/programmes">All programme recipes</a>
+</div>
+      		<div id="food-programmes-iPlayer" class="module coloured padded">
+			<h2 class="iPlayer-logo">Catch up on<a href="http://www.bbc.co.uk/iplayer"> BBC iPlayer<span class="logo"></span></a></h2>
+			<ul>
+										<li class="programme">
+								<h3>
+									<a class="Video" href="http://www.bbc.co.uk/iplayer/episode/b01skj96" >
+										<img src="http://ichef.bbci.co.uk/images/ic/128x72/p01l9g2n.jpg" width="128" height="72" alt="b01skj96"/>
+										<span class="mainTitle">The Chef's Protege</span>
+										<span class="subTitle">The Chef's Protege</span>
+										<span class="overlay Video"><span></span></span>
+									</a>
+								</h3>
+							</li>
+													<li class="programme">
+								<h3>
+									<a class="Video" href="http://www.bbc.co.uk/iplayer/episode/b0698xmd" >
+										<img src="http://ichef.bbci.co.uk/images/ic/128x72/p030w0g5.jpg" width="128" height="72" alt="b0698xmd"/>
+										<span class="mainTitle">The Hairy Bikers' Northern Exposure</span>
+										<span class="subTitle">The Hairy Bikers' Northern Exposure</span>
+										<span class="overlay Video"><span></span></span>
+									</a>
+								</h3>
+							</li>
+													<li class="programme">
+								<h3>
+									<a class="Video" href="http://www.bbc.co.uk/iplayer/episode/b071fhj8" >
+										<img src="http://ichef.bbci.co.uk/images/ic/128x72/p03hbzn2.jpg" width="128" height="72" alt="b071fhj8"/>
+										<span class="mainTitle">The Best Dishes Ever</span>
+										<span class="subTitle">The Best Dishes Ever</span>
+										<span class="overlay Video"><span></span></span>
+									</a>
+								</h3>
+							</li>
+													<li class="programme">
+								<h3>
+									<a class="Video" href="http://www.bbc.co.uk/iplayer/episode/b021n02l" >
+										<img src="http://ichef.bbci.co.uk/images/ic/128x72/p01l603k.jpg" width="128" height="72" alt="b021n02l"/>
+										<span class="mainTitle">Saturday Kitchen Best Bites</span>
+										<span class="subTitle">Saturday Kitchen Best Bites</span>
+										<span class="overlay Video"><span></span></span>
+									</a>
+								</h3>
+							</li>
+							
+			</ul>
+			<a class="footer-link" href="http://www.bbc.co.uk/iplayer/categories/food">More food &amp; drink programmes on iPlayer</a>
+			<a class="footer-link line-before" href="http://www.bbc.co.uk/programmes/genres/factual/foodanddrink/schedules">Food programmes on today</a>
+			<a class="footer-link" href="http://www.bbc.co.uk/programmes/genres/factual/foodanddrink">All food &amp; drink programmes</a>
+		</div>
+    </div>
+
+</div>
+            
+            </div>
+            </div>
+            </div>
+            </div>
+            
+                 </div> <div id="orb-footer"  class="orb-footer orb-footer-grey b-footer--grey--white" >  <div id="navp-orb-footer-promo" class="orb-footer-grey"></div>  <aside role="complementary"> <div id="orb-aside" class="orb-nav-sec b-r b-g-p"> <div class="orb-footer-inner" role="navigation"> <h2 class="orb-footer-lead">Explore the BBC</h2> <div class="orb-footer-primary-links"> <ul>    <li  class="orb-nav-news orb-d"  > <a href="http://www.bbc.co.uk/news/">News</a> </li>    <li  class="orb-nav-newsdotcom orb-w"  > <a href="http://www.bbc.com/news/">News</a> </li>    <li  class="orb-nav-sport"  > <a href="/sport/">Sport</a> </li>    <li  class="orb-nav-weather"  > <a href="/weather/">Weather</a> </li>    <li  class="orb-nav-shop orb-w"  > <a href="http://shop.bbc.com/">Shop</a> </li>    <li  class="orb-nav-earthdotcom orb-w"  > <a href="http://www.bbc.com/earth/">Earth</a> </li>    <li  class="orb-nav-travel-dotcom orb-w"  > <a href="http://www.bbc.com/travel/">Travel</a> </li>    <li  class="orb-nav-capital orb-w"  > <a href="http://www.bbc.com/capital/">Capital</a> </li>    <li  class="orb-nav-iplayer orb-d"  > <a href="/iplayer/">iPlayer</a> </li>    <li  class="orb-nav-culture orb-w"  > <a href="http://www.bbc.com/culture/">Culture</a> </li>    <li  class="orb-nav-autos orb-w"  > <a href="http://www.bbc.com/autos/">Autos</a> </li>    <li  class="orb-nav-future orb-w"  > <a href="http://www.bbc.com/future/">Future</a> </li>    <li  class="orb-nav-tv"  > <a href="/tv/">TV</a> </li>    <li  class="orb-nav-radio"  > <a href="/radio/">Radio</a> </li>    <li  class="orb-nav-cbbc"  > <a href="/cbbc">CBBC</a> </li>    <li  class="orb-nav-cbeebies"  > <a href="/cbeebies">CBeebies</a> </li>    <li  class="orb-nav-food"  > <a href="/food/">Food</a> </li>    <li  > <a href="/iwonder">iWonder</a> </li>    <li  > <a href="/education">Bitesize</a> </li>    <li  class="orb-nav-travel orb-d"  > <a href="/travel/">Travel</a> </li>    <li  class="orb-nav-music"  > <a href="/music/">Music</a> </li>    <li  class="orb-nav-earth orb-d"  > <a href="http://www.bbc.com/earth/">Earth</a> </li>    <li  class="orb-nav-arts"  > <a href="/arts/">Arts</a> </li>    <li  class="orb-nav-makeitdigital"  > <a href="/makeitdigital">Make It Digital</a> </li>    <li  > <a href="/taster">Taster</a> </li>    <li  class="orb-nav-nature orb-w"  > <a href="/nature/">Nature</a> </li>    <li  class="orb-nav-local"  > <a href="/local/">Local</a> </li>    </ul> </div> </div> </div> </aside> <footer role="contentinfo"> <div id="orb-contentinfo" class="orb-nav-sec b-r b-g-p"> <div class="orb-footer-inner"> <ul>        <li  > <a href="/terms/">Terms of Use</a> </li>    <li  > <a href="/aboutthebbc/">About the BBC</a> </li>    <li  > <a href="/privacy/">Privacy Policy</a> </li>    <li  > <a href="/privacy/cookies/about">Cookies</a> </li>    <li  > <a href="/accessibility/">Accessibility Help</a> </li>    <li  > <a href="/guidance/">Parental Guidance</a> </li>    <li  > <a href="/contact/">Contact the BBC</a> </li>        <li  class=" orb-w"  > <a href="http://advertising.bbcworldwide.com/">Advertise with us</a> </li>    <li  class=" orb-w"  > <a href="/privacy/cookies/international/">Ad choices</a> </li>    </ul> <small> <span class="orb-hilight">Copyright &copy; 2016 BBC.</span> The BBC is not responsible for the content of external sites. <a href="/help/web/links/" class="orb-hilight">Read about our approach to external linking.</a> </small> </div> </div> </footer> </div>     <!-- BBCDOTCOM bodyLast --><div class="bbccom_display_none"><script type="text/javascript"> /*<![CDATA[*/ if (window.bbcdotcom && window.bbcdotcom.analytics) { bbcdotcom.analytics.page(); } /*]]>*/ </script><noscript><img src="//ssc.api.bbc.com/?c1=2&c2=19293874&ns_site=bbc&name=" height="1" width="1" alt=""></noscript><script type="text/javascript"> /*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.currencyProviders) { bbcdotcom.currencyProviders.write(); } /*]]>*/ </script><script type="text/javascript"> /*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.currencyProviders) { bbcdotcom.currencyProviders.postWrite(); } /*]]>*/ </script><script type="text/javascript"> /*<![CDATA[*/ if (window.bbcdotcom && bbcdotcom.data && bbcdotcom.data.stats && bbcdotcom.data.stats === 1 && bbcdotcom.utils && window.location.pathname === '/' && window.bbccookies && bbccookies.readPolicy('performance') ) { var wwhpEdition = bbcdotcom.utils.getMetaPropertyContent('wwhp-edition'); var _sf_async_config={}; /** CONFIGURATION START **/ _sf_async_config.uid = 50924; _sf_async_config.domain = "bbc.co.uk"; _sf_async_config.title = "Homepage"+(wwhpEdition !== '' ? ' - '+wwhpEdition : ''); _sf_async_config.sections = "Homepage"+(wwhpEdition !== '' ? ', Homepage - '+wwhpEdition : ''); _sf_async_config.region = wwhpEdition; _sf_async_config.path = "/"+(wwhpEdition !== '' ? '?'+wwhpEdition : ''); /** CONFIGURATION END **/ (function(){ function loadChartbeat() { window._sf_endpt=(new Date()).getTime(); var e = document.createElement("script"); e.setAttribute("language", "javascript"); e.setAttribute("type", "text/javascript"); e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js'); document.body.appendChild(e); } var oldonload = window.onload; window.onload = (typeof window.onload != "function") ? loadChartbeat : function() { oldonload(); loadChartbeat(); }; })(); } /*]]>*/ </script></div><!-- BBCDOTCOM all code in page -->  <script type="text/javascript"> document.write('<' + 'script id="orb-js-script" data-assetpath="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/" src="http://static.bbci.co.uk/frameworks/barlesque/3.12.2/orb/4/script/orb.min.js"><' + '/script>'); </script>  <script type="text/javascript"> (function() {
+    'use strict';
+
+    var promoManager = {
+        url: '',
+        promoLoaded: false,
+                makeUrl: function (theme, site, win) {
+            var loc = win? win.location : window.location,
+                proto = loc.protocol,
+                host = loc.host,
+                url = proto + '//' + ((proto.match(/s:/i) && !host.match(/^www\.(int|test)\./i))? 'ssl.' : 'www.'),
+                themes = ['light', 'dark'];
+
+            if ( host.match(/^(?:www|ssl|m)\.(int|test|stage|live)\.bbc\./i) ) {
+                url += RegExp.$1 + '.';
+            }
+            else if ( host.match(/^pal\.sandbox\./i) ) {
+                url += 'test.';
+            }
+
+                        theme = themes[ +(theme === themes[0]) ];
+           
+           return url + 'bbc.co.uk/navpromo/card/' + site + '/' + theme;
+        },
+                init: function(node) {
+            var disabledByCookie = (document.cookie.indexOf('ckns_orb_nopromo=1') > -1),
+                that = this;
+            
+            if (window.promomanagerOverride) {
+                for (var p in promomanagerOverride) {
+                    that[p] = promomanagerOverride[p];
+                }
+            }
+                
+            if ( window.orb.fig('uk') && !disabledByCookie ) {
+                require(['orb/async/_footerpromo', 'istats-1'], function(promo, istats) {
+
+                    var virtualSite = istats.getSite() || 'default';
+                    that.url = (window.promomanagerOverride || that).makeUrl('light', virtualSite);
+
+                    if (that.url) { 
+                        promo.load(that.url, node, {
+                                                          onSuccess: function(e) {
+                                if(e.status === 'success') {
+                                    node.parentNode.className = node.parentNode.className + ' orb-footer-promo-loaded';
+                                    promoManager.promoLoaded = true;
+                                    promoManager.event('promo-loaded').fire(e);
+                                }
+                             },
+                             onError: function() {
+                                istats.log('error', 'orb-footer-promo-failed');
+                                bbccookies.set('ckns_orb_nopromo=1; expires=' + new Date(new Date().getTime() + 1000 * 60 * 10).toGMTString() + ';path=/;');
+                             }
+                        });   
+                    }
+                });
+            }
+        }
+    };
+    
+        
+    define('orb/promomanager', ['orb/lib/_event'], function (event) {
+        event.mixin(promoManager);
+        return promoManager;
+    });
+    
+    require(['orb/promomanager'], function (promoManager) {
+        promoManager.init(document.getElementById('navp-orb-footer-promo'));
+    })
+})();
+ </script>   
+        <script type="text/javascript" src="//mybbc.files.bbci.co.uk/s/notification-ui/1.4.2/js/notifications.js"></script>
+
+    <script type="text/javascript">
+
+        require.config({
+            paths: {
+                "mybbc/templates": '//mybbc.files.bbci.co.uk/s/notification-ui/1.4.2/templates',
+                "mybbc/notifications": '//mybbc.files.bbci.co.uk/s/notification-ui/1.4.2/js'
+            }
+        });
+
+        require(['mybbc/notifications/NotificationsMain', 'idcta/idcta-1'], function(NotificationsMain, idcta) {
+            if (window.orb.fig.geo.isUK()) {
+                NotificationsMain.run(idcta, '//mybbc.files.bbci.co.uk/s/notification-ui/1.4.2/');
+            }
+        });
+    </script>
+
+ <script type="text/javascript"> if (typeof require !== 'undefined') { require(['istats-1'], function(istats){ istats.track('external', { region: document.getElementsByTagName('body')[0] }); istats.track('download', { region: document.getElementsByTagName('body')[0] }); }); } </script>  <script type="text/javascript">define("orb/async/_suggestions",["orb/lib/_$","orb/api"],function(e,t){"use strict";function n(t,n){var s=document.createElement("div");return e.addClass(s,["orb-menu","orb-menu-suggest"]),e.setAttr(s,"role","listbox"),e.addEvent(s,"mousedown",function(e){for(var n=e.target;n&&"LI"!==(""+n.nodeName).toUpperCase();)n=n.parentNode;n&&t(n)}),e.addEvent(s,"mousemove",function(e){for(var t=e.target;t&&"LI"!==(""+t.nodeName).toUpperCase();)t=t.parentNode;t&&n(t)}),s}function s(){var t=document.createElement("span");return e.addClass(t,["orb-menu","orb-menu-suggest-status"]),e.setAttr(t,"role","status"),e.setAttr(t,"aria-live","polite"),e.setAttr(t,"lang","en-GB"),e.setAttr(t,"dir","ltr"),t}function o(e){var n;if("maxSuggestions"!==e)throw"ORB Suggestions: Unknown option name.";return n="undefined"!=typeof t.config("maxSuggestions")?+t.config("maxSuggestions"):g,n=Math.max(Math.min(n,10),0)}function r(e){for(var t="_SUGGEST",n=0,s=e.length;s>n;n++)t+=""+e.charCodeAt(n).toString(16);return t}var i={ESC:27,UP:38,DOWN:40},u="//search-suggest.api.bbci.co.uk/search-suggest/suggest?{{scope}}&format=blq-1&apikey=GqoNAMBBmPCZ0t8kXArU5jgojoZdEr10&q={{term}}",a=1,c=24,g=6,m=500,l="orb-menu-active",h="orb-menu-selected",d=function(o){var r=o.form.parentNode,u=this;this.searchInput=o,this.currentSuggestion=-1,this.changeThrottle=null,this.menuDom=n.call(this,function(e){u.setSuggestion(e),u.searchInput.form.submit()},function(t){var n=+e.getAttr(t,"data-item");u.setSelection(n)}),this.statusDom=s(),r.appendChild(this.menuDom),r.appendChild(this.statusDom),e.addEvent([o],"keyup",function(t){var n=+("number"==typeof t.which)?t.which:t.keyCode;n===i.UP?(e.removeClass(e("ul",u.menuDom),"orb-menu-mouse"),e.addClass(e("ul",u.menuDom),"orb-menu-keyboard"),u.moveSelection(-1)):n===i.DOWN?(e.removeClass(e("ul",u.menuDom),"orb-menu-mouse"),e.addClass(e("ul",u.menuDom),"orb-menu-keyboard"),u.moveSelection(1)):n===i.ESC?(u.setSelection(-1),u.hideSuggestions()):(e("#orb-search-suggid")[0].value="",u.fetchSuggestions())}),e.addEvent([o],"blur",function(e){clearTimeout(u.changeThrottle),u.hideSuggestions()}),t.layout(function(e){u.hideSuggestions()}),e.addEvent(this.menuDom,"mousemove",function(t){e.removeClass(e("ul",u.menuDom),"orb-menu-keyboard"),e.addClass(e("ul",u.menuDom),"orb-menu-mouse")})};return d.prototype.showSuggestions=function(t,n){var s,r,i="",u=n.length;if(u&&(r=o("maxSuggestions"),0!==r)){u=r?Math.min(r,u):u;for(var a=0;u>a;a++)s=e.str.htmlEntities(n[a].title),s=s.replace(new RegExp(e.str.htmlEntities(t),"i"),"<b>$&</b>"),s=e.str.trimHtml(s,c),i+='<li data-item="'+a+'" data-term="'+e.str.htmlEntities(n[a].title)+'" data-suggestion-id="'+e.str.htmlEntities(n[a].id)+'">'+s+"</li>";this.menuDom.innerHTML="<ul>"+i+"</ul>",u>0&&(this.statusDom.innerHTML=u+" result"+(1===u?" is ":"s are ")+"available, use up and down arrow keys to navigate."),e.addClass(this.menuDom,l)}},d.prototype.hideSuggestions=function(){e.removeClass(this.menuDom,l),this.menuDom.innerHTML="",this.setSelection(-1),this.statusDom.innerHTML=""},d.prototype.moveSelection=function(t){var n=e("li",this.menuDom),s=n[this.currentSuggestion];s&&(s.removeAttribute("aria-selected"),e.removeClass(s,h)),this.currentSuggestion+=t,this.currentSuggestion>=n.length?(this.currentSuggestion=-1,this.restoreSuggestion()):-1===this.currentSuggestion?this.restoreSuggestion():this.currentSuggestion<-1&&(this.currentSuggestion=n.length-1),s=n[this.currentSuggestion],s&&(s.setAttribute("aria-selected","true",0),e.addClass(s,h),this.setSuggestion(s))},d.prototype.setSelection=function(t){var n=e("li",this.menuDom),s=n[this.currentSuggestion];s&&(s.removeAttribute("aria-selected"),e.removeClass(s,h)),"number"==typeof t?this.currentSuggestion=t:this.currentSuggestion=-1},d.prototype.setSuggestion=function(t){if(arguments[0].nodeType){var n=e.getAttr(t,"data-suggestion-id");t=e.getAttr(t,"data-term"),e("#orb-search-suggid")[0].value=n}this.searchInput.value=t||""},d.prototype.restoreSuggestion=function(){this.searchInput.lastTerm&&(this.searchInput.value=this.searchInput.lastTerm),e("#orb-search-suggid")[0].value=""},d.prototype.fetchSuggestions=function(t){var n,s,o=this;t=t||this.searchInput.value||"",t&&t===this.searchInput.lastTerm||(this.searchInput.lastTerm=t,s=u.replace("{{term}}",encodeURIComponent(t)),n=(e("#orb-search-scope")[0]||{}).value||"all",s=s.replace("{{scope}}","scope="+encodeURIComponent(n)),clearTimeout(this.changeThrottle),t.length>=a?this.changeThrottle=setTimeout(function(){e.script.jsonp(s,function(e){o.showSuggestions(t,e[1])},{callbackName:r(t.toLowerCase())})},m):this.hideSuggestions())},d}),define("orb/features/_configuresearch",["orb/lib/_$","orb/features/masthead/_widgetmanager"],function(e,t){"use strict";var n=function(){var n=null;e.ready(function(){var s=e("#orb-search-q")[0],o=e(".orb-nav-search input, .orb-nav-search button");e.addEvent(o,"focus",function(e){clearTimeout(n),t.notify("widgetactivated",s)}),document.documentElement&&0===(""+document.documentElement.lang).indexOf("en")&&(e("#orb-search-suggid")[0].value="",e.addEvent([s],"keydown",function(t){"undefined"==typeof s.suggestions&&(s.suggestions="initialising",e.setAttr(s,"autocomplete","off"),require(["orb/async/_suggestions"],function(e){s.suggestions=new e(s)}))})),e.addEvent(o,"blur",function(e){n=setTimeout(function(){t.notify("widgetdeactivated",s)},220)})})};return n}),define("orb/features/_searchhint",["orb/lib/_$"],function(e){"use strict";return function(){var t="placeholder"in document.createElement("input");if(!t){var n=e("#orb-search-q")[0],s=e("#orb-search-form")[0],o=e.getAttr(n,"placeholder");e.ready(function(){e.addEvent(n,"focusout",function(e){""===n.value&&(n.value=o)}),e.addEvent(n,"focusin",function(e){n.value===o&&(n.value="")}),e.addEvent(s,"submit",function(e){n.value===o&&(n.value="")}),n.value||document.activeElement===n||(n.value=o)})}}}),require(["orb/features/_configuresearch","orb/features/_searchhint"],function(e,t){e(),t()});</script>              <script type="text/javascript">require(["istats-1","orb/cookies"],function(i,o){o.isAllowed("s1")&&i.invoke()});</script>            
+            <script type="text/javascript" src="http://static.bbci.co.uk/food/1.37.115/js/gloader.0.1.6.js"></script>
+            
+            <script type="text/javascript">
+    //<![CDATA[
+            
+            
+            var PAL_IMAGECHEF_HOST = 'http://ichef.bbci.co.uk';
+            var PAL_STATIC_HOST = 'http://static.bbci.co.uk';
+
+            var STATIC_ASSETS_VERSION = '1.37.115';
+            
+            try{
+                gloader.load(
+                    ['glow', '1', 'glow.anim', 'glow.dom', 'glow.events', 'glow.forms', 'glow.widgets', 'glow.embed', 'glow.widgets.Carousel', 'glow.widgets.InfoPanel', 'glow.widgets.AutoSuggest']
+                );
+                
+                
+            } catch(e) {
+            
+            }
+
+                //]]>
+</script>
+<script type="text/javascript" src="http://static.bbci.co.uk/food/1.37.115/js/main.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+            	glow.ready(function(){
+            		glow.dom.get('#promo-list').html('<li class="promo-item promo custom" id="promo-0"><img src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/all-day_breakfast_12416_16x9.jpg" width="608" height="344" alt="image" style="left:0px;" class="350 original" data-offset="350" /><div class="opacity"></div><a href="http://www.bbc.co.uk/food/collections/5_fantastic_frittatas" class="overlay-link"><span class="title-container"><span class="main-title">5 fantastic frittatas</span></span></a><a href="#" class="slither-link"><span class="slither"><span class="main-title small">5 fantastic frittatas</span><span class="arrow"></span></span></a><div class="info"><p class="intro">Frittatas make for a fabulously filling breakfast, but are also perfect for a quick lunch or speedy supper.</p><p class="secondary-link"><a href="http://www.bbc.co.uk/food/collections/12_eggcellent_recipes">Eggcellent recipes</a></p></div></li><li class="promo-item promo custom" id="promo-1"><img src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/fruit_tarts_45402_16x9.jpg" width="608" height="344" alt="image" style="left:-295px;" class="350 original" data-offset="350" /><div class="opacity"></div><a href="http://www.bbc.co.uk/guides/zqyrhv4" class="overlay-link"><span class="title-container"><span class="main-title">Bake off pro?</span></span></a><a href="#" class="slither-link"><span class="slither"><span class="main-title small">Bake off pro?</span><span class="arrow"></span></span></a><div class="info"><p class="intro">Do you have the knowledge to rise above home baking and cut it in a professional pastry kitchen? Take our test to see if you could be the Creme de la Creme.</p><p class="secondary-link"><a href="http://www.bbc.co.uk/food/collections/ptisserie_made_simple">PÃ¢tisserie made simple</a></p></div></li><li class="promo-item promo custom" id="promo-2"><img src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/lemon_pavlova_50340_16x9.jpg" width="608" height="344" alt="image" style="left:-295px;" class="350 original" data-offset="350" /><div class="opacity"></div><a href="http://www.bbc.co.uk/food/collections/8_lovely_lemon_puds" class="overlay-link"><span class="title-container"><span class="main-title">8 lovely lemon puds</span></span></a><a href="#" class="slither-link"><span class="slither"><span class="main-title small">8 lovely lemon puds</span><span class="arrow"></span></span></a><div class="info"><p class="intro">Bring some freshness to your dessert with a squeeze of lemon. Try a perfect pavlova, light mousse or refreshing ice-cream.</p><p class="secondary-link"><a href="http://www.bbc.co.uk/guides/zy88wmn">Are you making the most of British fruit?</a></p></div></li><li class="promo-item promo custom last" id="promo-3"><img src="http://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/crab_linguine_22025_16x9.jpg" width="608" height="344" alt="image" style="left:-195px;" class="250 original" data-offset="250" /><div class="opacity"></div><a href="http://www.bbc.co.uk/food/collections/crack_into_crab" class="overlay-link"><span class="title-container"><span class="main-title">Crack into crab</span></span></a><a href="#" class="slither-link"><span class="slither"><span class="main-title small">Crack into crab</span><span class="arrow"></span></span></a><div class="info"><p class="intro">Make the most of crab with our 5 cracking recipes. Try it with lovely linguine, transform it into crab cakes or spice it up with chilli.</p><p class="secondary-link"><a href="http://www.bbc.co.uk/food/collections/easy_fish_suppers">Easy fish suppers</a></p></div></li>');
+            		
+            	                    }); // end glow.ready
+                    //]]>
+</script>
+<script type="text/javascript" src="http://static.bbci.co.uk/food/1.37.115/js/homepage/homepage-main.js"></script>
+<script type="text/javascript" src="http://static.bbci.co.uk/food/1.37.115/js/widgets/quick-recipe-finder.js"></script>
+<script type="text/javascript" src="http://static.bbci.co.uk/food/1.37.115/js/homepage/embeddedquestions.js"></script>                                   <script type="text/javascript">
+  
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+        }
+        return "none";
+    } 
+
+var _sf_async_config={};
+/** CONFIGURATION START **/
+_sf_async_config.uid = 50924;
+ _sf_async_config.domain = "bbc.co.uk"
+_sf_async_config.useCanonical = true;
+_sf_async_config.sections = 'kandlfood';
+_sf_async_config.authors = '';
+/** CONFIGURATION END **/
+(function(){
+  function loadChartbeat() {
+    var ckns = getCookie('ckns_policy');
+   
+    if (ckns == '000' || ckns == '010'  ||  ckns == '110' || ckns == "none") {
+        _sf_async_config.noCookies = true; 
+    } else {
+        window._sf_endpt = (new Date()).getTime(); 
+        var e = document.createElement("script");
+        e.setAttribute("language", "javascript");
+        e.setAttribute("type", "text/javascript");
+        e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+        document.body.appendChild(e);
+    }
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != "function") ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+</script>
+    </body>
+</html>

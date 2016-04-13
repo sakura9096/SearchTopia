@@ -1,0 +1,1370 @@
+http://money.cnn.com/media/
+<!DOCTYPE html> <html> <head> <title>Media - Stock Market and Investment News - CNNMoney</title> <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"> <meta name="viewport" content="width=1140"> <link rel="canonical" href="http://money.cnn.com/"> <meta name="Description" content="Trends, personalities, and companies across the media spectrum, from news to entertainment. With Brian Stelter, the senior media correspondent for CNN Worldwide and the host of âReliable Sources,â the Sunday morning media program on CNN/U.S.">
+<meta name="Keywords" content="Brian Stelter, Reliable Sources, media, ABC, CNN, CBS, NBC, New York Times, Fox, Vox, Amazon, TV, entertainment, newspapers, magazine, Netflix, Hulu, Verizon, Comcast, Time Warner, Cable, Newsweek, Bloomberg, DirecTV, News Corp., Aereo, Disney, ESPN, YouTube, Google, Dish Network"> <meta name="viewport" content="width=device-width"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <link rel="stylesheet" type="text/css" href="http://z.cdn.turner.com/money/tmpl_asset/static/style/1625/css/cnnm-ocean.section-min.css" /> <script type="text/javascript" src="http://z.cdn.turner.com/money/tmpl_asset/static/script/1083/js/cnnmoney.main-min.js"></script> <script type="text/javascript" src="http://z.cdn.turner.com/money/.e/script/jquery/1.11.1/jquery.min.js"></script> <script type="text/javascript" src="http://z.cdn.turner.com/money/.e/script/jquery.migrate/jquery.migrate.min.js"></script> <script language="JavaScript" type="text/javascript">var cnnSiteWideCurrDate = new Date(2014, 11, 4);</script> <!--[if lt IE 9]>
+<script src = "http://z.cdn.turner.com/money/.element/script/html5shiv/3.7.0/html5shiv.js"> </script>
+<![endif]-->
+
+<!--// Optimizely script include //-->
+<script src = "//cdn.optimizely.com/js/59492907.js"> </script>
+
+<!--// Outbrain VR: generic //-->
+<script type= "text/javascript">
+var _vrq_automate = false;
+/* Home and international pages */
+var _vrq_pathname = location.pathname.toLowerCase();
+if (location.pathname == '/' || location.pathname == '/index.html' || (_vrq_pathname.match('news/world') != null) || (_vrq_pathname.match('/international') != null)) {
+    _vrq_automate = true;
+}
+var _vrq = _vrq || [];
+_vrq.push(['id', 454]);
+_vrq.push(['automate', _vrq_automate]);
+_vrq.push(['track',
+    function() {}
+]);
+(function(d, a) {
+    var s = d.createElement(a),
+        x = d.getElementsByTagName(a)[0];
+    s.async = true;
+    s.src = 'http://a.visualrevenue.com/vrs.js';
+    x.parentNode.insertBefore(s, x);
+})(document, 'script'); 
+
+/** HOT FIX HACK **/
+_vrtrack = function (Object) {};
+
+</script> 
+
+
+
+<style>
+.cmmtcount {display: none;}
+</style>
+
+<!--// MSIB SDK for login //-->
+<script type = "text/javascript">
+if (window.location.hostname.match(/^money.cnn.com$/i)) {
+    document.write(' <scr' + 'ipt src="https://s.cdn.turner.com/money/.element/script/msib/msib_sdk.min.js"></scr' + 'ipt>');
+} else {
+    /* document.write(' <scr' + 'ipt src="http://aud-qai.cnn.com/services/money/sdk/msib_sdk.js"></scr' + 'ipt>'); */
+    document.write(' <scr' + 'ipt src="https://s.cdn.turner.com/money/.element/script/msib/msib_sdk.min.js"></scr' + 'ipt>');
+} 
+</script>
+
+<!-- Facebook Custom Audience Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '687168111412131');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=687168111412131&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Custom Audience Pixel Code -->
+
+
+<!-- MNYGEN-6523: mPulse -->
+<script>
+(function(){
+  if (window.BOOMR && window.BOOMR.version) { return; }
+  var dom,doc,where,iframe = document.createElement("iframe"),win = window;
+
+  function boomerangSaveLoadTime(e) {
+    win.BOOMR_onload=(e && e.timeStamp) || new Date().getTime();
+  }
+  if (win.addEventListener) {
+    win.addEventListener("load", boomerangSaveLoadTime, false);
+  } else if (win.attachEvent) {
+    win.attachEvent("onload", boomerangSaveLoadTime);
+  }
+
+  iframe.src = "javascript:void(0)";
+  iframe.title = ""; iframe.role = "presentation";
+  (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+  where = document.getElementsByTagName("script")[0];
+  where.parentNode.insertBefore(iframe, where);
+
+  try {
+    doc = iframe.contentWindow.document;
+  } catch(e) {
+    dom = document.domain;
+    iframe.src="javascript:var d=document.open();d.domain='"+dom+"';void(0);";
+    doc = iframe.contentWindow.document;
+  }
+  doc.open()._l = function() {
+    var js = this.createElement("script");
+    if (dom) { this.domain = dom; }
+    js.id = "boomr-if-as";
+    js.src = "//c.go-mpulse.net/boomerang/" +
+    "VQUZM-ZM9PY-YXUX2-SMCUL-QHMKQ";
+    BOOMR_lstart=new Date().getTime();
+    this.body.appendChild(js);
+  };
+  doc.write('<body onload="document._l();">');
+  doc.close();
+})();
+</script>
+<!-- /MNYGEN-6523: mPulse -->
+
+ <script type="text/javascript"> var cnnActivePlayer = null; var cnnPlayers = []; var vidConfig = []; </script> <link rel="alternate" type="application/rss+xml" title="CNNMoney.com - Media [RSS]" href="http://rss.cnn.com/rss/money_media.rss">
+<link rel="alternate" type="application/rss+xml" title="CNNMoney.com - Top Stories [RSS]" href="http://rss.cnn.com/rss/money_topstories.rss">
+ 
+<script type="text/javascript">
+var _sf_startpt=(new Date()).getTime();
+document.adoffset = 0;
+</script>
+<script type="text/javascript" src="http://i.cdn.turner.com/ads/adfuel/ais/cnnmoney-ais.js"></script>
+<script type="text/javascript" src="http://i.cdn.turner.com/ads/adfuel/adfuel-1.1.0.js"></script>
+<script>
+var CNNMONEY = window.CNNMONEY || {};
+CNNMONEY.adTargets = {}; 
+    
+if(document.referrer.match("edition|us|www.cnn.com"))
+{
+	CNNMONEY.adTargets.refdom = "cnn";
+}
+else if(document.referrer.match("money.cnn.com"))
+{
+	CNNMONEY.adTargets.refdom = "money"; 
+}
+else if(document.referrer.match("facebook.com"))
+{
+	CNNMONEY.adTargets.refdom = "facebook"; 
+}
+else if(document.referrer.match("twitter.com") || document.referrer.match("/t.co/"))
+{
+	CNNMONEY.adTargets.refdom = "twitter"; 
+}
+else if(document.referrer.match("google.com"))
+{
+	CNNMONEY.adTargets.refdom = "google"; 
+}  
+else
+{
+	CNNMONEY.adTargets.refdom = "other"; 
+}      
+</script>
+ <script type="text/javascript"> CNNMONEY.adTargets.edition = 'dom'; </script> <script src="http://i.cdn.turner.com/ads/cnn_money/cnnmoney_media.js"></script> <meta pd="04/11/2016 16:52:21 -0400"> </head> <body class="cnn-section media"> <div class="moneyMediaNav"> <!--script language="JavaScript" src="http://i.cdn.turner.com/money/.element/ssi/javascript/1.1/cnnhat_section.js"></script-->
+
+<style>
+.tos-privacy .container {
+	width: 1140px;
+}
+</style>
+<div class="alert tos-privacy" id="js-TosPrivacy">
+    <section class="container">
+    	<h2 class="tos-header">Our Terms of Service and Privacy Policy have changed.</h2>
+    	<p class="tos-copy">By continuing to use this site, you are agreeing to the new <a class="tos-link" id="js-tosPP" href="/services/privacy/">Privacy Policy</a> and <a class="tos-link" id="js-tosTerms" href="/services/terms.html">Terms of Service</a>.</p>
+    		<a id="js-tosClose" class="button close"><i class="icon icon--close"></i></a>
+    </section>
+</div>
+
+<div class="clearfix"></div>
+
+<header class="main-banner js-banner">
+
+  <div class="container">
+  
+   <a href="http://cnn.com/" class="main-banner-logo">
+        <img src="http://i.cdn.turner.com/money/.element/img/8.0/logos/cnn-logo.png" width="82" height="82" class="cnn-logo" />
+   </a>
+   <a href="/" class="main-banner-logo">
+        <img src="http://i.cdn.turner.com/money/.element/img/8.0/logos/money-logo.png" width="140" height="82" class="money-logo" />
+   </a> 
+
+    <span class="editionizer js-editionizer">
+         <a class="editionizer-display"><span class="js-editionDisplay">U.S.</span>
+                <span class="icon-display js-editionIcon">+</span>
+         </a>
+         <a class="js-editionOption editionizer-option" id="edition">International</a>
+    </span>
+
+    
+    <nav class="main-nav js-nav" role="navigation">
+      <ul class="main-nav-ul">
+      	<li class="main-nav-li" id="main-nav--business">
+            <a class="main-nav-a" id="business-link" href="/news/">Business</a>
+            
+
+
+
+
+	
+    <div class="flyout-nav business">
+        <div class="row flyout-business">
+		    <div class="column" data-vr-zone="Nav-business col1">
+		        <article class="summary hero" data-vr-contentbox="">
+		            <a class="flyout-nav-link" href="/2016/04/11/luxury/tesla-model-x-recall/index.html">
+		                <figure class="summary-image">
+
+
+
+
+		
+			<img src="http://i2.cdn.turner.com/money/dam/assets/160405121551-model-x-handout-336x188.jpg" width="298" height="168" alt="model x handout" border="0"
+			
+			
+			 />
+
+	
+
+		                </figure>
+		                <figcaption class="nav-summary-hed">
+		                Tesla recalls Model X for seat problem
+		                </figcaption>
+		            </a>
+		        </article>
+		    </div>
+	            <div class="column">
+	<ul class="flyout-nav-list" data-vr-zone="Nav-business col2">
+	    <li data-vr-contentbox=""><a href="/news/world/" class="flyout-nav-link">World</a></li>
+	    <!-- <li data-vr-contentbox=""><a href="/news/economy/davos/" class="flyout-nav-link">Davos</a></li> -->
+	    <li data-vr-contentbox=""><a href="/news/companies/access/" class="flyout-nav-link">Access</a></li>
+	    <li data-vr-contentbox=""><a href="/news/companies/" class="flyout-nav-link">Companies</a></li>
+	    <li data-vr-contentbox=""><a href="/autos/" class="flyout-nav-link">Car News</a></li>
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-business col3">
+		
+	    <li data-vr-contentbox=""><a href="/news/americas-choice-2016/" class="flyout-nav-link">America's Choice 2016</a></li>
+	    <li data-vr-contentbox=""><a href="/news/growing-india/" class="flyout-nav-link">Growing India</a></li>
+	    <!-- <li data-vr-contentbox=""><a href="/news/super-bowl/" class="flyout-nav-link">Super Bowl</a></li> -->
+	    <li data-vr-contentbox=""><a href="/news/companies/who-is/" class="flyout-nav-link">Who is..?</a></li>
+	    <li data-vr-contentbox=""><a href="/news/thefeed/" class="flyout-nav-link">The Feed</a></li>	    
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-business col4">
+		<li data-vr-contentbox=""><a href="/news/cnnmoney-investigates/" class="flyout-nav-link">CNNMoney Investigates</a></li>
+        <li data-vr-contentbox=""><a href="/news/economy/election-2016/" class="flyout-nav-link">Your Money, Your Vote</a></li>
+		<li data-vr-contentbox=""><a href="/news/american-opportunity/" class="flyout-nav-link">American Opportunity</a></li>
+		<!--<li data-vr-contentbox=""><a href="/news/companies/leading-women/" class="flyout-nav-link">Leading Women</a></li>-->
+		<!--<li data-vr-contentbox=""><a href="/news/innovators/" class="flyout-nav-link">Innovators</a></li>-->
+		<li data-vr-contentbox=""><a href="/news/companies/5-stunning-stats/" class="flyout-nav-link">5 Stunning Stats</a></li>
+	    <li data-vr-contentbox=""><a href="/interactive/" class="flyout-nav-link">Interactives</a></li>
+	</ul>
+</div>
+
+        </div>
+    </div>
+
+  
+        </li>
+        <li class="main-nav-li" id="main-nav--markets">
+            <a class="main-nav-a" id="markets-link" href="/markets/">Markets</a>
+            
+
+
+
+
+	
+    <div class="flyout-nav markets">
+        <div class="row flyout-markets">
+		    <div class="column" data-vr-zone="Nav-markets col1">
+		        <article class="summary hero" data-vr-contentbox="">
+		            <a class="flyout-nav-link" href="/2016/04/11/investing/how-to-pick-financial-adviser/index.html">
+		                <figure class="summary-image">
+
+
+
+
+		
+			<img src="http://i2.cdn.turner.com/money/dam/assets/160328183300-interview-questions-instory-336x188.jpg" width="298" height="168" alt="interview questions instory" border="0"
+			
+			
+			 />
+
+	
+
+		                </figure>
+		                <figcaption class="nav-summary-hed">
+		                The 1st question to ask your financial adviser
+		                </figcaption>
+		            </a>
+		        </article>
+		    </div>
+	            <div class="column">
+	<ul class="flyout-nav-list" data-vr-zone="Nav-markets col2">
+	    <li data-vr-contentbox=""><a href="/investing/" class="flyout-nav-link">Investing</a></li>
+		<li data-vr-contentbox=""><a href="/news/economy/" class="flyout-nav-link">Economy</a></li>
+		<li data-vr-contentbox=""><a href="/investing/thebuzz/" class="flyout-nav-link">Buzz</a></li>
+	    <li data-vr-contentbox=""><a href="/news/specials/fed/" class="flyout-nav-link">Fed Focus</a></li>
+	    <!--<li data-vr-contentbox=""><a href="/data/markets/trade/" class="flyout-nav-link">Trade</a></li>-->
+	    <!--<li data-vr-contentbox=""><a href="/data/markets/profit/" class="flyout-nav-link">Profit</a></li>-->
+	    <li data-vr-contentbox=""><a href="/data/etf/" class="flyout-nav-link">ETF Center</a></li>
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-markets col3">
+	    <li data-vr-contentbox=""><a href="/data/premarket/" class="flyout-nav-link">Premarkets</a></li>
+	    <li data-vr-contentbox=""><a href="/data/hotstocks/" class="flyout-nav-link">Market Movers</a></li>
+	    <li data-vr-contentbox=""><a href="/data/dow30/" class="flyout-nav-link">Dow 30</a></li>
+	    <li data-vr-contentbox=""><a href="/data/afterhours/" class="flyout-nav-link">After-Hours</a></li>
+	    <li data-vr-contentbox=""><a href="/data/world_markets/americas/" class="flyout-nav-link">World Markets</a></li>
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-markets col4">
+		<li data-vr-contentbox=""><a href="/news/economy/americas-debt-and-the-economy/" class="flyout-nav-link">Americaâs Debt & the Economy</a></li>
+	    <li data-vr-contentbox=""><a href="/data/markets/investing-guide/" class="flyout-nav-link">Investing Guide</a></li>
+	    <li data-vr-contentbox=""><a href="/data/markets/the-open" class="flyout-nav-link">The Open</a></li>
+	    <li data-vr-contentbox=""><a href="/data/markets/stockswatch/" class="flyout-nav-link">Stockswatch</a></li>
+	    <!--<li data-vr-contentbox=""><a href="/technology/tech30" class="flyout-nav-link">Tech30</a></li>-->
+	    <li data-vr-contentbox=""><a href="/data/fear-and-greed" class="flyout-nav-link">Fear &amp; Greed</a></li>
+	    <!---<li data-vr-contentbox=""><a href="/news/specials/jobs" class="flyout-nav-link">Jobs</a></li>-->
+	</ul>
+</div>
+
+        </div>
+    </div>
+
+  
+        </li>
+        <li class="main-nav-li" id="main-nav--tech">
+            <a class="main-nav-a" href="/technology/">Tech</a>
+            
+
+
+
+
+	
+    <div class="flyout-nav tech">
+        <div class="row flyout-tech">
+		    <div class="column" data-vr-zone="Nav-tech col1">
+		        <article class="summary hero" data-vr-contentbox="">
+		            <a class="flyout-nav-link" href="/2016/04/11/technology/amazon-trump/index.html">
+		                <figure class="summary-image">
+
+
+
+
+		
+			<img src="http://i2.cdn.turner.com/money/dam/assets/150817112659-amazon-jeff-bezos-336x188.jpg" width="298" height="168" alt="Amazon Jeff Bezos" border="0"
+			
+			
+			 />
+
+	
+
+		                </figure>
+		                <figcaption class="nav-summary-hed">
+		                Amazon customers tell Jeff Bezos to 'dump Trump'
+		                </figcaption>
+		            </a>
+		        </article>
+		    </div>
+	            <div class="column">
+	<ul class="flyout-nav-list" data-vr-zone="Nav-tech col2">
+	    <li data-vr-contentbox=""><a href="/technology/innovate/" class="flyout-nav-link">Innovate</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/gadget/" class="flyout-nav-link">Gadget</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/connect/" class="flyout-nav-link">Connect</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/cybercrime_economy/" class="flyout-nav-link">Cyber-Safe</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/ces/" class="flyout-nav-link">CES</a></li>
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-tech col3">
+		<li data-vr-contentbox=""><a href="/technology/powering-your-world/" class="flyout-nav-link">Powering Your World</a></li>
+		<li data-vr-contentbox=""><a href="/technology/2020-visionaries/" class="flyout-nav-link">2020 Visionaries</a></li>
+		<li data-vr-contentbox=""><a href="/technology/elonmusk/" class="flyout-nav-link">Elon. Evolution</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/best-in-tech/" class="flyout-nav-link">Best In Tech</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/most-innovative-cities/" class="flyout-nav-link">Innovative Cities</a></li>
+	    
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-tech col4">
+	    <!--<li data-vr-contentbox=""><a href="/technology/evolution/" class="flyout-nav-link">Evolution</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/love-inc/" class="flyout-nav-link">Love Inc.</a></li>-->
+	    <li data-vr-contentbox=""><a href="/technology/upstarts/" class="flyout-nav-link">Upstarts</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/superhero-hackers/" class="flyout-nav-link">Superhero Hackers</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/15-questions/" class="flyout-nav-link">15 Questions With</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/love-inc/" class="flyout-nav-link">Love Inc.</a></li>
+	    <li data-vr-contentbox=""><a href="/technology/sex-drugs-silicon-valley/" class="flyout-nav-link">Sex, Drugs & Silicon Valley</a></li>
+	</ul>
+</div>
+
+        </div>
+    </div>
+
+  
+        </li>
+         <li class="main-nav-li" id="main-nav--media">
+            <a class="main-nav-a" href="/media/">Media</a>
+        </li>
+        <li class="main-nav-li" id="main-nav--personal_finance">
+            <a class="main-nav-a" href="/pf/">Personal Finance</a>
+            
+
+
+
+
+	
+    <div class="flyout-nav personal_finance">
+        <div class="row flyout-personal_finance">
+		    <div class="column" data-vr-zone="Nav-personal_finance col1">
+		        <article class="summary hero" data-vr-contentbox="">
+		            <a class="flyout-nav-link" href="/2016/04/11/pf/john-oliver-credit-reports/index.html">
+		                <figure class="summary-image">
+
+
+
+
+		
+			<img src="http://i2.cdn.turner.com/money/dam/assets/160411134924-john-oliver-last-week-tonight-336x188.jpg" width="298" height="168" alt="john oliver last week tonight" border="0"
+			
+			
+			 />
+
+	
+
+		                </figure>
+		                <figcaption class="nav-summary-hed">
+		                John Oliver rips into the credit reporting industry
+		                </figcaption>
+		            </a>
+		        </article>
+		    </div>
+	            <div class="column">
+	<ul class="flyout-nav-list" data-vr-zone="Nav-personal_finance col2">
+	    <li data-vr-contentbox=""><a href="/pf/save/" class="flyout-nav-link">Save</a></li>
+	    <li data-vr-contentbox=""><a href="/pf/spend/" class="flyout-nav-link">Spend</a></li>
+	    <li data-vr-contentbox=""><a href="/retirement/" class="flyout-nav-link">Ahead</a></li>
+	    <!--<li data-vr-contentbox=""><a href="/luxury/drive" class="flyout-nav-link">Drive</a></li>-->
+	    <li data-vr-contentbox=""><a href="/autos/wheels/" class="flyout-nav-link">Wheels</a></li>
+	    <li data-vr-contentbox=""><a href="/real_estate/" class="flyout-nav-link">Real Estate</a></li>
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-personal_finance col3">
+	    <li data-vr-contentbox=""><a href="/pf/workplace-and-careers/" class="flyout-nav-link">Careers</a></li>
+<!--//
+	    <li data-vr-contentbox=""><a href="/luxury/away/index.html" class="flyout-nav-link">Away</a></li>
+//-->
+	   <!-- <li data-vr-contentbox=""><a href="/real_estate/real-estate-special-report/" class="flyout-nav-link">Real Estate Special</a></li> -->
+	    <li data-vr-contentbox=""><a href="/pf/millennials-and-their-money/" class="flyout-nav-link">Millennials & Money</a></li>
+	    <li data-vr-contentbox=""><a href="/pf/your-money/" class="flyout-nav-link">Your Money</a></li>
+	    <li data-vr-contentbox=""><a href="/real_estate/homes/" class="flyout-nav-link">Homes</a></li>
+	    <li data-vr-contentbox=""><a href="/tools/" class="flyout-nav-link">Calculators</a></li>
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-personal_finance col4">
+	    <li data-vr-contentbox=""><a href="/pf/money-moves/" class="flyout-nav-link">Money Moves</a></li>
+	    <li data-vr-contentbox=""><a href="/pf/24-hours-with/" class="flyout-nav-link">24 Hours With</a></li>
+	    <!--<li data-vr-contentbox=""><a href="/magazines/moneymag/money101/" class="flyout-nav-link">Money Essentials</a></li>-->
+	    <li data-vr-contentbox=""><a href="/pf/money-essentials/" class="flyout-nav-link">Money Essentials</a></li>
+	    <!--<li data-vr-contentbox=""><a href="/pf/retire-your-way/" class="flyout-nav-link">Retire Your Way</a></li>-->
+	    <li data-vr-contentbox=""><a href="http://markets.money.cnn.com/secure/watchlist/" class="flyout-nav-link">My Watch List</a></li>
+	</ul>
+</div>
+
+        </div>
+    </div>
+
+  
+        </li>
+        <li class="main-nav-li" id="main-nav--small_business">
+            <a class="main-nav-a" href="/smallbusiness/">Small Biz</a>
+            
+
+
+
+
+	
+    <div class="flyout-nav small_business">
+        <div class="row flyout-small_business">
+		    <div class="column" data-vr-zone="Nav-small_business col1">
+		        <article class="summary hero" data-vr-contentbox="">
+		            <a class="flyout-nav-link" href="/2016/04/11/smallbusiness/savile-row-female-tailor-store-london/index.html">
+		                <figure class="summary-image">
+
+
+
+
+		
+			<img src="http://i2.cdn.turner.com/money/dam/assets/160411110216-kathryn-sargent-savile-row-tailor-london-336x188.jpg" width="298" height="168" alt="kathryn sargent savile row tailor london" border="0"
+			
+			
+			 />
+
+	
+
+		                </figure>
+		                <figcaption class="nav-summary-hed">
+		                Meet the first woman tailor to open a shop on Savile Row
+		                </figcaption>
+		            </a>
+		        </article>
+		    </div>
+	            <div class="column">
+	<ul class="flyout-nav-list" data-vr-zone="Nav-small_business col2">
+	    <li data-vr-contentbox=""><a href="/smallbusiness/startups/" class="flyout-nav-link">Startups</a></li>
+	    <li data-vr-contentbox=""><a href="/smallbusiness/empire/" class="flyout-nav-link">Empire</a></li>	    
+	    <li data-vr-contentbox=""><a href="/smallbusiness/women-entrepreneurs/" class="flyout-nav-link">Women Entrepreneurs</a></li>
+	    <!--<li data-vr-contentbox=""><a href="/smallbusiness/start-small-think-big" class="flyout-nav-link">Start Small, Think Big</a></li>-->
+	</ul>
+</div>
+
+        </div>
+    </div>
+
+  
+        </li>
+        <li class="main-nav-li" id="main-nav--luxury">
+            <a class="main-nav-a" href="/luxury/">Luxury</a>
+            
+
+
+
+
+	
+    <div class="flyout-nav luxury">
+        <div class="row flyout-luxury">
+		    <div class="column" data-vr-zone="Nav-luxury col1">
+		        <article class="summary hero" data-vr-contentbox="">
+		            <a class="flyout-nav-link" href="/2016/04/11/smallbusiness/savile-row-female-tailor-store-london/index.html">
+		                <figure class="summary-image">
+
+
+
+
+		
+			<img src="http://i2.cdn.turner.com/money/dam/assets/160411110216-kathryn-sargent-savile-row-tailor-london-336x188.jpg" width="298" height="168" alt="kathryn sargent savile row tailor london" border="0"
+			
+			
+			 />
+
+	
+
+		                </figure>
+		                <figcaption class="nav-summary-hed">
+		                Meet the first woman tailor to open a shop on Savile Row
+		                </figcaption>
+		            </a>
+		        </article>
+		    </div>
+	            <div class="column">
+	<ul class="flyout-nav-list" data-vr-zone="Nav-luxury col2">
+		<li data-vr-contentbox=""><a href="http://cnn.com/style/" class="flyout-nav-link">Style</a></li>
+	    <li data-vr-contentbox=""><a href="/luxury/away/index.html" class="flyout-nav-link">Away</a></li>
+	    <!--<li data-vr-contentbox=""><a href="/luxury/voyage/" class="flyout-nav-link">Voyage</a></li>-->
+	    <li data-vr-contentbox=""><a href="/luxury/rare" class="flyout-nav-link">Rare</a></li>
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-luxury col3">
+		<li data-vr-contentbox=""><a href="/luxury/drive" class="flyout-nav-link">Drive</a></li>
+		<li data-vr-contentbox=""><a href="/pf/wealth" class="flyout-nav-link">Wealth</a></li>
+	    <li data-vr-contentbox=""><a href="/interactive/luxury/rich-quiz/" class="flyout-nav-link">Rich Quiz</a></li>
+	    <!--<li data-vr-contentbox=""><a href="/interactive/luxury/expensive-real-estate/" class="flyout-nav-link">$25 Million Homes</a></li>-->
+	</ul>
+	<ul class="flyout-nav-list" data-vr-zone="Nav-luxury col4">
+		<li data-vr-contentbox=""><a href="/luxury/the-collector/" class="flyout-nav-link">The Collector</a></li>
+		<li data-vr-contentbox=""><a href="/luxury/a-gentlemans-guide/" class="flyout-nav-link">A Gentleman's Guide</a></li>
+	    <li data-vr-contentbox=""><a href="/calculator/pf/millionaire/index.html" class="flyout-nav-link">Millionaire Calculator</a></li>
+	</ul>
+</div>
+
+        </div>
+    </div>
+
+  
+        </li>
+      </ul>
+    </nav>
+    <div class="main-banner-right">
+
+        <div class="main-banner-eyebrow">
+          <span class="login">
+            <span class="username js-username-display" style="display: none;"></span>
+            <span class="status js-logged-in-display">
+              <a href="javascript:void(0)" class="cnnLogin">Log In</a>
+            </span>
+            <span class="status js-logged-out-display" style="display: none;">
+              <a href="javascript:void(0)" class="cnnLogout">Log Out</a>
+            </span>
+          </span>
+        </div>
+        
+    <form role="search" class="search" method="get" action="http://searchapp.cnn.com/money-search/validate.jsp" name="quoteForm">
+		<input type="text" id="symb" title="Search" name="symbols" autocomplete="off" class="blur search--input" placeholder="stock tickers">
+		<span id="search_button" class="search-icon" onclick="document.quoteForm.submit();"><img src="http://i.cdn.turner.com/money/.element/img/8.0/misc/icon-search.png" class="search-icon-img" width="24px" height="25px" /></span>
+    </form>
+    
+    <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+ </div> <main role="main"> <section class="container" id="toplead-zone"> <div class="row row-toplead js-toplead single-toplead "> <div class="column"> <a class="toplead js-toplead" href="/2016/04/11/media/game-of-thrones-season-six-trailer-2/index.html"> <figure> <img src="http://i2.cdn.turner.com/money/dam/assets/160411124508-sansa-stark-game-of-thrones-1100x619.png" width="1100" height="619" alt="'Game of Thrones' trailer sets up war with the White Walkers" border="0" class="toplead-img" /> <figcaption> <span class="cnnbyline"> <img src="http://i.cdn.turner.com/money/.element/img/8.0/authors/byline-icon/frank-pallotta.png" class="byline-icon" width="55" height="55" /> <span class="byline">By Frank Pallotta </span> </span> <h1 class="summary-hed">'Game of Thrones' trailer sets up war with the White Walkers</h1> </figcaption> </figure> </a> </div><!-- /column --> </div><!-- /row --> </section> <section class="container" id="stack-zone"> <div class="stack-zone-header"> <div class="cnnmoney-logo"> <a href="http://cnn.com/" class="cnnmoney-logo--cnn"> <img src="http://i.cdn.turner.com/money/.element/img/8.0/logos/cnn-logo.png" width="46" height="46" class="cnnmoney-logo--cnn-image"> </a> <a href="/" class="cnnmoney-logo--money"> <img src="http://i.cdn.turner.com/money/.element/img/8.0/logos/money-logo.png" width="78.5" height="46" class="cnnmoney-logo--money-image"> </a> </div> <img class="reliablesources-logo" src="http://i.cdn.turner.com/money/.element/img/8.0/sections/media/reliable-sources-cnnmoney.png" /> </div> <div class="row three-equal-columns js-stack"> <div class="column"> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/11/technology/yahoo-sale-marissa-mayer/index.html">Yahoo is for sale; bidders line up </a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1Vi73Cn" data-image="http://i2.cdn.turner.com/money/dam/assets/140713011920-yahoo-headquarters-620xa.jpg" data-title="Yahoo is for sale; bidders line up " data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/11/pf/john-oliver-credit-reports/index.html">John Oliver rips into the credit reporting industry</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1TNlxsQ" data-image="http://i2.cdn.turner.com/money/dam/assets/160411134924-john-oliver-last-week-tonight-620xa.jpg" data-title="John Oliver rips into the credit reporting industry" data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/11/technology/jopwell-launches-editorial-content-hub/index.html">Magic Johnson-backed startup launches editorial hub</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1Vifwp3" data-image="http://i2.cdn.turner.com/money/dam/assets/160411102118-jopwell-the-well-620xa.jpg" data-title="Magic Johnson-backed startup launches editorial hub" data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary external"> <h4> <a class="summary-headline" href="http://cnn.us11.list-manage1.com/subscribe?u=47c9040f6ff957a59bd88396e&id=e95cdc16a9&mc_cid=77c329c28c&mc_eid=b76cbdeaec" target="_blank">NEW: Sign up for our Reliable Sources newsletter! All the day's media news </a> </h4> </article> </div> <div class="column"> <article class="stack-summary video"> <span class="button summary-video"><i class="play-button"></i></span> <h4><a class="summary-headline" href="/video/media/2016/04/10/how-a-9-year-old-broke-news-about-a-murder.cnnmoney/index.html">Video: How a 9 year old broke news about a murder</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1XppFOG" data-image="http://i2.cdn.turner.com/money/dam/assets/160410150627-how-a-9-year-old-broke-news-about-a-murder-00032029-620xa.jpg" data-title="Video: How a 9 year old broke news about a murder" data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/11/media/hilde-kate-lysiak-reporting-lessons/index.html">What this 9-year-old already knows about reporting</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1NkY8Iv" data-image="http://i2.cdn.turner.com/money/dam/assets/160410150627-how-a-9-year-old-broke-news-about-a-murder-00043016-620xa.jpg" data-title="What this 9-year-old already knows about reporting" data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/10/media/donald-trump-sunday-shows/index.html">A Sunday without Donald Trump for the first time in 5 months</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1VKEGfb" data-image="http://i2.cdn.turner.com/money/dam/assets/160328100912-donald-trump-washington-620xa.jpg" data-title="A Sunday without Donald Trump for the first time in 5 months" data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/08/media/american-idol-series-finale-ratings/index.html">What the 'American Idol' finale looked like from the inside</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1V3nIKl" data-image="http://i2.cdn.turner.com/money/dam/assets/160408123017-american-idol-finale-trent-harmon-620xa.jpg" data-title="What the 'American Idol' finale looked like from the inside" data-mainset="fb,tw,email" ></div> </article> </div> <div class="column"> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/09/media/boston-globe-donald-trump-satire-front-page/index.html">Boston Globe's Donald Trump satire: 'Deportations to begin'</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1qfsFSU" data-image="http://i2.cdn.turner.com/money/dam/assets/160409191739-boston-globe-donald-trump-satire-620xa.gif" data-title="Boston Globe's Donald Trump satire: 'Deportations to begin'" data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/08/media/rolling-stone-jackie-testifies/index.html">'Jackie' of Rolling Stone story testifies under oath</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1S1PDXf" data-image="http://i2.cdn.turner.com/money/dam/assets/150405115643-rolling-stone-a-rape-on-campus-620xa.jpg" data-title="'Jackie' of Rolling Stone story testifies under oath" data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/08/media/bruce-springsteen-north-carolina-show-canceled/index.html">Bruce Springsteen cancels North Carolina concert over 'bathroom law'</a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1qB4HCh" data-image="http://i2.cdn.turner.com/money/dam/assets/160408154426-bruce-springsteen-nc-620xa.jpg" data-title="Bruce Springsteen cancels North Carolina concert over 'bathroom law'" data-mainset="fb,tw,email" ></div> </article> <article class="stack-summary default"> <h4><a class="summary-headline" href="/2016/04/08/media/ashton-kutcher-the-ranch-netflix/index.html">Ashton Kutcher on his unconventional new sitcom </a></h4> <div class="share-tools js-sharebar-tout" data-url="http://cnnmon.ie/1RV9sNB" data-image="http://i2.cdn.turner.com/money/dam/assets/160405170624-netflix-the-ranch-00011921-620xa.jpg" data-title="Ashton Kutcher on his unconventional new sitcom " data-mainset="fb,tw,email" ></div> </article> </div> </section> <section class="container" id="twitter-zone"> <div class="row module-small-header module-special two-columns-fixed-rr"> <div class="column"> <div class="row two-equal-columns"> <div class="column"> <div class="module twitter-zone">
+	<div class="module-header">
+		<a href="/author/brian-stelter/index.html"><h5 class="twitter-zone-name">Brian Stelter</h5></a>
+		<a href="https://twitter.com/brianstelter" target="_blank"><h5 class="twitter-zone-handle">@brianstelter</h5></a>
+		<a href="/author/brian-stelter/index.html"><img class="twitter-zone-headshot" src="http://i.cdn.turner.com/money/.element/img/8.0/sections/media/authors/brianstelter.png" width="135" height="110" style="float: right;" /></a>
+	</div>
+	<ul class="summary-list twitter-zone">
+		<li>
+			<article class="summary">
+				<div class="summary-hed">14 years of <a class="twitter-handle" target="_other" href="http://twitter.com/AmericanIdol">@AmericanIdol</a> = some of the kids at the finale last night weren't alive when the show premiered <a class="twitter-link" target="_other" href="https://t.co/SZZyW4TWQk">https://t.co/SZZyW4TWQk</a> </div>
+			</article>
+		</li>
+		<li>
+			<article class="summary">
+				<div class="summary-hed">48 hours til @CNNReliable... With a special guest... 9-year-old <a class="twitter-handle" target="_other" href="http://twitter.com/OrangeStreetNew">@OrangeStreetNew</a> publisher Hilde Kate Lysiak! </div>
+			</article>
+		</li>
+		<li>
+			<article class="summary">
+				<div class="summary-hed">Made it back to NYC in time for @CNNI's "@CNNMoney with @MaggieLake" -- recapping the <a target="_other" href="https://twitter.com/search?q=%23IdolFinale">#IdolFinale</a> next <a class="twitter-link" target="_other" href="https://t.co/4L0ZTBnONN">https://t.co/4L0ZTBnONN</a> </div>
+			</article>
+		</li>
+	</ul>
+</div>
+ </div> <div class="column"> <div class="module twitter-zone">
+	<div class="module-header">
+		<a href="/author/dylan-byers/index.html"><h5 class="twitter-zone-name">Dylan Byers</h5></a>
+		<a href="https://twitter.com/DylanByers" target="_blank"><h5 class="twitter-zone-handle">@DylanByers</h5></a>
+		<a href="/author/dylan-byers/index.html"><img class="twitter-zone-headshot" src="http://i.cdn.turner.com/money/.element/img/8.0/sections/media/authors/dylanbyers.png" width="135" height="110" style="float: right;" /></a>
+	</div>
+	<ul class="summary-list twitter-zone">
+		<li>
+			<article class="summary">
+				<div class="summary-hed">NYC media is gritty & combative, and it's going to take great pleasure in trying to tear down the 2016 hopefuls <a class="twitter-link" target="_other" href="https://t.co/vxU2XhQJmW">https://t.co/vxU2XhQJmW</a> </div>
+			</article>
+		</li>
+		<li>
+			<article class="summary">
+				<div class="summary-hed">"The Bronx Zoo Primary": Jim Rich, David Remnick, Adam Moss, Frank Rich, Ari Fleischer, Paul Begala on tabloid NY >> <a class="twitter-link" target="_other" href="https://t.co/vxU2XhQJmW">https://t.co/vxU2XhQJmW</a> </div>
+			</article>
+		</li>
+		<li>
+			<article class="summary">
+				<div class="summary-hed">New @CNN: "Tabloid trouble: The New York media vs. the candidates" ð½ <a class="twitter-link" target="_other" href="https://t.co/FvdCz8gQjs">https://t.co/FvdCz8gQjs</a> </div>
+			</article>
+		</li>
+	</ul>
+</div>
+ </div> </div> <div class="row two-equal-columns"> <div class="column"> <div class="module twitter-zone">
+	<div class="module-header">
+		<a href="/author/frank-pallotta/index.html"><h5 class="twitter-zone-name">Frank Pallotta</h5></a>
+		<a href="https://twitter.com/frankpallotta" target="_blank"><h5 class="twitter-zone-handle">@frankpallotta</h5></a>
+		<a href="/author/frank-pallotta/index.html"><img class="twitter-zone-headshot" src="http://i.cdn.turner.com/money/.element/img/8.0/sections/media/authors/frankpallotta.png" width="135" height="110" style="float: right;" /></a>
+	</div>
+	<ul class="summary-list twitter-zone">
+		<li>
+			<article class="summary">
+				<div class="summary-hed">Been using <a class="twitter-handle" target="_other" href="http://twitter.com/Snapchat">@Snapchat</a> on my Disney trip, and I finally get why it's so popular. It's fun, creative, tells a great story + easily digestible. </div>
+			</article>
+		</li>
+		<li>
+			<article class="summary">
+				<div class="summary-hed">Happy true opening day, <a class="twitter-handle" target="_other" href="http://twitter.com/Mets">@Mets</a> fans. <a target="_other" href="https://twitter.com/search?q=%23LGM">#LGM</a> <a class="twitter-link" target="_other" href="https://t.co/YkasPgaAOH">https://t.co/YkasPgaAOH</a> </div>
+			</article>
+		</li>
+		<li>
+			<article class="summary">
+				<div class="summary-hed">Spidey's best dynamic in comic is with Iron Man, Cap but contracts will probably keep them out. Bet on AntMan/Falcon <a class="twitter-link" target="_other" href="https://t.co/MVByeWYrFe">https://t.co/MVByeWYrFe</a> </div>
+			</article>
+		</li>
+	</ul>
+</div>
+ </div> <div class="column"> <div class="module twitter-zone">
+	<div class="module-header">
+		<a href="/author/tom-kludt/index.html"><h5 class="twitter-zone-name">Tom Kludt</h5></a>
+		<a href="https://twitter.com/TomKludt" target="_blank"><h5 class="twitter-zone-handle">@TomKludt</h5></a>
+		<a href="/author/tom-kludt/index.html"><img class="twitter-zone-headshot" src="http://i.cdn.turner.com/money/.element/img/8.0/sections/media/authors/tomkludt.png" width="135" height="110" style="float: right;" /></a>
+	</div>
+	<ul class="summary-list twitter-zone">
+		<li>
+			<article class="summary">
+				<div class="summary-hed">Any tweetstorm is only as good as the first tweet, aka the Throat Clear </div>
+			</article>
+		</li>
+		<li>
+			<article class="summary">
+				<div class="summary-hed">Engorged and nauseous, John Kasich waddles over to Halal Guys stand for next photo op <a class="twitter-link" target="_other" href="https://t.co/saiZjq7sc1">https://t.co/saiZjq7sc1</a> </div>
+			</article>
+		</li>
+		<li>
+			<article class="summary">
+				<div class="summary-hed">server owned <a class="twitter-link" target="_other" href="https://t.co/br7qqGsnKj">https://t.co/br7qqGsnKj</a> </div>
+			</article>
+		</li>
+	</ul>
+</div>
+ </div> </div> </div> <div class="column"> <div id="adsquare"><div id="ad_rect_btf_01"></div></div> <div id="rs-newletter-mod" class="module">
+	<!-- Begin MailChimp Signup Form -->
+	<form action="//cnn.us11.list-manage.com/subscribe/post?u=47c9040f6ff957a59bd88396e&amp;id=e95cdc16a9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>		
+		<h3 class="module-header">Newsletter</h3>
+		<div class="rs-newsletter-banner">
+			<div class="cnnmoney-logo"> 
+				<a href="http://cnn.com/" class="cnnmoney-logo--cnn"><img src="http://i.cdn.turner.com/money/.element/img/8.0/logos/cnn-logo.png" width="46" height="46" class="cnnmoney-logo--cnn-image"></a><a href="/" class="cnnmoney-logo--money"><img src="http://i.cdn.turner.com/money/.element/img/8.0/logos/money-logo.png" width="78.5" height="46" class="cnnmoney-logo--money-image"></a>
+			</div>
+			<img class="reliablesources-logo" src="http://i.cdn.turner.com/money/.element/img/8.0/sections/media/reliable-sources-cnnmoney.png" />
+		</div>
+		<div class="rs-newsletter-body">
+			<h3 class="email-signup-description"><strong>Big personalities. Big controversies. Big exclusives.</strong></h3>
+				
+			<div class="mc-field-group">
+				<p class="email-signup-description">Sign up for the tip sheet of the media industry, brought to you by Brian Stelter, Dylan Byers, and the best media team in the business.</p>
+				<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter email address" />
+			</div>
+			<div id="mce-responses" class="clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>
+			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		    <div style="position: absolute; left: -5000px;"><input type="text" name="b_47c9040f6ff957a59bd88396e_e95cdc16a9" tabindex="-1" value=""></div>
+		    <div class="clear">
+		    	<div>
+		    	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
+		    	<i id="rr-subscription-arrow" class="icon icon--arrow-right" style="position: absolute"></i>
+		    	</div>
+		    </div>
+		</div>
+	</form>
+</div>
+<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#rs-newletter-mod .module-header { margin-bottom: 0; }
+	#rs-newletter-mod .rs-newsletter-banner { 
+		background: url(http://i.cdn.turner.com/money/.element/img/8.0/newsletters/reliable_sources/rs-newsletter-bg.png) no-repeat;
+		background-size: 100%;
+		margin-bottom: 17px; 
+		padding-top: 13px;
+		text-align: center;
+		width: 300px; height: 88px;
+	}
+	#rs-newletter-mod .rs-newsletter-banner .cnnmoney-logo {display: inline-block; height: auto; margin-bottom: 8px;}
+	#rs-newletter-mod .rs-newsletter-banner .cnnmoney-logo--cnn { display: inline-block; width: 20px}
+	#rs-newletter-mod .rs-newsletter-banner .cnnmoney-logo--cnn-image { width: 100%; height: auto; }
+	#rs-newletter-mod .rs-newsletter-banner .cnnmoney-logo--money-image { width: 37px; height: auto }
+	#rs-newletter-mod .rs-newsletter-banner .reliablesources-logo { width: 90%; }
+	#rs-newletter-mod .rs-newsletter-body {
+		padding: 0 10px;
+	}
+	
+	#rs-newletter-mod #mc_embed_signup {background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	#rs-newletter-mod .mc-field-group { margin-bottom: 7px; }
+
+	#rs-newletter-mod .email-signup-description, 
+	#rs-newletter-mod #mce-success-response, 
+	#rs-newletter-mod .mce_inline_error { font-size: 14px; }
+	#rs-newletter-mod h3.email-signup-description { color: #777; text-align: left; font-size: 16px; margin: 0; width: 300px; }
+	#rs-newletter-mod p.email-signup-description { color: #777; text-align: left; font-size: 13px; line-height: 125%; margin: 15px 0 0 0; width: 283px; }
+	#rs-newletter-mod #mce-EMAIL { 
+		background-color: #E6E6E6;
+		border: none;
+		color: #000;
+		font-size: 15px;
+		height: 40px;
+		margin-top: 15px;
+		text-indent: 10px;
+		width: 100%; 
+	}
+
+	#rs-newletter-mod #mc-embedded-subscribe { 
+		background-color: #3f5ead; 
+		border: none; 
+		color: #fff; 
+		font-size: 16px; 
+		height: 43px; 
+		margin: 17.5px 5px 17.5px 0; 
+		text-indent: -35px;
+		width: 150px; 
+	}
+	#rs-newletter-mod #mc-embedded-subscribe:hover {
+		cursor: pointer;
+	}
+	#rs-newletter-mod #mce-error-response, 
+	#rs-newletter-mod .mce_inline_error {
+		color: red;
+		font-size: 14px;
+		margin-top: 7px;
+	}
+	#rs-newletter-mod #mce-success-response { 
+		color: #2A8E45;
+	}
+	#rs-newletter-mod #rr-subscription-arrow {
+		position: absolute;
+		margin-top: -45px;
+		color: #fff;
+		left: 145px;
+		font-size: 14px;
+	}
+	#rs-newletter-mod  ::-webkit-input-placeholder {
+	   text-align: left;
+	}
+	
+	#rs-newletter-mod  :-moz-placeholder { /* Firefox 18- */
+	   text-align: left;  
+	}
+	
+	#rs-newletter-mod  ::-moz-placeholder {  /* Firefox 19+ */
+	   text-align: left; 
+	}
+	
+	#rs-newletter-mod  :-ms-input-placeholder {  
+	   text-align: left;
+	}
+
+/* Media Sectoin: */
+	.cnn-section.media  #rs-newletter-mod {
+		background: #151515;
+		margin: 10px;
+		padding-bottom: 3px;
+		width: 300px;
+	}
+	.cnn-section.media #rs-newletter-mod .rs-newsletter-banner {
+		background: none;
+		margin-bottom: 0;
+	}
+	body.cnn-section.media #rs-newletter-mod .module-header {
+		margin: 0;
+		width: auto; height: auto;
+	}
+	body.cnn-section.media #rs-newletter-mod h3.email-signup-description {
+		color: #eee;
+		font-size: 18px;
+	}
+	body.cnn-section.media #rs-newletter-mod p.email-signup-description {
+		color: #eee;
+		font-size: 17px;
+	}
+</style>
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup--> </div> </div> </section>  <!-- videozone --> <section id="video-zone" class="reliable-sources-videos"> <div class="container"> <div id="reliable-videozone-header"><div class="showtime"><strong>Sundays</strong>, 11AM ET / 8AM PT</div></div> <div class="row two-columns-fixed-rr"> <div class="column module-small-header"> <div class="module"> <div class="cnnplayer"> <div id="cnnVPscreen"> <div id="cnnVidplayer"> <a id="cvp_default" class="summaryImg" href="javascript:VideoPlayerManager.playVideos('cvp_videozone_player');"> <img src="http://i2.cdn.turner.com/money/dam/assets/160410150627-how-a-9-year-old-broke-news-about-a-murder-00032029-1024x576.jpg" width="780" height="439" alt="" border="0" /> <span class="button video-play"><i class="icon icon--type-video"></i></span> </a> </div> </div> <div class="cnnVidFooter"> <div class="countdown js-vid-countdown-cvp_videozone_player"></div> </div> </div> <script type="text/javascript"> vidConfig.push({ "playerprofile" : "homepage", "playerid" : "cvp_videozone_player", "divid" : "cvp_default", "autoplay" : false, "has_poster" : true, "defaultSection" : "/.element/ssi/auto/4.0/video/xml/branding/reliablesources.xml", videoArray : [ {"id" : "/video/media/2016/04/10/how-a-9-year-old-broke-news-about-a-murder.cnnmoney", "hed" : "How a 9 year old broke news about a murder", "dek" : "Hilde Kate Lysiak, the 9 year old publisher of the Orange Street News, talks with Brian Stelter about her controversial scoop: a gruesome murder in her small town.", "img" : "http://i2.cdn.turner.com/money/dam/assets/160410150627-how-a-9-year-old-broke-news-about-a-murder-00032029-1024x576.jpg", "collectionName" : ""} ] }); </script> <div class="clearfix"></div> <h4 class="hp-video-header js-vid-hed-cvp_videozone_player"> How a 9 year old broke news about a murder </h4> </div> </div> <div class="column tl-right"> <div class="module"> <div class="module-body"> <ul class="summary-list summary-list-thumbs"> <li class="summary"> <a class="summary-hed" href="/video/media/2016/04/10/trumps-new-sunday-show-strategy-silence.cnnmoney/index.html"> <figure class="thumb-image pull-left"> <img src="http://i2.cdn.turner.com/money/dam/assets/160410160855-trumps-new-sunday-show-strategy-silence-00020407-124x70.jpg" width="124" height="70" alt="" border="0" /> </figure> <figcaption class="thumb-caption"> Trump's new Sunday show strategy: silence </figcaption> </a> </li> <li class="summary"> <a class="summary-hed" href="/video/media/2016/04/10/why-al-jazeera-america-mattered.cnnmoney/index.html"> <figure class="thumb-image pull-left"> <img src="http://i2.cdn.turner.com/money/dam/assets/160410150438-why-al-jazeera-america-mattered-00000929-124x70.jpg" width="124" height="70" alt="" border="0" /> </figure> <figcaption class="thumb-caption"> Why Al Jazeera America mattered </figcaption> </a> </li> <li class="summary"> <a class="summary-hed" href="/video/media/2016/04/07/rogue-one-star-wars-story-trailer.cnnmoney/index.html"> <figure class="thumb-image pull-left"> <img src="http://i2.cdn.turner.com/money/dam/assets/160406203244-star-wars-rogue-one-124x70.png" width="124" height="70" alt="" border="0" /> </figure> <figcaption class="thumb-caption"> Watch the trailer for 'Rogue One: A Star Wars Story' </figcaption> </a> </li> <li class="summary"> <a class="summary-hed" href="/video/media/2016/04/05/american-idol-best-and-worst-moments.cnnmoney/index.html"> <figure class="thumb-image pull-left"> <img src="http://i2.cdn.turner.com/money/dam/assets/160405164255-kelly-clarkson-american-idol-124x70.jpg" width="124" height="70" alt="" border="0" /> </figure> <figcaption class="thumb-caption"> 'American Idol': Best and worst moments </figcaption> </a> </li> </ul> </div> <div class=""> </div> </div> </div> </section> <!-- END videozone --> <section class="container"> <div class="row three-equal-columns module-small-header media-bins"> <div class="column"> <div class="module"> <h3 class="module-header">Top Songs <span class="module-subheader">Billboard</span> </h3> <div class="module-body"> <ul class="summary-list"> <li> <article class="summary-hed"> <span class="summary-count"> 1 </span> <span class="summary-link"> "Work" </span> <span class="summary-footer"> Rihanna featuring Drake </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 2 </span> <span class="summary-link"> "Love Yourself" </span> <span class="summary-footer"> Justin Bieber </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 3 </span> <span class="summary-link"> "Stressed Out" </span> <span class="summary-footer"> twenty one pilots </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 4 </span> <span class="summary-link"> "Sorry" </span> <span class="summary-footer"> Justin Bieber </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 5 </span> <span class="summary-link"> "My House" </span> <span class="summary-footer"> Flo Rida </span> </article> </li> </ul> </div> </div> </div> <div class="column"> <div class="module"> <h3 class="module-header">Top Albums <span class="module-subheader">Billboard</span> </h3> <div class="module-body"> <ul class="summary-list"> <li> <article class="summary-hed"> <span class="summary-count"> 1 </span> <span class="summary-link"> "25" </span> <span class="summary-footer"> Adele </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 2 </span> <span class="summary-link"> "Purpose" </span> <span class="summary-footer"> Justin Bieber </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 3 </span> <span class="summary-link"> "ANTI" </span> <span class="summary-footer"> Rihanna </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 4 </span> <span class="summary-link"> "Hymns" </span> <span class="summary-footer"> Joey + Rory </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 5 </span> <span class="summary-link"> "Traveller" </span> <span class="summary-footer"> Chris Stapleton </span> </article> </li> </ul> </div> </div> </div> <div class="column"> <div class="module"> <h3 class="module-header">Box Office <span class="module-subheader">Source: Rentrak</span> </h3> <div class="module-body"> <ul class="summary-list"> <li> <article class="summary-hed"> <span class="summary-count"> 1 </span> <span class="summary-link"> "Deadpool" (Fox) </span> <span class="summary-footer"> $55M </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 2 </span> <span class="summary-link"> "Kung Fu Panda 3" (Fox) </span> <span class="summary-footer"> $12.5M </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 3 </span> <span class="summary-link"> "Risen" (Sony) </span> <span class="summary-footer"> $11.8M </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 4 </span> <span class="summary-link"> "The Witch" (A24 Films) </span> <span class="summary-footer"> $8.6M </span> </article> </li> <li> <article class="summary-hed"> <span class="summary-count"> 5 </span> <span class="summary-link"> "How To Be Single" (WB) </span> <span class="summary-footer"> $16M </span> </article> </li> </ul> </div> </div> </div> </div> </section> <section class="container"> <ul class="row two-equal-columns js-river" data-vr-zone="River"> <li class="column" data-vr-contentbox="" > <article class="summary hero "> <a href="/video/media/2016/04/10/why-al-jazeera-america-mattered.cnnmoney/index.html" > <figure class="river-image-container "> <img src="http://i2.cdn.turner.com/money/dam/assets/160410150438-why-al-jazeera-america-mattered-00000929-540x304.jpg" width="540" height="304" alt="Video: Al Jazeera America prepares to sign off " border="0" /> </figure> <div class="summary-hed river-summary"> Video: Al Jazeera America prepares to sign off </div> </a> </article> </li> <li class="column" data-vr-contentbox="" > <article class="summary hero "> <a href="/2016/04/06/media/megyn-kelly-donald-trump/index.html" > <figure class="river-image-container "> <img src="http://i2.cdn.turner.com/money/dam/assets/160324112809-megyn-kelly-donald-trump-02-540x304.jpg" width="540" height="304" alt="Megyn Kelly says media has 'thumb on the scale' for Donald Trump" border="0" /> </figure> <div class="summary-hed river-summary"> Megyn Kelly says media has 'thumb on the scale' for Donald Trump </div> </a> </article> </li> <li class="column" data-vr-contentbox="" > <article class="summary hero "> <a href="/2016/04/07/media/star-wars-rogue-one-trailer/index.html" > <figure class="river-image-container "> <img src="http://i2.cdn.turner.com/money/dam/assets/160406203244-star-wars-rogue-one-540x304.png" width="540" height="304" alt="'Rogue One: A Star Wars Story' trailer debuts" border="0" /> </figure> <div class="summary-hed river-summary"> 'Rogue One: A Star Wars Story' trailer debuts </div> </a> </article> </li> <li class="column" data-vr-contentbox="" id="js-nativo-ad-summary" > <article class="summary hero "> <a href="http://www.cnn.com/2016/04/08/politics/new-york-media-2016-presidential-race/index.html" > <figure class="river-image-container "> </figure> <div class="summary-hed river-summary"> Tabloid trouble: The NY media vs. the candidates </div> </a> </article> </li> </ul> </section> <section class="container"> <div class="row three-equal-columns module-small-header"> <div class="column"> <style>
+	body.blog .cnnoutbrain {
+		border: 1px solid #ddd;
+		background-color: #fff;
+		margin-bottom: 5px;
+		padding: 10px 9px;
+	}
+</style>
+<div class="cnnoutbrain outbrain-module" id="js-outbrain-module"></div>
+ </div> <div class="column"> <div class="cnnoutbrain outbrain-module" id="js-outbrain-section-module-2"></div> </div> <div class="column"> <div id="adsquare" class="adsquare"><div id="ad_rect_btf_02"></div></div> </div> </div> </section> <section class="container"> <div class="paid-partner-section-delimiter"> <div class="paid-partner-section-delimiter-label">Paid partner content</div> <span class="paid-partner-delimiter-border"></span> </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row three-equal-columns module-small-header" id="bd1">
+                        <div class="column" id="bd1_00">
+		<div class="module">
+				<h3><a class="module-header full-width-header" target="_other" href="https://www.lendingtree.com/?esourceid=6164156&cchannel=bd&csource=cnn-money&siteid=headerlink">LendingTree <i class="icon icon--arrow-right"></i><div class="paid-partner module-heading-right">Paid Partner</div>
+</a></h3>
+			<div class="module-body">
+				<ul class="summary-list">
+								<iframe valign="middle" width="345" height="340" marginheight=0 marginwidth=0 frameborder=0 vspace=0 hspace=0 scrolling=NO src="https://offers.lendingtree.com/splitter/splitter.ashx?id=cnn-money-hp"></iframe>
+
+				</ul>
+			</div>
+		</div>
+                        </div>
+                        <div class="column" id="bd1_01">
+		<div class="module">
+				<h3 class="module-header">Partner Offers<div class="paid-partner module-heading-right">Paid Partner</div>
+</h3>
+			<div class="module-body">
+				<ul class="summary-list">
+								<iframe valign="middle" width="345" height="340" marginheight=0 marginwidth=0 frameborder=0 vspace=0 hspace=0 scrolling=NO  src="//www.dianomi.com/smartads.epl?id=2024"></iframe>
+
+				</ul>
+			</div>
+		</div>
+                        </div>
+                        <div class="column" id="bd1_02">
+		<div class="module">
+				<h3><a class="module-header full-width-header" target="_other" href="http://www.nextadvisor.com/credit_cards/index.php?kw=cnnmoneybp_int_nabrand-121015">NextAdvisor <i class="icon icon--arrow-right"></i><div class="paid-partner module-heading-right">Paid Partner</div>
+</a></h3>
+			<div class="module-body">
+				<ul class="summary-list">
+								<li><a href="http://www.nextadvisor.com/credit_cards/balance_transfer.php?kw=cnnmoneybp_dsk_top10bt2016"  target="_blank" class="summary summary-hed">10 best balance transfer credit cards for 2016</a></li>
+								<li><a href="http://www.nextadvisor.com/blog/2015/04/02/pay-interest-2017-credit-cards/?kw=cnnmoneybp_dsk_top2cc"  target="_blank" class="summary summary-hed">2 credit cards are offering 0% interest until December 2017</a></li>
+								<li><a href="http://www.nextadvisor.com/credit_cards/amex_bluecash_preferred_review.php?kw=cnnmoneybp_dsk_jawdrop10_bcreview"  target="_blank" class="summary summary-hed">A jaw-dropping 10% cash back card has hit the market</a></li>
+								<li><a href="http://www.nextadvisor.com/blog/2013/11/06/top-7-credit-card-offers-for-those-with-excellent-credit/?kw=cnnmoneybp_dsk_top7ccs"  target="_blank" class="summary summary-hed">7 credit cards for those with excellent credit</a></li>
+								<li><a href="http://www.nextadvisor.com/blog/2015/08/17/bankamericard-travel-rewards-credit-card-improves-bonus/?kw=cnnmoneybp_dsk-200bofa"  target="_blank" class="summary summary-hed last">$200 just for using a credit card? Yep</a></li>
+				</ul>
+			</div>
+		</div>
+                        </div>
+        </div>
+ <span class="paid-partner-delimiter-border-bottom"></span> </section> <section class="container"> <div class="row three-equal-columns"> <div class="column module-small-header"> <div class="module js-most-pop-chartbeat">
+    <h3 class="module-header">Most Popular</h3>
+    <div class="module-body">
+    <ul class="summary-list summary-list-thumbs">
+<li>
+      <a class="summary summary-hed" href="http://money.cnn.com/2016/04/11/technology/yahoo-sale-marissa-mayer/index.html?iid=TL_Popular">
+      <figure class="thumb-image pull-left">
+        <img src="http://i2.cdn.turner.com/money/dam/assets/140712211920-yahoo-headquarters-124x70.jpg" width="124" height="70">
+      </figure>
+      <figcaption class="thumb-caption">
+        Yahoo is for sale; bidders line up; Marissa Mayer is toast
+      </figcaption>
+      </a>
+</li>
+<li>
+      <a class="summary summary-hed" href="http://money.cnn.com/2016/04/11/technology/amazon-trump/index.html?iid=TL_Popular">
+      <figure class="thumb-image pull-left">
+        <img src="http://i2.cdn.turner.com/money/dam/assets/150817112659-amazon-jeff-bezos-124x70.jpg" width="124" height="70">
+      </figure>
+      <figcaption class="thumb-caption">
+        Amazon customers tell Jeff Bezos to 'dump Trump'
+      </figcaption>
+      </a>
+</li>
+<li>
+      <a class="summary summary-hed" href="http://money.cnn.com/2016/04/11/investing/how-to-pick-financial-adviser/index.html?iid=TL_Popular">
+      <figure class="thumb-image pull-left">
+        <img src="http://i2.cdn.turner.com/money/dam/assets/160328183300-interview-questions-instory-124x70.jpg" width="124" height="70">
+      </figure>
+      <figcaption class="thumb-caption">
+        The 1st question to ask your financial adviser
+      </figcaption>
+      </a>
+</li>
+</ul>
+</div>
+</div>
+ </div> <div class="column module-small-header"> <div id="moneySponsors" class="module">
+	<h3 class="boxHeading module-header">CNNMoney Sponsors</h3>
+	<div class="module-body partner-center-module">
+		<ul class="summary-list">
+			<li>
+				<div id="ad_mod_048fa0f34">
+					<script type="text/javascript" src="http://i.cdn.turner.com/ads/cnn_money/singles/cnnmoney_sponcenter1.js"></script>
+				</div>
+			</li>
+			<li>
+				<div id="ad_mod_439fb79c2">
+					<script type="text/javascript" src="http://i.cdn.turner.com/ads/cnn_money/singles/cnnmoney_sponcenter2.js"></script>
+				</div>
+			</li>
+			<li>
+				<div id="ad_mod_f5abb3fc6">
+					<script type="text/javascript" src="http://i.cdn.turner.com/ads/cnn_money/singles/cnnmoney_sponcenter3.js"></script>
+				</div>
+			</li>
+			<li>
+				<div id="ad_mod_a60ca7487">
+					<script type="text/javascript" src="http://i.cdn.turner.com/ads/cnn_money/singles/cnnmoney_sponcenter4.js"></script>
+				</div>
+			</li>
+			<li>
+				<div id="ad_mod_a7cebd199">
+					<script type="text/javascript" src="http://i.cdn.turner.com/ads/cnn_money/singles/cnnmoney_sponcenter5.js"></script>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+ </div> <div class="column"> 
+<div class="module glass-door">
+    <h3 class="module-header">Search for Jobs<div class="paid-partner module-heading-right">Powered by Indeed</div>
+</h3>
+    <div class="module-body sponsored">
+        <!--BEGIN: Indeed widget include -->
+        <div id="gdWidgetStatic">
+            <div class="cnnrow">
+                <div class="defaultWidgetBody widgetBody">
+                    <div id="Content">
+                        <div id="Contentrow">
+                            <div class="col1 searchFormrow defaultSearchForm">
+                                <div class="h2">Millions of job openings!</div>
+        
+                                <form action="http://www.indeed.com/jobs" class="clear" id="gd_jsform" name="gd_jsform" target="_job">
+                                    <input type="hidden" name="indpubnum" value="7133302637958085">
+                                    <div class="inputrow">
+                                        <fieldset>
+                                            <input class="sbox keyword" id="keyword" name="q" placeholder="Job title" type="text">
+                                        </fieldset>
+        
+                                        <fieldset>
+                                            <input class="sbox location" id="location" name="l" placeholder="Location" type="text">
+                                        </fieldset>
+                                    </div>
+                                    <button class="cnnm-btn" id="searchButton" type="submit">Find Jobs <i class="icon icon--arrow-right"></i>
+                                    </button>
+                                </form>
+                            </div>
+        
+                            <div class="row three-equal-columns categories">
+                                <div class="column">
+                                    <ul>
+                                        <li>
+                                            <a href="http://www.indeed.com/jobs?q=Accounting&indpubnum=7133302637958085" target="_blank">Accounting</a>
+                                        </li>
+        
+                                        <li>
+                                            <a href="http://www.indeed.com/jobs?q=Finance&indpubnum=7133302637958085" target="_blank">Finance</a>
+                                        </li>
+        
+                                        <li>
+                                            <a href=" http://www.indeed.com/jobs?q=Marketing&indpubnum=7133302637958085" target="_blank">Marketing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+        
+                                <div class="column">
+                                    <ul>
+                                        <li>
+                                            <a href="http://www.indeed.com/jobs?q=Engineering&indpubnum=7133302637958085" target="_blank">Engineering</a>
+                                        </li>
+        
+                                        <li>
+                                            <a href="http://www.indeed.com/jobs?q=Management&indpubnum=7133302637958085" target="_blank">Management</a>
+                                        </li>
+        
+                                        <li>
+                                            <a href="http://www.indeed.com/jobs?q=Sales&indpubnum=7133302637958085" target="_blank">Sales</a>
+                                        </li>
+                                    </ul>
+                                </div>
+        
+                                <div class="column">
+                                	<ul>
+                                		<li>
+                                			<a href="http://www.indeed.com/jobs?q=Developer&indpubnum=7133302637958085" target="_blank">Developer</a>
+                                		</li>
+                                		
+                                		<li>
+                                			<a href="http://www.indeed.com/jobs?q=Media&indpubnum=7133302637958085" target="_blank">Media</a>
+                                		</li>
+                                		
+                                		<li>
+                                			<a href="http://www.indeed.com/jobs?indpubnum=7133302637958085" target="_blank">See all jobs</a>
+                                		</li>
+                                	</ul>
+                                </div>
+                            </div>
+                            
+        					<a href="http://www.indeed.com/hire?indpubnum=7133302637958085" target="_blank">Employers / Post a Job</a>
+                            <div class="clear"></div>
+                            <blockquote class="sponsor">
+                                <span id="indeed_at">
+                             		<a href="http://www.indeed.com/?indpubnum=7133302637958085" style="text-decoration: none; color: #000" target="_blank">jobs</a> by<a href="http://www.indeed.com/?indpubnum=7133302637958085" target="_blank" title="Job Search" style="float:right; margin-top:2px;"><img src="/.element/ssi/partners/indeed/8.0/indeed_blue.png" style="border: 0; vertical-align: middle" alt="job search">
+                             		</a>
+                             	</span>
+                            </blockquote>
+                        </div>
+                    </div>
+        
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--END: Indeed widget include-->
+    </div>
+</div> </div> </div> </section> </main> <script>
+	function getCookie(check_name) {
+		var a_all_cookies = document.cookie.split(';');
+		var a_temp_cookie = '';
+		var ck_name = '';
+		var cookie_value = '';
+		var b_cookie_found = false;
+		for ( i = 0; i < a_all_cookies.length; i++) {
+			a_temp_cookie = a_all_cookies[i].split('=');
+			ck_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+			if (ck_name == check_name) {
+				b_cookie_found = true;
+				if (a_temp_cookie.length > 1) {
+					cookie_value = unescape(a_temp_cookie[1].replace(/^\s+|\s+$/g, ''));
+				}
+				return cookie_value;
+				break;
+			}
+			a_temp_cookie = null;
+			ck_name = '';
+		}
+		if (!b_cookie_found) {
+			return null;
+		}
+	}
+
+	function setCookie(c_name, value) {
+		var exdate = new Date();
+		exdate.setDate(exdate.getDate() + 365);
+		document.cookie = c_name + "=" + escape(value) + ";expires=" + exdate.toUTCString() + ";path=/;domain=cnn.com";
+		return;
+	}
+
+	function checkCookie(set_value) {
+		if (getCookie('SelectedEdition') == null || getCookie('SelectedEdition') == "") {
+			setCookie('SelectedEdition', set_value);
+		}
+		return;
+	}
+
+	try {
+		checkCookie('www');
+	} catch(e) {
+	}
+</script>
+
+<footer class="footer">
+	<section class="container">
+		<nav class="row four-equal-columns">
+			<div class="column">
+				<div class="list-header">
+					<div class="footer-cnnmoney-logo">
+						<img src="http://i.cdn.turner.com/money/.element/img/8.0/logos/CNNMoney-logo.png" width="220" height="82" class="cnnmoney-logo" />
+					</div>
+				</div>
+				<ul class="footer-links first">
+					<li class="footer-link">
+						<a rel="nofollow" href="/services/speakup/speakup.html">Contact Us</a>
+					</li>
+					<li class="footer-link">
+						<a rel="nofollow" href="/services/advertise/"target="_blank" >Advertise with Us</a>
+					</li>
+					<li class="footer-link">
+						<a rel="nofollow" href="/profile/">User Preferences</a>
+					</li>
+					<li class="footer-link">
+						<a rel="nofollow" href="/services/closed-captioning.html">Closed Captioning</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="column">
+				<div class="list-header">
+					Content
+				</div>
+				<ul class="footer-links">
+					<div class="row two-equal-columns">
+						<div class="column">
+							<li class="footer-link">
+								<a href="/news/">Business</a>
+							</li>
+							<li class="footer-link">
+								<a href="/markets/">Markets</a>
+							</li>
+							<li class="footer-link">
+								<a href="/investing/">Investing</a>
+							</li>
+							<li class="footer-link">
+								<a href="/news/economy/">Economy</a>
+							</li>
+							<li class="footer-link">
+								<a href="/technology/">Tech</a>
+							</li>
+						</div>
+						<div class="column">
+							<li class="footer-link">
+								<a href="/pf/">Personal Finance</a>
+							</li>
+							<li class="footer-link">
+								<a href="/smallbusiness/">Small Business</a>
+							</li>
+							<li class="footer-link">
+								<a href="/luxury/">Luxury</a>
+							</li>
+							<li class="footer-link">
+								<a href="/media/">Media</a>
+							</li>
+							<li class="footer-link">
+								<a href="/video/">Video</a>
+							</li>
+						</div>
+				</ul>
+			</div>
+
+			<div class="column">
+				<div class="list-header">
+					Tools
+				</div>
+				<ul class="footer-links">
+					<div class="row two-equal-columns">
+						<div class="column">
+							<li class="footer-link">
+								<a href="/services/sitemap/">Site Map</a>
+							</li>
+							<li class="footer-link">
+								<a href="/interactive/">Interactive</a>
+							</li>
+							<li class="footer-link">
+								<a href="http://jobsearch.money.cnn.com/a/all-jobs/list" target="_blank">Job Search</a>
+							</li>
+							<li class="footer-link">
+								<a href="http://realestate.money.cnn.com/">Real Estate Search</a>
+							</li>
+						</div>
+						<div class="column">
+							<li class="footer-link">
+								<a href="/pf/loan_center/">Loan Center</a>
+							</li>
+							<li class="footer-link">
+								<a href="/tools/">Calculators</a>
+							</li>
+							<li class="footer-link">
+								<a href="/news/corrections/">Corrections</a>
+							</li>
+							<li class="footer-link">
+								<a href="/profile/">Market Data Alerts</a>
+							</li>
+							<li class="footer-link">
+								<a href="/profile/">News Alerts</a>
+							</li>
+						</div>
+				</ul>
+			</div>
+
+			<div class="column">
+				<div class="list-header">
+					Connect
+				</div>
+				<ul class="footer-links">
+					<div class="row two-equal-columns">
+						<div class="column">
+							<li class="footer-link">
+								<a href="/profile/" rel="nofollow">My Account</a>
+							</li>
+							<li class="footer-link">
+								<a href="/services/mobile/" rel="nofollow">Mobile Site &amp; Apps</a>
+							</li>
+							<li class="footer-link">
+								<a href="http://facebook.com/cnnmoney" target="_blank">Facebook</a>
+							</li>
+							<li class="footer-link">
+								<a href="http://twitter.com/cnnmoney" target="_blank">Twitter</a>
+							</li>
+							<li class="footer-link">
+								<a href="http://www.linkedin.com/today/money.cnn.com" target="_blank">LinkedIn</a>
+							</li>
+						</div>
+						<div class="column">
+							<li class="footer-link">
+								<a href="http://www.youtube.com/CNNMoney" target="_blank">YouTube</a>
+							</li>
+							<li class="footer-link">
+								<a href="/services/rss/">RSS Feeds</a>
+							</li>
+							<li class="footer-link">
+								<a href="/profile/">Newsletters</a>
+							</li>
+							<li class="footer-link">
+								<a href="https://plus.google.com/115995105609774588517/" rel="publisher" target="_blank">Google+</a>
+							</li>
+						</div>
+				</ul>
+			</div>
+		</nav>
+		<p class="disclaimer" id="market-copyright">
+			<p>Most stock quote data provided by BATS. Market indices are shown in real time, except for the DJIA, which is delayed by two minutes. All times are ET. <a href="http://money.cnn.com/services/disclaimer.html">Disclaimer</a>. Morningstar: Â© 2016 Morningstar, Inc. All Rights Reserved. Factset: FactSet Research Systems Inc. 2016. All rights reserved. Chicago Mercantile Association: Certain market data is the property of Chicago Mercantile Exchange Inc. and its licensors. All rights reserved. Dow Jones: The Dow Jones branded indices are proprietary to and are calculated, distributed and marketed by DJI Opco, a subsidiary of S&amp;P Dow Jones Indices LLC and have been licensed for use to S&amp;P Opco, LLC and CNN. Standard &amp; Poor's and S&amp;P are registered trademarks of Standard &amp; Poorâs Financial Services LLC and Dow Jones is a registered trademark of Dow Jones Trademark Holdings LLC. All content of the Dow Jones branded indices &#169; S&amp;P Dow Jones Indices LLC 2016 and/or its affiliates.</p>
+		</p>
+		<p class="copyright">
+			<p>&copy; 2016 Cable News Network. A Time Warner Company. All Rights Reserved. <a href="/services/terms.html" rel="nofollow"> Terms</a> under which this service is provided to you. <a href="/services/privacy/"> Privacy Policy</a>. <a id="trusteLink"><script type="text/javascript" src="http://consent.truste.com/notice?domain=turner.com&c=trusteLink&text=true"></script></a><img id="adchoice-logo" src="http://i2.cdn.turner.com/money/.element/img/1.0/services/advertise/adchoiceslogo_footer.png" width="12" height="12">.</p>
+
+<!-- legal docs include -->
+<script type="text/javascript" src="http://z.cdn.turner.com/money/tmpl_asset/static/script/1083/js/cnnmoney.legal.docs-min.js"></script>
+
+		</p>
+	</section>
+</footer>
+<script>
+if (window.location.hostname === "ref2.money.cnn.com") {
+    var cnnOmniture_prodenv = false;
+}
+else if (window.location.hostname === "dev.money.cnn.com") {
+    var cnnOmniture_prodenv = false;
+}
+else if (window.location.hostname === "train.money.cnn.com") {
+    var cnnOmniture_prodenv = false;
+}
+else if (window.location.hostname === "stage.money.cnn.com") {
+    var cnnOmniture_prodenv = false;
+}
+else { 
+    var cnnOmniture_prodenv = true;
+}
+</script>
+
+<script language="JavaScript" src="http://i.cdn.turner.com/analytics/mon/jsmd-prod.js"></script>
+<script language="JavaScript">
+<!--
+if (window.location.pathname.indexOf(".element") == -1 && window.location.href.indexOf("?fb_xd_fragment#?=&") == -1 && window.location.href.indexOf("search/index.html?") == -1) {
+	var jsmd=_jsmd.init(); 
+	jsmd.send(); 
+}
+//--></script>
+<script type="text/javascript" src="http://z.cdn.turner.com/money/.element/script/6.0/newsbeat/newsbeat.js"></script>
+	
+<!-- STILL NEEDED? 
+<script language="JavaScript">
+	var R = new String(document.referrer);
+	var serveAd=1;
+	if(R.length > 0)
+	{
+		if (R.indexOf("yahoo.com") >= 0)
+			serveAd=0;
+	}
+	if(serveAd)
+	{
+		/* dynamic logic */
+		document.write('<scr'+'ipt src="http://content.dl-rms.com/rms/mother/8101/nodetag.js"></scr'+'ipt>');
+		/* ADSPACE: ros/popunders/bot.1x1 */
+		cnnad_createAd("229469","http://ads.cnn.com/html.ng/site=cnn_money&cnn_money_position=1x1_bot&params.styles=fs","1","1");
+		try { selectSurvey(); }	catch(e){}
+	}
+</script>-->
+	
+<!-- Begin: www.iperceptions.com -->
+<script src="http://ips-invite.iperceptions.com/webValidator.aspx?sdfc=8903e7fe-104983-4d96497c-d068-4528-a4f9-0dbb51a45963&lID=1&loc=STUDY&cD=90&rF=False&iType=1&domainname=0" type="text/javascript" defer="defer"></script>
+<!-- End: www.iperceptions.com -->
+
+
+
+<!-- ClickTale Bottom part -->
+<script type='text/javascript'>
+(function(win,doc){
+
+var scriptElement, scrSrc;
+
+if (typeof (win.ClickTaleCreateDOMElement) != "function")
+{
+	win.ClickTaleCreateDOMElement = function(tagName)
+	{
+		if (doc.createElementNS)
+		{
+			return doc.createElementNS('http://www.w3.org/1999/xhtml', tagName);
+		}
+		return doc.createElement(tagName);
+	}
+}
+
+win.WRInitTime=(new Date()).getTime();
+
+scriptElement = ClickTaleCreateDOMElement('script');
+scriptElement.type = "text/javascript";
+
+scrSrc = doc.location.protocol=='https:'? 'https://cdnssl.clicktale.net/':	'http://cdn.clicktale.net/';
+
+scrSrc += 'www04/ptc/1db4a0f2-17e4-45f8-b5fd-5fd78f545b59.js';
+
+scriptElement.src = scrSrc;
+
+doc.getElementsByTagName('body')[0].appendChild(scriptElement);
+})(window,document);
+</script>
+<!-- ClickTale end of Bottom part -->
+
+<script>
+    (function(doc, win) {
+        var fetchUrl = 'http://data.cnn.com/1m/sp/imm.dat';
+        jQuery.get(fetchUrl, '', function(data) {
+		try {
+		    var dsVal, details = jQuery.parseHTML(data, doc, true)[0],
+			script = doc.createElement('script');
+		    script.src = details.src;
+		    script.async = details.async;
+		    script.type = details.type;
+		    for (dsVal in details.dataset) {
+			script.dataset[dsVal] = details.dataset[dsVal];
+		    }
+		    doc.body.appendChild(script);
+		} catch (e) {}
+	    }, 'html');
+    })(document, window);
+</script>
+ <script type="text/javascript"> var urlPre="http://markets.money.cnn.com/"; var cnnDomain="http://money.cnn.com/"; var cookieDomain="cnn.com"; var tzOffset= -240; //var tzOffset= -300; </script> <script type="text/javascript" src="http://z.cdn.turner.com/xslo/cvp/ads/freewheel/js/fwjslib_1.1.js?version=1.1"></script> <script type="text/javascript" src="http://z.cdn.turner.com/xslo/cvp/js/cvp/2.8.4.1/cvp.min.js"></script> <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({doNotHash:true});</script> <script type="text/javascript" src="http://z.cdn.turner.com/money/tmpl_asset/static/script/1083/js/cnnm-ocean.section-min.js"></script> <!--// Nativo/Post Release //--> <!--// Nativo/Post Release //-->
+<script type="text/javascript" src="http://a.postrelease.com/serve/load.js?async=true" async="async"></script> <div id="csiIframe"></div> <div id="ad_oop_skin_01"></div> </body> </html>

@@ -7,12 +7,15 @@ public class WordOccurence {
 	private boolean isCapital; //if the word is all capitals or not
 	private int importance; //get the importance according to the type and whether it is Capitalized
 	private int position; //the position of hitting
+	private int maxFrequency;
 	
-	public WordOccurence(String url, int type, boolean isCapital, int position) {
+	public WordOccurence(String url, int type, boolean isCapital, int position, int maxFrequency) {
 		this.url = url;
 		this.type = type;
 		this.isCapital = isCapital;
 		this.position = position;
+		this.maxFrequency = maxFrequency;
+		
 		switch (type) {
 		case 0:
 		case 1:
@@ -29,7 +32,7 @@ public class WordOccurence {
 	}
 	
 	public String toString() {
-		return this.url + "\t" + this.type + "\t" + this.position + "\t" + this.importance;
+		return this.url + "\t" + this.type + "\t" + this.position + "\t" + this.importance + "\t" + this.maxFrequency;
 	}
 
 	//Getters and Setters
@@ -73,6 +76,13 @@ public class WordOccurence {
 		this.position = position;
 	}
 	
+	public int getMaxFrequency() {
+		return maxFrequency;
+	}
+	
+	public void setMaxFrequency(int maxFrequency) {
+		this.maxFrequency = maxFrequency;
+	}
 	
 	
 }

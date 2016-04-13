@@ -93,7 +93,7 @@ public class FileParser {
 		if (StopList.contains(word)) {
 			return;
 		}
-		WordOccurence wordOccurence = new WordOccurence(this.url, type, isCapital, this.position++);
+		WordOccurence wordOccurence = new WordOccurence(this.url, type, isCapital, this.position++, 0);
 		if (!wordMap.containsKey(word)) {
 			wordMap.put(word, new ArrayList<WordOccurence>());
 		}
@@ -160,6 +160,17 @@ public class FileParser {
 				anchorsb.append(anchor + " ");
 			}
 			parseString(anchorsb.toString(), 0);
+		}
+		
+		int maxFrequency = 0;
+		for (String mapKeyWord: wordMap.keySet()) {
+			maxFrequency = Math.max(maxFrequency, wordMap.get(mapKeyWord).size());
+		}
+		
+		for (String mapKeyWord: wordMap.keySet()) {
+			for (WordOccurence occurence: wordMap.get (mapKeyWord)) {
+				occurence.setMaxFrequency (maxFrequency);
+			}
 		}
 	}
 	

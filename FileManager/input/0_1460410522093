@@ -1,0 +1,372 @@
+http://www.turner.com
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#">
+<head>
+  <!--[if IE]><![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://www.turner.com/sites/all/themes/turner_themes/turner_broadcasting/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="dns-prefetch" href="//www.turner.com" />
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="http://www.turner.com/" />
+<link rel="shortlink" href="http://www.turner.com/" />
+<meta property="og:site_name" content="Turner" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.turner.com/" />
+<meta property="og:title" content="Turner" />
+  <title>Turner</title>
+  <link rel="apple-touch-icon" href="/sites/all/themes/turner_themes/turner_base/apple-touch-icon.png">
+  <style type="text/css" media="all">
+@import url("//www.turner.com/modules/system/system.base.css?o5cezg");
+@import url("//www.turner.com/modules/system/system.menus.css?o5cezg");
+@import url("//www.turner.com/modules/system/system.messages.css?o5cezg");
+@import url("//www.turner.com/modules/system/system.theme.css?o5cezg");
+</style>
+<style type="text/css" media="all">
+@import url("//www.turner.com/modules/aggregator/aggregator.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/date/date_api/date.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/date/date_popup/themes/datepicker.1.7.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/date/date_repeat_field/date_repeat_field.css?o5cezg");
+@import url("//www.turner.com/modules/field/theme/field.css?o5cezg");
+@import url("//www.turner.com/modules/node/node.css?o5cezg");
+@import url("//www.turner.com/modules/search/search.css?o5cezg");
+@import url("//www.turner.com/modules/user/user.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/views/css/views.css?o5cezg");
+</style>
+<style type="text/css" media="all">
+@import url("//www.turner.com/sites/all/modules/contrib/colorbox/styles/default/colorbox_style.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/ctools/css/ctools.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/panels/css/panels.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/content_type_extras/css/content_type_extras.css?o5cezg");
+@import url("//www.turner.com/sites/all/themes/turner_themes/turner_base/panels-layouts/landing_page/landing_page.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/panels/plugins/layouts/onecol/onecol.css?o5cezg");
+@import url("//www.turner.com/sites/all/modules/contrib/improved_multi_select/improved_multi_select.css?o5cezg");
+</style>
+<style type="text/css" media="all">
+@import url("//www.turner.com/sites/all/themes/turner_themes/turner_base/css/turner-base.main.css?o5cezg");
+@import url("//www.turner.com/sites/all/themes/turner_themes/turner_broadcasting/css/turner-broadcasting.main.css?o5cezg");
+</style>
+<style type="text/css" media="all">
+@import url("//www.turner.com/sites/all/themes/turner_themes/turner_base/css/turner-base-main-other.css?o5cezg");
+</style>
+  <script type="text/javascript" src="https://www.turner.com/sites/all/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
+<script type="text/javascript" src="https://www.turner.com/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://www.turner.com/misc/drupal.js?o5cezg"></script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/libraries/colorbox/jquery.colorbox-min.js?o5cezg"></script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/modules/contrib/colorbox/js/colorbox.js?o5cezg"></script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/modules/contrib/colorbox/styles/default/colorbox_style.js?o5cezg"></script>
+<script type="text/javascript" src="//assets.adobedtm.com/a07001966fe7963612925bd8a87a43dc50b34ac6/satelliteLib-3b341f1f5520c2633938096a5c3c1711809c256c.js"></script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/modules/features/features_all/ct_landing_page/plugins/content_types/js/load_more.js?o5cezg"></script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/modules/contrib/google_analytics/googleanalytics.js?o5cezg"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-69150030-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/modules/contrib/improved_multi_select/improved_multi_select.js?o5cezg"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var switchTo5x=true;
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+stLight.options({publisher: "9ba6ce8b-7360-4423-a1bc-ede547ecf7c4", doNotHash: false, doNotCopy: false, hashAddressBar: false, onhover: false});
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/themes/turner_themes/turner_base/libraries/foundation/vendor/modernizr.js?o5cezg"></script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/themes/turner_themes/turner_broadcasting/js/turner-broadcasting.behaviors.js?o5cezg"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"turner_broadcasting","theme_token":"YaF05lT6yyfh1eTzBsdsR95gLyqdm-0L9TnOQFS5SOc","js":{"0":1,"sites\/all\/themes\/turner_themes\/turner_base\/libraries\/foundation\/foundation.min.js":1,"sites\/all\/themes\/turner_themes\/turner_base\/js\/turner-base.behaviors.js":1,"sites\/all\/modules\/custom\/tps_core\/tps_geo\/js\/for_maxmind_domestic.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"\/\/assets.adobedtm.com\/a07001966fe7963612925bd8a87a43dc50b34ac6\/satelliteLib-3b341f1f5520c2633938096a5c3c1711809c256c.js":1,"sites\/all\/modules\/features\/features_all\/ct_landing_page\/plugins\/content_types\/js\/load_more.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/modules\/contrib\/improved_multi_select\/improved_multi_select.js":1,"2":1,"http:\/\/w.sharethis.com\/button\/buttons.js":1,"3":1,"sites\/all\/themes\/turner_themes\/turner_base\/libraries\/foundation\/vendor\/modernizr.js":1,"sites\/all\/themes\/turner_themes\/turner_broadcasting\/js\/turner-broadcasting.behaviors.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/content_type_extras\/css\/content_type_extras.css":1,"sites\/all\/themes\/turner_themes\/turner_base\/panels-layouts\/landing_page\/landing_page.css":1,"sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/onecol\/onecol.css":1,"sites\/all\/modules\/contrib\/improved_multi_select\/improved_multi_select.css":1,"sites\/all\/themes\/turner_themes\/turner_base\/css\/turner-base.main.css":1,"sites\/all\/themes\/turner_themes\/turner_broadcasting\/css\/turner-broadcasting.main.css":1,"sites\/all\/themes\/turner_themes\/turner_base\/css\/turner-base-main-other.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"improved_multi_select":{"selectors":["select[multiple]"]},"tps_geo":{"region_home_pages":[]}});
+//--><!]]>
+</script>
+  <!--[if lt IE 10]>
+    <script type="text/javascript" src="/sites/all/themes/turner_themes/turner_base/libraries/placeholders/placeholders.jquery.min.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script type="text/javascript">
+      window.location.href = '/browser-not-supported.html';
+    </script>
+  <![endif]-->
+</head>
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-341 node-type-landing-page node-published" >
+  <p id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </p>
+    <div class="l-page" role="main">
+    <a id="main-content"></a>
+    <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="panel-display panel-landing-page l-page--static clearfix" >
+  <section class="l-nav--3-column">
+    <div class="panel-pane pane-panels-mini pane-turner-nav"  >
+            <!-- HEADER -->
+  <header class="header admin-hide">
+    <h1 class="header__logo--3-column"><a href="/">Turner Company</a></h1>
+  </header>
+  <div class="panel-display panel-1col clearfix" id="mini-panel-turner_nav">
+  <div class="panel-panel panel-col">
+    <div><nav class="main-menu panel-pane pane-block pane-system-main-menu"  >
+            <ul class="menu"><li><a href="/company">Company</a></li>
+<li><a href="/locations">Brands and Locations</a></li>
+<li><a href="http://jobsatturner.com" title="">Jobs at Turner</a></li>
+<li><a href="/community">Community</a></li>
+<li><a href="/pressroom">Press</a></li>
+</ul>    </nav>
+</div>
+  </div>
+</div>
+    </div>
+  </section>
+  <!-- /.l-nav -->
+  <!-- MAIN BODY -->
+  <section class="l-main--3-column">
+    <!-- UTILITY STRIP -->
+    <div class="utility-strip">
+      <div class="panel-pane pane-region-filter regions-selector"  >
+      <button href="#" data-dropdown="turner-regions" aria-controls="turner-regions" aria-expanded="false" class="button dropdown regions-selector__button">Switch Regions</button><br><ul id="turner-regions" data-dropdown-content class="f-dropdown regions-selector__list" aria-hidden="true"><li><a href="#" onclick="window.location='http://www.turner.com/north-america'; return false;">North America</a></li><li><a href="#" onclick="window.location='http://www.turner.com/europe-middle-east-africa'; return false;">Europe, Middle East & Africa</a></li><li><a href="#" onclick="window.location='http://www.turner.com/asia-pacific'; return false;">Asia Pacific</a></li><li><a href="#" onclick="window.location='http://www.turner.com/latin-america'; return false;">Latin America</a></li></ul></div>
+    </div>
+    <!-- MAIN TITLE GROUP -->
+    <div class="row small-collapse tile-group--3-column">
+      <article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/FullFrontalVitamin.jpg?itok=MXO81Gk2, (default)], [http://www.turner.com/s3fs-public/FullFrontalVitamin.jpg, (retina)]">
+                                      <a class="tile-group__link-wrapper" href="http://www.tbs.com/shows/full-frontal-with-samantha-bee.html">
+          <div class="tile-group__text-box">
+        <h4 class="tile-group__tile-title--solo"><span><strong>Full Frontal with Samantha Bee: Mondays at 10:30/9:30c</strong></span></h4>
+      </div>
+      </a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/thumbnails/iHeart.png?itok=vpnTaWnU, (default)], [http://www.turner.com/s3fs-public/thumbnails/iHeart.png, (retina)]">
+                                    <a class="tile-group__link-wrapper" href="/story/iheart-radio-music-awards-2016">
+  <div class="tile-group__text-box">
+          <div class="tile-group__line">
+        <h4 class="tile-group__tile-title--solo"><span><strong>iHeart Radio Music Awards 2016</strong></span></h4>
+        </div>
+          </div>
+</a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/thumbnails/640x640_BleacherReportInvestment.jpg?itok=YPHPz1K3, (default)], [http://www.turner.com/s3fs-public/thumbnails/640x640_BleacherReportInvestment.jpg, (retina)]">
+                                    <a class="tile-group__link-wrapper" href="/story/turner-invest-100-million-rapidly-growing-bleacher-report-business">
+  <div class="tile-group__text-box">
+          </div>
+</a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/thumbnails/640x640_CokeBridge.jpg?itok=p0JyeBOw, (default)], [http://www.turner.com/s3fs-public/thumbnails/640x640_CokeBridge.jpg, (retina)]">
+                                    <a class="tile-group__link-wrapper" href="/story/bridge">
+  <div class="tile-group__text-box">
+          </div>
+</a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/640x640_TCMHonorsFrancisFordCoppola.png?itok=LL52mLJ2, (default)], [http://www.turner.com/s3fs-public/640x640_TCMHonorsFrancisFordCoppola.png, (retina)]">
+                                      <a class="tile-group__link-wrapper" href="https://www.turner.com/pressroom/tcm-honor-francis-ford-coppola-hand-and-footprint-ceremony">
+      </a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/CNN_PartsUnknown_2016_320x320_Dated.png?itok=A9uLfS0v, (default)], [http://www.turner.com/s3fs-public/CNN_PartsUnknown_2016_320x320_Dated.png, (retina)]">
+                                      <a class="tile-group__link-wrapper" href="http://www.cnn.com/shows/anthony-bourdain-parts-unknown">
+      </a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/640x640_AllThePresidentsMen.gif?itok=u8F4P0Kb, (default)], [http://www.turner.com/s3fs-public/640x640_AllThePresidentsMen.gif, (retina)]">
+                                      <a class="tile-group__link-wrapper" href="https://www.turner.com/pressroom/all-president%E2%80%99s-men-open-2016-tcm-classic-film-festival">
+      </a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/thumbnails/640x640_DavidLevy-60Sports_0.jpg?itok=K5eXWnds, (default)], [http://www.turner.com/s3fs-public/thumbnails/640x640_DavidLevy-60Sports_0.jpg, (retina)]">
+                                    <a class="tile-group__link-wrapper" href="/story/david-levy-named-60-most-powerful-people-sports">
+  <div class="tile-group__text-box">
+          <div class="tile-group__line">
+        <h4 class="tile-group__tile-title--solo"><span><strong>David Levy Named in 60 Most Powerful People in Sports</strong></span></h4>
+        </div>
+          </div>
+</a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/IBMWatsonVitamin_0.jpg?itok=S7QLIRmN, (default)], [http://www.turner.com/s3fs-public/IBMWatsonVitamin_0.jpg, (retina)]">
+                                      <a class="tile-group__link-wrapper" href="https://www.turner.com/pressroom/turner-first-apply-watson-technology-broadcast-advertising-sales">
+          <div class="tile-group__text-box">
+        <h4 class="tile-group__tile-title--solo"><span><strong>Turner is First to Apply IBM Watson Tech to Broadcast Ad Sales</strong></span></h4>
+      </div>
+      </a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-8 columns tile-group__tile panel-pane pane-slot2x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_2x1/public/thumbnails/25741_002_01324_640x320.jpg?itok=Ggr0tHG0, (default)], [http://www.turner.com/s3fs-public/thumbnails/25741_002_01324_640x320.jpg, (retina)]">
+                              <a class="tile-group__link-wrapper" href="/story/what-does-one-debate-take">
+  <div class="tile-group__text-box">
+          <div class="tile-group__line">
+        <h4 class="tile-group__tile-title--solo"><span><strong>What Does One Debate Take? </strong></span></h4>
+        </div>
+          </div>
+</a>
+          </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/thumbnails/PPGM.jpg?itok=68OSaotz, (default)], [http://www.turner.com/s3fs-public/thumbnails/PPGM.jpg, (retina)]">
+                                    <a class="tile-group__link-wrapper" href="/story/powerpuff-girls-x-moschino-collection">
+  <div class="tile-group__text-box">
+          <div class="tile-group__line">
+        <h4 class="tile-group__tile-title--solo"><span><strong>THE POWERPUFF GIRLS X MOSCHINO COLLECTION</strong></span></h4>
+        </div>
+          </div>
+</a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/320x320-LotsOfBrandsAndCountriesYo.gif?itok=LkZhoxTu, (default)], [http://www.turner.com/s3fs-public/320x320-LotsOfBrandsAndCountriesYo.gif, (retina)]">
+                                      <a class="tile-group__link-wrapper" href="https://www.turner.com/locations">
+      </a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/Watertile.jpg?itok=AttCZwDb, (default)], [http://www.turner.com/s3fs-public/Watertile.jpg, (retina)]">
+                                      <a class="tile-group__link-wrapper" href="http://www.cnn.com/2016/03/06/us/gallery/cnn-day-of-service-flint/index.html">
+          <div class="tile-group__text-box">
+        <h4 class="tile-group__tile-title--solo"><span><strong>CNN&#039;s Day of Service in Flint</strong></span></h4>
+      </div>
+      </a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><article class="medium-4 columns tile-group__tile panel-pane pane-slot1x1"  >
+  <div class="tile-group__tile-wrapper">
+    <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/320x320-BestCompanyMothers.gif?itok=KsoRkYNy, (default)], [http://www.turner.com/s3fs-public/320x320-BestCompanyMothers.gif, (retina)]">
+                                      <a class="tile-group__link-wrapper" href="http://www.workingmother.com/turner-broadcasting-system">
+      </a>
+                </div>
+  </div>
+</article>
+<div class="panel-separator"></div><!-- FEATURE: 1 X 1 -->
+    <article class="medium-4 columns tile-group__tile contextual-links-region">
+      <div class="tile-group__tile-wrapper">
+        <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/AvatarMaker.png?itok=zxY-YHut, (default)], [http://www.turner.com/s3fs-public/AvatarMaker.png, (retina)]">
+            <a class="tile-group__link-wrapper" href="https://www.powerpuffyourself.com">
+          <div class="tile-group__text-box">
+        <h4 class="tile-group__tile-title--solo"><span><strong>Powerpuff Yourself Avatar Maker</strong></span></h4>
+      </div>
+      </a>
+
+        </div>
+      </div>
+    </article><!-- FEATURE: 1 X 1 -->
+    <article class="medium-4 columns tile-group__tile contextual-links-region">
+      <div class="tile-group__tile-wrapper">
+        <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/thumbnails/640x640-Stephano-Kim.jpg?itok=PCPr8579, (default)], [http://www.turner.com/s3fs-public/thumbnails/640x640-Stephano-Kim.jpg, (retina)]">
+          <a class="tile-group__link-wrapper" href="/story/stephano-kim-honored-part-ad-ages-40-under-40-2016">
+  <div class="tile-group__text-box">
+          <div class="tile-group__line">
+        <h4 class="tile-group__tile-title--solo"><span><strong>Stephano Kim honored as part of Ad Age&#039;s 40 Under 40 2016</strong></span></h4>
+        </div>
+          </div>
+</a>
+
+        </div>
+      </div>
+    </article><!-- FEATURE: 1 X 1 -->
+    <article class="medium-4 columns tile-group__tile contextual-links-region">
+      <div class="tile-group__tile-wrapper">
+        <div class="tile-group__tile-content" data-interchange="[http://www.turner.com/s3fs-public/styles/slot_1x1/public/thumbnails/640x640_SXSW-Screenings2.gif?itok=UANnlk8d, (default)], [http://www.turner.com/s3fs-public/thumbnails/640x640_SXSW-Screenings2.gif, (retina)]">
+          <a class="tile-group__link-wrapper" href="/story/turner-sxsw%C2%AE">
+  <div class="tile-group__text-box">
+          </div>
+</a>
+
+        </div>
+      </div>
+    </article><div class="load-more js-tile-load-more-wrapper"><a href="#" class="button load-more__button js-tile-load-more" data-nid="341" data-offset="1">Load More</a></div>    </div>
+    <footer class="footer admin-hide">
+      <ul class="inline-list left footer__menu">
+        <li ><a href="/legal#accessibility">Accessibility</a></li>
+        <li><a href="/legal#safeharbor">Safe Harbor</a></li>
+        <li><a href="/legal#ApplicantHelp">Applicant Help</a></li>
+      </ul>
+      <ul class="inline-list right footer__menu">
+        <li class="footer__menu-link--twitter"><a href="https://twitter.com/TBSInc">Follow us on twitter</a></li>
+        <li class="footer__menu-link--facebook"><a href="https://www.facebook.com/turnerbroadcasting/">Find us on facebook</a></li>
+      </ul>
+      <ul class="inline-list left footer__menu">
+        <li ><a href="/legal#Advertising%20Policy%20-%20International">International Advertising Policy</a></li>
+        <li><a href="/legal#Advertising%20Policy%20-%20Latin%20America">Latin America Advertising Policy</a></li>
+        <li ><a href="/legal#advertising-us">US Advertising Policy</a></li>
+      </ul>
+      <ul class="inline-list left footer__menu">
+        <li><a href="/legal#PrivacyPolicy">Privacy Policy</a></li>
+        <li><a href="/legal#InternationalDistribution">Distribution Information</a></li>
+        <li><a href="/legal#Terms%20of%20Use">Terms of Use</a></li>
+        <li><a href="/contact-us">Contact Us</a></li>
+      </ul>
+      <p class="right footer__copyright">Â©, Â® and â¢ 2015. Turner Broadcasting System, Inc. A Time Warner Company.</p>
+    </footer>
+  </section>
+  <!-- /.l-main -->
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+_satellite.pageBottom();
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/themes/turner_themes/turner_base/libraries/foundation/foundation.min.js?o5cezg"></script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/themes/turner_themes/turner_base/js/turner-base.behaviors.js?o5cezg"></script>
+<script type="text/javascript" src="https://www.turner.com/sites/all/modules/custom/tps_core/tps_geo/js/for_maxmind_domestic.js?o5cezg"></script>
+</body>
+</html>

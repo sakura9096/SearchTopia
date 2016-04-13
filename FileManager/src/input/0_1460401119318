@@ -1,0 +1,1980 @@
+https://www.ted.com/topics
+<!DOCTYPE html>
+<!--[if lt IE 8]> <html class="no-js loggedout oldie ie7" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js loggedout oldie ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class='no-js loggedout' lang='en'><!--<![endif]-->
+<head>
+<script>
+  (function (H){
+  H.className=H.className.replace(/\bno-js\b/,'js');
+  if (('; '+document.cookie).match(/; _ted_user_id=/)) H.className=H.className.replace(/\bloggedout\b/,'loggedin');
+  })(document.documentElement)
+</script><meta charset='utf-8'>
+<title>Topics | Watch | TED</title>
+<meta content="Topics | Watch | TED" name="title" />
+<meta content="TED is a nonprofit devoted to Ideas Worth Spreading - through TED.com, our annual conferences, the annual TED Prize and local TEDx events." name="description" />
+<meta content="TED, Talks, Themes, Speakers, Technology, Entertainment, Design, Watch" name="keywords" />
+<meta content="http://assets.tedcdn.com/images/ted_amp_network.gif" name="thumbnail" />
+<meta content="http://assets.tedcdn.com/images/ted_amp_network.gif" property="og:image" />
+<link href="https://tedcdnpa-a.akamaihd.net/favicon.svg" mask="mask" rel="icon" sizes="any" />
+<meta content="#E62B1E" name="theme-color" />
+<link href="https://tedcdnpa-a.akamaihd.net/favicon.ico" rel="shortcut icon" />
+<meta content="True" name="HandheldFriendly" />
+<meta content="320" name="MobileOptimized" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="TED.com" name="apple-mobile-web-app-title" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="https://tedcdnpa-a.akamaihd.net/apple-touch-icon.png" rel="apple-touch-icon" />
+<link href="https://tedcdnpa-a.akamaihd.net/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
+<meta content="TED.com" name="application-name" />
+<meta content="/browserconfig.xml" name="msapplication-config" />
+<meta content="#000000" name="msapplication-TileColor" />
+<meta content="on" http-equiv="cleartype" />
+<meta content="Topics | Watch | TED" property="og:title" />
+<meta content="TED is a nonprofit devoted to Ideas Worth Spreading - through TED.com, our annual conferences, the annual TED Prize and local TEDx events." property="og:description" />
+<meta content="https://www.ted.com/topics" property="og:url" />
+<meta content="201021956610141" property="fb:app_id" /><!--[if lte IE 8]>
+<link rel="stylesheet" href="https://tedcdnpa-a.akamaihd.net/stylesheets/global-ie.css?1460122888">
+<link rel="stylesheet" href="https://tedcdnpa-a.akamaihd.net/stylesheets/pages-ie.css?1460122888">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<link rel="stylesheet" href="https://tedcdnpa-a.akamaihd.net/stylesheets/global.css?1460122888">
+<link rel="stylesheet" href="https://tedcdnpa-a.akamaihd.net/stylesheets/pages.css?1460122888">
+<!--<![endif]--><script>
+  if(top != self) top.location.replace(location);
+</script><script>
+  (function(i,r,l,d,o){
+    i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+    if(l && d!="yes" && d!="1") o.userId=l[1];
+    __ga('create',"UA-40781755-2",'ted.com',o);
+    __ga('set',"dimension4","1.0.0-rc.1.1");
+    __ga('set',"dimension3",'logged'+(l ? 'In' : 'Out'));
+  })(window,"__ga",('; '+document.cookie).match(/; _ted_user_id=(\d+);/),(window.navigator && window.navigator.doNotTrack),{});
+</script><script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  
+  googletag.cmd.push(function() {
+    googletag.pubads().enableAsyncRendering();
+    googletag.enableServices();
+  });
+  
+  function gptProxy(data) {
+    g('ads.gptAd', data);
+  }
+</script><script>
+  _q=[];q=function(){_q.push(arguments)};
+  _g=[];g=function(){_g.push(arguments)};
+  
+  TED = {"assetBuster":1460122888,"playerPath":"//tedcdnpb-a.akamaihd.net/assets/player/flash_hls/player_4_00_011.swf","playerPathRemote":"//tedcdnpb-a.akamaihd.net/assets/player/flash_hls/player_4_00_011.swf","playerPathLocal":"/assets/player/flash_hls/player_4_00_011.swf","assetHost":"https://tedcdnpa-a.akamaihd.net","authHost":"https://auth.ted.com","settingsUrl":"https://www.ted.com/settings/account","signInUrl":"/session/new","signOutUrl":"https://auth.ted.com/session/logout","signInHelpUrl":"https://auth.ted.com/account/password/new","signUpUrl":"/users/new","csClientId":"7341760","gaDimensions":{"breakpoint":"dimension1","talkId":"dimension2","authState":"dimension3","version":"dimension4","playlistId":"dimension5","testId":"dimension7","embedZone":"dimension8"}};
+  TED.signOutUrl += '?referer=' + location.protocol + '//' + location.host + '/session/logout';
+  
+  TED.startTime = new Date();
+  TED.isFirstVisit = !document.cookie.match(/; _ga=/);
+  
+  TED.abby = (function () {
+    var abs=(document.cookie.match(/_abby_(\w+)=(\w+)/g) || []), dms=[], ts={}, t;
+    for (var i=-1, l=abs.length; ++i < l;) {
+      t = abs[i].match(/_abby_(\w+)=(\w+)/);
+      ts[t[1]] = t[2];
+      tstr = t[1] + ':' + t[2];
+      if (dms.indexOf(tstr) < 0) dms.push(tstr);
+    }
+    if (dms.length) {
+      __ga('set', "dimension7", dms.join(','));
+    }
+    return {tests: ts}
+  }());
+  
+  require = {"baseUrl":"https://tedcdnpa-a.akamaihd.net/javascripts","map":{"*":{"Handlebars":"hbs/handlebars","underscore":"lodash"}},"waitSeconds":0,"deps":["libs"],"paths":{"Backbone":"libs.js?215ace7cc9967e1c53e5cbd144e4b6e1","embed":"embed.js?39062d7d717165613fccd4854ade203a","swfobject.js.src":"swfobject.js.src.js?8c2ec4bc2c9a39bc3f4ff92223077cf6","swatch":"swatch.js?16869db8464b9a973575e776c098a1ed","dq.js.src":"dq.js.src.js?20900afc0ab80dbb330fcde67664a6a3","crushinator.js.src":"crushinator.js.src.js?984341d50c95cdd2fe92b9bd7ce05f3c","libs":"libs.js?215ace7cc9967e1c53e5cbd144e4b6e1","touchPunch":"touchPunch.js?47b6211b7aef9750ac4f6613a4256cc9","deferLink":"deferLink.js?e14e03f72ba516ed01acd550b7e88632","swfobject":"libs.js?215ace7cc9967e1c53e5cbd144e4b6e1","dq":"libs.js?215ace7cc9967e1c53e5cbd144e4b6e1","surprise_me":"surprise_me.js?48b81bdd4728b033eaa172568d42682d","jqueryujs":"libs.js?215ace7cc9967e1c53e5cbd144e4b6e1","SwipeView":"SwipeView.js?3d6ab40c7f02be91047f9e6802690af6","touchPunch.js.src":"touchPunch.js.src.js?30225c78da2fa55b9f6280523fe7006c","menuAim.js.src":"menuAim.js.src.js?666acd493c1b93bb7d3e4f2a47bee270","Modernizr.js.src":"Modernizr.js.src.js?5bc88f4d7b86ab7371f2426944495bd5","Swipe":"Swipe.js?b746c9e9c38bd13ef622cfeed09ba6bf","Mailcheck":"Mailcheck.js?e9277fbd868675ae76cf972e86b4a68d","depot":"depot.js?459b54116dfdf9b345aaea2b3601f380","Cookies.js.src":"Cookies.js.src.js?c9dd9a474a04929b74b9d363f8dfcf8e","autosize.js.src":"autosize.js.src.js?e3a7f4e47ca37d3dcad5da224a89362e","pages":"pages.js?fde8b45d2e3b6882e96c00e60c7c4154","Swipe.js.src":"Swipe.js.src.js?9ce5a91df31873e94034bafb36759f30","transit.js.src":"transit.js.src.js?b2c17d2af483e0b0ec85ad9980cad508","hbs":"hbs.js?62ffd6dc422a088483ef7863de071d9e","talk":"talk.js?fbac1a5b232f67d3c7552535494f83ff","jqueryujs.js.src":"jqueryujs.js.src.js?c7d857a07ee95a2ea27569af02b49dea","Cookies":"Cookies.js?ec959f431471b295566bcf6ad4298fcb","spinjs":"spinjs.js?0f67f5820075f88643c601a4284d14b2","jwplayer/jwplayer.html5":"jwplayer/jwplayer.html5.js?c0969ca5364f270ed8647d28c59dc9f9","jwplayer/jwplayer":"jwplayer/jwplayer.js?06735c0a9046236cc35a724dc09c5b0d","tedx":"tedx.js?89add31be0136fc24e2178b7788ca395","Mailcheck.js.src":"Mailcheck.js.src.js?a734d154e45ba6dc9bfb76bd86c6bb5b","autosize":"autosize.js?c463a94f6da61cb86e53ea61dbcb6735","flot.js.src":"flot.js.src.js?b8c10fb1c177809813dadb198bcc16de","deferLink.js.src":"deferLink.js.src.js?57798dc1e4ea6cc549573232e4219193","waypoints.js.src":"waypoints.js.src.js?f302b99ffb6e3606e9eb7ca7d82a0264","dashboard_hotels":"dashboard_hotels.js?0ab7eab2881f65bfd2ab72d48675c511","crushinator":"crushinator.js?6f15f1348c1b4554cd0ca2fd953fe55e","home":"home.js?d20faeadacc5db11366564befa494ea5","settings":"settings.js?87f8651da8f7a3058a30ac51c9ac95c0","moment":"moment.js?408f6a21d69b26bb98a3c705e51e7764","numeral.js.src":"numeral.js.src.js?c0e90e3e9f126d77a564afce7b9201b3","profiles":"profiles.js?b6691f093adf9244d990259e23763fdd","spinjs.js.src":"spinjs.js.src.js?4f5885262e8544079071bf4876566be7","Backbone.js.src":"Backbone.js.src.js?bad03324ce6bc1c8effa5d3b4e3c2750","numeral":"numeral.js?611d7abced1fea00d28e10252bff308e","SwipeView.js.src":"SwipeView.js.src.js?9a048263972115536ed447f9c0b7d904","moment.js.src":"moment.js.src.js?49f7c993eafe9006c9121dd4f414aa6d","global":"global.js?a2fb4a87bb17076cd8a738d9d5103f13","dashboard_sessions":"dashboard_sessions.js?959366ec91bed3f0495eee18c62f9356","Modernizr":"Modernizr.js?8d4a21cfb9a3fcefdabddaac961016fe","depot.js.src":"depot.js.src.js?41f161d39f9c3fcbd516140f308c08b5","menuAim":"menuAim.js?9cb78e11db10ac4675f57a9c4e3047b7","dashboard":"dashboard.js?399db5af2af978ea31e9aae2315a5914","pages/dynamic/dummy":"pages/dynamic/dummy.js?3967fae7f441a192ac0a2b697e4e7a3d","playlists":"playlists.js?57da6c2578e96e3e57cc04277e7d4f45","lodash":"libs.js?215ace7cc9967e1c53e5cbd144e4b6e1","core":"core.js?dfcb641a53fe5a5c22ed16e37e7d8e2a","hbs.js.src":"hbs.js.src.js?3fc49de9f867d99109e8408170520be5","dashboard_tedx":"dashboard_tedx.js?5274dfce221b8547e3913598fe27e10b","jquery.js.src":"jquery.js.src.js?7f38dcbfb11aff050652ff3b754adb63","flot":"flot.js?cc487fa44adf9da4523f900fe26c7c0d","search":"search.js?cf947f19e0187160d72a4fba3f793437","jquery":"libs.js?215ace7cc9967e1c53e5cbd144e4b6e1","lodash.js.src":"lodash.js.src.js?e42fbb6429290cb8f1b3177a20c86ab8","newsletter":"newsletter.js?d8df040bd4ec91a821e6a327ac0fd193","transit":"transit.js?1bb6034bee2f350ddcc3876a929ed54c","talks":"talks.js?41c2a36348164662f125863c3028263f","waypoints":"waypoints.js?a6a99f3a64e668c5afdfe0aaa1245215","hbs/handlebars":"libs.js?215ace7cc9967e1c53e5cbd144e4b6e1"}};
+</script>
+<script>
+  TED.abby.overridden = false;
+  TED.abby.disabled = false;
+  if (false) {
+    
+  }
+  TED["controller"]="pages"
+</script>
+<script async="async" data-main="pages" src="https://tedcdnpa-a.akamaihd.net/javascripts/core.js?1460122888"></script></head>
+<body class='pages-body'>
+<div class='shoji' id='shoji'>
+<div class='shoji__fixtures' id='shoji-fixtures'></div>
+<div class='shoji__door'>
+<div class='page shoji__washi'>
+<script>
+  (function(d,h){
+    if (('; '+d.cookie).match(/; _uconf=0;/)) {
+      d.write(h);
+      g('uconf.init',"uconf","uconf-close");
+    }
+  }(document,"\u003Cdiv class='alert alert--flash alert--warning' id='uconf'\u003E\n\u003Cdiv class='container'\u003E\n\u003Cdiv class='alert__container'\u003E\u003Ch4 class='h10 m5'\u003EYour account isn't active yet.\u003C/h4\u003EPlease click on the confirmation link we sent you.\nIf you don't receive the email within ten minutes, we can\n\u003Ca href='https://auth.ted.com/account/confirmation/new'\u003Esend it again\u003C/a\u003E.\n\u003Ca class='alert__close g g-button-modal-close' href='#' id='uconf-close'\u003EClose\u003C/a\u003E\n\u003C/div\u003E\n\u003C/div\u003E\n\u003C/div\u003E\n"))
+</script><div class='main-nav-screen' id='main-nav-screen'></div>
+<noscript>
+<div class='alert alert--flash alert--warning'>
+<div class='container'>
+<div class='h9'>You have JavaScript disabled</div>
+For the best experience, please turn JavaScript on.
+<a href='http://enable-javascript.com/'>Here's how</a>
+</div>
+</div>
+</noscript>
+
+<header class='banner' role='banner'>
+<div class='banner__container'>
+<a class='g-menu banner__main-nav-toggle' href='#main-nav' id='main-nav-toggle'>Navigation</a>
+<a class='g-logo-small banner__logo' href='/'>TED</a>
+<span class='banner__account'>
+<nav class='nav nav--main banner__account__nav' role='navigation'>
+<ul class='nav__menu' role='menubar'>
+<li class='nav__item nav__item--disabled' role='presentation'>
+<a class='nav__link nav__link--placeheld banner__account__link banner__account__link--profile' href='/dashboard' id='account-link' role='menuitem' title='Your account'>
+<div class='banner__account__image' id='account-image'></div>
+<span class='badge banner__account__badge' id='account-badge'>1</span>
+</a>
+<span class='nav__link nav__link--placeholder'></span>
+<div class='nav__folder'></div>
+</li>
+</ul>
+</nav>
+<a class='banner__account__link banner__account__link--login auth-login' href='/session/new' id='login-link'>Log in</a>
+<a class='banner__account__link banner__account__link--signup' href='/users/new'>Sign up</a>
+</span>
+
+<div id='banner-core'>
+<form action='/search' class='main-search' id='main-search' role='search'>
+<div class='main-search__content'>
+<input autocorrect='off' class='main-search__input' name='q' placeholder='Search...' value=''>
+<input class='main-search__button g-search' type='submit' value='Search'>
+</div>
+</form>
+
+<nav class='nav nav--main' id='main-nav' role='navigation'>
+<a class='nav__link nav__skip' href='#main-nav-skip'>Skip to content&hellip;</a>
+<ul class='nav__menu' role='menubar'>
+<li class='nav__item nav__item--foldable' role='presentation'>
+<a aria-haspopup='true' class='nav__link' data-ga-label='watch' href='#' role='menuitem'>
+Watch
+</a>
+<div class='nav__folder'>
+<ul class='nav__menu' role='menubar'>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="watch" data-ga-category="navigation.item" data-ga-label="/talks" href="/talks" role="menuitem"><span class="nav__item__title">TED Talks</span><div class="nav__item__info">Browse the library of TED talks and speakers</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="watch" data-ga-category="navigation.item" data-ga-label="/playlists" href="/playlists" role="menuitem"><span class="nav__item__title">Playlists</span><div class="nav__item__info">100+ collections of TED Talks, for curious minds</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="watch" data-ga-category="navigation.item" data-ga-label="/watch/ted-ed" href="/watch/ted-ed" role="menuitem"><span class="nav__item__title">TED-Ed videos</span><div class="nav__item__info">Watch, share and create lessons with TED-Ed</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="watch" data-ga-category="navigation.item" data-ga-label="/watch/tedx-talks" href="/watch/tedx-talks" role="menuitem"><span class="nav__item__title">TEDx Talks</span><div class="nav__item__info">Talks from independently organized local events</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="watch" data-ga-category="navigation.item" data-ga-label="/surpriseme" href="/surpriseme" role="menuitem"><span class="nav__item__title">Surprise Me</span><div class="nav__item__info">The easy option. Let us choose for you!</div></a></li>
+</ul>
+</div>
+</li>
+<li class='nav__item nav__item--foldable' role='presentation'>
+<a aria-haspopup='true' class='nav__link' data-ga-label='discover' href='#' role='menuitem'>
+Discover
+</a>
+<div class='nav__folder'>
+<ul class='nav__menu' role='menubar'>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="discover" data-ga-category="navigation.item" data-ga-label="/topics" href="/topics" role="menuitem"><span class="nav__item__title">Topics</span><div class="nav__item__info">Explore TED offerings by topic</div></a></li>
+<li class="nav__item nav__item--latch" role="presentation"><a class="ga-link nav__link" data-ga-action="discover" data-ga-category="navigation.item" data-ga-label="/read/ted-books" href="/read/ted-books" role="menuitem"><span class="nav__item__title">TED Books</span><div class="nav__item__info">Short books to feed your craving for ideas</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="discover" data-ga-category="navigation.item" data-ga-label="/read/ted-studies" href="/read/ted-studies" role="menuitem"><span class="nav__item__title">TED Studies</span><div class="nav__item__info">Curated course material for educators and life long learners</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="discover" data-ga-category="navigation.item" data-ga-label="http://ideas.ted.com" href="http://ideas.ted.com" role="menuitem" target="_blank"><span class="nav__item__title">Ideas Blog</span><i class="icon icon_outbound nav__item__icon-outbound" title="Outbound"></i><span class="screen-reader-text">Outbound</span><div class="nav__item__info">Our daily coverage of the world of ideas</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="discover" data-ga-category="navigation.item" data-ga-label="/newsletter" href="/newsletter" role="menuitem"><span class="nav__item__title">Newsletter</span><div class="nav__item__info">Inspiration delivered straight to your inbox</div></a></li>
+</ul>
+</div>
+</li>
+<li class='nav__item nav__item--foldable' role='presentation'>
+<a aria-haspopup='true' class='nav__link' data-ga-label='attend' href='#' role='menuitem'>
+Attend
+</a>
+<div class='nav__folder'>
+<ul class='nav__menu' role='menubar'>
+<li class="nav__item nav__item--latch" role="presentation"><a class="ga-link nav__link" data-ga-action="attend" data-ga-category="navigation.item" data-ga-label="/attend/conferences" href="/attend/conferences" role="menuitem"><span class="nav__item__title">Conferences</span><div class="nav__item__info">Take part in our events: TED, TEDGlobal, TEDActive and more</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="attend" data-ga-category="navigation.item" data-ga-label="/tedx/events" href="/tedx/events" role="menuitem"><span class="nav__item__title">TEDx events</span><div class="nav__item__info">Find and attend local, independently organized events</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="attend" data-ga-category="navigation.item" data-ga-label="/attend/ted-live" href="/attend/ted-live" role="menuitem"><span class="nav__item__title">TED Live</span><div class="nav__item__info">Experience the conferences from home</div></a></li>
+</ul>
+</div>
+</li>
+<li class='nav__item nav__item--foldable' role='presentation'>
+<a aria-haspopup='true' class='nav__link' data-ga-label='participate' href='#' role='menuitem'>
+Participate
+</a>
+<div class='nav__folder'>
+<ul class='nav__menu' role='menubar'>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="participate" data-ga-category="navigation.item" data-ga-label="/participate/nominate" href="/participate/nominate" role="menuitem"><span class="nav__item__title">Nominate</span><div class="nav__item__info">Recommend speakers, TED Prize recipients, Fellows and more</div></a></li>
+<li class="nav__item nav__item--latch" role="presentation"><a class="ga-link nav__link" data-ga-action="participate" data-ga-category="navigation.item" data-ga-label="/participate/organize-a-local-tedx-event" href="/participate/organize-a-local-tedx-event" role="menuitem"><span class="nav__item__title">Organize a local TEDx event</span><div class="nav__item__info">Rules and resources to help you plan a local TEDx event</div></a></li>
+<li class="nav__item nav__item--latch" role="presentation"><a class="ga-link nav__link" data-ga-action="participate" data-ga-category="navigation.item" data-ga-label="/participate/translate" href="/participate/translate" role="menuitem"><span class="nav__item__title">Translate</span><div class="nav__item__info">Bring TED to the non-English speaking world</div></a></li>
+<li class="nav__item nav__item--latch" role="presentation"><a class="ga-link nav__link" data-ga-action="participate" data-ga-category="navigation.item" data-ga-label="/participate/ted-prize" href="/participate/ted-prize" role="menuitem"><span class="nav__item__title">TED Prize</span><div class="nav__item__info">Get involved in the yearly prize for world-changing ideas</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="participate" data-ga-category="navigation.item" data-ga-label="/participate/ted-fellows-program" href="/participate/ted-fellows-program" role="menuitem"><span class="nav__item__title">TED Fellows</span><div class="nav__item__info">Join or support innovators from around the globe</div></a></li>
+</ul>
+</div>
+</li>
+<li class='nav__item nav__item--foldable' role='presentation'>
+<a aria-haspopup='true' class='nav__link' data-ga-label='about' href='#' role='menuitem'>
+About
+</a>
+<div class='nav__folder'>
+<ul class='nav__menu' role='menubar'>
+<li class="nav__item nav__item--latch" role="presentation"><a class="ga-link nav__link" data-ga-action="about" data-ga-category="navigation.item" data-ga-label="/about/our-organization" href="/about/our-organization" role="menuitem"><span class="nav__item__title">Our organization</span><div class="nav__item__info">Our mission, history, team, and more</div></a></li>
+<li class="nav__item nav__item--latch" role="presentation"><a class="ga-link nav__link" data-ga-action="about" data-ga-category="navigation.item" data-ga-label="/about/conferences" href="/about/conferences" role="menuitem"><span class="nav__item__title">Conferences</span><div class="nav__item__info">TED Conferences, past, present, and future</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="about" data-ga-category="navigation.item" data-ga-label="/about/programs-initiatives" href="/about/programs-initiatives" role="menuitem"><span class="nav__item__title">Programs &amp; Initiatives</span><div class="nav__item__info">Details about TED&#39;s world-changing initiatives</div></a></li>
+<li class="nav__item nav__item--latch" role="presentation"><a class="ga-link nav__link" data-ga-action="about" data-ga-category="navigation.item" data-ga-label="/about/partner-with-ted" href="/about/partner-with-ted" role="menuitem"><span class="nav__item__title">Partner with TED</span><div class="nav__item__info">Learn how you can partner with us</div></a></li>
+<li class="nav__item" role="presentation"><a class="ga-link nav__link" data-ga-action="about" data-ga-category="navigation.item" data-ga-label="http://blog.ted.com" href="http://blog.ted.com" role="menuitem" target="_blank"><span class="nav__item__title">TED Blog</span><i class="icon icon_outbound nav__item__icon-outbound" title="Outbound"></i><span class="screen-reader-text">Outbound</span><div class="nav__item__info">Updates from TED and highlights from our global community</div></a></li>
+</ul>
+</div>
+</li>
+</ul>
+<div id='main-nav-skip'></div>
+</nav>
+
+</div>
+</div>
+</header><script>
+g('floodlight.clear');
+</script><div class='main pages-main' role='main'>
+<!-- PB:T: one_column_no_nav -->
+<div class='container'>
+<div class='m1 module'>
+<nav class='breadcrumb m4 show-lg'>Watch&nbsp;&nbsp;&rsaquo;&nbsp;&nbsp;</nav>
+
+<h1 class='h1 h1--alt m2'>
+Topics
+</h1>
+
+</div>
+
+<!-- PB:B: dynamic -->
+<div>
+<!--[if lte IE 8]>
+<style>
+@import url("https://tedcdnpa-a.akamaihd.net/stylesheets/pages/dynamic/topics-ie.css?1460122888");
+</style>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<style scoped>
+@import url("https://tedcdnpa-a.akamaihd.net/stylesheets/pages/dynamic/topics.css?1460122888");
+</style>
+<!--<![endif]-->
+<div class='topics'>
+<div class='topics__list'>
+<div class='topics__list__letter'>
+<div class='h9'>A</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/activism'>Activism</a></div>
+92 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Addiction'>Addiction</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/adventure'>Adventure</a></div>
+31 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/advertising'>Advertising</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Africa'>Africa</a></div>
+76 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/aging'>Aging</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/agriculture'>Agriculture</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/AI'>AI</a></div>
+19 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/AIDS'>AIDS</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/aircraft'>Aircraft</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/algorithm'>Algorithm</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/alternative+energy'>Alternative energy</a></div>
+26 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/ancient+world'>Ancient world</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/animals'>Animals</a></div>
+80 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/anthropology'>Anthropology</a></div>
+14 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/ants'>Ants</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/apes'>Apes</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/architecture'>Architecture</a></div>
+69 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/art'>Art</a></div>
+140 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/arts'>Arts</a></div>
+197 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Asia'>Asia</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/astronomy'>Astronomy</a></div>
+39 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/atheism'>Atheism</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/augmented+reality'>Augmented reality</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Autism+spectrum+disorder'>Autism spectrum disorder</a></div>
+8 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>B</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/bacteria'>Bacteria</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/beauty'>Beauty</a></div>
+30 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/bees'>Bees</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/behavioral+economics'>Behavioral economics</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/big+bang'>Big bang</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/big+problems'>Big problems</a></div>
+35 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/biodiversity'>Biodiversity</a></div>
+37 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Bioethics'>Bioethics</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/biology'>Biology</a></div>
+123 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/biomechanics'>Biomechanics</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/biomimicry'>Biomimicry</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/biosphere'>Biosphere</a></div>
+25 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/biotech'>Biotech</a></div>
+27 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/birds'>Birds</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/body+language'>Body language</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/books'>Books</a></div>
+31 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/botany'>Botany</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/brain'>Brain</a></div>
+114 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Brand'>Brand</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Brazil'>Brazil</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Buddhism'>Buddhism</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/bullying'>Bullying</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/business'>Business</a></div>
+305 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>C</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cancer'>Cancer</a></div>
+26 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/capitalism'>Capitalism</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cars'>Cars</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cello'>Cello</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/charter+for+compassion'>Charter for compassion</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/chautauqua'>Chautauqua</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/chemistry'>Chemistry</a></div>
+16 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/children'>Children</a></div>
+90 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/china'>China</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/choice'>Choice</a></div>
+21 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Christianity'>Christianity</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cities'>Cities</a></div>
+105 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/climate+change'>Climate change</a></div>
+50 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cloud'>Cloud</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/code'>Code</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cognitive+science'>Cognitive science</a></div>
+24 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/collaboration'>Collaboration</a></div>
+83 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/comedy'>Comedy</a></div>
+28 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/communication'>Communication</a></div>
+77 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/community'>Community</a></div>
+56 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/compassion'>Compassion</a></div>
+17 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/complexity'>Complexity</a></div>
+17 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/composing'>Composing</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/computers'>Computers</a></div>
+72 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/conducting'>Conducting</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/consciousness'>Consciousness</a></div>
+16 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/conservation'>Conservation</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/consumerism'>Consumerism</a></div>
+20 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cooperation'>Cooperation</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/corruption'>Corruption</a></div>
+15 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cosmos'>Cosmos</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/creativity'>Creativity</a></div>
+158 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/crime'>Crime</a></div>
+37 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Criminal+Justice'>Criminal Justice</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/culture'>Culture</a></div>
+470 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/curiosity'>Curiosity</a></div>
+16 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/cyborg'>Cyborg</a></div>
+3 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>D</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/dance'>Dance</a></div>
+21 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/dark+matter'>Dark matter</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/data'>Data</a></div>
+51 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/death'>Death</a></div>
+21 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Debate'>Debate</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/decision-making'>Decision-making</a></div>
+19 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/deextinction'>Deextinction</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/demo'>Demo</a></div>
+42 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/democracy'>Democracy</a></div>
+30 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/depression'>Depression</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/design'>Design</a></div>
+365 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/development'>Development</a></div>
+53 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/dinosaurs'>Dinosaurs</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/disability'>Disability</a></div>
+19 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/disaster+relief'>Disaster relief</a></div>
+21 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/disease'>Disease</a></div>
+41 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/DNA'>DNA</a></div>
+14 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/drones'>Drones</a></div>
+16 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>E</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/ebola'>Ebola</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/economics'>Economics</a></div>
+125 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/education'>Education</a></div>
+172 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Egypt'>Egypt</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/empathy'>Empathy</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/energy'>Energy</a></div>
+40 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/engineering'>Engineering</a></div>
+55 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/entertainment'>Entertainment</a></div>
+282 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/entrepreneur'>Entrepreneur</a></div>
+46 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/environment'>Environment</a></div>
+101 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/epidemiology'>Epidemiology</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Europe'>Europe</a></div>
+15 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/evil'>Evil</a></div>
+2 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/evolution'>Evolution</a></div>
+54 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/exoskeleton'>Exoskeleton</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/exploration'>Exploration</a></div>
+66 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/extraterrestrial+life'>Extraterrestrial life</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/extreme+sports'>Extreme sports</a></div>
+6 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>F</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/failure'>Failure</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/faith'>Faith</a></div>
+20 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/family'>Family</a></div>
+17 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/fashion'>Fashion</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/fear'>Fear</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/feminism'>Feminism</a></div>
+22 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/film'>Film</a></div>
+54 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/finance'>Finance</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/fish'>Fish</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/flight'>Flight</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/food'>Food</a></div>
+50 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Foreign+Policy'>Foreign Policy</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/funny'>Funny</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/future'>Future</a></div>
+87 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>G</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/gaming'>Gaming</a></div>
+26 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/garden'>Garden</a></div>
+16 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/gender'>Gender</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Gender+spectrum'>Gender spectrum</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/genetics'>Genetics</a></div>
+29 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/geology'>Geology</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/glacier'>Glacier</a></div>
+2 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/global+issues'>Global issues</a></div>
+446 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/goal-setting'>Goal-setting</a></div>
+21 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/God'>God</a></div>
+15 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Google'>Google</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/government'>Government</a></div>
+54 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/green'>Green</a></div>
+55 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/guitar'>Guitar</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Guns'>Guns</a></div>
+2 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>H</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/hack'>Hack</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/happiness'>Happiness</a></div>
+58 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/health'>Health</a></div>
+156 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/health+care'>Health care</a></div>
+88 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/heart+health'>Heart health</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/history'>History</a></div>
+86 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/human+origins'>Human origins</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/humanity'>Humanity</a></div>
+55 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/humor'>Humor</a></div>
+80 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>I</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/identity'>Identity</a></div>
+33 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/illness'>Illness</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/illusion'>Illusion</a></div>
+17 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/immigration'>Immigration</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/india'>India</a></div>
+16 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/industrial+design'>Industrial design</a></div>
+17 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/inequality'>Inequality</a></div>
+48 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/infrastructure'>Infrastructure</a></div>
+32 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/innovation'>Innovation</a></div>
+94 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/insects'>Insects</a></div>
+25 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/intelligence'>Intelligence</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/interface+design'>Interface design</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Internet'>Internet</a></div>
+56 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/interview'>Interview</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/invention'>Invention</a></div>
+103 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/investment'>Investment</a></div>
+24 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Iran'>Iran</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/iraq'>Iraq</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Islam'>Islam</a></div>
+7 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>J</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/jazz'>Jazz</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/journalism'>Journalism</a></div>
+28 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>L</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/language'>Language</a></div>
+43 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Latin+America'>Latin America</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/law'>Law</a></div>
+38 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/leadership'>Leadership</a></div>
+46 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/LGBT'>LGBT</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/library'>Library</a></div>
+14 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/life'>Life</a></div>
+64 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/literature'>Literature</a></div>
+17 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/live+music'>Live music</a></div>
+53 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/love'>Love</a></div>
+29 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>M</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/MacArthur+grant'>MacArthur grant</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/magic'>Magic</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/map'>Map</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/marketing'>Marketing</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/materials'>Materials</a></div>
+20 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/math'>Math</a></div>
+42 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/media'>Media</a></div>
+54 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/medical+research'>Medical research</a></div>
+35 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/medicine'>Medicine</a></div>
+121 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/meditation'>Meditation</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/meme'>Meme</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/memory'>Memory</a></div>
+16 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/men'>Men</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/mental+health'>Mental health</a></div>
+29 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/microbiology'>Microbiology</a></div>
+15 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/microfinance'>Microfinance</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/microsoft'>Microsoft</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Middle+East'>Middle East</a></div>
+22 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/military'>Military</a></div>
+14 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/mind'>Mind</a></div>
+32 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/mindfulness'>Mindfulness</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/mining'>Mining</a></div>
+2 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/mission+blue'>Mission blue</a></div>
+22 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/mobility'>Mobility</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/money'>Money</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/monkeys'>Monkeys</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Moon'>Moon</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/morality'>Morality</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/motivation'>Motivation</a></div>
+25 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/museums'>Museums</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/music'>Music</a></div>
+125 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>N</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/nanoscale'>Nanoscale</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/NASA'>NASA</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/natural+disaster'>Natural disaster</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/nature'>Nature</a></div>
+61 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/neurology'>Neurology</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/neuroscience'>Neuroscience</a></div>
+42 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/New+York'>New York</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/news'>News</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/novel'>Novel</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/nuclear+energy'>Nuclear energy</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/nuclear+weapons'>Nuclear weapons</a></div>
+2 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>O</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/obesity'>Obesity</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/oceans'>Oceans</a></div>
+63 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/oil'>Oil</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/One+Laptop+Per+Child'>One Laptop Per Child</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/online+video'>Online video</a></div>
+22 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/open-source'>Open-source</a></div>
+27 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/origami'>Origami</a></div>
+2 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>P</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/pain'>Pain</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/painting'>Painting</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/paleontology'>Paleontology</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/pandemic'>Pandemic</a></div>
+2 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/parenting'>Parenting</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/peace'>Peace</a></div>
+47 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/performance'>Performance</a></div>
+76 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/performance+art'>Performance art</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/personal+growth'>Personal growth</a></div>
+30 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/philanthropy'>Philanthropy</a></div>
+32 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/philosophy'>Philosophy</a></div>
+52 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/photography'>Photography</a></div>
+82 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/physics'>Physics</a></div>
+57 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/piano'>Piano</a></div>
+15 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Planets'>Planets</a></div>
+18 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/plastic'>Plastic</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/play'>Play</a></div>
+14 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/poetry'>Poetry</a></div>
+45 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/policy'>Policy</a></div>
+24 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/politics'>Politics</a></div>
+164 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/pollution'>Pollution</a></div>
+15 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/population'>Population</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/potential'>Potential</a></div>
+30 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/poverty'>Poverty</a></div>
+49 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/prediction'>Prediction</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/presentation'>Presentation</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/primates'>Primates</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/prison'>Prison</a></div>
+15 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/privacy'>Privacy</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/product+design'>Product design</a></div>
+25 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/productivity'>Productivity</a></div>
+14 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/programming'>Programming</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/prosthetics'>Prosthetics</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/protests'>Protests</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/psychology'>Psychology</a></div>
+88 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/public+health'>Public health</a></div>
+26 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>R</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/race'>Race</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/refugees'>Refugees</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/relationships'>Relationships</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/religion'>Religion</a></div>
+42 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/robots'>Robots</a></div>
+39 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/rocket+science'>Rocket science</a></div>
+4 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>S</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/sanitation'>Sanitation</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/science'>Science</a></div>
+471 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/security'>Security</a></div>
+20 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/self'>Self</a></div>
+32 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Senses'>Senses</a></div>
+16 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/sex'>Sex</a></div>
+30 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/shopping'>Shopping</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/sight'>Sight</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/simplicity'>Simplicity</a></div>
+14 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/singer'>Singer</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/skateboarding'>Skateboarding</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Slavery'>Slavery</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/smell'>Smell</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/social+change'>Social change</a></div>
+104 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/social+media'>Social media</a></div>
+35 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/society'>Society</a></div>
+66 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/sociology'>Sociology</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/software'>Software</a></div>
+28 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/solar'>Solar</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/solar+energy'>Solar energy</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/sound'>Sound</a></div>
+10 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/South+America'>South America</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/space'>Space</a></div>
+49 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/speech'>Speech</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/spoken+word'>Spoken word</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/sports'>Sports</a></div>
+28 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/state-building'>State-building</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/statistics'>Statistics</a></div>
+23 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/storytelling'>Storytelling</a></div>
+103 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/street+art'>Street art</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/String+theory'>String theory</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/student'>Student</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/submarine'>Submarine</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/success'>Success</a></div>
+20 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/suicide'>Suicide</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Surgery'>Surgery</a></div>
+5 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/sustainability'>Sustainability</a></div>
+56 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>T</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/teaching'>Teaching</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/technology'>Technology</a></div>
+616 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TED+Books'>TED Books</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TED+Brain+Trust'>TED Brain Trust</a></div>
+55 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TED+Conference'>TED Conference</a></div>
+714 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TED+Fellows'>TED Fellows</a></div>
+117 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TED+Prize'>TED Prize</a></div>
+25 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TED-Ed'>TED-Ed</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TEDMED'>TEDMED</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TEDx'>TEDx</a></div>
+360 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/TEDYouth'>TEDYouth</a></div>
+27 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/telecom'>Telecom</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/television'>Television</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/terrorism'>Terrorism</a></div>
+24 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/testing'>Testing</a></div>
+1 talk
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/theater'>Theater</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/third+world'>Third world</a></div>
+16 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/time'>Time</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/toy'>Toy</a></div>
+14 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/trafficking'>Trafficking</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Transgender'>Transgender</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/transportation'>Transportation</a></div>
+31 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/travel'>Travel</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/trees'>Trees</a></div>
+11 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/typography'>Typography</a></div>
+6 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>U</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/United+States'>United States</a></div>
+13 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/universe'>Universe</a></div>
+32 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/urban'>Urban</a></div>
+2 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/urban+planning'>Urban planning</a></div>
+18 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>V</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/Vaccines'>Vaccines</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/violence'>Violence</a></div>
+43 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/violin'>Violin</a></div>
+6 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/virus'>Virus</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/visualizations'>Visualizations</a></div>
+45 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/vocals'>Vocals</a></div>
+3 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/vulnerability'>Vulnerability</a></div>
+1 talk
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>W</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/war'>War</a></div>
+87 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/water'>Water</a></div>
+24 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/weather'>Weather</a></div>
+8 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/web'>Web</a></div>
+38 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/wikipedia'>Wikipedia</a></div>
+7 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/wind+energy'>Wind energy</a></div>
+4 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/women'>Women</a></div>
+83 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/women+in+business'>Women in business</a></div>
+22 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/work'>Work</a></div>
+48 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/world+cultures'>World cultures</a></div>
+12 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/writing'>Writing</a></div>
+41 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/wunderkind'>Wunderkind</a></div>
+5 talks
+</div>
+<div class='topics__list__letter'>
+<div class='h9'>Y</div>
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/yesallwomen'>Yesallwomen</a></div>
+9 talks
+</div>
+<div class='topics__list__topic'>
+<div class='h9'><a href='/topics/youth'>Youth</a></div>
+34 talks
+</div>
+</div>
+</div>
+</div>
+
+
+</div></div>
+<footer class='footer'>
+<div class='container'>
+<div class='footer__content'>
+<a class="g-logo-small footer__logo" href="/">TED</a>
+<div class='footer__content__links'>
+<nav class='footer__section' role='navigation'>
+<h3 class='footer__title'>
+Programs &amp; initiatives
+</h3>
+<ul class='footer__links'>
+<li class='m5'><a class="footer__link" href="/about/programs-initiatives/tedx-program">TEDx</a></li>
+<li class='m5'><a class="footer__link" href="/about/programs-initiatives/ted-prize">TED Prize</a></li>
+<li class='m5'><a class="footer__link" href="/about/programs-initiatives/ted-fellows-program">TED Fellows</a></li>
+<li class='m5'><a class="footer__link" href="/about/programs-initiatives/ted-ed">TED Ed</a></li>
+<li class='m5'><a class="footer__link" href="/about/programs-initiatives/ted-open-translation-project">Open Translation Project</a></li>
+<li class='m5'><a class="footer__link" href="/about/programs-initiatives/ted-books">TED Books</a></li>
+<li class='m5'><a class="footer__link" href="/about/programs-initiatives/ted-institute">TED Institute</a></li>
+</ul>
+</nav>
+<nav class='footer__section' role='navigation'>
+<h3 class='footer__title'>
+Ways to get TED
+</h3>
+<ul class='footer__links'>
+<li class='m5'><a class="footer__link" href="//www.npr.org/programs/ted-radio-hour/" rel="nofollow" target="_blank">TED Radio Hour on NPR</a></li>
+<li class='m5'><a class="footer__link" href="/about/programs-initiatives/ted-talks/ways-to-get-ted-talks">More ways to get TED</a></li>
+</ul>
+</nav>
+<nav class='footer__section' role='navigation'>
+<h3 class='footer__title'>Follow TED</h3>
+<ul class='footer__links'>
+<li class='m5'><a class="footer__link" href="//www.facebook.com/TED" target="_blank">Facebook</a></li>
+<li class='m5'><a class="footer__link" href="//twitter.com/tedtalks" target="_blank">Twitter</a></li>
+<li class='m5'><a class="footer__link" href="//plus.google.com/+TED" rel="publisher" target="_blank">Google+</a></li>
+<li class='m5'><a class="footer__link" href="//www.pinterest.com/tednews" target="_blank">Pinterest</a></li>
+<li class='m5'><a class="footer__link" href="//instagram.com/ted" target="_blank">Instagram</a></li>
+<li class='m5'><a class="footer__link" href="//www.youtube.com/ted" target="_blank">YouTube</a></li>
+<li><a class="footer__link" href="http://blog.ted.com">TED Blog</a></li>
+</ul>
+</nav>
+<nav class='footer__section' role='navigation'>
+<h3 class='footer__title'>Our community</h3>
+<ul class='footer__links'>
+<li class='m5'><a class="footer__link" href="/people/speakers">TED Speakers</a></li>
+<li class='m5'><a class="footer__link" href="/people/fellows">TED Fellows</a></li>
+<li class='m5'><a class="footer__link" href="/people/translators">TED Translators</a></li>
+<li class='m5'><a class="footer__link" href="/people/tedx" rel="nofollow">TEDx Organizers</a></li>
+<li class='m5'><a class="footer__link" href="/people">TED Community</a></li>
+</ul>
+</nav>
+</div>
+<div class='footer__content__forms'>
+<form action='/newsletter/signup' class='footer__section footer__section--form footer-newsletter' id='newsletter-signup' method='post'>
+<h3 class='footer__title'>Get TED email updates</h3>
+<div id='newsletter-signup-details'>
+<p>Subscribe to receive email notifications
+whenever new talks are published.</p>
+<ul class='footer-newsletter__options'>
+<li class='footer-newsletter__option'>
+<label>
+<input checked id='newsletter-signup-daily' name='newsletterSignup[subscription_list][]' type='checkbox' value='daily'>
+Daily
+</label>
+</li>
+<li class='footer-newsletter__option'>
+<label>
+<input id='newsletter-signup-weekly' name='newsletterSignup[subscription_list][]' type='checkbox' value='weekly'>
+Weekly
+</label>
+</li>
+</ul>
+<div class='form-group footer-newsletter__signup-email-group'>
+<label for='newsletter-signup-email'>
+Your email address
+</label>
+<input class='form-control' id='newsletter-signup-email' name='newsletterSignup[email_address]' size='16'>
+</div>
+<div class='footer-newsletter__error-wrapper'>
+<p class='footer-newsletter__error' id='newsletter-signup-error-blankemail'>
+Please enter an email address.
+</p>
+<p class='footer-newsletter__error' id='newsletter-signup-error-email'>
+Please enter a valid email address.
+</p>
+<p class='footer-newsletter__error' id='newsletter-signup-error-suggestion'>
+Did you mean
+<span>
+<a class='newsletter-signup-error__data' href='#'></a>?
+</span>
+</p>
+<p class='footer-newsletter__error' id='newsletter-signup-error-subscription'>
+Please check
+<em>Daily</em>
+or
+<em>Weekly</em>
+and try again.
+</p>
+<p class='footer-newsletter__error' id='newsletter-signup-error-unknown'>
+Please check your details and try again.
+</p>
+<p class='footer-newsletter__error' id='newsletter-signup-error-uncaught'>
+Please check your details and try again.
+</p>
+<p class='footer-newsletter__error' id='newsletter-signup-error-other'>
+Sorry, we're currently having trouble
+processing new newsletter signups.
+Please try again later.
+</p>
+</div>
+<input class='button' type='submit' value='Submit'>
+</div>
+<div class='footer-newsletter__success' id='newsletter-signup-success'>
+<p>
+Thanks! Please check your inbox
+for a confirmation email.
+</p>
+<p>
+If you want to get even more from TED,
+like the ability to save talks to watch later,&nbsp;<a href='/users/new'>sign up for a TED account now</a>&#46;
+</p>
+</div>
+</form>
+<form class='footer__section' style='display:none;'>
+<h3 class='footer__title'>Language Selector</h3>
+<p>TED.com translations are made possible by volunteer
+translators. Learn more about the
+<a href="/pages/open_translation_project">Open Translation Project</a>.</p>
+<select class='form-control' disabled>
+<option>English</option>
+</select>
+</form>
+</div>
+</div>
+</div>
+<div class='footer__services'>
+<div class='container footer__services__container'>
+<nav role='navigation'>
+<ul class='footer__links'>
+<li><a class="footer__service" href="/about/our-organization/our-policies-terms/ted-talks-usage-policy">TED Talks Usage Policy</a></li>
+<li><a class="footer__service" href="/about/our-organization/our-policies-terms/privacy-policy">Privacy Policy</a></li>
+<li><a class="footer__service" href="/about/partner-with-ted">Advertising / Partnership</a></li>
+<li><a class="footer__service" href="/about/our-organization/our-policies-terms/ted-com-terms-of-use">TED.com Terms of Use</a></li>
+<li><a class="footer__service" href="/contact" target="_blank">Contact</a></li>
+<li><a class="footer__service" href="/about/our-organization/jobs-at-ted">Jobs</a></li>
+<li><a class="footer__service" href="/about/our-organization/who-we-are">Staff</a></li>
+<li><a class="footer__service" href="/about/our-organization/contact-us/press-and-media-information">Press</a></li>
+<li><a class="footer__service" href="//support.ted.com ">Help</a></li>
+</ul>
+</nav>
+<p class='footer__service footer__service--info' role='contentinfo'>
+&copy; TED Conferences, LLC
+</p>
+</div>
+</div>
+</footer></div>
+<a class='shoji__lattice' href='#' id='shoji-lattice'></a>
+</div>
+</div>
+<script>
+  (function() {
+    var gads = document.createElement("script");
+    gads.async = true;
+    gads.type = "text/javascript";
+    var useSSL = "https:" == document.location.protocol;
+    gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+    var node = document.getElementsByTagName("script")[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script><script>
+  (function(s,o,g,a,m){a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(document,'script','https://www.google-analytics.com/analytics.js');
+</script><script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "7341760" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script></body></html>

@@ -1,0 +1,30 @@
+http://money.cnn.com/technology/innovationnation
+<doctype html>
+<html>
+<head>
+<!--Pleace this snippet right after opening the head tag to make it work properly-->
+<!--REDIRECTING STARTS-->
+<link rel="canonical" href="http://money.cnn.com/technology/innovate/index.html"/>
+<noscript>
+<meta http-equiv="refresh" content="0;URL=http://money.cnn.com/technology/innovate/index.html">
+</noscript>
+<script type="text/javascript">
+	var url = "http://money.cnn.com/technology/innovate/index.html";
+	
+	// IE8 and lower fix
+	if (navigator.userAgent.match(/MSIE\s(?!9.0)/))
+	{
+		var referLink = document.createElement("a");
+		referLink.href = url;
+		document.body.appendChild(referLink);
+		referLink.click();
+	}
+	
+	// All other browsers
+	else { window.location.replace(url); }
+</script>
+<!--REDIRECTING ENDS-->
+</head>
+<body>
+</body>
+</html>
