@@ -9,12 +9,11 @@ public class WordOccurence {
 	private int position; //the position of hitting
 	private int maxFrequency;
 	
-	public WordOccurence(String url, int type, boolean isCapital, int position, int maxFrequency) {
+	public WordOccurence(String url, int type, boolean isCapital, int position) {
 		this.url = url;
 		this.type = type;
 		this.isCapital = isCapital;
 		this.position = position;
-		this.maxFrequency = maxFrequency;
 		
 		switch (type) {
 		case 0:

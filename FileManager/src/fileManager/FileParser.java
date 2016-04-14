@@ -22,16 +22,20 @@ import org.jsoup.select.Elements;
  * Get file from resource and parse them
  */
 public class FileParser {
-	private Map<String, List<WordOccurence>> wordMap;
+	private Map<String, List<WordOccurence>> normalHitMap;
+	private Map<String, List<WordOccurence>> fancyHitMap;
 	private List<String> outLinks;
 	private File fileToRead;
 	private String url;
 	private String hostName;
 	int position; //record current read position
+	int maxNormalHit;
+	int maxFanceyHit;
 	
 	
 	public FileParser(File fileToRead) {
-		this.wordMap = new HashMap<>();
+		this.normalHitMap = new HashMap<>();
+		this.fancyHitMap = new HashMap<>();
 		this.outLinks = new ArrayList<>();
 		this.fileToRead = fileToRead;
 		this.position = 1;
@@ -93,11 +97,22 @@ public class FileParser {
 		if (StopList.contains(word)) {
 			return;
 		}
-		WordOccurence wordOccurence = new WordOccurence(this.url, type, isCapital, this.position++, 0);
-		if (!wordMap.containsKey(word)) {
-			wordMap.put(word, new ArrayList<WordOccurence>());
+		WordOccurence wordOccurence = new WordOccurence(this.url, type, isCapital, this.position++);
+		if (wordOccurence.getImportance() > 4) {
+			String key = "1:" + word;
+			addToMapHelper(key, wordOccurence, this.fancyHitMap);
+		} else {
+			String key = "2:" + word;
+			addToMapHelper(key, wordOccurence, this.normalHitMap);
 		}
-		wordMap.get(word).add(wordOccurence);
+		
+	}
+	
+	public void addToMapHelper(String key, WordOccurence wordOccurence, Map<String, List<WordOccurence>> map) {
+		if (!map.containsKey(key)) {
+			map.put(key, new ArrayList<WordOccurence>());
+		}
+		map.get(key).add(wordOccurence);
 	}
 	
 	/*
@@ -162,25 +177,25 @@ public class FileParser {
 			parseString(anchorsb.toString(), 0);
 		}
 		
-		int maxFrequency = 0;
-		for (String mapKeyWord: wordMap.keySet()) {
-			maxFrequency = Math.max(maxFrequency, wordMap.get(mapKeyWord).size());
+		for (String mapKeyWord: this.fancyHitMap.keySet()) {
+			this.maxFanceyHit = Math.max(this.maxFanceyHit, this.fancyHitMap.get(mapKeyWord).size());
 		}
 		
-		for (String mapKeyWord: wordMap.keySet()) {
-			for (WordOccurence occurence: wordMap.get (mapKeyWord)) {
-				occurence.setMaxFrequency (maxFrequency);
-			}
+		for (String mapKeyWord: this.normalHitMap.keySet()) {
+			this.maxNormalHit = Math.max(this.maxNormalHit, this.normalHitMap.get(mapKeyWord).size());
 		}
+		
 	}
 	
-	public String wordOccurenceToString() {
+	
+	public String wordOccurenceToString(Map<String, List<WordOccurence>> map, int maxFrequency) {
 		StringBuilder sb = new StringBuilder();
-		for (Map.Entry<String, List<WordOccurence>> entry : wordMap.entrySet()) {
+		for (Map.Entry<String, List<WordOccurence>> entry : map.entrySet()) {
 			String key = entry.getKey();
 			List<WordOccurence> value = entry.getValue();
 			sb.append(key + " ");
 			for (WordOccurence wordOccurence : value) {
+				wordOccurence.setMaxFrequency(maxFrequency);
 				sb.append(wordOccurence + " ");
 			}
 			sb.append("\n");
@@ -190,12 +205,20 @@ public class FileParser {
 	
 	public String outLinksToString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(this.url);
+		sb.append(this.url + " ");
 		for (String outLink : outLinks) {
 			sb.append(outLink + " ");
 		}
 		sb.append("\n");
 		return sb.toString();
+	}
+	
+	public String fancyHitMapToString() {
+		return this.wordOccurenceToString(this.fancyHitMap, this.maxFanceyHit);
+	}
+	
+	public String normalHitMapToString() {
+		return this.wordOccurenceToString(this.normalHitMap, this.maxNormalHit);
 	}
 	
 	
