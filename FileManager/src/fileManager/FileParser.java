@@ -24,21 +24,27 @@ import org.jsoup.select.Elements;
 public class FileParser {
 	private Map<String, List<WordOccurence>> normalHitMap;
 	private Map<String, List<WordOccurence>> fancyHitMap;
+	private Map<String, List<WordOccurence>> normalPhraseHitMap;
+	private Map<String, List<WordOccurence>> fancyPhraseHitMap;
 	private List<String> outLinks;
 	private File fileToRead;
 	private String url;
 	private String hostName;
-	int position; //record current read position
+	//int position; //record current read position
 	int maxNormalHit;
-	int maxFanceyHit;
+	int maxFancyHit;
+	int maxNormalPhraseHit;
+	int maxFancyPhraseHit;
 	
 	
 	public FileParser(File fileToRead) {
 		this.normalHitMap = new HashMap<>();
 		this.fancyHitMap = new HashMap<>();
+		this.fancyPhraseHitMap = new HashMap<>();
+		this.normalPhraseHitMap = new HashMap<>();
 		this.outLinks = new ArrayList<>();
 		this.fileToRead = fileToRead;
-		this.position = 1;
+		//this.position = 1;
 	}
 	
 	/*
@@ -49,9 +55,35 @@ public class FileParser {
 			return;
 		}
 		String[] words = str.split("[^a-zA-Z0-9']+");
-		for (String wordToken : words) {
-			addToMap(wordToken, type, position);
+		String prev = null;//record the prev word
+		for (int i = 0; i < words.length; i++) {
+			String curr = isValidWord(words[i]);
+			if (curr == null) {
+				continue;
+			}
+			addToMap(curr, type, false);
+			if (prev != null) {
+				addToMap(prev + "\t" + curr, type, true);
+			}
+			prev = curr;
 		}
+	}
+	
+	/*
+	 * check if the word is valid or not
+	 */
+	public String isValidWord(String word) {
+		if (word == null || word.length() == 0) return null;
+		word = this.removeQuote(word);
+		word = word.trim();
+		word = word.toLowerCase();
+		if (isWord(word)) {
+			word = Stemmer.getString(word);
+		}
+		if (StopList.contains(word)) {
+			return null;
+		}
+		return word;
 	}
 	
 	
@@ -80,31 +112,41 @@ public class FileParser {
 	}
 	
 	/*
+	 * remove potential quote
+	 */
+	public String removeQuote(String word) {
+		if (word.startsWith("'")) {
+			word = word.substring(1);
+		}
+		if (word.endsWith("'")) {
+			word = word.substring(0, word.length() - 1);
+		}
+		return word;
+	}
+	
+	/*
 	 * Add to word occurence map
 	 */
-	public void addToMap(String word, int type, int position) {
-		if (word == null || word.length() == 0) return;
-		word = word.trim();
-		boolean isCapital = false;
-		if (isCapital(word)) {
-			isCapital = true;
-		}
-		word = word.toLowerCase();
-		if (isWord(word)) {
-			word = Stemmer.getString(word);
-		}
-		//if it's stop word, we don't handle it;
-		if (StopList.contains(word)) {
-			return;
-		}
-		WordOccurence wordOccurence = new WordOccurence(this.url, type, isCapital, this.position++);
-		if (wordOccurence.getImportance() > 4) {
-			String key = "1:" + word;
-			addToMapHelper(key, wordOccurence, this.fancyHitMap);
+	public void addToMap(String word, int type, boolean isPhrase) {
+		WordOccurence wordOccurence = new WordOccurence(this.url, type);
+		if (!isPhrase) {
+			if (wordOccurence.getType() == 0) {
+				String key = "1:" + word;
+				addToMapHelper(key, wordOccurence, this.fancyHitMap);
+			} else {
+				String key = "2:" + word;
+				addToMapHelper(key, wordOccurence, this.normalHitMap);
+			}
 		} else {
-			String key = "2:" + word;
-			addToMapHelper(key, wordOccurence, this.normalHitMap);
+			if (wordOccurence.getType() == 0) {
+				String key = "1:" + word;
+				addToMapHelper(key, wordOccurence, this.fancyPhraseHitMap);
+			} else {
+				String key = "2:" + word;
+				addToMapHelper(key, wordOccurence, this.normalPhraseHitMap);
+			}
 		}
+		
 		
 	}
 	
@@ -122,7 +164,7 @@ public class FileParser {
 		BufferedReader br = new BufferedReader(new FileReader(fileToRead));
 
 		this.url = br.readLine();
-		System.out.println(this.url);
+		//System.out.println(this.url);
 		this.hostName = new URL(URLDecoder.decode(url, "UTF-8")).getHost();
 		String html = br.readLine();
 		Document doc = Jsoup.parse(html, url);
@@ -139,20 +181,20 @@ public class FileParser {
 						element.attr("name").equals("description")) {
 					metasb.append(element.attr("content") + " ");
 				}
-				parseString(metasb.toString(), 2);
+				parseString(metasb.toString(), 0);
 				
 			}
 		}
 		
 		//read from title
 		String title = doc.title();
-		parseString(title, 1);
+		parseString(title, 0);
 		
 		
 		//read from body
 		Element body = doc.body();
 		if (body != null) {
-			parseString(body.text(), 3);
+			parseString(body.text(), 1);
 		}
  		
 		//then read from possible links and build the anchor file
@@ -178,11 +220,19 @@ public class FileParser {
 		}
 		
 		for (String mapKeyWord: this.fancyHitMap.keySet()) {
-			this.maxFanceyHit = Math.max(this.maxFanceyHit, this.fancyHitMap.get(mapKeyWord).size());
+			this.maxFancyHit = Math.max(this.maxFancyHit, this.fancyHitMap.get(mapKeyWord).size());
 		}
 		
 		for (String mapKeyWord: this.normalHitMap.keySet()) {
 			this.maxNormalHit = Math.max(this.maxNormalHit, this.normalHitMap.get(mapKeyWord).size());
+		}
+		
+		for (String mapKeyWord: this.fancyPhraseHitMap.keySet()) {
+			this.maxFancyPhraseHit = Math.max(this.maxFancyHit, this.fancyPhraseHitMap.get(mapKeyWord).size());
+		}
+		
+		for (String mapKeyWord: this.normalPhraseHitMap.keySet()) {
+			this.maxNormalPhraseHit = Math.max(this.maxNormalPhraseHit, this.normalPhraseHitMap.get(mapKeyWord).size());
 		}
 		
 	}
@@ -200,6 +250,7 @@ public class FileParser {
 			}
 			sb.append("\n");
 		}
+		System.out.println(sb.toString());
 		return sb.toString();
 	}
 	
@@ -214,13 +265,20 @@ public class FileParser {
 	}
 	
 	public String fancyHitMapToString() {
-		return this.wordOccurenceToString(this.fancyHitMap, this.maxFanceyHit);
+		return this.wordOccurenceToString(this.fancyHitMap, this.maxFancyHit);
 	}
 	
 	public String normalHitMapToString() {
 		return this.wordOccurenceToString(this.normalHitMap, this.maxNormalHit);
 	}
 	
+	public String fancyPhraseHitMapToString() {
+		return this.wordOccurenceToString(this.fancyPhraseHitMap, this.maxFancyPhraseHit);
+	}
+	
+	public String normalPhraseHitMapToString() {
+		return this.wordOccurenceToString(this.normalPhraseHitMap, this.maxNormalPhraseHit);
+	}
 	
 	
 	

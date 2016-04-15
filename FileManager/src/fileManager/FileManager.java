@@ -27,9 +27,16 @@ public class FileManager {
 			FileParser fileParser = new FileParser(fileToRead);
 			fileParser.parse();
 			outWriter.write(fileParser.fancyHitMapToString());
+			outWriter.write(fileParser.fancyPhraseHitMapToString());
 			outWriter.write(fileParser.normalHitMapToString());
+			outWriter.write(fileParser.normalPhraseHitMapToString());
 			anchorWriter.write(fileParser.outLinksToString());
 		}
+		outWriter.flush();
+		anchorWriter.flush();
+		
+		outWriter.close();
+		anchorWriter.close();
 		
 	}
 
