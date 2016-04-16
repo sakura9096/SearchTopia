@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -19,12 +20,12 @@ public class CrawlerMain {
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
-		if (args.length != 8) {
-			System.err.println("need 8 arguments: maxSize, numThread, selfFileDir, workersFileDir, output, countMax, dbDir, seedsFileDir");
+		if (args.length != 9) {
+			System.err.println("need 9 arguments: maxSize, numThread, selfFileDir, workersFileDir, output, countMax, dbDir, seedsFileDir, profileDir");
 			return;
 		}
 		try {
-			DetectorFactory.loadProfile("profiles");
+			DetectorFactory.loadProfile(args[8]);
 		} catch (LangDetectException e) {
 			// TODO Auto-generated catch block
 			System.out.println("error in loading profiles");
@@ -33,7 +34,7 @@ public class CrawlerMain {
 		AtomicLong backup = new AtomicLong();
 		backup.set(0);
 		String dbDir = args[6];
-		Frontier frontier = Frontier.getInstance(backup, dbDir);
+		ConcurrentLinkedQueue<String> frontier = new ConcurrentLinkedQueue<String>();
 		double maxSize = Double.parseDouble(args[0]);
 		int threadsSize = Integer.parseInt(args[1]);
 		long maxCount = Long.parseLong(args[5]);
@@ -74,7 +75,7 @@ public class CrawlerMain {
 		System.out.println("get self port: " + port);
 		
 		
-		Server server = new Server(port, backup, dbDir);
+		Server server = new Server(port, backup, dbDir, frontier);
 		Thread thread = new Thread(server);
 		thread.start();
 		System.out.println("start the server to listen: ");
@@ -84,6 +85,7 @@ public class CrawlerMain {
 		List<String> frontierOfDB = db.getAllFrontiers();
 			
 		if(frontierOfDB !=null && !frontierOfDB.isEmpty()){
+			System.out.println("There is something in the database frontier!!");
 			fromZero = false;
 			frontier.addAll(frontierOfDB);
 		}
@@ -97,7 +99,7 @@ public class CrawlerMain {
 		 parts = line.split("\\s+", 2);
 		 if (parts.length != 2) continue;
 		 seedHost.add(parts[0].trim());
-		 if (fromZero) frontier.enQueue(parts[1].trim());
+		 frontier.offer(parts[1].trim());
 		}
 	   in.close();
 	   System.out.println("get seedHost: " + seedHost.size());

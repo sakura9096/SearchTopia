@@ -5,11 +5,13 @@ import java.math.BigInteger;
 import java.net.Socket;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicLong;
 
 import com.cybozu.labs.langdetect.LangDetectException;
@@ -23,7 +25,8 @@ public class Crawler implements Runnable {
 	String selfIP;
 	int selfID;
 	String outputDir;
-	Frontier frontier;
+	//Frontier frontier;
+	ConcurrentLinkedQueue<String> frontier;
 	AtomicLong count;
 	AtomicLong backup;
 	long maxCount;
@@ -40,7 +43,7 @@ public class Crawler implements Runnable {
 
 	
 	public Crawler(double maxSize, AtomicLong count, AtomicLong backup,
-			Frontier frontier, Map<Integer, String> workersIP, 
+			ConcurrentLinkedQueue<String> frontier, Map<Integer, String> workersIP, 
 			String selfIP, int selfID, String outputDir, String dbDir, long maxCount, 
 			Set<String> seedHost, Map<String, Integer> hostCount) {
 
@@ -78,49 +81,48 @@ public class Crawler implements Runnable {
 	public void run() {
 		try {
 			while (true) {
-				synchronized (frontier) {
-					while (frontier.size() == 0) {
+				//synchronized (frontier) {
+					while (frontier.isEmpty()) {
 						System.out.println("frontier is size 0");
-						frontier.wait(10000);
+						Thread.sleep(1000);
 						if (count.get() >= maxCount) {
+							System.out.println("exceeds the max!!!!");
 							return;
 						}
 					}
-				}
-				
-				synchronized (frontier) {
-					startUrl = frontier.deQueue();
-					frontier.notifyAll();
-				}
-				System.out.println("dequeue fron frontier: " + startUrl);
-				
+				startUrl = frontier.poll();
 			
 				
 				if (db.urlCrawled(startUrl) || startUrl.length() >= 500) {
-					System.out.println(startUrl + " is crawled before! or is too long!");
+			
 					continue;
 				}
 				
+				int index = startUrl.indexOf("#");
+				if (index != -1) {
+					startUrl = startUrl.substring(0, index);
+				}
 				
 				try {
 					HttpClient tempUrl = new HttpClient(startUrl);
 					String host = tempUrl.getHost();
 					if (hostCount.containsKey(host)) {
 						if (hostCount.get(host) > 500 && !seedHost.contains(host)) {
-							System.out.println(host + "---this host has too many pages, but not a seed host!");
+							//System.out.println(host + "---this host has too many pages, but not a seed host!");
 							continue;
 						}
 					}
 					int who = chooseWorker(host);
 					if (who == selfID) {
-						System.out.println(startUrl + "---> is for worker ifself " + who);
+					
 						this.selfWork(host, startUrl);
 					} else {
-						System.out.println(startUrl + "---> is for worker " + who);
+					
 						sendToOthers(who, startUrl);
 					}
 					
 				} catch (Exception e) {
+					System.out.println(e.getMessage());
 					continue;
 				}
 				
@@ -131,7 +133,7 @@ public class Crawler implements Runnable {
 			}
 			
 		} catch (Exception e) {
-			
+			System.out.println(e.getMessage());
 		}
 	}
 	
@@ -154,7 +156,7 @@ public class Crawler implements Runnable {
 	
 	public void selfWork(String host, String url) {
 		if (processor == null) return;
-		System.out.println("Do the selfwork: " + url);
+		//System.out.println("Do the selfwork: " + url);
 		this.currentUrl = url;
 		
 		HttpClient client = new HttpClient(currentUrl);
@@ -185,35 +187,34 @@ public class Crawler implements Runnable {
 	    	hostCount.put(host, 1);
 	    }
 	    List<String> links = this.processor.extract(currentUrl);
-	    System.out.println(currentUrl + ":Extracting links");
+
 	    if (frontier.size() < 1000000) {
-	    	 for (String link: links) {
-	  		   System.out.println(link + ":Extracting link");
-	  		   synchronized (frontier) {	  			  
-	  			   frontier.enQueue(link);
-	  			   System.out.println(link + ":Pushing to the frontier");
-	  			   frontier.notifyAll();
-	  			   backup.incrementAndGet();
-	  			  
-	  		   }
-	  	    }
+	    	frontier.addAll(links);
+	    //	this.frontier.notifyAll();
 	    }
-	   
+	    this.checkAndUpdate();
+	    	   
 	}
 	
 	public void sendToOthers(int who, String url) {
 		try {
 			String worker = this.workersIP.get(who);
 			String[] parts = worker.split(":", 2);
+			//System.out.println("0");
 			if (parts.length != 2) return;
 			String otherip = parts[0].trim();
+			//System.out.println("1111");
 			int otherport = Integer.parseInt(parts[1].trim());
+			//System.out.println("1");
 			Socket s = new Socket(otherip, otherport);
+			//System.out.println("2");
 			PrintWriter pw = new PrintWriter(s.getOutputStream());
+			//System.out.println("3");
 			pw.println(url);
 			pw.flush();
 			pw.close();
 			s.close();
+			//System.out.println("Sending to worker " + who);
 		} catch (Exception e) {
 			
 		}
@@ -248,7 +249,14 @@ public class Crawler implements Runnable {
 		int delay = robot.getDelay() * 1000;
 		if (currentTime - lastCrawled < delay) {
 			synchronized (frontier) {
-				frontier.enQueue(url);;
+				int index = url.indexOf("#");
+				if (index != -1) {
+					url = url.substring(0, index);
+				}
+
+				frontier.offer(url);
+				this.checkAndUpdate();
+				  
 			}
 			return false;
 		} 
@@ -293,7 +301,17 @@ public class Crawler implements Runnable {
 		}
 		return newRobot;
 	}
-		
+	
+	public void checkAndUpdate() {
+		if (this.backup.get() > 5000 && this.backup.get() < 1000000) {
+			List<String> origin = db.getAllFrontiers();
+			for (String str: origin) {
+				db.deleteFrontierURL(str);
+			}
+			db.addAllFroniters(new ArrayList<String>(this.frontier));
+			this.backup.set(0);
+		}
+	}
 		
 
 }

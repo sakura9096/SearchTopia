@@ -3,6 +3,7 @@ package cis455.g02.crawler;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,8 +42,15 @@ public class Processor {
 		
 		client.executeGet();
 		String body = client.getBody();
-		File file = new File(this.outputDir + this.selfId + "_" + System.currentTimeMillis());
+		String fileDir = this.outputDir + this.hashToString(url);
+	//	System.out.println(fileDir);
+		File file = new File(fileDir);
+	//	System.out.println(this.outputDir + this.selfId + "_" + System.currentTimeMillis());
 		try {
+			if (file.exists() && file.isFile()) {
+				this.db.putCrawledURL(url, System.currentTimeMillis());
+				return;
+			}
 			file.createNewFile();
 			PrintWriter out = new PrintWriter(file);
 			out.println(url);
@@ -51,6 +59,7 @@ public class Processor {
 			out.close();
 			this.db.putCrawledURL(url, System.currentTimeMillis());
 		} catch (IOException e) {
+			System.out.println(e.getMessage());
 			System.out.println("error in writing!");
 		}
 		
@@ -69,6 +78,10 @@ public class Processor {
 			Elements eles = doc.select("a[href]");
 			for (Element e: eles) {
 				String link = e.attr("abs:href");
+				int index = link.indexOf("#");
+		  		if (index != -1) {
+		  			link = link.substring(0, index);
+		  		}
 				if (link.length() < 500 && !isTooDeep(link) && link.startsWith("http")) links.add(link);
 			}
 			return links;
@@ -102,6 +115,23 @@ public class Processor {
 			return false;
 		}
 		
+	}
+	
+	private String hashToString(String s){
+
+		try{
+			MessageDigest m = MessageDigest.getInstance("SHA-1");
+			m.update(s.getBytes());
+			byte byteData[] = m.digest();
+
+			StringBuilder sb = new StringBuilder();
+			for (int i = 0; i < byteData.length; i++) {
+				sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+			}
+			return sb.toString();
+		}catch(Exception e){
+			return System.currentTimeMillis() + "";
+		}
 	}
 	
 
