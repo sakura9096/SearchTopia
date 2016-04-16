@@ -103,6 +103,12 @@ public class PageRank {
 			}
 			Node from = new Node(tokens[0]); // the source url
 			from.setPageRank(initialPageRank);
+			graph.addNode(from);
+			// sink node
+			if (tokens.length == 1) {
+				IOUtils.write(from.getUrl() + "\t" + initialPageRank + "\n", os);
+				continue;
+			}
 			HashSet<String> outlinks = new HashSet<>();
 			for (int i = 1; i < tokens.length; i++) {
 				String token = tokens[i];

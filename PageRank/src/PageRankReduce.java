@@ -4,7 +4,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
 /**
- * The Reducer class in the PageRank MapReduce work.
+ * The Reducer for PageRank MapReduce work.
  * The input is the intermediate key-value pairs from PageRankMap,
  * and the output format is: [url	pageRank	url1	url2...]
  * 
@@ -52,9 +52,11 @@ public class PageRankReduce extends Reducer<Text, Text, Text, Text> {
 			double delta = sourceNode.getPageRank() - newPageRank;
 
 			sourceNode.setPageRank(newPageRank);
-
-			outValue.set(newPageRank + "\t" + graph.outboundLinksToString(sourceNode));
-
+			if (graph.getOutboundLinks(sourceNode).size() > 0) {
+				outValue.set(newPageRank + "\t" + graph.outboundLinksToString(sourceNode));
+			} else {
+				outValue.set(newPageRank + "");
+			}
 			context.write(new Text(sourceNode.getUrl()), outValue);
 			
 			// to check the convergence 
