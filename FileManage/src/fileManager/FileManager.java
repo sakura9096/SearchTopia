@@ -22,15 +22,20 @@ public class FileManager {
 		FileWriter outWriter = new FileWriter(outputDirectory, true);
 		FileWriter anchorWriter = new FileWriter(anchorDirectory, true);
 		
-		
 		for (File fileToRead : filesToRead.listFiles()) {
 			FileParser fileParser = new FileParser(fileToRead);
-			fileParser.parse();
-			outWriter.write(fileParser.fancyHitMapToString());
-			outWriter.write(fileParser.fancyPhraseHitMapToString());
-			outWriter.write(fileParser.normalHitMapToString());
-			outWriter.write(fileParser.normalPhraseHitMapToString());
-			anchorWriter.write(fileParser.outLinksToString());
+			try {
+				fileParser.parse();
+				outWriter.write(fileParser.fancyHitMapToString());
+				outWriter.write(fileParser.fancyPhraseHitMapToString());
+				outWriter.write(fileParser.normalHitMapToString());
+				outWriter.write(fileParser.normalPhraseHitMapToString());
+				anchorWriter.write(fileParser.outLinksToString());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		}
 		outWriter.flush();
 		anchorWriter.flush();

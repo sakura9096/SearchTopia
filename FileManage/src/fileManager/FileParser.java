@@ -73,9 +73,10 @@ public class FileParser {
 	 * check if the word is valid or not
 	 */
 	public String isValidWord(String word) {
-		if (word == null || word.length() == 0) return null;
-		word = this.removeQuote(word);
+		if (word == null) return null;
 		word = word.trim();
+		word = this.removeQuote(word);
+		if (word.length() == 0) return null;
 		word = word.toLowerCase();
 		if (isWord(word)) {
 			word = Stemmer.getString(word);
