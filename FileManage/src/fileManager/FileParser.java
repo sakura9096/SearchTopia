@@ -10,6 +10,7 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -76,6 +77,7 @@ public class FileParser {
 		if (word == null) return null;
 		word = word.trim();
 		word = this.removeQuote(word);
+		word = word.trim();
 		if (word.length() == 0) return null;
 		word = word.toLowerCase();
 		if (isWord(word)) {
@@ -93,7 +95,7 @@ public class FileParser {
 	 */
 	public boolean isWord(String word) {
 		for (int i = 0; i < word.length(); i++) {
-			if (Character.isLetter(word.charAt(i))) {
+			if (!Character.isLetter(word.charAt(i))) {
 				return false;
 			}
 		}
@@ -116,13 +118,15 @@ public class FileParser {
 	 * remove potential quote
 	 */
 	public String removeQuote(String word) {
-		if (word.startsWith("'")) {
-			word = word.substring(1);
-		}
-		if (word.endsWith("'")) {
-			word = word.substring(0, word.length() - 1);
-		}
-		return word;
+		 int start = 0;
+		 int end = word.length() - 1;
+		 while (start < word.length() && word.charAt(start) == '\'') {
+			 start++;
+		 }
+		 while (end >= 0 && word.charAt(end) == '\'') {
+			 end--;
+		 }
+		 return start > end ? "" : word.substring(start, end + 1);
 	}
 	
 	/*
@@ -165,9 +169,14 @@ public class FileParser {
 		BufferedReader br = new BufferedReader(new FileReader(fileToRead));
 
 		this.url = br.readLine();
-		//System.out.println(this.url);
+
 		this.hostName = new URL(URLDecoder.decode(url, "UTF-8")).getHost();
-		String html = br.readLine();
+		StringBuilder sb = new StringBuilder();
+		String line;
+		while ((line = br.readLine()) != null) {
+			sb.append(line);
+		}
+		String html = sb.toString();
 		Document doc = Jsoup.parse(html, url);
 		
 		//read from url
@@ -183,12 +192,12 @@ public class FileParser {
 					metasb.append(element.attr("content") + " ");
 				}
 				parseString(metasb.toString(), 0);
-				
 			}
 		}
 		
 		//read from title
 		String title = doc.title();
+		//System.out.println(title);
 		parseString(title, 0);
 		
 		
@@ -196,6 +205,7 @@ public class FileParser {
 		Element body = doc.body();
 		if (body != null) {
 			parseString(body.text(), 1);
+			//System.out.println(body.text());
 		}
  		
 		//then read from possible links and build the anchor file
@@ -208,17 +218,21 @@ public class FileParser {
 				if (outLink.endsWith("/")) {
 					outLink = outLink.substring(0, outLink.length() - 1);
 				}
-				String outHost = new URL(URLDecoder.decode(outLink, "UTF-8")).getHost();
-				if (!outHost.equals(this.hostName)) {
+				try {
 					outLink = URLDecoder.decode(outLink, "UTF-8");
-					this.outLinks.add(outLink);
+				} catch (Exception e) {
+					
 				}
+				
+				this.outLinks.add(outLink);
 				
 				String anchor = link.text().trim();
 				anchorsb.append(anchor + " ");
 			}
 			parseString(anchorsb.toString(), 0);
 		}
+		
+		this.removeFromPhraseMap();
 		
 		for (String mapKeyWord: this.fancyHitMap.keySet()) {
 			this.maxFancyHit = Math.max(this.maxFancyHit, this.fancyHitMap.get(mapKeyWord).size());
@@ -239,9 +253,9 @@ public class FileParser {
 	}
 	
 	
-	public String wordOccurenceToString(Map<String, List<WordOccurence>> map, int maxFrequency) {
-		StringBuilder sb = new StringBuilder();
+	public void wordOccurenceToString(Map<String, List<WordOccurence>> map, int maxFrequency, FileWriter outWriter) throws IOException {
 		for (Map.Entry<String, List<WordOccurence>> entry : map.entrySet()) {
+			StringBuilder sb = new StringBuilder();
 			String key = entry.getKey();
 			List<WordOccurence> value = entry.getValue();
 			sb.append(key + " ");
@@ -250,9 +264,11 @@ public class FileParser {
 				sb.append(wordOccurence + " ");
 			}
 			sb.append("\n");
+			outWriter.write(sb.toString());
+			outWriter.flush();
 		}
-		System.out.println(sb.toString());
-		return sb.toString();
+		//System.out.println(sb.toString());
+		
 	}
 	
 	public String outLinksToString() {
@@ -265,20 +281,37 @@ public class FileParser {
 		return sb.toString();
 	}
 	
-	public String fancyHitMapToString() {
-		return this.wordOccurenceToString(this.fancyHitMap, this.maxFancyHit);
+	public void fancyHitMapToString(FileWriter outWriter) throws IOException {
+		this.wordOccurenceToString(this.fancyHitMap, this.maxFancyHit, outWriter);
 	}
 	
-	public String normalHitMapToString() {
-		return this.wordOccurenceToString(this.normalHitMap, this.maxNormalHit);
+	public void normalHitMapToString(FileWriter outWriter) throws IOException {
+		this.wordOccurenceToString(this.normalHitMap, this.maxNormalHit, outWriter);
 	}
 	
-	public String fancyPhraseHitMapToString() {
-		return this.wordOccurenceToString(this.fancyPhraseHitMap, this.maxFancyPhraseHit);
+	public void fancyPhraseHitMapToString(FileWriter outWriter) throws IOException {
+		this.wordOccurenceToString(this.fancyPhraseHitMap, this.maxFancyPhraseHit, outWriter);
 	}
 	
-	public String normalPhraseHitMapToString() {
-		return this.wordOccurenceToString(this.normalPhraseHitMap, this.maxNormalPhraseHit);
+	public void normalPhraseHitMapToString(FileWriter outWriter) throws IOException {
+		this.wordOccurenceToString(this.normalPhraseHitMap, this.maxNormalPhraseHit, outWriter);
+	}
+	
+	public void removeFromPhraseMap() {
+		for (Iterator<Map.Entry<String, List<WordOccurence>>> it = this.fancyPhraseHitMap.entrySet().iterator(); it.hasNext();) {
+			Map.Entry<String, List<WordOccurence>> entry = it.next();
+			if (entry.getValue().size() <= 1) {
+				it.remove();
+			}
+		}
+		
+		for (Iterator<Map.Entry<String, List<WordOccurence>>> it = this.normalPhraseHitMap.entrySet().iterator(); it.hasNext();) {
+			Map.Entry<String, List<WordOccurence>> entry = it.next();
+			if (entry.getValue().size() <= 1) {
+				it.remove();
+			}
+		}
+	
 	}
 	
 	
