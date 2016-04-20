@@ -1,3 +1,4 @@
+import java.util.HashSet;
 
 /**
  * @author yuezhang
@@ -7,6 +8,7 @@ public class Node {
 
 	private String url;
 	private double pageRank;
+//	private HashSet<String> outlinks;
 	
 	
 	/**
@@ -14,7 +16,29 @@ public class Node {
 	 */
 	public Node(String url) {
 		this.url = url;
+//		outlinks = new HashSet<>();
 	}
+	
+//	public void addOutLinks(String outlink) {
+//		outlinks.add(outlink);
+//	}
+	
+//	public HashSet<String> getOutLinks() {
+//		return outlinks;
+//	}
+	
+//	public void removeOutLinks(String outlink) {
+//		outlinks.remove(outlink);
+//	}
+//	
+//	public String outlinksToString() {
+//		StringBuilder sb = new StringBuilder();
+//		for (String outlink : outlinks) {
+//			sb.append(outlink + "\t");
+//		}
+//		sb.substring(0, sb.length() - 1);
+//		return sb.toString();
+//	}
 
 	/**
 	 * @return the url

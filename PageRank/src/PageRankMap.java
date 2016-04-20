@@ -33,7 +33,7 @@ public class PageRankMap extends Mapper<Text, Text, Text, Text> {
 		
 		Node node = graph.getNodes().get(key.toString());
 		
-		if(node != null && graph.getOutboundLinks(node) != null && graph.getOutboundLinks(node).size() > 0) {
+		if(node != null && graph.getOutboundLinks(node).size() > 0) {
 			String[] tokens = value.toString().split("\t");
 			
 			double outboundPageRank = Double.valueOf(tokens[0]) /(double)graph.getOutboundLinks(node).size();
@@ -53,7 +53,7 @@ public class PageRankMap extends Mapper<Text, Text, Text, Text> {
 			
 			String[] tokens = value.toString().split("\t");
 			
-			double outboundPageRank = Double.valueOf(tokens[0]) /(double)graph.getNodes().size();
+			double outboundPageRank = Double.valueOf(tokens[0]) /(double)graph.getNumNode();
 			
 			Iterator<Node> it = graph.getNodes().values().iterator();
 			while (it.hasNext()) {

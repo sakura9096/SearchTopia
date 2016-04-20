@@ -34,7 +34,7 @@ public class PageRank {
 		graph = Graph.getInstance();
 
 		try {
-			runPageRank(inputFile, outputDir, graph);
+			runPageRank(inputFile, outputDir);
 
 		} catch (Exception e) {			
 			e.printStackTrace();
@@ -42,21 +42,23 @@ public class PageRank {
 
 	}
 
-	private static void runPageRank(String input, String outputDir, Graph graph) throws Exception {
+	private static void runPageRank(String input, String outputDir) throws Exception {
 
 		Configuration conf = new Configuration();
 
 		Path outputPath = new Path(outputDir);
 		outputPath.getFileSystem(conf).delete(outputPath, true);
 		outputPath.getFileSystem(conf).mkdirs(outputPath);
-
+		
 		Path inputPath = new Path(outputPath, "input.txt");
 
-		int numNode = buildGraphAndInputFile(new Path(input), inputPath, graph);
-
+		int numNode = buildGraphAndInputFile(new Path(input), inputPath);
+		System.out.println(numNode);
+		
 		int iteration = 1;
 		double convergenceGoal = 0.01;
 
+		
 		while (true) {
 
 			Path jobOutPath = new Path(outputPath, String.valueOf(iteration));
@@ -66,6 +68,7 @@ public class PageRank {
 			System.out.println("=  Input path:   " + inputPath);
 			System.out.println("=  Output path:  " + jobOutPath);
 			System.out.println("======================================");
+			
 			
 			if (pageRankDrive(inputPath, jobOutPath, numNode, iteration) < convergenceGoal) {
 				System.out.println("Reached convergence goal: " + convergenceGoal + ". Done.");
@@ -78,32 +81,39 @@ public class PageRank {
 
 	}
 
-	private static int buildGraphAndInputFile(Path input, Path intermediate, Graph graph) throws IOException {
-
-		long startTime = System.currentTimeMillis();
+	private static int buildGraphAndInputFile(Path input, Path intermediate) throws IOException {
 
 		Configuration conf = new Configuration();
 		FileSystem fs = input.getFileSystem(conf);
-		
-		int numNode = getNumNodes(input);
-		// give an initial pageRank to each url
-		double initialPageRank = 1.0 / (double) numNode;
 
 		OutputStream os = fs.create(intermediate);
 		LineIterator it = IOUtils.lineIterator(fs.open(input), "UTF8");
 
-		// parse the input file one line at a time, generate the link graph
+		int numNode = getNumNodes(input);
+		// give an initial pageRank to each url
+		double initialPageRank = 1000.0 / (double) numNode;
+		
+		while (it.hasNext()) {
+			String line = it.nextLine();
+			String[] tokens = line.split("\\s+");		
+			if (tokens.length < 1) {
+				continue;
+			}
+			graph.addSourceLink(tokens[0]);
+		}
+		
+		it = IOUtils.lineIterator(fs.open(input), "UTF8");
 		// the input file format: [url	outlink1	outlink2	outlink3...]
 		// the resulted file format: [url	pageRank	outlink1	outlink2 ...]
 		while (it.hasNext()) {
 			String line = it.nextLine();
-			String[] tokens = line.split("\\s+");
+			String[] tokens = line.split("\\s+");		
 			if (tokens.length < 1) {
 				continue;
 			}
 			Node from = new Node(tokens[0]); // the source url
-			from.setPageRank(initialPageRank);
 			graph.addNode(from);
+			from.setPageRank(initialPageRank);
 			// sink node
 			if (tokens.length == 1) {
 				IOUtils.write(from.getUrl() + "\t" + initialPageRank + "\n", os);
@@ -112,23 +122,25 @@ public class PageRank {
 			HashSet<String> outlinks = new HashSet<>();
 			for (int i = 1; i < tokens.length; i++) {
 				String token = tokens[i];
-				// ignore links pointing to the same outbound url
-				if (!outlinks.contains(token)) {
+				// ignore links pointing to the same url and remove dangling links
+				if (!outlinks.contains(token) && graph.getSourceLinks().contains(token)) {
 					Node to = new Node(token);
 					// remove self-links 
-					if (!to.equals(from)) {
+					if (!from.equals(to)) {
 						graph.addLink(from, to);
 					}
 					outlinks.add(token);
-				}	
+				}
 			}
-			IOUtils.write(from.getUrl() + "\t" + initialPageRank + "\t" + 
-					graph.outboundLinksToString(from) + "\n", os);
+			if (graph.getOutboundLinks(from).size() > 0) {
+				IOUtils.write(from.getUrl() + "\t" + initialPageRank + "\t" + 
+						graph.outboundLinksToString(from) + "\n", os);		
+			} else {
+				IOUtils.write(from.getUrl() + "\t" + initialPageRank + "\n", os);		
+			}
+			
 		}
 		os.close();
-		System.out.println(String.format("Loaded %d nodes and %d links in %d ms", 
-				graph.getNumNode(), graph.getNumLinks(), (System.currentTimeMillis()-startTime)));
-		
 		return graph.getNumNode();
 	}
 

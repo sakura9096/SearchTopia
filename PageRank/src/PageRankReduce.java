@@ -37,17 +37,19 @@ public class PageRankReduce extends Reducer<Text, Text, Text, Text> {
 		Node sourceNode = null;
 		
 		for (Text textValue : values) {
-			String val = textValue.toString();
+			String val = textValue.toString().trim();
 			if (!val.startsWith("PR:")) {
 				sourceNode = graph.getNodes().get(key.toString());
 			} else if (val.startsWith("PR:")){
 				String[] vals = val.split("\t");
-				pageRankSum += Double.valueOf(vals[0].substring(3, vals[0].length()));			
+				pageRankSum += Double.valueOf(vals[0].substring(3, vals[0].length()));
+//				System.out.println(Double.valueOf(vals[0].substring(3, vals[0].length())));
 			}
 		}
+		System.out.println("PageRankSum: " + pageRankSum);
 		if (sourceNode != null) {
 			
-			double dampingTerm = ((1.0 - DAMPING_FACTOR) / (double) numNodes);
+			double dampingTerm = ((1000.0 - DAMPING_FACTOR) / (double) numNodes);
 			double newPageRank = dampingTerm + (DAMPING_FACTOR * pageRankSum);
 			double delta = sourceNode.getPageRank() - newPageRank;
 

@@ -12,7 +12,7 @@ public class Graph {
 	
 	private HashMap<String, Node> nodes;
 	private HashMap<Node, HashSet<Node>> outboundLinks;
-	private HashMap<Node, HashSet<Node>> inboundLinks;
+	private HashSet<String> sourceLinks;
 	private int numLinks = 0;
 	
 	/**
@@ -21,7 +21,7 @@ public class Graph {
 	private Graph() {
 		nodes = new HashMap<>();
 		outboundLinks = new HashMap<>();
-		inboundLinks = new HashMap<>();
+		sourceLinks = new HashSet<>();
 	}
 	
 	/**
@@ -55,7 +55,6 @@ public class Graph {
 			return false;
 		}	
 		outboundLinks.get(from).add(to);
-		inboundLinks.get(to).add(from);
 		numLinks++;
 		return true;
 	}
@@ -72,9 +71,6 @@ public class Graph {
 		nodes.put(node.getUrl(), node);
 		if (!outboundLinks.containsKey(node)) {
 			outboundLinks.put(node, new HashSet<Node>());
-		}
-		if (!inboundLinks.containsKey(node)) {
-			inboundLinks.put(node, new HashSet<Node>());
 		}
 		return true;
 	}
@@ -109,19 +105,13 @@ public class Graph {
 		return sb.toString();
 	}
 
-	/**
-	 * @return the inboundLinks
-	 */
-	public HashSet<Node> getInboundLinks(Node node) {
-		return inboundLinks.get(node);
-	}
 
 	/**
 	 * @return the numLinks
 	 */
-	public int getNumLinks() {
-		return numLinks;
-	}
+//	public int getNumLinks() {
+//		return numLinks;
+//	}
 
 	/**
 	 * @return the numNode
@@ -129,5 +119,31 @@ public class Graph {
 	public int getNumNode() {
 		return nodes.size();
 	}
+	
+	/**
+	 * @param url
+	 */
+	public void addSourceLink(String url) {
+		sourceLinks.add(url);
+	}
 
+	
+	/**
+	 * @return
+	 */
+	public HashSet<String> getSourceLinks() {
+		return sourceLinks;
+	}
+	
+	
+	/**
+	 * Remove dangling link.
+	 * @param node The source node which point to the dangling link.
+	 * @param url The dangling link to be removed.
+	 */
+	public void removeNode(Node node, String url) {
+		getOutboundLinks(node).remove(getNodes().get(url));
+		nodes.remove(url);
+	}
+	
 }
