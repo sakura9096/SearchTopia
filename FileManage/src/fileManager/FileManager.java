@@ -55,8 +55,6 @@ public class FileManager {
 		
 		outWriter.close();
 		anchorWriter.close();
-		List<String> res = new ArrayList<>();
-		Iterator<String> iter = res.iterator();
 	}
 
 }

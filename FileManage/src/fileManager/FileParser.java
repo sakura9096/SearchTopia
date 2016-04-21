@@ -70,6 +70,14 @@ public class FileParser {
 		}
 	}
 	
+	public boolean isASCII(String word) {
+		for (int i = 0; i < word.length(); i++) {
+			if (word.charAt(i) > 128) {
+				return false;
+			}
+		}
+		return true;
+	}
 	/*
 	 * check if the word is valid or not
 	 */
@@ -78,7 +86,7 @@ public class FileParser {
 		word = word.trim();
 		word = this.removeQuote(word);
 		word = word.trim();
-		if (word.length() == 0) return null;
+		if (word.length() == 0 || !isASCII(word)) return null;
 		word = word.toLowerCase();
 		if (isWord(word)) {
 			word = Stemmer.getString(word);
@@ -272,12 +280,13 @@ public class FileParser {
 	}
 	
 	public String outLinksToString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(this.url + " ");
+		List<String> temp = new ArrayList<>();
+		temp.add(this.url);
 		for (String outLink : outLinks) {
-			sb.append(outLink + " ");
+			temp.add(outLink);
 		}
-		sb.append("\n");
+		StringBuilder sb = new StringBuilder(Codec.encode(temp));
+		sb.append('\n');
 		return sb.toString();
 	}
 	
