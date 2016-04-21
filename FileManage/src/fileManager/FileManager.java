@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 /*
  * Get all files from file and send them to file parser for parsing
@@ -54,7 +55,8 @@ public class FileManager {
 		
 		outWriter.close();
 		anchorWriter.close();
-		
+		List<String> res = new ArrayList<>();
+		Iterator<String> iter = res.iterator();
 	}
 
 }

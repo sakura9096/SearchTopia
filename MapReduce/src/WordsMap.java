@@ -15,17 +15,18 @@ public class WordsMap extends Mapper<LongWritable, Text, Text, Text> {
     		if (line.length() == 0) {
     			return;
     		}
-        StringTokenizer tokenizer = new StringTokenizer(line, " ");
+        List<String> list = Codec.decode(line);
 //        String [] lineInfo = line.split("\t");
 //        if (Integer.parseInt(lineInfo[3]) >= 4) {
 //        		emitKey.set(tokenizer.nextToken() + ":1");
 //        } else {
 //        		emitKey.set(tokenizer.nextToken() + ":2");
 //        }
-        emitKey.set(tokenizer.nextToken());
+        Iterator<String> iter = list.iterator();
+        emitKey.set(iter.next());
 //        String lowerCaseKey = emitKey.toString().toLowerCase();
-        while (tokenizer.hasMoreTokens()) {
-        		String nextToken = tokenizer.nextToken ();
+        while (iter.hasNext()) {
+        		String nextToken = iter.next();
         		if (nextToken.length() > 0) {
                 word.set(nextToken);
 //                  String lowerCaseKey = word.toString().toLowerCase();
