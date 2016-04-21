@@ -255,14 +255,14 @@ public class FileParser {
 	
 	public void wordOccurenceToString(Map<String, List<WordOccurence>> map, int maxFrequency, FileWriter outWriter) throws IOException {
 		for (Map.Entry<String, List<WordOccurence>> entry : map.entrySet()) {
-			StringBuilder sb = new StringBuilder();
+			List<String> temp = new ArrayList<>();
 			String key = entry.getKey();
+			temp.add(key);
 			List<WordOccurence> value = entry.getValue();
-			sb.append(key + " ");
 			for (WordOccurence wordOccurence : value) {
-				wordOccurence.setMaxFrequency(maxFrequency);
-				sb.append(wordOccurence + " ");
+				temp.add(wordOccurence.toString());
 			}
+			StringBuilder sb = new StringBuilder(Codec.encode(temp));
 			sb.append("\n");
 			outWriter.write(sb.toString());
 			outWriter.flush();

@@ -15,8 +15,8 @@ public class WordsReduce extends Reducer<Text, Text, Text, Text> {
 //            sum += val.get();
 //        }
 //    		HashMap <WordURLWrapper, ArrayList<HitInfo>> result = new HashMap <WordURLWrapper, ArrayList<HitInfo>> ();
-//   		HashMap <WordURLWrapper, HitsWrapper> result = new HashMap <WordURLWrapper, HitsWrapper> ();
-    	//	System.out.println("The key is:" +key.toString());
+//   		HashMap <WordURLWrapper, HitsWrapper> result = new HashMap <WordURLWrapper, HitsWrapper> ();    	
+    		System.out.println("The key is:" +key.toString());
     		HashMap <String, HitsWrapper> result = new HashMap <String, HitsWrapper> ();
  //   		int numOfDocContainsKey = 0;
 //    		String oldURL = "";
@@ -25,32 +25,38 @@ public class WordsReduce extends Reducer<Text, Text, Text, Text> {
     		for (Text hit: values) {
     			String hitString = hit.toString ();
     			StringTokenizer tokenizer = new StringTokenizer(hitString, "\t");
-    			String currentURL = tokenizer.nextToken();
-    	//		System.out.println("The next token is:" + currentURL);
-    			String secondToken = tokenizer.nextToken();
-    	//		System.out.println("Second token is:" + secondToken);
-//    			HitInfo currentHitInfo = new HitInfo (tokenizer.nextToken(), tokenizer.nextToken());
- //   			WordURLWrapper wuw = new WordURLWrapper (key.toString(), currentURL, tokenizer.nextToken());
-    			
-    			if (!result.containsKey(currentURL)) {
-    				int wordURLFreq = 1;
- //   				numOfDocContainsKey ++;
- //   				oldURL = currentURL;
-    				
- //   				ArrayList <HitInfo> currList = new ArrayList<HitInfo> ();
- //   				currList.add(currentHitInfo);
-    				
-    				String maxFrequency = secondToken;
-//    				System.out.println("maxFrequency token is:" + maxFrequency);
-    				HitsWrapper hitsWrapper = new HitsWrapper (wordURLFreq, maxFrequency);   				
-    				result.put(currentURL, hitsWrapper);
-    				
-    			} else {
-  //  				wordURLFreq ++;
-  //  				result.get(currentURL).addHitsInfo(currentHitInfo);
-    				HitsWrapper currentHitsWrapper = result.get(currentURL);
-    				currentHitsWrapper.increaseWordFrequency();
+    			try {
+	    			String currentURL = tokenizer.nextToken();
+	    			System.out.println("The next token is:" + currentURL);
+	    			String secondToken = tokenizer.nextToken();
+	    			System.out.println("Second token is:" + secondToken);
+	//    			HitInfo currentHitInfo = new HitInfo (tokenizer.nextToken(), tokenizer.nextToken());
+	 //   			WordURLWrapper wuw = new WordURLWrapper (key.toString(), currentURL, tokenizer.nextToken());
+	    			
+	    			if (!result.containsKey(currentURL)) {
+	    				int wordURLFreq = 1;
+	 //   				numOfDocContainsKey ++;
+	 //   				oldURL = currentURL;
+	    				
+	 //   				ArrayList <HitInfo> currList = new ArrayList<HitInfo> ();
+	 //   				currList.add(currentHitInfo);
+	    				
+	    				String maxFrequency = secondToken;
+	    				System.out.println("maxFrequency token is:" + maxFrequency);
+	    				HitsWrapper hitsWrapper = new HitsWrapper (wordURLFreq, maxFrequency);   				
+	    				result.put(currentURL, hitsWrapper);
+	    				
+	    			} else {
+	  //  				wordURLFreq ++;
+	  //  				result.get(currentURL).addHitsInfo(currentHitInfo);
+	    				HitsWrapper currentHitsWrapper = result.get(currentURL);
+	    				currentHitsWrapper.increaseWordFrequency();
+	    			}
+    			} catch (Exception e) {
+    				e.printStackTrace();
+    				continue;
     			}
+    			
     		}
     		
     		for (String url: result.keySet()) {
