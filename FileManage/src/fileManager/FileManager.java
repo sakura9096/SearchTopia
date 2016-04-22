@@ -3,6 +3,8 @@ package fileManager;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 /*
  * Get all files from file and send them to file parser for parsing
@@ -12,6 +14,14 @@ public class FileManager {
 		String inputDirectory = args[0];
 		String outputDirectory = args[1];
 		String anchorDirectory = args[2];
+//		
+//		File fileToRead = new File(inputDirectory);
+//		
+//		FileParser parser = new FileParser(fileToRead);
+//		parser.parse();
+//		System.out.println(parser.fancyHitMapToString());
+//		System.out.println(parser.normalHitMapToString());
+//		System.out.println(parser.outLinksToString());
 		
 		File filesToRead = new File(inputDirectory);
 		if (!filesToRead.isDirectory()) {
@@ -19,25 +29,32 @@ public class FileManager {
 			return;
 		}
 		
+		
 		FileWriter outWriter = new FileWriter(outputDirectory, true);
 		FileWriter anchorWriter = new FileWriter(anchorDirectory, true);
 		
+		File[] fileToReadArray = filesToRead.listFiles();
+		Arrays.sort(fileToReadArray);
 		
-		for (File fileToRead : filesToRead.listFiles()) {
-			FileParser fileParser = new FileParser(fileToRead);
-			fileParser.parse();
-			outWriter.write(fileParser.fancyHitMapToString());
-			outWriter.write(fileParser.fancyPhraseHitMapToString());
-			outWriter.write(fileParser.normalHitMapToString());
-			outWriter.write(fileParser.normalPhraseHitMapToString());
+		for (int i = 0; i < fileToReadArray.length; i++) {
+			FileParser fileParser = new FileParser(fileToReadArray[i]);
+			try {
+				fileParser.parse();
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				continue;
+			}
+			System.out.println(fileToReadArray[i].getName());
+			fileParser.fancyHitMapToString(outWriter);
+			fileParser.fancyPhraseHitMapToString(outWriter);
+			fileParser.normalHitMapToString(outWriter);
+			fileParser.normalPhraseHitMapToString(outWriter);
 			anchorWriter.write(fileParser.outLinksToString());
 		}
-		outWriter.flush();
-		anchorWriter.flush();
 		
 		outWriter.close();
 		anchorWriter.close();
-		
 	}
 
 }

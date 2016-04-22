@@ -377,10 +377,10 @@ class Stemmer
     * forcing lower case must be done outside the Stemmer class.
     * Usage: Stemmer file-name file-name ...
     */
-   public static void main(String[] args)
-   {
-      System.out.println(Stemmer.getString("Expected"));
-      System.out.println();
-      
-   }
+//   public static void main(String[] args)
+//   {
+//      System.out.println(Stemmer.getString("Expected"));
+//      System.out.println();
+//      
+//   }
 }
