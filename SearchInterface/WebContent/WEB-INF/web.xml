@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+ <web-app>
+     <display-name>SearchInterface</display-name>
+     
+     <servlet>
+         <servlet-name>WelcomeServlet</servlet-name>
+         <servlet-class>cis455.g02.servlet.WelcomeServlet</servlet-class>
+     </servlet>
+
+     <servlet-mapping>
+         <servlet-name>WelcomeServlet</servlet-name>
+         <url-pattern>/welcome</url-pattern>
+     </servlet-mapping>
+</web-app>
