@@ -31,23 +31,18 @@ public class TestDB {
 	}
 	
 	
-	public Map<String, String> getTitleMap(List<String> urls) {
+	public String getTitle(String url) {
 		Map<String, String> results = new HashMap<String, String>();
-		
-		for (String url: urls) {
-			try {
-				DatabaseEntry searchEntry = new DatabaseEntry();  
-			    DatabaseEntry keyValue = new DatabaseEntry(url.getBytes("UTF-8")); 
-			    db.get(null, keyValue, searchEntry, LockMode.DEFAULT);//retrieving record  
-				String foundData = new String(searchEntry.getData(), "UTF-8");  
-				results.put(url, foundData);  
-			} catch (Exception e) {
-				results.put(url, null);
-				continue;
-			}	   
-		   
-		}
-		return results;
+		try {
+			DatabaseEntry searchEntry = new DatabaseEntry();  
+			DatabaseEntry keyValue = new DatabaseEntry(url.getBytes("UTF-8")); 
+			db.get(null, keyValue, searchEntry, LockMode.DEFAULT);//retrieving record  
+			String foundData = new String(searchEntry.getData(), "UTF-8");  
+			return foundData;
+		} catch (Exception e) {
+			return null;
+		}	   
+		  
 	}
 	
 	public void close() {
