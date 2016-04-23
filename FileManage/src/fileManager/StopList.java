@@ -8,7 +8,7 @@ import java.util.Set;
  * Class for storing the stop list
  */
 public class StopList {
-	public final static String[] stopList = { "a", "about", "above", "after", "again",
+	public final static String[] stopList = { "0", "a", "about", "above", "after", "again",
 			"against", "all", "am", "an", "and", "any", "are", "aren't", "as",
 			"at", "be", "because", "been", "before", "being", "below",
 			"between", "both", "but", "by", "can't", "cannot", "could",

@@ -14,7 +14,7 @@ public class FileManager {
 		String inputDirectory = args[0];
 		String outputDirectory = args[1];
 		String anchorDirectory = args[2];
-//		
+		
 //		File fileToRead = new File(inputDirectory);
 //		
 //		FileParser parser = new FileParser(fileToRead);
@@ -34,15 +34,15 @@ public class FileManager {
 		FileWriter anchorWriter = new FileWriter(anchorDirectory, true);
 		
 		File[] fileToReadArray = filesToRead.listFiles();
+		//File[] fileToReadArray = new File[]{filesToRead};
 		Arrays.sort(fileToReadArray);
 		
 		for (int i = 0; i < fileToReadArray.length; i++) {
 			FileParser fileParser = new FileParser(fileToReadArray[i]);
 			try {
 				fileParser.parse();
-				
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				 //TODO Auto-generated catch block
 				continue;
 			}
 			System.out.println(fileToReadArray[i].getName());

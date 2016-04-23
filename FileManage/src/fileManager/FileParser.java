@@ -191,17 +191,17 @@ public class FileParser {
 		
 		
 		//read from metadata
-		Elements metadata = doc.select("meta[name]");
-		if (metadata != null) {
-			StringBuilder metasb = new StringBuilder();
-			for (Element element : metadata) {
-				if (element.attr("name").equals("keyword") ||
-						element.attr("name").equals("description")) {
-					metasb.append(element.attr("content") + " ");
-				}
-				parseString(metasb.toString(), 0);
-			}
-		}
+//		Elements metadata = doc.select("meta[name]");
+//		if (metadata != null) {
+//			StringBuilder metasb = new StringBuilder();
+//			for (Element element : metadata) {
+//				if (element.attr("name").equals("keyword") ||
+//						element.attr("name").equals("description")) {
+//					metasb.append(element.attr("content") + " ");
+//				}
+//			}
+//			System.out.println(metasb.toString());
+//		}
 		
 		//read from title
 		String title = doc.title();
@@ -212,6 +212,7 @@ public class FileParser {
 		//read from body
 		Element body = doc.body();
 		if (body != null) {
+			//System.out.println(body.text());
 			parseString(body.text(), 1);
 			//System.out.println(body.text());
 		}
@@ -219,7 +220,7 @@ public class FileParser {
 		//then read from possible links and build the anchor file
 		Elements links = doc.select("a[href]");
 		if (links != null) {
-			StringBuilder anchorsb = new StringBuilder();
+			//StringBuilder anchorsb = new StringBuilder();
 			for (Element link : links) {
 				String outLink = link.attr("abs:href").trim();
 				if (outLink.length() == 0) continue;
@@ -234,10 +235,11 @@ public class FileParser {
 				
 				this.outLinks.add(outLink);
 				
-				String anchor = link.text().trim();
-				anchorsb.append(anchor + " ");
+				//String anchor = link.text().trim();
+				//anchorsb.append(anchor + " ");
 			}
-			parseString(anchorsb.toString(), 0);
+			//System.out.println(anchorsb.toString());
+			//parseString(anchorsb.toString(), 0);
 		}
 		
 		this.removeFromPhraseMap();
@@ -268,6 +270,7 @@ public class FileParser {
 			temp.add(key);
 			List<WordOccurence> value = entry.getValue();
 			for (WordOccurence wordOccurence : value) {
+				wordOccurence.setMaxFrequency(maxFrequency);
 				temp.add(wordOccurence.toString());
 			}
 			StringBuilder sb = new StringBuilder(Codec.encode(temp));
@@ -307,12 +310,12 @@ public class FileParser {
 	}
 	
 	public void removeFromPhraseMap() {
-		for (Iterator<Map.Entry<String, List<WordOccurence>>> it = this.fancyPhraseHitMap.entrySet().iterator(); it.hasNext();) {
-			Map.Entry<String, List<WordOccurence>> entry = it.next();
-			if (entry.getValue().size() <= 1) {
-				it.remove();
-			}
-		}
+//		for (Iterator<Map.Entry<String, List<WordOccurence>>> it = this.fancyPhraseHitMap.entrySet().iterator(); it.hasNext();) {
+//			Map.Entry<String, List<WordOccurence>> entry = it.next();
+//			if (entry.getValue().size() <= 1) {
+//				it.remove();
+//			}
+//		}
 		
 		for (Iterator<Map.Entry<String, List<WordOccurence>>> it = this.normalPhraseHitMap.entrySet().iterator(); it.hasNext();) {
 			Map.Entry<String, List<WordOccurence>> entry = it.next();
