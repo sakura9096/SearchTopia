@@ -16,7 +16,7 @@ public class WordsReduce extends Reducer<Text, Text, Text, Text> {
 //        }
 //    		HashMap <WordURLWrapper, ArrayList<HitInfo>> result = new HashMap <WordURLWrapper, ArrayList<HitInfo>> ();
 //   		HashMap <WordURLWrapper, HitsWrapper> result = new HashMap <WordURLWrapper, HitsWrapper> ();    	
-    		System.out.println("The key is:" +key.toString());
+//    		System.out.println("The key is:" +key.toString());
     		HashMap <String, HitsWrapper> result = new HashMap <String, HitsWrapper> ();
  //   		int numOfDocContainsKey = 0;
 //    		String oldURL = "";
@@ -27,9 +27,9 @@ public class WordsReduce extends Reducer<Text, Text, Text, Text> {
     			StringTokenizer tokenizer = new StringTokenizer(hitString, "\t");
     			try {
 	    			String currentURL = tokenizer.nextToken();
-	    			System.out.println("The next token is:" + currentURL);
+//	    			System.out.println("The next token is:" + currentURL);
 	    			String secondToken = tokenizer.nextToken();
-	    			System.out.println("Second token is:" + secondToken);
+//	    			System.out.println("Second token is:" + secondToken);
 	//    			HitInfo currentHitInfo = new HitInfo (tokenizer.nextToken(), tokenizer.nextToken());
 	 //   			WordURLWrapper wuw = new WordURLWrapper (key.toString(), currentURL, tokenizer.nextToken());
 	    			
@@ -42,7 +42,7 @@ public class WordsReduce extends Reducer<Text, Text, Text, Text> {
 	 //   				currList.add(currentHitInfo);
 	    				
 	    				String maxFrequency = secondToken;
-	    				System.out.println("maxFrequency token is:" + maxFrequency);
+//	    				System.out.println("maxFrequency token is:" + maxFrequency);
 	    				HitsWrapper hitsWrapper = new HitsWrapper (wordURLFreq, maxFrequency);   				
 	    				result.put(currentURL, hitsWrapper);
 	    				
