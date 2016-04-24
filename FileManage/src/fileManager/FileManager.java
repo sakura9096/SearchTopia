@@ -37,7 +37,8 @@ public class FileManager {
 		//File[] fileToReadArray = new File[]{filesToRead};
 		Arrays.sort(fileToReadArray);
 		
-		for (int i = 0; i < fileToReadArray.length; i++) {
+//		for (int i = 0; i < fileToReadArray.length; i++) {
+		for (int i = 0; i < 35000; i++) {
 			FileParser fileParser = new FileParser(fileToReadArray[i]);
 			try {
 				fileParser.parse();

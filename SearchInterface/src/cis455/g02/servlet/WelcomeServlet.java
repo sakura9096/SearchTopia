@@ -11,10 +11,17 @@ import java.util.List;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+
 import cis455.api.YelpHelper;
+import cis455.storage.TestDB;
 
 public class WelcomeServlet extends HttpServlet {
 	
@@ -49,15 +56,52 @@ public class WelcomeServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
-		String query = request.getParameter("query").trim();
+		String spellmsg = "";
+		String finalQuery = "";
+		String firstQuery = request.getParameter("query");
+		String secondQuery = request.getParameter("decide");
+		
+		
+		HttpResponse<JsonNode> spellcheck;
+		if (secondQuery == null) {
+			firstQuery = firstQuery.trim();
+			finalQuery = firstQuery;
+			try {
+				spellcheck = Unirest.get("https://montanaflynn-spellcheck.p.mashape.com/check/?text=" + this.spellCheckQuery(firstQuery))
+						.header("X-Mashape-Key", "4LiSJm40mdmsh8EgGYw128TMAY8cp1thFKijsnZ4BwP9iZaZhS")
+						.header("Accept", "application/json")
+						.asJson();
+			} catch (UnirestException e) {
+				spellcheck = null;
+			}
+			if (spellcheck != null) {
+				JSONObject myObj =  spellcheck.getBody().getObject();
+
+				// extract fields from the object
+				spellmsg = myObj.getString("suggestion");
+				//System.out.println(msg);
+			}
+			
+			if (!spellmsg.equals("") && !spellmsg.equals(firstQuery)) {
+				finalQuery = spellmsg;
+			}
+		} else {
+			finalQuery = secondQuery.trim();
+		}
+		
+		
 		/********************************************TO DO**********************************/
-		List<String> results = processQuery(query);
+		List<String> results = processQuery(finalQuery);
 		if (results.size() != 100) {
 			for (int i = results.size(); i < 100; i++) {
-				results.add("https://www.google.com"); // just in case they don't return 100 results
+				results.add("https://en.wikipedia.org/wiki/1909"); // just in case they don't return 100 results
 			}
 		}
+		
 		/****************************Deal with the database, and return top k**********************************/
+	
+		
+		TestDB db = new TestDB();
 		pw.println("<!DOCTYPE html><html lang=\"en\"><head>");
 		pw.println(" <title>Search Results</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
 				+ " <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.3.min.js'>"
@@ -66,7 +110,7 @@ public class WelcomeServlet extends HttpServlet {
 				+ "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\"><script type='text/javascript' src=\"https://esimakin.github.io/twbs-pagination/js/jquery.twbsPagination.js\"></script>"
 				+ "<script type='text/javascript'>//<![CDATA[\n"
 				+ "$(document).ready(function() {"
-				+ "$('#demo1').WikipediaWidget('" + this.wikiQuery(query) + "');"
+				+ "$('#demo1').WikipediaWidget('" + this.wikiQuery(finalQuery) + "');"
 				+ " });</script>"
 				+ "<script type='text/javascript'>//<![CDATA[ \n"
 				+ "$(window).load(function(){$('#pagination-demo').twbsPagination({"
@@ -78,9 +122,15 @@ public class WelcomeServlet extends HttpServlet {
 				String page = p + "";
 				pw.print("if (page ==\"" + page + "\") { $('#page-content').html(\"");
 				for (int j = i * 10; j < i * 10 + 10; j++) {
+//					String url = results.get(j);
+//					Document doc = Jsoup.connect(url).get();
+//					String title = doc.title();
 					String url = results.get(j);
-					Document doc = Jsoup.connect(url).get();
-					String title = doc.title();
+					String title = db.getTitle(url);
+					if  (title == null) {
+						
+						title = "Not Title Found";
+					}
 					pw.print("<a href='" + url +"' class='list-group-item'><h4 class='list-group-item-heading'>" + title + "</h4><p class='list-group-item-text'>" + url + "</p></a>");
 				}
 				pw.println("\");}");
@@ -123,7 +173,13 @@ public class WelcomeServlet extends HttpServlet {
 				+ "<div class=\"navbar-nav\" id=\"myNavbar\">"
 				+ "<form action=\"welcome\" method=\"post\" align=\"center\">"
 				+ "<input type=\"text\" placeholder=\"Please enter your query\" name=\"query\" style=\"width: 500px; height: 40px\">"
-				+ "<button type=\"submit\" class=\"btn btn-secondary-outline btn-md\">Search</button></form></div></nav>"
+				+ "<button type=\"submit\" class=\"btn btn-secondary-outline btn-md\">Search</button></form></div></nav>");
+		if (!spellmsg.equals(firstQuery) && !spellmsg.equals("") ) {
+			pw.println("<h4 style = \"font-family: sans-serif\">Displaying results for " + finalQuery + "?  "
+					+ "<form name='myform' action=\"welcome\" method=\"post\">Do you still want to search: <input type=\"hidden\" name=\"decide\" value='" + firstQuery + "'><span onclick=\"document.myform.submit();\"><u><strong>" + firstQuery +  "</strong></u></span></form></h4>");
+			
+		}
+		pw.println(""
 				+ "<div class=\"container-fluid text-center\"><div class=\"row content\">"
 				+ "<div class=\"col-sm-8 text-left\">"
 				+ "<div class=\"list-group\">"
@@ -134,7 +190,7 @@ public class WelcomeServlet extends HttpServlet {
 				+ "<div class=\"well\">"
 				+ "<div class=\"bs-example\">"
 				+ "<ul class=\"nav nav-tabs\">"
-				+ "<li class=\"active\"><a data-toggle=\"tab\" href=\"#sectionA\">Wikipedia</a></li>"
+				+ "<li class=\"active\"><a data-toggle=\"tab\" href=\"#sectionA\">What's Wikipedia Saying</a></li>"
 				+ "<li><a data-toggle=\"tab\" href=\"#sectionB\">Yelp Businesses</a></li>"
 			
 				+ "</ul>"
@@ -144,7 +200,7 @@ public class WelcomeServlet extends HttpServlet {
 						+ "</div>"
 						+ "<div id=\"sectionB\" class=\"tab-pane fade\">"
 						+ "<h4>Business Information</h4>"
-						+ "<p>" + this.yelpHTML(query) + "</p>"
+						+ "<p>" + this.yelpHTML(finalQuery) + "</p>"
 						
 						+ "</div>"
 						
@@ -170,34 +226,34 @@ public class WelcomeServlet extends HttpServlet {
 		List<String> results = new ArrayList<String>();
 	
 		for (int i = 0; i < 10; i++) {
-			results.add("http://www.apple.com/");
+			results.add("https://en.wikipedia.org/wiki/2003");
 		}
 		for (int i = 10; i < 20; i++) {
-			results.add("http://www.dell.com/en-us/");
+			results.add("https://en.wikipedia.org/wiki/1909");
 		}
 		for (int i = 20; i < 30; i++) {
-			results.add("http://www.apple.com/");
+			results.add("https://en.wikipedia.org/wiki/2003");
 		}
 		for (int i = 30; i < 40; i++) {
-			results.add("http://www.dell.com/en-us/");
+			results.add("https://en.wikipedia.org/wiki/1909");
 		}
 		for (int i = 40; i < 50; i++) {
-			results.add("http://www.apple.com/");
+			results.add("https://en.wikipedia.org/wiki/2003");
 		}
 		for (int i = 50; i < 60; i++) {
-			results.add("http://www.dell.com/en-us/");
+			results.add("https://en.wikipedia.org/wiki/1909");
 		}
 		for (int i = 60; i < 70; i++) {
-			results.add("http://www.apple.com/");
+			results.add("https://en.wikipedia.org/wiki/2003");
 		}
 		for (int i = 70; i < 80; i++) {
-			results.add("http://www.dell.com/en-us/");
+			results.add("https://en.wikipedia.org/wiki/1909");
 		}
 		for (int i = 80; i < 90; i++) {
-			results.add("http://www.apple.com/");
+			results.add("https://en.wikipedia.org/wiki/2003");
 		}
 		for (int i = 90; i < 100; i++) {
-			results.add("http://www.dell.com/en-us/");
+			results.add("https://en.wikipedia.org/wiki/1909");
 		}
 		
 		/*This part needs to be removed!*/
@@ -220,6 +276,19 @@ public class WelcomeServlet extends HttpServlet {
 	public String yelpHTML(String str) {
 		YelpHelper helper = new YelpHelper(str);
 		return helper.excute();
+	}
+	
+	public String spellCheckQuery(String query) {
+		String[] strings = query.split("\\s+");
+		StringBuilder sb = new StringBuilder();
+		boolean first = true;
+		for (String item : strings) {
+			if (first) first = false;
+			else
+		      sb.append("+");
+		      sb.append(item);
+		   }
+		return sb.toString();
 	}
 
 }

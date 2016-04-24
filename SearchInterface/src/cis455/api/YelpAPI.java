@@ -155,10 +155,10 @@ public class YelpAPI {
 //    System.out.println(businessResponseJSON);
     JSONArray businesses = (JSONArray) response.get("businesses");
     int total = Math.min(businesses.size(), 10);
-    System.out.println(businesses.size());
+    
     for (int i = 0; i < total; i++) {
     	JSONObject business = (JSONObject) businesses.get(i);
-    	System.out.println(business);
+    	
     	String name = "";
     	String url = "";
     	String rating = "";

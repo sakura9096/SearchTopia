@@ -10,5 +10,13 @@
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/json_simple-1.1.jar"/>
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/scribe-1.3.5.jar"/>
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/je-5.0.34.jar"/>
+	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/httpasyncclient-4.0.2.jar"/>
+	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/httpclient-4.3.6.jar"/>
+	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/httpcore-nio-4.3.2.jar"/>
+	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/httpmime-4.3.6.jar"/>
+	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/unirest-java-1.4.9.jar"/>
+	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/json-20140107.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

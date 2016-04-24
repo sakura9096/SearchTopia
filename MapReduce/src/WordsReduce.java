@@ -66,7 +66,7 @@ public class WordsReduce extends Reducer<Text, Text, Text, Text> {
     			reducedKey.set(wordURL);
     			HitsWrapper hitsWrapper = result.get (url);
     			
-    			double idf = Math.log10 (1000000/(double) result.keySet().size());
+    			double idf = Math.log10 (1017446/(double) result.keySet().size());
     			double tf = 0.5 + 0.5 * hitsWrapper.getWordFrequency() / Integer.parseInt(hitsWrapper.getMaxFrequency());
     			
     			double tfidf = idf * tf;
