@@ -16,7 +16,7 @@ public class TestDB {
 	Environment dbEnv;
 	DatabaseConfig dbconf;
 	Database db;
-	String dir = "/Users/Linjie/Desktop/title";
+	String dir = "/Users/fanglinlu/Desktop/title";
 	//String dir2 = "/Users/Linjie/Desktop/title";
 	
 	
