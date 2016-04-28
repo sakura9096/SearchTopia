@@ -1,6 +1,9 @@
 package cis455.queryProcess;
 
+import java.awt.print.Book;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.amazonaws.AmazonClientException;
@@ -9,6 +12,8 @@ import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 import com.amazonaws.services.dynamodbv2.document.Attribute;
 import com.amazonaws.services.dynamodbv2.document.Table;
 import com.amazonaws.services.dynamodbv2.document.TableKeysAndAttributes;
@@ -61,30 +66,107 @@ public class DynamoDBDatabase {
         dynamoDB.setRegion(usEast);
 	 }
 	 
-	 public ArrayList<TFIDFURLWrapper> getURLsFromWord (String word) {
+	 public ArrayList<TFIDFURLWrapper> getURLsFromFacnyBarrel (String word) {
 //		TableKeysAndAttributes tableKeysAndAttributes = new TableKeysAndAttributes ("Fancy-Bareel");
 //		tableKeysAndAttributes.addHashOnlyPrimaryKeys( , , );
 		 ArrayList<TFIDFURLWrapper> result = new ArrayList<TFIDFURLWrapper> ();
-		 QueryRequest qRequest = new QueryRequest ("Fancy-Barrel");
-		 qRequest.setKeyConditionExpression ("word=:" + word);
 		 
-		 QueryResult qr = dynamoDB.query (qRequest);
+		 DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
 		 
-		 for (Map<String, AttributeValue> itemsValue: qr.getItems()) {
-			 AttributeValue tfidfAttribute = itemsValue.get("tfidf");
-			 String tfidfAttributeStr = tfidfAttribute.getN();
-			 Double tfidf = Double.parseDouble (tfidfAttributeStr);
+		 //FancyBarrel fb = mapper.load(FancyBarrel.class, word);
+		 
+		 Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		 
+		 eav.put(":val1", new AttributeValue().withS(word));
+		 
+		 DynamoDBQueryExpression<FancyBarrel> queryExpression = new DynamoDBQueryExpression<FancyBarrel>()
+		            .withKeyConditionExpression("word = :val1")
+		            .withExpressionAttributeValues(eav);
+		 
+		 List<FancyBarrel> queryResult = mapper.query(FancyBarrel.class, queryExpression);
+		 
+		 for (FancyBarrel itemsValue: queryResult) {
+			 double tfidf =itemsValue.getTFIDF();
 			 
 			 
-			 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.get("url").getS());
+			 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.getURL());
 			 result.add(tfuw);
-			 
+		 
 		 }
 		 
+		 
+//		 QueryRequest qRequest = new QueryRequest ("Fancy-Barrel");
+//		 qRequest.setKeyConditionExpression ("word=:" + word);
+//		 
+//		 QueryResult qr = dynamoDB.query (qRequest);
+		 
+//		 for (Map<String, AttributeValue> itemsValue: qr.getItems()) {
+//			 AttributeValue tfidfAttribute = itemsValue.get("tfidf");
+//			 String tfidfAttributeStr = tfidfAttribute.getN();
+//			 Double tfidf = Double.parseDouble (tfidfAttributeStr);
+//			 
+//			 
+//			 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.get("url").getS());
+//			 result.add(tfuw);
+//			 
+//		 }
+//		 
 		 return result;
 		 
 		
 	 }
+	 
+	 public ArrayList<TFIDFURLWrapper> getURLsFromNormalBarrel (String word) {
+//			TableKeysAndAttributes tableKeysAndAttributes = new TableKeysAndAttributes ("Fancy-Bareel");
+//			tableKeysAndAttributes.addHashOnlyPrimaryKeys( , , );
+			 ArrayList<TFIDFURLWrapper> result = new ArrayList<TFIDFURLWrapper> ();
+			 
+			 DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
+			 
+			 //FancyBarrel fb = mapper.load(FancyBarrel.class, word);
+			 
+			 Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+			 
+			 eav.put(":val1", new AttributeValue().withS(word));
+			 
+			 DynamoDBQueryExpression<NormalBarrel> queryExpression = new DynamoDBQueryExpression<NormalBarrel>()
+			            .withKeyConditionExpression("word = :val1")
+			            .withExpressionAttributeValues(eav);
+			 
+			 List<NormalBarrel> queryResult = mapper.query (NormalBarrel.class, queryExpression);
+			 
+			 for (NormalBarrel itemsValue: queryResult) {
+				 double tfidf =itemsValue.getTFIDF();
+				 
+				 
+				 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.getURL());
+				 result.add(tfuw);
+			 
+			 }
+			 
+			 
+//			 QueryRequest qRequest = new QueryRequest ("Fancy-Barrel");
+//			 qRequest.setKeyConditionExpression ("word=:" + word);
+//			 
+//			 QueryResult qr = dynamoDB.query (qRequest);
+			 
+//			 for (Map<String, AttributeValue> itemsValue: qr.getItems()) {
+//				 AttributeValue tfidfAttribute = itemsValue.get("tfidf");
+//				 String tfidfAttributeStr = tfidfAttribute.getN();
+//				 Double tfidf = Double.parseDouble (tfidfAttributeStr);
+//				 
+//				 
+//				 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.get("url").getS());
+//				 result.add(tfuw);
+//				 
+//			 }
+//			 
+			 return result;
+			 
+			
+		 }
+	 
+	 
 
 	  
 }
