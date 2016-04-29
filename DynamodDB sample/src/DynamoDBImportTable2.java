@@ -1,9 +1,11 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -33,20 +35,7 @@ public class DynamoDBImportTable2 {
      * @see com.amazonaws.auth.BasicAWSCredentials
      * @see com.amazonaws.auth.ProfilesConfigFile
      * @see com.amazonaws.ClientConfiguration
-     */
-	 private static Comparator <TFIDFURLWrapper> tfidfComparator = new Comparator <TFIDFURLWrapper> () {
-			public int compare (TFIDFURLWrapper w1, TFIDFURLWrapper w2) {
-
-				if (w1.tfidf - w2.tfidf < 0) {
-					return 1;
-				} else if (w1.tfidf - w2.tfidf > 0) {
-					return -1;
-				} else {
-					return 0;
-				}
-				
-			}
-	 };
+     **/
     private static void init() throws Exception {
         /*
          * The ProfileCredentialsProvider will return your [default]
@@ -75,73 +64,72 @@ public class DynamoDBImportTable2 {
     }
     
     private static void writeMultipleItemsBatchWrite() {
-    	
-    		String tableName;
-    		try {
-			FileReader fileReader = new FileReader ("/Users/fanglinlu/Documents/classes/CIS555/project/output3");
-			BufferedReader br1 = new BufferedReader (fileReader);
-			
-			String line;
-			while ((line = br1.readLine()) != null) {
+    		
+    		File directory = new File ("/Users/fanglinlu/Desktop/newOutput");
+    		File[] fList = directory.listFiles ();
+    		
+    		for (File file : fList) {
+	    		String tableName;
+	    		try {
+				FileReader fileReader = new FileReader (file.getAbsolutePath());
+				BufferedReader br1 = new BufferedReader (fileReader);
 				
-				String[] lineInfo = line.split("\t");
-				String word;
-				String url;
-				String tfIdf;
-				if (lineInfo.length < 4) {
-					word = lineInfo[0];
-					url = lineInfo[1];
-					tfIdf =lineInfo[2];
-					
-				} else {
-					word = lineInfo[0] + " " + lineInfo[1];
-					url = lineInfo[2];
-					tfIdf = lineInfo[3];
-				}
 				
-			}
-	    		while (true) {
-	    		    
-		    		ArrayList<ArrayList<Map<String, AttributeValue>>> returningItems = get1000Items(br1);
-
-		    		
-		    		if (returningItems.get(0).size() == 0 && returningItems.get(1).size() == 0) {
-		    			return;
-		    		}
-		    		for (int k = 0; k < 2; k++) {
-		    			ArrayList<Map<String, AttributeValue>> items = returningItems.get(k);
-//			    		if (items.size() == 0) return;
+		    		while (true) {
+		    		    
+			    		ArrayList<ArrayList<Map<String, AttributeValue>>> returningItems = get1000Items(br1);
+	
 			    		
-			    		int i = 0;
-			    		while (i < items.size()) {
-			    			List<WriteRequest> requests = new ArrayList<WriteRequest>();
-			    			
-			    			for (int j = 0; j < 25 && i < items.size(); j++, i++) {
-				    			PutRequest putRequest = new PutRequest (items.get(i));
-				    			WriteRequest wr = new WriteRequest (putRequest);
-				    			requests.add(wr);
-			    			}
-			    			
-			    			Map<String, List<WriteRequest>> map = new HashMap <String, List<WriteRequest>>();
-			    			if (k == 0) {
-			    				tableName = "Fancy-Barrel";
-			    			} else {
-			    				tableName = "Normal-Barrel";
-			    			}
-			    			
-			    			map.put(tableName, requests);
-			    			
-			    			
-			    			BatchWriteItemRequest bwir = new BatchWriteItemRequest(map);
-			//	    			TableWriteItems writeItems = new TableWriteItems(tableName).withItemsToPut(items);
-			    			BatchWriteItemResult outcome = dynamoDB.batchWriteItem(bwir);
+			    		if (returningItems.get(0).size() == 0 && returningItems.get(1).size() == 0) {
+			    			break;
+			    		}
+			    		for (int k = 0; k < 2; k++) {
+			    			ArrayList<Map<String, AttributeValue>> items = returningItems.get(k);
+				    		
+				    		int i = 0;
+				    		while (i < items.size()) {
+				    			List<WriteRequest> requests = new ArrayList<WriteRequest>();
+				    			HashSet<WordURLWrapper> wuw = new HashSet<WordURLWrapper> ();
+				    			for (int j = 0; j < 25 && i < items.size(); j++, i++) {
+				    				Map<String, AttributeValue> item = items.get(i);
+				 //   				System.out.println("word:" + item.get("word").getS());
+				 //   				System.out.println("url:" + item.get("url").getS());
+				    				WordURLWrapper currentWrapper = new WordURLWrapper (item.get("word").getS(), item.get("url").getS());
+				    				if (wuw.contains(currentWrapper)) {
+				    					j--;
+				 //   					System.out.println("Contains!");
+				    				} else {
+				    					wuw.add(currentWrapper);
+				    					PutRequest putRequest = new PutRequest (items.get(i));
+						    			WriteRequest wr = new WriteRequest (putRequest);
+						    			requests.add(wr);
+						    			
+				    				}
+					    		
+				    			}
+				    			
+				    			Map<String, List<WriteRequest>> map = new HashMap <String, List<WriteRequest>>();
+				    			if (k == 0) {
+				    				tableName = "Fancy-Barrel2";
+				    			} else {
+				    				tableName = "Normal-Barrel2";
+				    			}
+				    			
+				    			map.put(tableName, requests);
+				    			
+				    			
+				    			BatchWriteItemRequest bwir = new BatchWriteItemRequest(map);
+				//	    			TableWriteItems writeItems = new TableWriteItems(tableName).withItemsToPut(items);
+				    			BatchWriteItemResult outcome = dynamoDB.batchWriteItem(bwir);
+				    		}
 			    		}
 		    		}
+		    		
+		    		br1.close();		
+				
+	    		} catch (Exception e) {
+	    			e.printStackTrace();
 	    		}
-			
-			
-    		} catch (Exception e) {
-    			e.printStackTrace();
     		}
 		
 
@@ -150,99 +138,69 @@ public class DynamoDBImportTable2 {
     public static ArrayList<ArrayList<Map<String, AttributeValue>>> get1000Items(BufferedReader br1) throws Exception{
     		ArrayList<ArrayList<Map<String, AttributeValue>>> result = new ArrayList<ArrayList<Map<String, AttributeValue>>> ();
     		
-		HashMap<String, PriorityQueue<TFIDFURLWrapper>> hm1 = new HashMap <String, PriorityQueue<TFIDFURLWrapper>>();
-		HashMap<String, PriorityQueue<TFIDFURLWrapper>> hm2 = new HashMap <String, PriorityQueue<TFIDFURLWrapper>>();
+//		HashMap<String, PriorityQueue<TFIDFURLWrapper>> hm1 = new HashMap <String, PriorityQueue<TFIDFURLWrapper>>();
+//		HashMap<String, PriorityQueue<TFIDFURLWrapper>> hm2 = new HashMap <String, PriorityQueue<TFIDFURLWrapper>>();
 		
 		ArrayList<Map<String,AttributeValue>> returningItems1 = new ArrayList<Map<String,AttributeValue>>();
 		ArrayList<Map<String,AttributeValue>> returningItems2 = new ArrayList<Map<String,AttributeValue>>();
 		
 		String line = null;
 		int i = 0;
-			while ((line = br1.readLine()) != null && i < 10000) {
-				i++;
-		}
-		while ((line = br1.readLine()) != null && hm1.keySet().size() <= 1000 && hm2.keySet().size() <= 1000) {
-			
+		
+//		while ((line = br1.readLine()) != null && i < 10000) {
+//				i++;
+//		}
+		while ((line = br1.readLine()) != null && returningItems1.size() <= 1000 && returningItems2.size() <= 1000) {
+//			System.out.println("The line is:" + line);
 			String[] lineInfo = line.split("\t");
 			String word;
 			String url;
+			String tf;
+			String idf;
 			String tfIdf;
-			if (lineInfo.length < 4) {
+			
+			if (lineInfo.length == 5) {
 				word = lineInfo[0];
 				url = lineInfo[1];
-				tfIdf =lineInfo[2];
+				tf =lineInfo[2];
+				idf = lineInfo[3];
+				tfIdf = lineInfo[4];
 				
-			} else {
+			} else if (lineInfo.length == 6){
 				word = lineInfo[0] + " " + lineInfo[1];
 				url = lineInfo[2];
-				tfIdf = lineInfo[3];
+				tf = lineInfo[3];
+				idf = lineInfo[4];
+				tfIdf = lineInfo[5];	
+			} else {
+				continue;
 			}
-			
-			double tfIdfValue = Double.parseDouble(tfIdf);
-			DecimalFormat df = new DecimalFormat ("#.##");
-//			System.out.println(df.format(tfIdfValue));
-			TFIDFURLWrapper tuw = new TFIDFURLWrapper (Double.parseDouble (df.format(tfIdfValue)), url);
+
+			String putWord = word.substring(2);
+
+			Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
+			item.put("word", new AttributeValue (putWord));
+			int index = url.indexOf("?");
+			if (index != -1) { 
+				item.put("url", new AttributeValue (url.substring(0, index)));
+				item.put("originalURL", new AttributeValue (url));
+			} else {
+				item.put("url", new AttributeValue(url));
+			}
+			item.put("tf", new AttributeValue (tf));
+			item.put("idf", new AttributeValue (idf));
+			item.put("tfidf", new AttributeValue().withN(tfIdf));
 			
 			if (word.startsWith("1:")) {
-				String putWord = word.substring(2);
-				if (hm1.keySet().contains(putWord)) {
-					PriorityQueue<TFIDFURLWrapper> pq = hm1.get(putWord);
-					pq.add(tuw);
-				
-				} else {
-					PriorityQueue<TFIDFURLWrapper> pq = new PriorityQueue <TFIDFURLWrapper> (10, tfidfComparator);
-					pq.add(tuw);
-					hm1.put(putWord, pq);
-				}
+				returningItems1.add(item);
 			} else {
-				String putWord = word.substring(2);
-				if (hm2.keySet().contains(putWord)) {
-					PriorityQueue<TFIDFURLWrapper> pq = hm2.get(putWord);
-					pq.add(tuw);
-				
-				} else {
-					PriorityQueue<TFIDFURLWrapper> pq = new PriorityQueue <TFIDFURLWrapper> (10, tfidfComparator);
-					pq.add(tuw);
-					hm2.put(putWord, pq);
-				}
+				returningItems2.add(item);
 			}
 
 		}
-				
-		for (String keyWord: hm1.keySet()) {
-			PriorityQueue<TFIDFURLWrapper> pq = hm1.get(keyWord);
-			int m = 0;
-			while (!pq.isEmpty() && m < 100) {
-				TFIDFURLWrapper tfw = pq.poll();
-//					bw.write(keyWord + "\t" +  tfw.url + "\t" + tfw.tfidf + "\n");
-				Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
-				item.put("word", new AttributeValue (keyWord));
-				item.put("url", new AttributeValue (tfw.url));
-				item.put("tfidf", new AttributeValue().withN(tfw.tfidf + ""));
-				returningItems1.add(item);
-				m ++;
-			}
-		}
-		
-		for (String keyWord: hm2.keySet()) {
-			PriorityQueue<TFIDFURLWrapper> pq = hm2.get(keyWord);
-			int m = 0;
-			while (!pq.isEmpty() && m < 100) {
-				TFIDFURLWrapper tfw = pq.poll();
-//					bw.write(keyWord + "\t" +  tfw.url + "\t" + tfw.tfidf + "\n");
-				Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
-				item.put("word", new AttributeValue (keyWord));
-				item.put("url", new AttributeValue (tfw.url));
-				item.put("tfidf", new AttributeValue ().withN(tfw.tfidf + ""));
-				returningItems2.add(item);
-				m ++;
-			}
-		}
-		
 		
 		result.add(returningItems1);
 		result.add(returningItems2);
 		return result;
-
     }
 }

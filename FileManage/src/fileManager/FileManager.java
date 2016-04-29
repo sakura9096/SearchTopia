@@ -37,9 +37,9 @@ public class FileManager {
 		//File[] fileToReadArray = new File[]{filesToRead};
 		Arrays.sort(fileToReadArray);
 		
-//		for (int i = 0; i < fileToReadArray.length; i++) {
-		for (int i = 0; i < 35000; i++) {
-			FileParser fileParser = new FileParser(fileToReadArray[i]);
+		for (int i = 0; i < fileToReadArray.length; i++) {
+//		for (int i = 0; i < 35000; i++) {
+			NewFileParser fileParser = new NewFileParser(fileToReadArray[i]);
 			try {
 				fileParser.parse();
 			} catch (Exception e) {
@@ -47,6 +47,7 @@ public class FileManager {
 				continue;
 			}
 			System.out.println(fileToReadArray[i].getName());
+//			fileParser.write(outWriter);
 //			fileParser.fancyHitMapToString(outWriter);
 //			fileParser.fancyPhraseHitMapToString(outWriter);
 //			fileParser.normalHitMapToString(outWriter);
@@ -57,7 +58,7 @@ public class FileManager {
 		}
 		
 		outWriter.close();
-		anchorWriter.close();
+		//anchorWriter.close();
 	}
 
 }
