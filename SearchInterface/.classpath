@@ -5,6 +5,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="com.amazonaws.eclipse.sdk.AWS_JAVA_SDK"/>
+	
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/commons-lang-2.6.jar"/>
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/httpasyncclient-4.0.2.jar"/>
