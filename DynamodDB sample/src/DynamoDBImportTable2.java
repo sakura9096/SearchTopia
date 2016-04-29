@@ -1,7 +1,5 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -11,37 +9,18 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 import com.amazonaws.AmazonClientException;
-import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
-import com.amazonaws.services.dynamodbv2.document.Item;
-import com.amazonaws.services.dynamodbv2.document.TableWriteItems;
-import com.amazonaws.services.dynamodbv2.model.AttributeDefinition;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.BatchWriteItemRequest;
 import com.amazonaws.services.dynamodbv2.model.BatchWriteItemResult;
-import com.amazonaws.services.dynamodbv2.model.ComparisonOperator;
-import com.amazonaws.services.dynamodbv2.model.Condition;
-import com.amazonaws.services.dynamodbv2.model.CreateTableRequest;
-import com.amazonaws.services.dynamodbv2.model.DescribeTableRequest;
-import com.amazonaws.services.dynamodbv2.model.KeySchemaElement;
-import com.amazonaws.services.dynamodbv2.model.KeyType;
-import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
-import com.amazonaws.services.dynamodbv2.model.PutItemRequest;
-import com.amazonaws.services.dynamodbv2.model.PutItemResult;
 import com.amazonaws.services.dynamodbv2.model.PutRequest;
-import com.amazonaws.services.dynamodbv2.model.ScalarAttributeType;
-import com.amazonaws.services.dynamodbv2.model.ScanRequest;
-import com.amazonaws.services.dynamodbv2.model.ScanResult;
-import com.amazonaws.services.dynamodbv2.model.TableDescription;
 import com.amazonaws.services.dynamodbv2.model.WriteRequest;
-import com.amazonaws.services.dynamodbv2.util.TableUtils;
 
-public class DynamoDBIndexerTable {
-	
+public class DynamoDBImportTable2 {
 	 static AmazonDynamoDBClient dynamoDB;
 
 	 /**
@@ -96,30 +75,35 @@ public class DynamoDBIndexerTable {
     }
     
     private static void writeMultipleItemsBatchWrite() {
-//    		FileReader fileReader = new FileReader ("/Users/fanglinlu/Documents/workspace/S3Test/output/Output");
+    	
     		String tableName;
     		try {
 			FileReader fileReader = new FileReader ("/Users/fanglinlu/Documents/classes/CIS555/project/output3");
 			BufferedReader br1 = new BufferedReader (fileReader);
 			
 			String line;
-//			int l = 0;
-//			while ((line = br1.readLine()) != null && l < 782300) {
-//				l++;
-//			}
-			
+			while ((line = br1.readLine()) != null) {
+				
+				String[] lineInfo = line.split("\t");
+				String word;
+				String url;
+				String tfIdf;
+				if (lineInfo.length < 4) {
+					word = lineInfo[0];
+					url = lineInfo[1];
+					tfIdf =lineInfo[2];
+					
+				} else {
+					word = lineInfo[0] + " " + lineInfo[1];
+					url = lineInfo[2];
+					tfIdf = lineInfo[3];
+				}
+				
+			}
 	    		while (true) {
 	    		    
 		    		ArrayList<ArrayList<Map<String, AttributeValue>>> returningItems = get1000Items(br1);
-//		    		System.out.println("The items size are:" + items.size());
-		    		
-//    				ArrayList<Map<String, AttributeValue>> items = new ArrayList <Map<String, AttributeValue>> ();
-//    				
-//    				Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
-//    				item.put("word", new AttributeValue ("000"));
-//    				item.put("url", new AttributeValue ("url"));
-//    				item.put("tfidf", new AttributeValue ().withN("2.344"));
-//    				items.add(item);
+
 		    		
 		    		if (returningItems.get(0).size() == 0 && returningItems.get(1).size() == 0) {
 		    			return;
@@ -261,5 +245,4 @@ public class DynamoDBIndexerTable {
 		return result;
 
     }
-
 }
