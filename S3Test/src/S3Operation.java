@@ -2,6 +2,7 @@ import java.io.File;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
+import com.amazonaws.ClientConfiguration;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
@@ -9,6 +10,7 @@ import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.transfer.Download;
+import com.amazonaws.services.s3.transfer.MultipleFileDownload;
 import com.amazonaws.services.s3.transfer.TransferManager;
 
 public class S3Operation {
@@ -16,6 +18,14 @@ public class S3Operation {
 		String bucketName = args[0];
 		String key = args[1];
 		String downloadDirectory = args[2];
+		
+////        for (int i = 0; i < 11; i ++) {
+//        		download (bucketName, key + "part-r-0000" + i, downloadDirectory + "part-r-0000" + i);
+//        }
+		download (bucketName, key, downloadDirectory);
+	}
+	
+	private static void download (String bucketName, String key, String downloadDirectory) {
 		AWSCredentials credentials = null;
         try {
             credentials = new ProfileCredentialsProvider("default").getCredentials();
@@ -26,15 +36,15 @@ public class S3Operation {
                     "location (/home/fanglinlu/.aws/credentials), and is in valid format.",
                     e);
         }
+        
+//        ClientConfiguration config = new ClientConfiguration(); 
+//        config.setConnectionTimeout(500000000);
+//        config.setSocketTimeout(500000000); 
+//        AmazonS3 s3 = new AmazonS3Client(credentials, config);
 
         AmazonS3 s3 = new AmazonS3Client(credentials);
         Region usEast1 = Region.getRegion(Regions.US_EAST_1);
         s3.setRegion(usEast1);
-
-		download (bucketName, key,credentials, downloadDirectory);
-	}
-	
-	private static void download (String bucketName, String key, AWSCredentials credentials, String downloadDirectory) {
 		File file = new File (downloadDirectory);
 //		if (!file.exists() || !file.isDirectory()) {
 //			System.out.println("The input direcotry does not exists!");
@@ -43,6 +53,8 @@ public class S3Operation {
 		
 		TransferManager transferM = new TransferManager(credentials);
 		Download download = transferM.download(bucketName, key, file);
+		
+//		MultipleFileDownload download = transferM.downloadDirectory(bucketName, key, file);
 		
 		try {
 			download.waitForCompletion();
