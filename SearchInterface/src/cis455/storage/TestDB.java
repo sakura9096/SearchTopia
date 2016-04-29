@@ -17,8 +17,8 @@ public class TestDB {
 	DatabaseConfig dbconf;
 	Database db;
 	
-	//String dir = "/Users/Linjie/Desktop/title";
-	String dir = "/home/ec2-user/title";
+	String dir = "/Users/Linjie/Desktop/title";
+	//String dir = "/home/ec2-user/title";
 
 	
 	public TestDB() {

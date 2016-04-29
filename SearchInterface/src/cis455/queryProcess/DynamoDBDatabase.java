@@ -66,10 +66,10 @@ public class DynamoDBDatabase {
         dynamoDB.setRegion(usEast);
 	 }
 	 
-	 public ArrayList<TFIDFURLWrapper> getURLsFromFacnyBarrel (String word) {
+	 public List<TFIDFURLWrapper> getURLsFromFacnyBarrel (String word) {
 //		TableKeysAndAttributes tableKeysAndAttributes = new TableKeysAndAttributes ("Fancy-Bareel");
 //		tableKeysAndAttributes.addHashOnlyPrimaryKeys( , , );
-		 ArrayList<TFIDFURLWrapper> result = new ArrayList<TFIDFURLWrapper> ();
+		 List<TFIDFURLWrapper> result = new ArrayList<TFIDFURLWrapper> ();
 		 
 		 DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
 		 
@@ -116,10 +116,10 @@ public class DynamoDBDatabase {
 		
 	 }
 	 
-	 public ArrayList<TFIDFURLWrapper> getURLsFromNormalBarrel (String word) {
+	 public List<TFIDFURLWrapper> getURLsFromNormalBarrel (String word) {
 //			TableKeysAndAttributes tableKeysAndAttributes = new TableKeysAndAttributes ("Fancy-Bareel");
 //			tableKeysAndAttributes.addHashOnlyPrimaryKeys( , , );
-			 ArrayList<TFIDFURLWrapper> result = new ArrayList<TFIDFURLWrapper> ();
+			 List<TFIDFURLWrapper> result = new ArrayList<TFIDFURLWrapper> ();
 			 
 			 DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
 			 
