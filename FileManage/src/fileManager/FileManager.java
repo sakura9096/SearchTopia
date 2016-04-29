@@ -47,11 +47,13 @@ public class FileManager {
 				continue;
 			}
 			System.out.println(fileToReadArray[i].getName());
-			fileParser.fancyHitMapToString(outWriter);
-			fileParser.fancyPhraseHitMapToString(outWriter);
-			fileParser.normalHitMapToString(outWriter);
-			fileParser.normalPhraseHitMapToString(outWriter);
+//			fileParser.fancyHitMapToString(outWriter);
+//			fileParser.fancyPhraseHitMapToString(outWriter);
+//			fileParser.normalHitMapToString(outWriter);
+//			fileParser.normalPhraseHitMapToString(outWriter);
 			anchorWriter.write(fileParser.outLinksToString());
+			anchorWriter.flush();
+			
 		}
 		
 		outWriter.close();

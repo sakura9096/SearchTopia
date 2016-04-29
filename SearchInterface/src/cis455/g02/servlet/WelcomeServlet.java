@@ -28,6 +28,7 @@ public class WelcomeServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
+		
 
 		pw.println("<!DOCTYPE html><html lang=\"en\">");
 		pw.println("<head><title>Search Engine</title>");

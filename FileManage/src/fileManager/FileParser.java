@@ -204,18 +204,18 @@ public class FileParser {
 //		}
 		
 		//read from title
-		String title = doc.title();
+		//String title = doc.title();
 		//System.out.println(title);
-		parseString(title, 0);
+		//parseString(title, 0);
 		
 		
 		//read from body
-		Element body = doc.body();
-		if (body != null) {
+		//Element body = doc.body();
+		//if (body != null) {
 			//System.out.println(body.text());
-			parseString(body.text(), 1);
+			//parseString(body.text(), 1);
 			//System.out.println(body.text());
-		}
+		//}
  		
 		//then read from possible links and build the anchor file
 		Elements links = doc.select("a[href]");
@@ -242,23 +242,23 @@ public class FileParser {
 			//parseString(anchorsb.toString(), 0);
 		}
 		
-		this.removeFromPhraseMap();
-		
-		for (String mapKeyWord: this.fancyHitMap.keySet()) {
-			this.maxFancyHit = Math.max(this.maxFancyHit, this.fancyHitMap.get(mapKeyWord).size());
-		}
-		
-		for (String mapKeyWord: this.normalHitMap.keySet()) {
-			this.maxNormalHit = Math.max(this.maxNormalHit, this.normalHitMap.get(mapKeyWord).size());
-		}
-		
-		for (String mapKeyWord: this.fancyPhraseHitMap.keySet()) {
-			this.maxFancyPhraseHit = Math.max(this.maxFancyHit, this.fancyPhraseHitMap.get(mapKeyWord).size());
-		}
-		
-		for (String mapKeyWord: this.normalPhraseHitMap.keySet()) {
-			this.maxNormalPhraseHit = Math.max(this.maxNormalPhraseHit, this.normalPhraseHitMap.get(mapKeyWord).size());
-		}
+//		this.removeFromPhraseMap();
+//		
+//		for (String mapKeyWord: this.fancyHitMap.keySet()) {
+//			this.maxFancyHit = Math.max(this.maxFancyHit, this.fancyHitMap.get(mapKeyWord).size());
+//		}
+//		
+//		for (String mapKeyWord: this.normalHitMap.keySet()) {
+//			this.maxNormalHit = Math.max(this.maxNormalHit, this.normalHitMap.get(mapKeyWord).size());
+//		}
+//		
+//		for (String mapKeyWord: this.fancyPhraseHitMap.keySet()) {
+//			this.maxFancyPhraseHit = Math.max(this.maxFancyHit, this.fancyPhraseHitMap.get(mapKeyWord).size());
+//		}
+//		
+//		for (String mapKeyWord: this.normalPhraseHitMap.keySet()) {
+//			this.maxNormalPhraseHit = Math.max(this.maxNormalPhraseHit, this.normalPhraseHitMap.get(mapKeyWord).size());
+//		}
 		
 	}
 	
