@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="/Users/yuezhang/Documents/workspace/Group02/PageRank/lib/commons-lang3-3.4.jar"/>
 	<classpathentry kind="lib" path="/Users/yuezhang/Documents/workspace/Group02/PageRank/lib/hadoop-common-2.6.0.jar"/>
 	<classpathentry kind="lib" path="/Users/yuezhang/Documents/workspace/Group02/PageRank/lib/hadoop-mapreduce-client-core-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/Users/yuezhang/Documents/workspace/Group02/PageRank/lib/je-5.0.34.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
