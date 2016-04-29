@@ -1,5 +1,14 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
@@ -8,8 +17,12 @@ import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
+import com.amazonaws.services.dynamodbv2.document.Item;
+import com.amazonaws.services.dynamodbv2.document.TableWriteItems;
 import com.amazonaws.services.dynamodbv2.model.AttributeDefinition;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.amazonaws.services.dynamodbv2.model.BatchWriteItemRequest;
+import com.amazonaws.services.dynamodbv2.model.BatchWriteItemResult;
 import com.amazonaws.services.dynamodbv2.model.ComparisonOperator;
 import com.amazonaws.services.dynamodbv2.model.Condition;
 import com.amazonaws.services.dynamodbv2.model.CreateTableRequest;
@@ -19,10 +32,13 @@ import com.amazonaws.services.dynamodbv2.model.KeyType;
 import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
 import com.amazonaws.services.dynamodbv2.model.PutItemRequest;
 import com.amazonaws.services.dynamodbv2.model.PutItemResult;
+import com.amazonaws.services.dynamodbv2.model.PutRequest;
 import com.amazonaws.services.dynamodbv2.model.ScalarAttributeType;
 import com.amazonaws.services.dynamodbv2.model.ScanRequest;
 import com.amazonaws.services.dynamodbv2.model.ScanResult;
 import com.amazonaws.services.dynamodbv2.model.TableDescription;
+import com.amazonaws.services.dynamodbv2.model.WriteRequest;
+import com.amazonaws.services.dynamodbv2.util.TableUtils;
 
 public class DynamoDBIndexerTable {
 	
@@ -39,6 +55,19 @@ public class DynamoDBIndexerTable {
      * @see com.amazonaws.auth.ProfilesConfigFile
      * @see com.amazonaws.ClientConfiguration
      */
+	 private static Comparator <TFIDFURLWrapper> tfidfComparator = new Comparator <TFIDFURLWrapper> () {
+			public int compare (TFIDFURLWrapper w1, TFIDFURLWrapper w2) {
+
+				if (w1.tfidf - w2.tfidf < 0) {
+					return 1;
+				} else if (w1.tfidf - w2.tfidf > 0) {
+					return -1;
+				} else {
+					return 0;
+				}
+				
+			}
+	 };
     private static void init() throws Exception {
         /*
          * The ProfileCredentialsProvider will return your [default]
@@ -62,80 +91,175 @@ public class DynamoDBIndexerTable {
 
     public static void main(String[] args) throws Exception {
         init();
-        
-        try {
-            String tableName = "Indexer-table";
+  
+        writeMultipleItemsBatchWrite();
+    }
+    
+    private static void writeMultipleItemsBatchWrite() {
+//    		FileReader fileReader = new FileReader ("/Users/fanglinlu/Documents/workspace/S3Test/output/Output");
+    		String tableName;
+    		try {
+			FileReader fileReader = new FileReader ("/Users/fanglinlu/Documents/classes/CIS555/project/output3");
+			BufferedReader br1 = new BufferedReader (fileReader);
+			
+			String line;
+//			int l = 0;
+//			while ((line = br1.readLine()) != null && l < 782300) {
+//				l++;
+//			}
+			
+	    		while (true) {
+	    		    
+		    		ArrayList<ArrayList<Map<String, AttributeValue>>> returningItems = get1000Items(br1);
+//		    		System.out.println("The items size are:" + items.size());
+		    		
+//    				ArrayList<Map<String, AttributeValue>> items = new ArrayList <Map<String, AttributeValue>> ();
+//    				
+//    				Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
+//    				item.put("word", new AttributeValue ("000"));
+//    				item.put("url", new AttributeValue ("url"));
+//    				item.put("tfidf", new AttributeValue ().withN("2.344"));
+//    				items.add(item);
+		    		
+		    		if (returningItems.get(0).size() == 0 && returningItems.get(1).size() == 0) {
+		    			return;
+		    		}
+		    		for (int k = 0; k < 2; k++) {
+		    			ArrayList<Map<String, AttributeValue>> items = returningItems.get(k);
+//			    		if (items.size() == 0) return;
+			    		
+			    		int i = 0;
+			    		while (i < items.size()) {
+			    			List<WriteRequest> requests = new ArrayList<WriteRequest>();
+			    			
+			    			for (int j = 0; j < 25 && i < items.size(); j++, i++) {
+				    			PutRequest putRequest = new PutRequest (items.get(i));
+				    			WriteRequest wr = new WriteRequest (putRequest);
+				    			requests.add(wr);
+			    			}
+			    			
+			    			Map<String, List<WriteRequest>> map = new HashMap <String, List<WriteRequest>>();
+			    			if (k == 0) {
+			    				tableName = "Fancy-Barrel";
+			    			} else {
+			    				tableName = "Normal-Barrel";
+			    			}
+			    			
+			    			map.put(tableName, requests);
+			    			
+			    			
+			    			BatchWriteItemRequest bwir = new BatchWriteItemRequest(map);
+			//	    			TableWriteItems writeItems = new TableWriteItems(tableName).withItemsToPut(items);
+			    			BatchWriteItemResult outcome = dynamoDB.batchWriteItem(bwir);
+			    		}
+		    		}
+	    		}
+			
+			
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+		
 
-//            // Create table if it does not exist yet
-//            if (Tables.doesTableExist(dynamoDB, tableName)) {
-//                System.out.println("Table " + tableName + " is already ACTIVE");
-//            } else {
-                // Create a table with a primary hash key named 'name', which holds a string
-            CreateTableRequest createTableRequest = new CreateTableRequest().withTableName(tableName)
-                .withKeySchema(new KeySchemaElement().withAttributeName("word").withKeyType(KeyType.HASH))
-                .withAttributeDefinitions(new AttributeDefinition().withAttributeName("word").withAttributeType(ScalarAttributeType.S))
-                .withKeySchema(new KeySchemaElement().withAttributeName("tfidf").withKeyType(KeyType.RANGE))
-                .withAttributeDefinitions(new AttributeDefinition().withAttributeName("tfidf").withAttributeType(ScalarAttributeType.N))
-                .withProvisionedThroughput(new ProvisionedThroughput().withReadCapacityUnits(180000L).withWriteCapacityUnits(36000L));
-            
-                TableDescription createdTableDescription = dynamoDB.createTable(createTableRequest).getTableDescription();
-            System.out.println("Created Table: " + createdTableDescription);
+    }
+    
+    public static ArrayList<ArrayList<Map<String, AttributeValue>>> get1000Items(BufferedReader br1) throws Exception{
+    		ArrayList<ArrayList<Map<String, AttributeValue>>> result = new ArrayList<ArrayList<Map<String, AttributeValue>>> ();
+    		
+		HashMap<String, PriorityQueue<TFIDFURLWrapper>> hm1 = new HashMap <String, PriorityQueue<TFIDFURLWrapper>>();
+		HashMap<String, PriorityQueue<TFIDFURLWrapper>> hm2 = new HashMap <String, PriorityQueue<TFIDFURLWrapper>>();
+		
+		ArrayList<Map<String,AttributeValue>> returningItems1 = new ArrayList<Map<String,AttributeValue>>();
+		ArrayList<Map<String,AttributeValue>> returningItems2 = new ArrayList<Map<String,AttributeValue>>();
+		
+		String line = null;
+		int i = 0;
+			while ((line = br1.readLine()) != null && i < 10000) {
+				i++;
+		}
+		while ((line = br1.readLine()) != null && hm1.keySet().size() <= 1000 && hm2.keySet().size() <= 1000) {
+			
+			String[] lineInfo = line.split("\t");
+			String word;
+			String url;
+			String tfIdf;
+			if (lineInfo.length < 4) {
+				word = lineInfo[0];
+				url = lineInfo[1];
+				tfIdf =lineInfo[2];
+				
+			} else {
+				word = lineInfo[0] + " " + lineInfo[1];
+				url = lineInfo[2];
+				tfIdf = lineInfo[3];
+			}
+			
+			double tfIdfValue = Double.parseDouble(tfIdf);
+			DecimalFormat df = new DecimalFormat ("#.##");
+//			System.out.println(df.format(tfIdfValue));
+			TFIDFURLWrapper tuw = new TFIDFURLWrapper (Double.parseDouble (df.format(tfIdfValue)), url);
+			
+			if (word.startsWith("1:")) {
+				String putWord = word.substring(2);
+				if (hm1.keySet().contains(putWord)) {
+					PriorityQueue<TFIDFURLWrapper> pq = hm1.get(putWord);
+					pq.add(tuw);
+				
+				} else {
+					PriorityQueue<TFIDFURLWrapper> pq = new PriorityQueue <TFIDFURLWrapper> (10, tfidfComparator);
+					pq.add(tuw);
+					hm1.put(putWord, pq);
+				}
+			} else {
+				String putWord = word.substring(2);
+				if (hm2.keySet().contains(putWord)) {
+					PriorityQueue<TFIDFURLWrapper> pq = hm2.get(putWord);
+					pq.add(tuw);
+				
+				} else {
+					PriorityQueue<TFIDFURLWrapper> pq = new PriorityQueue <TFIDFURLWrapper> (10, tfidfComparator);
+					pq.add(tuw);
+					hm2.put(putWord, pq);
+				}
+			}
 
-            // Wait for it to become active
-            System.out.println("Waiting for " + tableName + " to become ACTIVE...");
-//                Tables.awaitTableToBecomeActive(dynamoDB, tableName);
-//            }
+		}
+				
+		for (String keyWord: hm1.keySet()) {
+			PriorityQueue<TFIDFURLWrapper> pq = hm1.get(keyWord);
+			int m = 0;
+			while (!pq.isEmpty() && m < 100) {
+				TFIDFURLWrapper tfw = pq.poll();
+//					bw.write(keyWord + "\t" +  tfw.url + "\t" + tfw.tfidf + "\n");
+				Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
+				item.put("word", new AttributeValue (keyWord));
+				item.put("url", new AttributeValue (tfw.url));
+				item.put("tfidf", new AttributeValue().withN(tfw.tfidf + ""));
+				returningItems1.add(item);
+				m ++;
+			}
+		}
+		
+		for (String keyWord: hm2.keySet()) {
+			PriorityQueue<TFIDFURLWrapper> pq = hm2.get(keyWord);
+			int m = 0;
+			while (!pq.isEmpty() && m < 100) {
+				TFIDFURLWrapper tfw = pq.poll();
+//					bw.write(keyWord + "\t" +  tfw.url + "\t" + tfw.tfidf + "\n");
+				Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
+				item.put("word", new AttributeValue (keyWord));
+				item.put("url", new AttributeValue (tfw.url));
+				item.put("tfidf", new AttributeValue ().withN(tfw.tfidf + ""));
+				returningItems2.add(item);
+				m ++;
+			}
+		}
+		
+		
+		result.add(returningItems1);
+		result.add(returningItems2);
+		return result;
 
-            // Describe our new table
-            DescribeTableRequest describeTableRequest = new DescribeTableRequest().withTableName(tableName);
-            TableDescription tableDescription = dynamoDB.describeTable(describeTableRequest).getTable();
-            System.out.println("Table Description: " + tableDescription);
-
-            // Add an item
-            Map<String, AttributeValue> item = newItem("Bill & Ted's Excellent Adventure", 1989, "****", "James", "Sara");
-            PutItemRequest putItemRequest = new PutItemRequest(tableName, item);
-            PutItemResult putItemResult = dynamoDB.putItem(putItemRequest);
-            System.out.println("Result: " + putItemResult);
-
-            // Add another item
-            item = newItem("Airplane", 1980, "*****", "James", "Billy Bob");
-            putItemRequest = new PutItemRequest(tableName, item);
-            putItemResult = dynamoDB.putItem(putItemRequest);
-            System.out.println("Result: " + putItemResult);
-
-            // Scan items for movies with a year attribute greater than 1985
-            HashMap<String, Condition> scanFilter = new HashMap<String, Condition>();
-            Condition condition = new Condition()
-                .withComparisonOperator(ComparisonOperator.GT.toString())
-                .withAttributeValueList(new AttributeValue().withN("1985"));
-            scanFilter.put("year", condition);
-            ScanRequest scanRequest = new ScanRequest(tableName).withScanFilter(scanFilter);
-            ScanResult scanResult = dynamoDB.scan(scanRequest);
-            System.out.println("Result: " + scanResult);
-
-        } catch (AmazonServiceException ase) {
-            System.out.println("Caught an AmazonServiceException, which means your request made it "
-                    + "to AWS, but was rejected with an error response for some reason.");
-            System.out.println("Error Message:    " + ase.getMessage());
-            System.out.println("HTTP Status Code: " + ase.getStatusCode());
-            System.out.println("AWS Error Code:   " + ase.getErrorCode());
-            System.out.println("Error Type:       " + ase.getErrorType());
-            System.out.println("Request ID:       " + ase.getRequestId());
-        } catch (AmazonClientException ace) {
-            System.out.println("Caught an AmazonClientException, which means the client encountered "
-                    + "a serious internal problem while trying to communicate with AWS, "
-                    + "such as not being able to access the network.");
-            System.out.println("Error Message: " + ace.getMessage());
-        }
     }
 
-    private static Map<String, AttributeValue> newItem(String name, int year, String rating, String... fans) {
-        Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
-        item.put("name", new AttributeValue(name));
-        item.put("year", new AttributeValue().withN(Integer.toString(year)));
-        item.put("rating", new AttributeValue(rating));
-        item.put("fans", new AttributeValue().withSS(fans));
-
-        return item;
-    }
 }

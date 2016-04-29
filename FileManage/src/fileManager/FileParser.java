@@ -171,12 +171,16 @@ public class FileParser {
 	}
 	
 	/*
-	 * Parse the file
+	 *Parse the file
 	 */
 	public void parse() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(fileToRead));
 
 		this.url = br.readLine();
+		int index = url.indexOf("?");
+		if (index != -1) {
+			url = url.substring(0, index);
+		}
 
 		this.hostName = new URL(URLDecoder.decode(url, "UTF-8")).getHost();
 		StringBuilder sb = new StringBuilder();
@@ -191,36 +195,36 @@ public class FileParser {
 		
 		
 		//read from metadata
-//		Elements metadata = doc.select("meta[name]");
-//		if (metadata != null) {
-//			StringBuilder metasb = new StringBuilder();
-//			for (Element element : metadata) {
-//				if (element.attr("name").equals("keyword") ||
-//						element.attr("name").equals("description")) {
-//					metasb.append(element.attr("content") + " ");
-//				}
-//			}
-//			System.out.println(metasb.toString());
-//		}
+		Elements metadata = doc.select("meta[name]");
+		if (metadata != null) {
+			StringBuilder metasb = new StringBuilder();
+			for (Element element : metadata) {
+				if (element.attr("name").equals("keyword") ||
+						element.attr("name").equals("description")) {
+					metasb.append(element.attr("content") + " ");
+				}
+			}
+			System.out.println(metasb.toString());
+		}
 		
 		//read from title
-		//String title = doc.title();
-		//System.out.println(title);
-		//parseString(title, 0);
+		String title = doc.title();
+		System.out.println(title);
+		parseString(title, 0);
 		
 		
 		//read from body
-		//Element body = doc.body();
-		//if (body != null) {
-			//System.out.println(body.text());
-			//parseString(body.text(), 1);
-			//System.out.println(body.text());
-		//}
+		Element body = doc.body();
+		if (body != null) {
+			System.out.println(body.text());
+			parseString(body.text(), 1);
+			System.out.println(body.text());
+		}
  		
 		//then read from possible links and build the anchor file
 		Elements links = doc.select("a[href]");
 		if (links != null) {
-			//StringBuilder anchorsb = new StringBuilder();
+			StringBuilder anchorsb = new StringBuilder();
 			for (Element link : links) {
 				String outLink = link.attr("abs:href").trim();
 				if (outLink.length() == 0) continue;
@@ -229,37 +233,41 @@ public class FileParser {
 				}
 				try {
 					outLink = URLDecoder.decode(outLink, "UTF-8");
+					index = outLink.indexOf("?");
+					if (index != -1) {
+						outLink = outLink.substring(0, index);
+					}
 				} catch (Exception e) {
-					
+			
 				}
 				
 				this.outLinks.add(outLink);
 				
-				//String anchor = link.text().trim();
-				//anchorsb.append(anchor + " ");
+				String anchor = link.text().trim();
+				anchorsb.append(anchor + " ");
 			}
-			//System.out.println(anchorsb.toString());
-			//parseString(anchorsb.toString(), 0);
+			System.out.println(anchorsb.toString());
+			parseString(anchorsb.toString(), 0);
+		}
+//		
+//		this.removeFromPhraseMap();
+		
+		for (String mapKeyWord: this.fancyHitMap.keySet()) {
+			this.maxFancyHit = Math.max(this.maxFancyHit, this.fancyHitMap.get(mapKeyWord).size());
 		}
 		
-//		this.removeFromPhraseMap();
-//		
-//		for (String mapKeyWord: this.fancyHitMap.keySet()) {
-//			this.maxFancyHit = Math.max(this.maxFancyHit, this.fancyHitMap.get(mapKeyWord).size());
-//		}
-//		
-//		for (String mapKeyWord: this.normalHitMap.keySet()) {
-//			this.maxNormalHit = Math.max(this.maxNormalHit, this.normalHitMap.get(mapKeyWord).size());
-//		}
-//		
-//		for (String mapKeyWord: this.fancyPhraseHitMap.keySet()) {
-//			this.maxFancyPhraseHit = Math.max(this.maxFancyHit, this.fancyPhraseHitMap.get(mapKeyWord).size());
-//		}
-//		
-//		for (String mapKeyWord: this.normalPhraseHitMap.keySet()) {
-//			this.maxNormalPhraseHit = Math.max(this.maxNormalPhraseHit, this.normalPhraseHitMap.get(mapKeyWord).size());
-//		}
+		for (String mapKeyWord: this.normalHitMap.keySet()) {
+			this.maxNormalHit = Math.max(this.maxNormalHit, this.normalHitMap.get(mapKeyWord).size());
+		}
 		
+		for (String mapKeyWord: this.fancyPhraseHitMap.keySet()) {
+			this.maxFancyPhraseHit = Math.max(this.maxFancyHit, this.fancyPhraseHitMap.get(mapKeyWord).size());
+		}
+		
+		for (String mapKeyWord: this.normalPhraseHitMap.keySet()) {
+			this.maxNormalPhraseHit = Math.max(this.maxNormalPhraseHit, this.normalPhraseHitMap.get(mapKeyWord).size());
+		}
+	
 	}
 	
 	
@@ -325,7 +333,4 @@ public class FileParser {
 		}
 	
 	}
-	
-	
-	
 }

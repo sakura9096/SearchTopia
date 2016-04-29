@@ -20,5 +20,6 @@
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/scribe-1.3.5.jar"/>
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="/Users/Linjie/Desktop/Group02/SearchInterface/lib/unirest-java-1.4.9.jar"/>
+
 	<classpathentry kind="output" path="bin"/>
 </classpath>
