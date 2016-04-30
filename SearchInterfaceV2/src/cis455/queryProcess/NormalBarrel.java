@@ -5,11 +5,12 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
-@DynamoDBTable (tableName = "Fancy-Barrel")
+@DynamoDBTable (tableName = "Normal")
 
 public class NormalBarrel {
 	private String word;
-	private String url;
+	private String originalUrl;
+	private String normalizedUrl;
 	private double tfidf;
 	
 	@DynamoDBHashKey (attributeName = "word")
@@ -22,12 +23,13 @@ public class NormalBarrel {
 	}
 	
 	@DynamoDBRangeKey (attributeName = "url")
-	public String getURL () {
-		return url;
+	public String getNormalizedURL () {
+		return normalizedUrl;
 	}
 	
-	public void setURL (String url) {
-		this.url = url;
+	@DynamoDBAttribute (attributeName = "originalurl")
+	public String getOriginalURL() {
+		return originalUrl;
 	}
 	
 	@DynamoDBAttribute (attributeName = "tfidf")

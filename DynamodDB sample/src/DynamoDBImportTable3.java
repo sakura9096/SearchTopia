@@ -199,7 +199,7 @@ public class DynamoDBImportTable3 {
 			}
 			
 			String check = word.substring(0, 2);
-			if (check.equals("2:")) {
+			if (check.equals("1:")) {
 				continue;
 			}
 			word = word.substring(2);

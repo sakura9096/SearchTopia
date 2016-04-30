@@ -1,4 +1,4 @@
-package cis455.queryProcess;
+	package cis455.queryProcess;
 
 import java.awt.print.Book;
 import java.util.ArrayList;
@@ -17,6 +17,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 import com.amazonaws.services.dynamodbv2.document.Attribute;
 import com.amazonaws.services.dynamodbv2.document.Table;
 import com.amazonaws.services.dynamodbv2.document.TableKeysAndAttributes;
+import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.KeysAndAttributes;
 import com.amazonaws.services.dynamodbv2.model.QueryRequest;
@@ -66,10 +67,10 @@ public class DynamoDBDatabase {
         dynamoDB.setRegion(usEast);
 	 }
 	 
-	 public List<TFIDFURLWrapper> getURLsFromFacnyBarrel (String word) {
+	 public List<ItemWrapper2> getURLsFromFacnyBarrel (String word) {
 //		TableKeysAndAttributes tableKeysAndAttributes = new TableKeysAndAttributes ("Fancy-Bareel");
 //		tableKeysAndAttributes.addHashOnlyPrimaryKeys( , , );
-		 List<TFIDFURLWrapper> result = new ArrayList<TFIDFURLWrapper> ();
+		 List<ItemWrapper2> result = new ArrayList<ItemWrapper2> ();
 		 
 		 DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
 		 
@@ -84,42 +85,43 @@ public class DynamoDBDatabase {
 		            .withExpressionAttributeValues(eav);
 		 
 		 List<FancyBarrel> queryResult = mapper.query(FancyBarrel.class, queryExpression);
+		 System.out.println("The size of fancybarrel is:" + queryResult.size());
+		 
+		 Map<String, String> expressionAttributeNames = new HashMap<String, String>();
+		 expressionAttributeNames.put("#u", "url");
 		 
 		 for (FancyBarrel itemsValue: queryResult) {
 			 double tfidf =itemsValue.getTFIDF();
+			 String normalizedUrl = itemsValue.getUrl();
 			 
+			 Map<String, AttributeValue> eav1 = new HashMap<String, AttributeValue>();
 			 
-			 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.getURL());
-			 result.add(tfuw);
+			 eav1.put(":val2", new AttributeValue().withS(normalizedUrl));
+			 
+			 DynamoDBQueryExpression<PageRankTable> queryExpression1 = new DynamoDBQueryExpression<PageRankTable>()
+			            .withKeyConditionExpression("#u = :val2")
+			            .withExpressionAttributeNames(expressionAttributeNames)
+			            .withExpressionAttributeValues(eav1);
+			 
+			 List<PageRankTable> queryResult1 = mapper.query (PageRankTable.class, queryExpression1);
+			 double pageRank = queryResult1.get(0).getPageRank();
+			 double totalScore = tfidf * pageRank;
+			 ItemWrapper2 item = new ItemWrapper2(tfidf, pageRank, itemsValue.getOriginalURL(), totalScore);
+			 
+			 result.add(item);
 		 
 		 }
-		 
-		 
-//		 QueryRequest qRequest = new QueryRequest ("Fancy-Barrel");
-//		 qRequest.setKeyConditionExpression ("word=:" + word);
 //		 
-//		 QueryResult qr = dynamoDB.query (qRequest);
-		 
-//		 for (Map<String, AttributeValue> itemsValue: qr.getItems()) {
-//			 AttributeValue tfidfAttribute = itemsValue.get("tfidf");
-//			 String tfidfAttributeStr = tfidfAttribute.getN();
-//			 Double tfidf = Double.parseDouble (tfidfAttributeStr);
-//			 
-//			 
-//			 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.get("url").getS());
-//			 result.add(tfuw);
-//			 
-//		 }
-//		 
+		 System.out.println("result size is:" + result.size());
 		 return result;
 		 
 		
 	 }
 	 
-	 public List<TFIDFURLWrapper> getURLsFromNormalBarrel (String word) {
+	 public List<ItemWrapper2> getURLsFromNormalBarrel (String word) {
 //			TableKeysAndAttributes tableKeysAndAttributes = new TableKeysAndAttributes ("Fancy-Bareel");
 //			tableKeysAndAttributes.addHashOnlyPrimaryKeys( , , );
-			 List<TFIDFURLWrapper> result = new ArrayList<TFIDFURLWrapper> ();
+			 List<ItemWrapper2> result = new ArrayList<ItemWrapper2> ();
 			 
 			 DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
 			 
@@ -137,10 +139,22 @@ public class DynamoDBDatabase {
 			 
 			 for (NormalBarrel itemsValue: queryResult) {
 				 double tfidf =itemsValue.getTFIDF();
+				 String normalizedUrl = itemsValue.getNormalizedURL();
 				 
+				 Map<String, AttributeValue> eav1 = new HashMap<String, AttributeValue>();
 				 
-				 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.getURL());
-				 result.add(tfuw);
+				 eav1.put(":val2", new AttributeValue().withS(normalizedUrl));
+				 
+				 DynamoDBQueryExpression<PageRankTable> queryExpression1 = new DynamoDBQueryExpression<PageRankTable>()
+				            .withKeyConditionExpression("url = :val2")
+				            .withExpressionAttributeValues(eav1);
+				 
+				 List<PageRankTable> queryResult1 = mapper.query (PageRankTable.class, queryExpression1);
+				 double pageRank = queryResult1.get(0).getPageRank();
+				 double totalScore = tfidf * pageRank;
+				 ItemWrapper2 item = new ItemWrapper2(tfidf, pageRank, itemsValue.getOriginalURL(), totalScore);
+				 
+				 result.add(item);
 			 
 			 }
 			 
@@ -168,5 +182,28 @@ public class DynamoDBDatabase {
 	 
 	 
 
+	 public ArrayList<ItemWrapper> addPageRank (ArrayList<ItemWrapper> list) {
+
+			DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
+
+			for (ItemWrapper item : list) {
+				String url = item.getNormalizedUrl();
+				
+				Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+
+				eav.put(":val1", new AttributeValue().withS(url));
+
+				DynamoDBQueryExpression<PageRankTable> queryExpression = new DynamoDBQueryExpression<PageRankTable>()
+						.withKeyConditionExpression("url = :val1")
+						.withExpressionAttributeValues(eav);
+
+				List<PageRankTable> queryResult = mapper.query(PageRankTable.class, queryExpression);
+				double rankVal = queryResult.get(0).getPageRank();
+				item.setPageRank(rankVal);
+			}
+
+			return list;
+		}
+		
 	  
 }
