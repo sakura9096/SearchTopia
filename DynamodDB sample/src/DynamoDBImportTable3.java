@@ -83,7 +83,7 @@ public class DynamoDBImportTable3 {
     public static void main(String[] args) throws Exception {
         init();
         
-        File directory = new File ("/Users/yilunfu/Documents/workspace/Group02/S3Test/output");
+        File directory = new File ("/Users/yilunfu/Desktop/newoutput");
 		File[] fList = directory.listFiles ();
 		
 		for (File file : fList) {
@@ -120,7 +120,7 @@ public class DynamoDBImportTable3 {
     		item.put("word", new AttributeValue(newItem.word));
     		item.put("url", new AttributeValue(newItem.url));
     		item.put("originalurl", new AttributeValue(newItem.originURL));
-    		item.put("tfidf", new AttributeValue(String.valueOf(newItem.tfidf)));
+    		item.put("tfidf", new AttributeValue().withN(String.valueOf(newItem.tfidf)));
     		
     		PutRequest putRequest = new PutRequest(item);
     		WriteRequest wr = new WriteRequest (putRequest);

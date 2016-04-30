@@ -27,10 +27,10 @@ public class MapReduceResultTester2 {
 		try {
 //			FileReader fileReader = new FileReader ("/Users/fanglinlu/Documents/classes/CIS555/hadoop-2.7.2/input/test-input");
 //			FileReader fileReader = new FileReader ("/Users/fanglinlu/Documents/workspace/S3Test/output/Output");
-			FileReader fileReader = new FileReader ("");
+			FileReader fileReader = new FileReader ("/Users/yilunfu/Desktop/newoutput/part-r-00003");
 			BufferedReader br1 = new BufferedReader (fileReader);
 			
-			FileWriter fileWriter = new FileWriter ("outputTestResult4", true);
+			FileWriter fileWriter = new FileWriter ("/Users/yilunfu/Desktop/newoutput/outputTestResult4", true);
 			BufferedWriter bw = new BufferedWriter (fileWriter);
 			
 			HashMap<String, PriorityQueue<TFIDFURLWrapper>> hm = new HashMap <String, PriorityQueue<TFIDFURLWrapper>>();
@@ -40,35 +40,35 @@ public class MapReduceResultTester2 {
 			
 			String line = null;
 			int i = 0;
-//			while ((line = br1.readLine()) != null && i < 40000000) {
-//				i++;
-//			}
-			while ((line = br1.readLine()) != null && i < 800000) {
-				String[] lineInfo = line.split("\t");
-				String word;
-				String url;
-				String tfIdf;
-				if (lineInfo.length < 4) {
-					word = lineInfo[0];
-					url = lineInfo[1];
-					tfIdf =lineInfo[2];
-					
-				} else {
-					word = lineInfo[0] + "\t" + lineInfo[1];
-					url = lineInfo[2];
-					tfIdf = lineInfo[3];
-				}
-				
-				double tfIdfValue = Double.parseDouble(tfIdf);
-				
-				TFIDFURLWrapper tuw = new TFIDFURLWrapper (tfIdfValue, url);
-				if (hm.keySet().contains(word)) {
-					hm.get(word).add(tuw);
-				} else {
-					PriorityQueue<TFIDFURLWrapper> pq = new PriorityQueue <TFIDFURLWrapper> (10, tfidfComparator);
-					pq.add(tuw);
-					hm.put(word, pq);
-				}
+			while ((line = br1.readLine()) != null && i < 1800000) {
+				i++;
+			}
+			while ((line = br1.readLine()) != null && i < 1810000) {
+//				String[] lineInfo = line.split("\t");
+//				String word;
+//				String url;
+//				String tfIdf;
+//				if (lineInfo.length < 4) {
+//					word = lineInfo[0];
+//					url = lineInfo[1];
+//					tfIdf =lineInfo[2];
+//					
+//				} else {
+//					word = lineInfo[0] + "\t" + lineInfo[1];
+//					url = lineInfo[2];
+//					tfIdf = lineInfo[3];
+//				}
+//				
+//				double tfIdfValue = Double.parseDouble(tfIdf);
+//				
+//				TFIDFURLWrapper tuw = new TFIDFURLWrapper (tfIdfValue, url);
+//				if (hm.keySet().contains(word)) {
+//					hm.get(word).add(tuw);
+//				} else {
+//					PriorityQueue<TFIDFURLWrapper> pq = new PriorityQueue <TFIDFURLWrapper> (10, tfidfComparator);
+//					pq.add(tuw);
+//					hm.put(word, pq);
+//				}
 	//			List<String> list = Codec.decode(line);
 //		        String [] lineInfo = line.split("\t");
 //		        if (Integer.parseInt(lineInfo[3]) >= 4) {
@@ -89,20 +89,19 @@ public class MapReduceResultTester2 {
 ////		                context.write(new Text(emitKey), word); 
 //		        		}
 //		   
-//		        }
-	//			bw.write(line);
+				bw.write(line + "\n");
 				i++;
 			}
 			
-			for (String keyWord: hm.keySet()) {
-				PriorityQueue<TFIDFURLWrapper> pq = hm.get(keyWord);
-				while (!pq.isEmpty()) {
-					TFIDFURLWrapper tfw = pq.poll();
-					bw.write(keyWord + "\t" +  tfw.url + "\t" + tfw.tfidf + "\n");
-				}
-			}
-			br1.close();
-			bw.close();
+//			for (String keyWord: hm.keySet()) {
+//				PriorityQueue<TFIDFURLWrapper> pq = hm.get(keyWord);
+//				while (!pq.isEmpty()) {
+//					TFIDFURLWrapper tfw = pq.poll();
+//					bw.write(keyWord + "\t" +  tfw.url + "\t" + tfw.tfidf + "\n");
+//				}
+//			}
+//			br1.close();
+//			bw.close();
 
 		} catch (Exception e) {
 			e.printStackTrace();
