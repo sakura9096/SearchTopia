@@ -17,6 +17,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 import com.amazonaws.services.dynamodbv2.document.Attribute;
 import com.amazonaws.services.dynamodbv2.document.Table;
 import com.amazonaws.services.dynamodbv2.document.TableKeysAndAttributes;
+import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.KeysAndAttributes;
 import com.amazonaws.services.dynamodbv2.model.QueryRequest;
@@ -86,16 +87,20 @@ public class DynamoDBDatabase {
 		 List<FancyBarrel> queryResult = mapper.query(FancyBarrel.class, queryExpression);
 		 System.out.println("The size of fancybarrel is:" + queryResult.size());
 		 
+		 Map<String, String> expressionAttributeNames = new HashMap<String, String>();
+		 expressionAttributeNames.put("#u", "url");
+		 
 		 for (FancyBarrel itemsValue: queryResult) {
 			 double tfidf =itemsValue.getTFIDF();
-			 String normalizedUrl = itemsValue.getNormalizedURL();
+			 String normalizedUrl = itemsValue.getUrl();
 			 
 			 Map<String, AttributeValue> eav1 = new HashMap<String, AttributeValue>();
 			 
 			 eav1.put(":val2", new AttributeValue().withS(normalizedUrl));
 			 
 			 DynamoDBQueryExpression<PageRankTable> queryExpression1 = new DynamoDBQueryExpression<PageRankTable>()
-			            .withKeyConditionExpression("normalizedUrl = :val2")
+			            .withKeyConditionExpression("#u = :val2")
+			            .withExpressionAttributeNames(expressionAttributeNames)
 			            .withExpressionAttributeValues(eav1);
 			 
 			 List<PageRankTable> queryResult1 = mapper.query (PageRankTable.class, queryExpression1);
@@ -141,7 +146,7 @@ public class DynamoDBDatabase {
 				 eav1.put(":val2", new AttributeValue().withS(normalizedUrl));
 				 
 				 DynamoDBQueryExpression<PageRankTable> queryExpression1 = new DynamoDBQueryExpression<PageRankTable>()
-				            .withKeyConditionExpression("normalizedUrl = :val2")
+				            .withKeyConditionExpression("url = :val2")
 				            .withExpressionAttributeValues(eav1);
 				 
 				 List<PageRankTable> queryResult1 = mapper.query (PageRankTable.class, queryExpression1);

@@ -10,7 +10,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 public class FancyBarrel {
 	private String word;
 	private String originalUrl;
-	private String normalizedUrl;
+	private String url;
 	private double tfidf;
 	
 	@DynamoDBHashKey (attributeName = "word")
@@ -23,12 +23,12 @@ public class FancyBarrel {
 	}
 	
 	@DynamoDBRangeKey (attributeName = "url")
-	public String getNormalizedURL () {
-		return normalizedUrl;
+	public String getUrl () {
+		return url;
 	}
 	
-	public void setNormalizedURL (String url) {
-		this.normalizedUrl = url;
+	public void setUrl (String url) {
+		this.url = url;
 	}
 	
 	@DynamoDBAttribute (attributeName = "originalurl")
