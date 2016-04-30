@@ -95,7 +95,7 @@ public class DynamoDBDatabase {
 			 eav1.put(":val2", new AttributeValue().withS(normalizedUrl));
 			 
 			 DynamoDBQueryExpression<PageRankTable> queryExpression1 = new DynamoDBQueryExpression<PageRankTable>()
-			            .withKeyConditionExpression("normalizedUrl = :val2")
+			            .withKeyConditionExpression("url = :val2")
 			            .withExpressionAttributeValues(eav1);
 			 
 			 List<PageRankTable> queryResult1 = mapper.query (PageRankTable.class, queryExpression1);
