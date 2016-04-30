@@ -1,12 +1,18 @@
 package cis455.queryProcess;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class QueryProcessWrapper {
 	
+	private DynamoDBDatabase database;
+	public QueryProcessWrapper () {
+		database = DynamoDBDatabase.getInstance();
+	}
 	public List<String> getQueryResult (String query) {
 		
 		String[] queryList = query.split("\\s+");
@@ -48,22 +54,24 @@ public class QueryProcessWrapper {
 	
 	
 	public List<String> serachOneWord(String word1) {
-		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
-		List<TFIDFURLWrapper> fancyReturns = database.getURLsFromFacnyBarrel(word1);
+//		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
+		List<ItemWrapper2> fancyReturns = database.getURLsFromFacnyBarrel(word1);
+		Collections.sort(fancyReturns, Collections.reverseOrder());
+		
 		List<String> result = new ArrayList<String>();
 		if (fancyReturns.size() >= 100) {
 			for (int i = 0; i < 100; i++) {
-				result.add(fancyReturns.get(i).url);
+				result.add(fancyReturns.get(i).originalUrl);
 			}
 			return result;
 		} else {
 			for (int i = 0; i < fancyReturns.size(); i++) {
-				result.add(fancyReturns.get(i).url);
+				result.add(fancyReturns.get(i).originalUrl);
 			}
-			List<TFIDFURLWrapper> normalReturns = database.getURLsFromNormalBarrel(word1);
+			List<ItemWrapper2> normalReturns = database.getURLsFromNormalBarrel(word1);
 			int min = Math.min(100 - fancyReturns.size(), normalReturns.size());
 			for (int i = 0; i < min; i++) {
-				result.add(normalReturns.get(i).url);
+				result.add(normalReturns.get(i).originalUrl);
 			}
 			return result;
 		}
@@ -71,29 +79,29 @@ public class QueryProcessWrapper {
 	
 	public List<String> searchTwoWords(String word1, String word2) {
 		String conbine = word1 + " " + word2;
-		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
-		List<TFIDFURLWrapper> fancyReturns = database.getURLsFromFacnyBarrel(conbine);
+//		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
+		List<ItemWrapper2> fancyReturns = database.getURLsFromFacnyBarrel(conbine);
 		List<String> result = new ArrayList<String>();
 		if (fancyReturns.size() >= 100) {
 			for (int i = 0; i < 100; i++) {
-				result.add(fancyReturns.get(i).url);
+				result.add(fancyReturns.get(i).originalUrl);
 			}
 			return result;
 		} else {
 			for (int i = 0; i < fancyReturns.size(); i++) {
-				result.add(fancyReturns.get(i).url);
+				result.add(fancyReturns.get(i).originalUrl);
 			}
-			List<TFIDFURLWrapper> normalReturns = database.getURLsFromNormalBarrel(conbine);
+			List<ItemWrapper2> normalReturns = database.getURLsFromNormalBarrel(conbine);
 			
 			if (normalReturns.size() >= 100 - fancyReturns.size()) {
 				int leave = 100 - fancyReturns.size();
 				for (int i = 0; i < leave; i++) {
-					result.add(normalReturns.get(i).url);
+					result.add(normalReturns.get(i).originalUrl);
 				}
 				return result;
 			} else {
 				for (int i = 0; i < normalReturns.size(); i++) {
-					result.add(normalReturns.get(i).url);
+					result.add(normalReturns.get(i).originalUrl);
 				}
 				List<String> list1 = this.serachOneWord(word1);
 				List<String> list2 = this.serachOneWord(word2);
@@ -113,29 +121,29 @@ public class QueryProcessWrapper {
 	public List<String> searchThreeWords(String word1, String word2, String word3) {
 		String combine1 = word1 + " " + word2;
 		String combine2 = word2 + " " + word3;
-		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
-		Set<TFIDFURLWrapper> topSet11 = new HashSet<TFIDFURLWrapper>(database.getURLsFromFacnyBarrel(combine1));
-		Set<TFIDFURLWrapper> topSet12 = new HashSet<TFIDFURLWrapper>(database.getURLsFromFacnyBarrel(word3));
+//		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
+		Set<ItemWrapper2> topSet11 = new HashSet<ItemWrapper2>(database.getURLsFromFacnyBarrel(combine1));
+		Set<ItemWrapper2> topSet12 = new HashSet<ItemWrapper2>(database.getURLsFromFacnyBarrel(word3));
 		topSet11.retainAll(topSet12);
-		Set<TFIDFURLWrapper> topSet21 = new HashSet<TFIDFURLWrapper>(database.getURLsFromFacnyBarrel(combine2));
-		Set<TFIDFURLWrapper> topSet22 = new HashSet<TFIDFURLWrapper>(database.getURLsFromFacnyBarrel(word1));
+		Set<ItemWrapper2> topSet21 = new HashSet<ItemWrapper2>(database.getURLsFromFacnyBarrel(combine2));
+		Set<ItemWrapper2> topSet22 = new HashSet<ItemWrapper2>(database.getURLsFromFacnyBarrel(word1));
 		topSet21.retainAll(topSet22);
-		Set<TFIDFURLWrapper> topSet1 = new HashSet<TFIDFURLWrapper>(database.getURLsFromFacnyBarrel(word2));
+		Set<ItemWrapper2> topSet1 = new HashSet<ItemWrapper2>(database.getURLsFromFacnyBarrel(word2));
 		topSet1.retainAll(topSet12);
 		topSet1.retainAll(topSet22);
-		Set<TFIDFURLWrapper> topSet = new HashSet<TFIDFURLWrapper>();
+		Set<ItemWrapper2> topSet = new HashSet<ItemWrapper2>();
 		topSet.addAll(topSet11);
 		topSet.addAll(topSet21);
 		topSet.addAll(topSet1);
 		List<String> result = new ArrayList<String>();
 		if (topSet.size() >= 100) {
-			for (TFIDFURLWrapper w: topSet) {
-				result.add(w.url);
+			for (ItemWrapper2 w: topSet) {
+				result.add(w.originalUrl);
 			}
 			return result;
 		} else {
-			for (TFIDFURLWrapper w: topSet) {
-				result.add(w.url);
+			for (ItemWrapper2 w: topSet) {
+				result.add(w.originalUrl);
 			}
 			List<String> l1 = this.searchTwoWords(word1, word2);
 			List<String> l2 = this.searchTwoWords(word2, word3);
