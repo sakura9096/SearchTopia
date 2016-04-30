@@ -7,16 +7,16 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 @DynamoDBTable (tableName = "PageRank")
 public class PageRankTable {
 
-	private String url;
+	private String normalizedUrl;
 	private double pageRank;
 
 	@DynamoDBHashKey (attributeName = "url")
 	public String getUrl() {
-		return url;
+		return normalizedUrl;
 	}
 	
 	public void setUrl(String url) {
-		this.url = url;
+		this.normalizedUrl = url;
 	}
 	
 	@DynamoDBRangeKey (attributeName = "PageRank")
