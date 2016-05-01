@@ -43,8 +43,8 @@ public class DynamoDBImportTable3 {
 	 static Queue<NewTFIDFURLWrapper> fancyWriteQueue = new LinkedList<>();
 	 static Queue<NewTFIDFURLWrapper> normalWriteQueue = new LinkedList<>();
 	 static int queueLimit = 25;
-	 static String fancyTable = "Fancy";
-	 static String normalTable = "Normal";
+	 static String fancyTable = "FancyTable";
+	 static String normalTable = "NormalTable";
 	 
 	 static Queue<NewTFIDFURLWrapper> heap = new PriorityQueue<>(heapLimit, tfidfComparator);
 
@@ -83,14 +83,19 @@ public class DynamoDBImportTable3 {
     public static void main(String[] args) throws Exception {
         init();
         
-        File directory = new File ("/Users/yilunfu/Desktop/newoutput");
-		File[] fList = directory.listFiles ();
+ //       File directory = new File ("/Users/fanglinlu/Desktop/import");
+        File directory = new File (args[0]);
+		File[] fList = directory.listFiles();
 		
 		for (File file : fList) {
     		String tableName;
     		try {
 			FileReader fileReader = new FileReader (file.getAbsolutePath());
 			BufferedReader br1 = new BufferedReader (fileReader);
+			
+//			for (int i = 0; i < 7377190; i++) {
+//				br1.readLine();
+//			}
 			
 			getItems(br1);
 	    	br1.close();	
@@ -198,15 +203,19 @@ public class DynamoDBImportTable3 {
 				continue;
 			}
 			
+			if (word.length() > 500) {
+				continue;
+			}
+			
 			String check = word.substring(0, 2);
-			if (check.equals("1:")) {
+			if (check.equals("2:")) {
 				continue;
 			}
 			word = word.substring(2);
 			
 			if (prevString != null && prevString.equals(word)) {
 				double tfIdfValue = Double.parseDouble(tfIdf);
-				DecimalFormat df = new DecimalFormat ("#.##");
+				DecimalFormat df = new DecimalFormat ("#.####");
 				NewTFIDFURLWrapper wrapper = new NewTFIDFURLWrapper(word, Double.parseDouble (df.format(tfIdfValue)), url, originUrl);
 				if (heap.size() < heapLimit) {
 					if (!set.contains(url)) {
@@ -234,7 +243,7 @@ public class DynamoDBImportTable3 {
 				}
 				prevString = word;
 				double tfIdfValue = Double.parseDouble(tfIdf);
-				DecimalFormat df = new DecimalFormat ("#.##");
+				DecimalFormat df = new DecimalFormat ("#.####");
 				NewTFIDFURLWrapper wrapper = new NewTFIDFURLWrapper(word, Double.parseDouble (df.format(tfIdfValue)), url, originUrl);
 				set.add(url);
 				heap.offer(wrapper);

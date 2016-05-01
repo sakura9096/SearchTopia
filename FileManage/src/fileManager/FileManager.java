@@ -31,7 +31,7 @@ public class FileManager {
 		
 		
 		FileWriter outWriter = new FileWriter(outputDirectory, true);
-		FileWriter anchorWriter = new FileWriter(anchorDirectory, true);
+//		FileWriter anchorWriter = new FileWriter(anchorDirectory, true);
 		
 		File[] fileToReadArray = filesToRead.listFiles();
 		//File[] fileToReadArray = new File[]{filesToRead};
@@ -47,13 +47,13 @@ public class FileManager {
 				continue;
 			}
 			System.out.println(fileToReadArray[i].getName());
-//			fileParser.write(outWriter);
+			fileParser.write(outWriter);
 //			fileParser.fancyHitMapToString(outWriter);
 //			fileParser.fancyPhraseHitMapToString(outWriter);
 //			fileParser.normalHitMapToString(outWriter);
 //			fileParser.normalPhraseHitMapToString(outWriter);
-			anchorWriter.write(fileParser.outLinksToString());
-			anchorWriter.flush();
+//			anchorWriter.write(fileParser.outLinksToString());
+//			anchorWriter.flush();
 			
 		}
 		

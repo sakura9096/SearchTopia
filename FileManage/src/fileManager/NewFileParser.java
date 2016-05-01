@@ -49,6 +49,16 @@ public class NewFileParser {
 		}
 		return true;
 	}
+	
+	public static boolean isAllASCII(String str) {
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) > 128) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
 	/*
 	 * check if the word is valid or not
 	 */
@@ -67,7 +77,6 @@ public class NewFileParser {
 		}
 		return word;
 	}
-	
 	
 	/*
 	 * Check if a word is all letter so that we can use stemmer
@@ -167,56 +176,62 @@ public class NewFileParser {
 		String html = sb.toString();
 		Document doc = Jsoup.parse(html, url);
 		
-//		Elements metadata = doc.select("meta[name]");
-//		if (metadata != null) {
-//			StringBuilder metasb = new StringBuilder();
-//			for (Element element : metadata) {
-//				if (element.attr("name").equals("keyword") ||
-//						element.attr("name").equals("description")) {
-//					metasb.append(element.attr("content") + " ");
-//				}
-//			}
-//			parseString(metasb.toString(), 0);
-//		}
-		
-//		String title = doc.title();
-		//System.out.println(title);
-//		parseString(title, 0);
-		
-//		Element body = doc.body();
-//		if (body != null) {
-//			parseString(body.text(), 1);
-//		}
-		
-		Elements links = doc.select("a[href]");
-		if (links != null) {
-//			StringBuilder anchorsb = new StringBuilder();
-			for (Element link : links) {
-				String outLink = link.attr("abs:href").trim();
-				if (outLink.length() == 0) continue;
-				if (outLink.endsWith("/")) {
-					outLink = outLink.substring(0, outLink.length() - 1);
+		Elements metadata = doc.select("meta[name]");
+		if (metadata != null) {
+			StringBuilder metasb = new StringBuilder();
+			for (Element element : metadata) {
+				if (element.attr("name").equals("keyword") ||
+						element.attr("name").equals("description")) {
+					metasb.append(element.attr("content") + " ");
 				}
-				try {
-					outLink = URLDecoder.decode(outLink, "UTF-8");
-					index = outLink.indexOf("?");
-					if (index != -1) {
-						outLink = outLink.substring(0, index);
-					}
-				} catch (Exception e) {
-			
-				}
-				
-				this.outLinks.add(outLink);
 			}
-//			System.out.println(anchorsb.toString());
-//			parseString(anchorsb.toString(), 0);
+			if (!this.isAllASCII(metasb.toString())) {
+				throw new IOException();
+			}
+			parseString(metasb.toString(), 0);
 		}
 		
-		//remove phrase that appears only once
-//		removeFromPhraseMap();
+		String title = doc.title();
+		//System.out.println(title);
+		if (!this.isAllASCII(title)) {
+			throw new IOException();
+		}
+		parseString(title, 0);
 		
-//		normalizeMap();
+		Element body = doc.body();
+		if (body != null) {
+			parseString(body.text(), 1);
+		}
+		
+//		Elements links = doc.select("a[href]");
+//		if (links != null) {
+//			StringBuilder anchorsb = new StringBuilder();
+//			for (Element link : links) {
+//				String outLink = link.attr("abs:href").trim();
+//				if (outLink.length() == 0) continue;
+//				if (outLink.endsWith("/")) {
+//					outLink = outLink.substring(0, outLink.length() - 1);
+//				}
+//				try {
+//					outLink = URLDecoder.decode(outLink, "UTF-8");
+//					index = outLink.indexOf("?");
+//					if (index != -1) {
+//						outLink = outLink.substring(0, index);
+//					}
+//				} catch (Exception e) {
+//			
+//				}
+//				
+//				this.outLinks.add(outLink);
+//			}
+//			System.out.println(anchorsb.toString());
+//			parseString(anchorsb.toString(), 0);
+//		}
+		
+		//remove phrase that appears only once
+		removeFromPhraseMap();
+		
+		normalizeMap();
 	}
 	
 	public String outLinksToString() {
