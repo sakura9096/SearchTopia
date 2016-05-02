@@ -1,5 +1,8 @@
 package cis455.queryProcess;
 
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+
 public class ItemWrapper2 implements Comparable<ItemWrapper2>{
 	String originalUrl;
 	String normalizedUrl;
@@ -12,11 +15,12 @@ public class ItemWrapper2 implements Comparable<ItemWrapper2>{
 		this.normalizedUrl = url;
 	}
 	
-	public ItemWrapper2 (double tfidf, double pageRank, String originalUrl, double totalScore) {
+	public ItemWrapper2 (double tfidf, double pageRank, String originalUrl, String normalizedUrl, double totalScore) {
 		this.tfidf = tfidf;
 		this.pageRank = pageRank;
 		this.originalUrl = originalUrl;
 		this.normalizedUrl = normalizedUrl;
+		this.totalScore = totalScore;
 	}
 	
 	public void setPageRank(double pageRank) {
@@ -49,5 +53,30 @@ public class ItemWrapper2 implements Comparable<ItemWrapper2>{
 			return 0;
 		}
 	}
+	
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 31). // two randomly chosen prime numbers
+            // if deriving: appendSuper(super.hashCode()).
+            append(this.normalizedUrl).
+            append(tfidf).
+            toHashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+       if (!(obj instanceof ItemWrapper2))
+            return false;
+        if (obj == this)
+            return true;
+
+       ItemWrapper2 rhs = (ItemWrapper2) obj;
+        return new EqualsBuilder().
+            // if deriving: appendSuper(super.equals(obj)).
+            append(this.normalizedUrl, rhs.normalizedUrl).
+            isEquals();
+    }
+
 
 }

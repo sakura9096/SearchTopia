@@ -26,7 +26,7 @@ public class QueryProcessWrapper {
 				finalQueryList.add(word);
 			}
 		}
-		
+		System.out.println("size" + finalQueryList.size());
 		if (finalQueryList.size() == 1) {
 			return this.serachOneWord(finalQueryList.get(0));
 		} else if (finalQueryList.size() == 2) {
@@ -59,16 +59,22 @@ public class QueryProcessWrapper {
 		Collections.sort(fancyReturns, Collections.reverseOrder());
 		
 		List<String> result = new ArrayList<String>();
+		
 		if (fancyReturns.size() >= 100) {
+			
 			for (int i = 0; i < 100; i++) {
 				result.add(fancyReturns.get(i).originalUrl);
 			}
 			return result;
 		} else {
+			
 			for (int i = 0; i < fancyReturns.size(); i++) {
 				result.add(fancyReturns.get(i).originalUrl);
 			}
+			
 			List<ItemWrapper2> normalReturns = database.getURLsFromNormalBarrel(word1);
+		
+			Collections.sort(normalReturns, Collections.reverseOrder());
 			int min = Math.min(100 - fancyReturns.size(), normalReturns.size());
 			for (int i = 0; i < min; i++) {
 				result.add(normalReturns.get(i).originalUrl);
@@ -81,25 +87,33 @@ public class QueryProcessWrapper {
 		String conbine = word1 + " " + word2;
 //		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
 		List<ItemWrapper2> fancyReturns = database.getURLsFromFacnyBarrel(conbine);
+		Collections.sort(fancyReturns, Collections.reverseOrder());
 		List<String> result = new ArrayList<String>();
+		
 		if (fancyReturns.size() >= 100) {
+			
 			for (int i = 0; i < 100; i++) {
 				result.add(fancyReturns.get(i).originalUrl);
+				
 			}
+			
 			return result;
 		} else {
+			
 			for (int i = 0; i < fancyReturns.size(); i++) {
 				result.add(fancyReturns.get(i).originalUrl);
 			}
 			List<ItemWrapper2> normalReturns = database.getURLsFromNormalBarrel(conbine);
-			
+			Collections.sort(normalReturns, Collections.reverseOrder());
 			if (normalReturns.size() >= 100 - fancyReturns.size()) {
+				
 				int leave = 100 - fancyReturns.size();
 				for (int i = 0; i < leave; i++) {
 					result.add(normalReturns.get(i).originalUrl);
 				}
 				return result;
 			} else {
+				
 				for (int i = 0; i < normalReturns.size(); i++) {
 					result.add(normalReturns.get(i).originalUrl);
 				}
@@ -135,14 +149,17 @@ public class QueryProcessWrapper {
 		topSet.addAll(topSet11);
 		topSet.addAll(topSet21);
 		topSet.addAll(topSet1);
+		List<ItemWrapper2> topList = new ArrayList<ItemWrapper2>(topSet);
+		Collections.sort(topList, Collections.reverseOrder());
+		
 		List<String> result = new ArrayList<String>();
 		if (topSet.size() >= 100) {
-			for (ItemWrapper2 w: topSet) {
+			for (ItemWrapper2 w: topList) {
 				result.add(w.originalUrl);
 			}
 			return result;
 		} else {
-			for (ItemWrapper2 w: topSet) {
+			for (ItemWrapper2 w: topList) {
 				result.add(w.originalUrl);
 			}
 			List<String> l1 = this.searchTwoWords(word1, word2);

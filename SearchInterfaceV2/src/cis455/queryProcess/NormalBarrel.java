@@ -5,7 +5,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
-@DynamoDBTable (tableName = "Normal")
+@DynamoDBTable (tableName = "NormalTable2")
 
 public class NormalBarrel {
 	private String word;
@@ -27,9 +27,16 @@ public class NormalBarrel {
 		return normalizedUrl;
 	}
 	
+	public void setNormalizedURL (String url) {
+		this.normalizedUrl = url;
+	}
+	
 	@DynamoDBAttribute (attributeName = "originalurl")
 	public String getOriginalURL() {
 		return originalUrl;
+	}
+	public void setOriginalURL (String originalurl) {
+		this.originalUrl = originalurl;
 	}
 	
 	@DynamoDBAttribute (attributeName = "tfidf")

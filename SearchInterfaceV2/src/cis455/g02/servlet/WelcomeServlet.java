@@ -104,7 +104,7 @@ public class WelcomeServlet extends HttpServlet {
 		List<String> results = processQuery(finalQuery);
 		if (results.size() != 100) {
 			for (int i = results.size(); i < 100; i++) {
-				results.add("https://en.wikipedia.org/wiki/1909"); // just in case they don't return 100 results
+				results.add(""); // just in case they don't return 100 results
 			}
 		}
 		
@@ -146,12 +146,16 @@ public class WelcomeServlet extends HttpServlet {
 //					Document doc = Jsoup.connect(url).get();
 //					String title = doc.title();
 					String url = results.get(j);
-				//	String title = db.getTitle(url);
-					String title = url;
+					String title = db.getTitle(url);
+					
+					//String title = url;
 					if  (title == null) {
 						
-						title = "Not Title Found";
+						title = url;
 					}
+					
+					title = title.replaceAll("\"", "'");
+					url = url.replaceAll("\"", "'");
 					pw.print("<a href='" + url +"' class='list-group-item'><h4 class='list-group-item-heading'>" + title + "</h4><p class='list-group-item-text'>" + url + "</p></a>");
 				}
 				pw.println("\");}");
@@ -196,7 +200,7 @@ public class WelcomeServlet extends HttpServlet {
 				+ "<input class=\"ui-widget\" id=\"tags\" type=\"text\" placeholder=\"Please enter your query\" name=\"query\" style=\"width: 500px; height: 40px\">"
 				+ "<button type=\"submit\" class=\"btn btn-secondary-outline btn-md\">Search</button></form></div></nav>");
 		if (!spellmsg.equals(firstQuery) && !spellmsg.equals("") ) {
-			pw.println("<h4 style = \"font-family: sans-serif\">Displaying results for " + finalQuery + "?  "
+			pw.println("<h4 style = \"font-family: sans-serif\">Displaying results for " + finalQuery + ".  "
 					+ "<form name='myform' action=\"welcome\" method=\"post\">Do you still want to search: <input type=\"hidden\" name=\"decide\" value='" + firstQuery + "'><span onclick=\"document.myform.submit();\"><u><strong>" + firstQuery +  "</strong></u></span></form></h4>");
 			
 		}

@@ -14,14 +14,8 @@ import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
-import com.amazonaws.services.dynamodbv2.document.Attribute;
-import com.amazonaws.services.dynamodbv2.document.Table;
-import com.amazonaws.services.dynamodbv2.document.TableKeysAndAttributes;
-import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
-import com.amazonaws.services.dynamodbv2.model.KeysAndAttributes;
-import com.amazonaws.services.dynamodbv2.model.QueryRequest;
-import com.amazonaws.services.dynamodbv2.model.QueryResult;
+
 
 public class DynamoDBDatabase {
 	
@@ -93,7 +87,7 @@ public class DynamoDBDatabase {
 		 for (FancyBarrel itemsValue: queryResult) {
 			 double tfidf =itemsValue.getTFIDF();
 			 String normalizedUrl = itemsValue.getUrl();
-			 
+			// System.out.println("normalized: " + normalizedUrl);
 			 Map<String, AttributeValue> eav1 = new HashMap<String, AttributeValue>();
 			 
 			 eav1.put(":val2", new AttributeValue().withS(normalizedUrl));
@@ -104,10 +98,18 @@ public class DynamoDBDatabase {
 			            .withExpressionAttributeValues(eav1);
 			 
 			 List<PageRankTable> queryResult1 = mapper.query (PageRankTable.class, queryExpression1);
-			 double pageRank = queryResult1.get(0).getPageRank();
-			 double totalScore = tfidf * pageRank;
-			 ItemWrapper2 item = new ItemWrapper2(tfidf, pageRank, itemsValue.getOriginalURL(), totalScore);
+			 double pageRank;
+			 double totalScore;
+			 if (queryResult1 == null || queryResult1.size() == 0) {
+				 pageRank = 0;
+				 totalScore = 2 * tfidf * pageRank / (tfidf + pageRank);
+			 } else {
+				pageRank = queryResult1.get(0).getPageRank();
+				totalScore = 2 * tfidf * pageRank / (tfidf + pageRank);
+			 }
 			 
+			 ItemWrapper2 item = new ItemWrapper2(tfidf, pageRank, itemsValue.getOriginalURL(), normalizedUrl, totalScore);
+           
 			 result.add(item);
 		 
 		 }
@@ -137,6 +139,9 @@ public class DynamoDBDatabase {
 			 
 			 List<NormalBarrel> queryResult = mapper.query (NormalBarrel.class, queryExpression);
 			 
+			 Map<String, String> expressionAttributeNames = new HashMap<String, String>();
+			 expressionAttributeNames.put("#u", "url");
+			 
 			 for (NormalBarrel itemsValue: queryResult) {
 				 double tfidf =itemsValue.getTFIDF();
 				 String normalizedUrl = itemsValue.getNormalizedURL();
@@ -146,64 +151,33 @@ public class DynamoDBDatabase {
 				 eav1.put(":val2", new AttributeValue().withS(normalizedUrl));
 				 
 				 DynamoDBQueryExpression<PageRankTable> queryExpression1 = new DynamoDBQueryExpression<PageRankTable>()
-				            .withKeyConditionExpression("url = :val2")
+				            .withKeyConditionExpression("#u = :val2")
+				            .withExpressionAttributeNames(expressionAttributeNames)
 				            .withExpressionAttributeValues(eav1);
 				 
 				 List<PageRankTable> queryResult1 = mapper.query (PageRankTable.class, queryExpression1);
-				 double pageRank = queryResult1.get(0).getPageRank();
-				 double totalScore = tfidf * pageRank;
-				 ItemWrapper2 item = new ItemWrapper2(tfidf, pageRank, itemsValue.getOriginalURL(), totalScore);
+				
+				 double pageRank;
+				 double totalScore;
+//				 double tf_idf = Double.parseDouble(tfidf);
+				 if (queryResult1 == null || queryResult1.size() == 0) {
+					 pageRank = 0;
+					 totalScore = 2 * tfidf * pageRank / (tfidf + pageRank);
+				 } else {
+					pageRank = queryResult1.get(0).getPageRank();
+					totalScore = 2 * tfidf * pageRank / (tfidf + pageRank);
+				 }
+				 
+				 ItemWrapper2 item = new ItemWrapper2(tfidf, pageRank, itemsValue.getOriginalURL(), normalizedUrl, totalScore);
 				 
 				 result.add(item);
 			 
 			 }
 			 
-			 
-//			 QueryRequest qRequest = new QueryRequest ("Fancy-Barrel");
-//			 qRequest.setKeyConditionExpression ("word=:" + word);
-//			 
-//			 QueryResult qr = dynamoDB.query (qRequest);
-			 
-//			 for (Map<String, AttributeValue> itemsValue: qr.getItems()) {
-//				 AttributeValue tfidfAttribute = itemsValue.get("tfidf");
-//				 String tfidfAttributeStr = tfidfAttribute.getN();
-//				 Double tfidf = Double.parseDouble (tfidfAttributeStr);
-//				 
-//				 
-//				 TFIDFURLWrapper tfuw = new TFIDFURLWrapper(tfidf, itemsValue.get("url").getS());
-//				 result.add(tfuw);
-//				 
-//			 }
-//			 
 			 return result;
 			 
 			
 		 }
-	 
-	 
 
-	 public ArrayList<ItemWrapper> addPageRank (ArrayList<ItemWrapper> list) {
-
-			DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
-
-			for (ItemWrapper item : list) {
-				String url = item.getNormalizedUrl();
-				
-				Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
-
-				eav.put(":val1", new AttributeValue().withS(url));
-
-				DynamoDBQueryExpression<PageRankTable> queryExpression = new DynamoDBQueryExpression<PageRankTable>()
-						.withKeyConditionExpression("url = :val1")
-						.withExpressionAttributeValues(eav);
-
-				List<PageRankTable> queryResult = mapper.query(PageRankTable.class, queryExpression);
-				double rankVal = queryResult.get(0).getPageRank();
-				item.setPageRank(rankVal);
-			}
-
-			return list;
-		}
-		
 	  
 }
