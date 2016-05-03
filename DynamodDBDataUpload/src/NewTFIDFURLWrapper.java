@@ -1,4 +1,8 @@
-
+/**
+ * This is a wrapper class for word, url, tfidf and originalURL
+ * @author fanglinlu
+ *
+ */
 public class NewTFIDFURLWrapper {
 	String word;
 	double tfidf;
