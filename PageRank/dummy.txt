@@ -1,1 +1,0 @@
-http:////A *http:////B http:////C*http:////C http:////B*http:////D http:////A http:////B*http:////E http:////B http:////D http:////F*http:////F http:////B http:////E*http:////G1 htpp:////B http:////E*http:////G2 http:////B http:////E*http:////G3 http:////B http:////E*http:////G4 http:////E*http:////G5 http:////E http:////H*
