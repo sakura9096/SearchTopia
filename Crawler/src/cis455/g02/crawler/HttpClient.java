@@ -6,7 +6,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
-
+/*
+ * HttpClient is responsible for sending requests and get response
+ */
 public class HttpClient {
 	String url;
 	HttpsURLConnection httpsCon;
@@ -88,7 +90,7 @@ public class HttpClient {
 		}
 	}
 	
-	
+	// execute the head request
 	public void excuteHead() {
 		try {
 			if (url.startsWith("https")) {
@@ -166,6 +168,7 @@ public class HttpClient {
 		this.path = path;
 	}
 
+	// execute get request
 	public void executeGet() {
 		try {
 			if (url.startsWith("https")) {
