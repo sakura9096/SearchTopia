@@ -21,6 +21,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+/**
+ * FileParesr, for reading in a file and then parse it 
+ * to anchor file and hit list.
+ */
 public class NewFileParser {
 	private Map<String, Double> normalHitMap;
 	private Map<String, Double> fancyHitMap;
@@ -41,6 +45,9 @@ public class NewFileParser {
 		this.fileToRead = fileToRead;
 	}
 	
+	/*
+	 * Check if a word is consists of all ASCII character
+	 */
 	public boolean isASCII(String word) {
 		for (int i = 0; i < word.length(); i++) {
 			if (word.charAt(i) > 128) {
@@ -50,7 +57,10 @@ public class NewFileParser {
 		return true;
 	}
 	
-	public static boolean isAllASCII(String str) {
+	/*
+	 * Check if a string is consists of all ASCII character
+	 */
+	public boolean isAllASCII(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			if (str.charAt(i) > 128) {
 				return false;
@@ -105,6 +115,9 @@ public class NewFileParser {
 		 return start > end ? "" : word.substring(start, end + 1);
 	}
 	
+	/*
+	 * Parse a string 
+	 */
 	public void parseString(String str, int type) {
 		if (str == null || str.length() == 0) {
 			return;
@@ -124,6 +137,9 @@ public class NewFileParser {
 		}
 	}
 	
+	/*
+	 * Add a word to corresponding map based on type and isPhrase
+	 */
 	public void addToMap(String word, int type, boolean isPhrase) {
 		if (!isPhrase) {
 			if (type == 0) {
@@ -162,10 +178,10 @@ public class NewFileParser {
 		BufferedReader br = new BufferedReader(new FileReader(fileToRead));
 
 		this.url = br.readLine();
-		int index = url.indexOf("?");
-		if (index != -1) {
-			url = url.substring(0, index);
-		}
+//		int index = url.indexOf("?");
+//		if (index != -1) {
+//			url = url.substring(0, index);
+//		}
 
 		this.hostName = new URL(URLDecoder.decode(url, "UTF-8")).getHost();
 		StringBuilder sb = new StringBuilder();
@@ -203,30 +219,31 @@ public class NewFileParser {
 			parseString(body.text(), 1);
 		}
 		
-//		Elements links = doc.select("a[href]");
-//		if (links != null) {
-//			StringBuilder anchorsb = new StringBuilder();
-//			for (Element link : links) {
-//				String outLink = link.attr("abs:href").trim();
-//				if (outLink.length() == 0) continue;
-//				if (outLink.endsWith("/")) {
-//					outLink = outLink.substring(0, outLink.length() - 1);
-//				}
-//				try {
-//					outLink = URLDecoder.decode(outLink, "UTF-8");
-//					index = outLink.indexOf("?");
-//					if (index != -1) {
-//						outLink = outLink.substring(0, index);
-//					}
-//				} catch (Exception e) {
-//			
-//				}
-//				
-//				this.outLinks.add(outLink);
-//			}
-//			System.out.println(anchorsb.toString());
-//			parseString(anchorsb.toString(), 0);
-//		}
+		//generate the anchor file
+		Elements links = doc.select("a[href]");
+		if (links != null) {
+			StringBuilder anchorsb = new StringBuilder();
+			for (Element link : links) {
+				String outLink = link.attr("abs:href").trim();
+				if (outLink.length() == 0) continue;
+				if (outLink.endsWith("/")) {
+					outLink = outLink.substring(0, outLink.length() - 1);
+				}
+				try {
+					outLink = URLDecoder.decode(outLink, "UTF-8");
+					int index = outLink.indexOf("?");
+					if (index != -1) {
+						outLink = outLink.substring(0, index);
+					}
+				} catch (Exception e) {
+			
+				}
+				
+				this.outLinks.add(outLink);
+			}
+			System.out.println(anchorsb.toString());
+			parseString(anchorsb.toString(), 0);
+		}
 		
 		//remove phrase that appears only once
 		removeFromPhraseMap();
@@ -234,6 +251,9 @@ public class NewFileParser {
 		normalizeMap();
 	}
 	
+	/*
+	 * For serialize list of outlinks to string
+	 */
 	public String outLinksToString() {
 		List<String> temp = new ArrayList<>();
 		temp.add(this.url);

@@ -3,6 +3,10 @@ package fileManager;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * For encoding a list of strings and then decode it 
+ * back
+ */
 public class Codec {
 	 // Encodes a list of strings to a single string.
     public static String encode(List<String> strs) {

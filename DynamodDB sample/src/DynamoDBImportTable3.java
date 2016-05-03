@@ -24,7 +24,9 @@ import com.amazonaws.services.dynamodbv2.model.BatchWriteItemRequest;
 import com.amazonaws.services.dynamodbv2.model.BatchWriteItemResult;
 import com.amazonaws.services.dynamodbv2.model.PutRequest;
 import com.amazonaws.services.dynamodbv2.model.WriteRequest;
-
+/*
+ * This is the class for uploading data to DynamoDB
+ */
 public class DynamoDBImportTable3 {
 	
 	private static Comparator <NewTFIDFURLWrapper> tfidfComparator = new Comparator <NewTFIDFURLWrapper> () {
@@ -44,7 +46,7 @@ public class DynamoDBImportTable3 {
 	 static Queue<NewTFIDFURLWrapper> normalWriteQueue = new LinkedList<>();
 	 static int queueLimit = 25;
 	 static String fancyTable = "FancyTable";
-	 static String normalTable = "NormalTable";
+	 static String normalTable = "NormalTable2";
 	 
 	 static Queue<NewTFIDFURLWrapper> heap = new PriorityQueue<>(heapLimit, tfidfComparator);
 
@@ -84,7 +86,7 @@ public class DynamoDBImportTable3 {
         init();
         
  //       File directory = new File ("/Users/fanglinlu/Desktop/import");
-        File directory = new File (args[0]);
+        File directory = new File(args[0]);
 		File[] fList = directory.listFiles();
 		
 		for (File file : fList) {
@@ -137,14 +139,23 @@ public class DynamoDBImportTable3 {
     	BatchWriteItemResult outcome = dynamoDB.batchWriteItem(bwir);
     }
     
+    /*
+     * Batch Write contents in Fancy Queue
+     */
     private static void batchWriteFancyQueue() throws Exception {
     	batchWriteQueue(fancyWriteQueue, fancyTable);
     }
     
+    /*
+     * Batch Write contents in normal Queue
+     */
     private static void batchWriteNormalQueue() throws Exception {
     	batchWriteQueue(normalWriteQueue, normalTable);
     }
     
+    /*
+     * Helper function 
+     */
     public static void addToFancyQueue(NewTFIDFURLWrapper wrapper) throws Exception {
     	fancyWriteQueue.offer(wrapper);
     	if (fancyWriteQueue.size() == queueLimit) {
@@ -152,6 +163,9 @@ public class DynamoDBImportTable3 {
     	}
     }
     
+    /*
+     * Helper function
+     */
     public static void addToNormalQueue(NewTFIDFURLWrapper wrapper) throws Exception {
     	normalWriteQueue.offer(wrapper);
     	if (normalWriteQueue.size() == queueLimit) {
@@ -159,6 +173,9 @@ public class DynamoDBImportTable3 {
     	}
     }
     
+    /*
+     * clear the heap
+     */
     public static void clearHeap() throws Exception {
     	if (prevString == null) {
     		return;
@@ -173,6 +190,9 @@ public class DynamoDBImportTable3 {
     	
     }
     
+    /*
+     * get items from file
+     */
     public static void getItems(BufferedReader br1) throws Exception {
     	String line =  null;
 		while ((line = br1.readLine()) != null) {
@@ -208,9 +228,9 @@ public class DynamoDBImportTable3 {
 			}
 			
 			String check = word.substring(0, 2);
-			if (check.equals("2:")) {
-				continue;
-			}
+//			if (check.equals("2:")) {
+//				continue;
+//			}
 			word = word.substring(2);
 			
 			if (prevString != null && prevString.equals(word)) {
