@@ -14,6 +14,11 @@ import cis455.g02.storage.StoreWrapper;
 
 import java.io.InputStreamReader;
 
+/**
+ * Server for listening the incoming packets
+ * @author Linjie
+ *
+ */
 public class Server implements Runnable {
 	private int port;
 	private AtomicLong backup;

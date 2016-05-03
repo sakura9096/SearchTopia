@@ -17,7 +17,11 @@ import java.util.concurrent.atomic.AtomicLong;
 import com.cybozu.labs.langdetect.LangDetectException;
 
 import cis455.g02.storage.StoreWrapper;
-
+/**
+ * Each crawler is a thread, to do the crawling job, and send the urls to its corresponding crawler
+ * @author Linjie
+ *
+ */
 public class Crawler implements Runnable {
 	String startUrl;
 	double maxSize;
@@ -138,7 +142,7 @@ public class Crawler implements Runnable {
 	}
 	
 	
-	
+	// chose which work 
 	public int chooseWorker(String host) {
 		try {
 			String hashValue = this.byteToHexString(this.getHashValue(host));
@@ -154,6 +158,7 @@ public class Crawler implements Runnable {
 		return this.selfID;
 	}
 	
+	// do the self work
 	public void selfWork(String host, String url) {
 		if (processor == null) return;
 		//System.out.println("Do the selfwork: " + url);

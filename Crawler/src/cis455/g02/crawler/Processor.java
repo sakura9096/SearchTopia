@@ -18,6 +18,11 @@ import com.cybozu.labs.langdetect.LangDetectException;
 
 import cis455.g02.storage.StoreWrapper;
 
+/**
+ * Processor is responsible for downloading pages and extract links
+ * @author Linjie
+ *
+ */
 public class Processor {
 	
 	private StoreWrapper db;

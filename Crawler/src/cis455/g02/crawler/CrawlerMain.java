@@ -15,7 +15,12 @@ import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.LangDetectException;
 
 import cis455.g02.storage.StoreWrapper;
-
+/**
+ * CrawlerMain is responsible for start the server, and start each thread crawler and join all the crawlers when 
+ * finish crawling
+ * @author Linjie
+ *
+ */
 public class CrawlerMain {
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

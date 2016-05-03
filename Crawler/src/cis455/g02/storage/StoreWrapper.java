@@ -11,13 +11,17 @@ import com.sleepycat.persist.EntityCursor;
 import com.sleepycat.persist.EntityStore;
 import com.sleepycat.persist.PrimaryIndex;
 import com.sleepycat.persist.StoreConfig;
-
+/**
+ * StoreWrapper class as a drive to get access from and write into the berkeleydb
+ * @author Linjie
+ *
+ */
 public class StoreWrapper {
 	private Environment myEnv;
 	private EntityStore myStore;
 	private PrimaryIndex <String, Frontier> frontierByURL;
 	private PrimaryIndex <String, Crawled> crawledByURL;
-	private PrimaryIndex <String, Document> documentsByHashedContent;
+
 	private static StoreWrapper myStoreWrapper  = null;
 	
 	private StoreWrapper (String envHome) {
@@ -52,7 +56,7 @@ public class StoreWrapper {
 			 
 			 frontierByURL = myStore.getPrimaryIndex(String.class, Frontier.class);
 			 crawledByURL = myStore.getPrimaryIndex(String.class, Crawled.class);
-			 documentsByHashedContent = myStore.getPrimaryIndex(String.class, Document.class);
+			
 		 } catch (DatabaseException e) {
 			 System.out.println(e.getMessage());
 		 }
@@ -91,15 +95,7 @@ public class StoreWrapper {
 		 myStore.sync();
 	 }
 	 
-	 public void putDoumentContent (String hashedContent, String url) {
-		 Document document = new Document ();
-		 document.setHasedContent(hashedContent);
-		 document.setUrl(url);
-		 documentsByHashedContent.put(document);
-		 
-		 myEnv.sync();
-		 myStore.sync();
-	 }
+
 	 
 	 public List<String> getAllFrontiers () {
 		 
@@ -116,9 +112,7 @@ public class StoreWrapper {
 		 return result;
 	 }
 	 
-	 public boolean contentExists (String hashedContent) {
-		 return documentsByHashedContent.contains (hashedContent);
-	 }
+	
 	 
 	 public boolean urlCrawled (String url) {
 		 return crawledByURL.contains(url);
