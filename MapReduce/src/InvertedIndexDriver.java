@@ -8,6 +8,9 @@ import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
+/*
+ * This is the driver class of of the map reduce class.
+ */
 public class InvertedIndexDriver {
 
 	public static void main(String[] args) throws Exception{

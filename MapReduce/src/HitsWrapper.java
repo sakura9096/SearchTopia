@@ -1,20 +1,18 @@
 import java.util.ArrayList;
-
+/**
+ * This is the wrapper class of all the wordFrequency and maxFrequency. 
+ * @author fanglinlu
+ *
+ */
 public class HitsWrapper {
 	private int wordFrequency;
-//	private ArrayList<HitInfo> hitsInfo;
 	private String maxFrequency;
 	
 	public HitsWrapper (int wordFrequency, String maxFrequency) {
 		this.wordFrequency = wordFrequency;
-//		this.hitsInfo = hitsInfo;
 		this.maxFrequency = maxFrequency;
 	}
 	
-//	public void addHitsInfo (HitInfo hitInfo) {
-//		hitsInfo.add(hitInfo);
-//	}
-
 	public int getWordFrequency() {
 		return wordFrequency;
 	}
@@ -26,14 +24,6 @@ public class HitsWrapper {
 	public void increaseWordFrequency () {
 		this.wordFrequency ++; 
 	}
-
-//	public ArrayList<HitInfo> getHitsInfo() {
-//		return hitsInfo;
-//	}
-//
-//	public void setHitsInfo(ArrayList<HitInfo> hitsInfo) {
-//		this.hitsInfo = hitsInfo;
-//	}
 
 	public String getMaxFrequency() {
 		return maxFrequency;

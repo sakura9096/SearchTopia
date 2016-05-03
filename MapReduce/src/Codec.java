@@ -3,6 +3,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is the coding class for encoding and decoding for the words in map phase.
+ * @author fanglinlu
+ *
+ */
 public class Codec {
 	 // Encodes a list of strings to a single string.
     public static String encode(List<String> strs) {
