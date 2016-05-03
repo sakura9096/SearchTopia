@@ -1,4 +1,7 @@
 
+/*
+ * Wrapper for word
+ */
 public class NewTFIDFURLWrapper {
 	String word;
 	double tfidf;

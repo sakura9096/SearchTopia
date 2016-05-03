@@ -2,7 +2,10 @@ package cis455.g02.storage;
 
 import com.sleepycat.persist.model.Entity;
 import com.sleepycat.persist.model.PrimaryKey;
-
+/**
+ * Crawled table for check if the url is crawled
+ * fields: url
+ */
 @Entity
 public class Crawled {
 	

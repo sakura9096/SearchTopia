@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-/*
+/**
  * Get all files from file and send them to file parser for parsing
  */
 public class FileManager {
@@ -31,7 +31,7 @@ public class FileManager {
 		
 		
 		FileWriter outWriter = new FileWriter(outputDirectory, true);
-//		FileWriter anchorWriter = new FileWriter(anchorDirectory, true);
+		FileWriter anchorWriter = new FileWriter(anchorDirectory, true);
 		
 		File[] fileToReadArray = filesToRead.listFiles();
 		//File[] fileToReadArray = new File[]{filesToRead};
@@ -52,13 +52,13 @@ public class FileManager {
 //			fileParser.fancyPhraseHitMapToString(outWriter);
 //			fileParser.normalHitMapToString(outWriter);
 //			fileParser.normalPhraseHitMapToString(outWriter);
-//			anchorWriter.write(fileParser.outLinksToString());
-//			anchorWriter.flush();
+			anchorWriter.write(fileParser.outLinksToString());
+			anchorWriter.flush();
 			
 		}
 		
 		outWriter.close();
-		//anchorWriter.close();
+		anchorWriter.close();
 	}
 
 }
