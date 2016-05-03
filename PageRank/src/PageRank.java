@@ -20,6 +20,9 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 /**
  * The PageRank calculation.
+ * It contains a preprocessing stage which remove all the dangling links 
+ * and output a [url, initial pageRank, url-list] file for the Mapper. 
+ * The Mapper and Reducer then calculate each page's score in multiple iterations.
  *
  */
 public class PageRank {
@@ -36,7 +39,7 @@ public class PageRank {
 		String outputDir = args[1];
 		String dbDir = args[2];
 
-		//		SourceURLWrapper sourceURL = SourceURLWrapper.getInstance(dbDir);
+		//SourceURLWrapper sourceURL = SourceURLWrapper.getInstance(dbDir);
 
 		try {
 			runPageRank(inputFile, outputDir, dbDir);
@@ -46,6 +49,13 @@ public class PageRank {
 		}
 	}
 
+	/**
+	 * Run the preprocessing and MapReduce job.
+	 * @param input
+	 * @param outputDir
+	 * @param dbDir
+	 * @throws Exception
+	 */
 	private static void runPageRank(String input, String outputDir, String dbDir) throws Exception {
 
 		Configuration conf = new Configuration();
@@ -59,9 +69,9 @@ public class PageRank {
 		Path sourceURLFile = new Path(dbDir, "sourceURL.txt");
 		int numNode = preprocessInputFile(new Path(input), inputPath, sourceURLFile);
 		System.out.println("Num Node: " + numNode);
-		//		int numNode = 1017446;
+		//int numNode = 1017446;
 		int iteration = 1;
-		//		double convergenceGoal = 0.01;
+		//double convergenceGoal = 0.01;
 
 
 		while (iteration < 30) {
@@ -74,10 +84,10 @@ public class PageRank {
 			System.out.println("Output path:  " + jobOutPath);
 			System.out.println("======================================");
 
-			//			if (pageRankDrive(inputPath, jobOutPath, numNode, iteration) < convergenceGoal) {
-			//				System.out.println("Reached convergence goal: " + convergenceGoal + ". Done.");
-			//				break;
-			//			}
+//			if (pageRankDrive(inputPath, jobOutPath, numNode, iteration) < convergenceGoal) {
+//				System.out.println("Reached convergence goal: " + convergenceGoal + ". Done.");
+//				break;
+//			}
 			pageRankDrive(inputPath, jobOutPath, numNode, iteration);
 
 			// update the input directory to be the output of last iteration
@@ -87,6 +97,14 @@ public class PageRank {
 
 	}
 
+	/**
+	 * Preprocess the anchor file and remove the dangling links.
+	 * @param input
+	 * @param intermediate
+	 * @param dbDir
+	 * @return
+	 * @throws IOException
+	 */
 	private static int preprocessInputFile(Path input, Path intermediate, Path dbDir) throws IOException {
 
 		Set<String> srcURL = new HashSet<>();
@@ -155,11 +173,23 @@ public class PageRank {
 
 		os.close();
 		outstream.close();
-		
+
 		return srcURL.size();
 	}
 
 
+	/**
+	 * Run the MapReduce job.
+	 * @param input
+	 * @param output
+	 * @param numNode
+	 * @param iteration
+	 * @return
+	 * @throws IOException
+	 * @throws ClassNotFoundException
+	 * @throws InterruptedException
+	 * @throws URISyntaxException
+	 */
 	private static double pageRankDrive(Path input, Path output, int numNode, int iteration) throws IOException, ClassNotFoundException, InterruptedException, URISyntaxException {
 
 		Configuration conf = new Configuration();

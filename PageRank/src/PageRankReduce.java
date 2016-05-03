@@ -16,7 +16,6 @@ public class PageRankReduce extends Reducer<Text, Text, Text, Text> {
 	public static String NUM_NODES = "pagerank.numnodes";
 	private int numNodes;
 
-//	private SourceURL sourceURL = SourceURL.getInstance();
 	
 	public static enum Counter {
 		PROGRESS
@@ -32,7 +31,6 @@ public class PageRankReduce extends Reducer<Text, Text, Text, Text> {
 	public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
 
 		double pageRankSum = 0;	
-//		Node sourceNode = null;
 		String sourceNode = null;
 		double originPageRank = 0;
 		String outlinks = null;
@@ -49,7 +47,6 @@ public class PageRankReduce extends Reducer<Text, Text, Text, Text> {
 				} else if (val.startsWith("PR:")){
 					String[] vals = val.split("\t");
 					pageRankSum += Double.valueOf(vals[0].substring(3, vals[0].length()));
-//					System.out.println(Double.valueOf(vals[0].substring(3, vals[0].length())));
 				}
 			}
 			
