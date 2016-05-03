@@ -9,10 +9,10 @@ import java.util.Set;
 
 public class QueryProcessWrapper {
 	
-	private DynamoDBDatabase database;
-	public QueryProcessWrapper () {
-		database = DynamoDBDatabase.getInstance();
-	}
+//	private DynamoDBDatabase database;
+//	public QueryProcessWrapper () {
+//		database = DynamoDBDatabase.getInstance();
+//	}
 	public List<String> getQueryResult (String query) {
 		
 		String[] queryList = query.split("\\s+");
@@ -54,7 +54,7 @@ public class QueryProcessWrapper {
 	
 	
 	public List<String> serachOneWord(String word1) {
-//		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
+		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
 		List<ItemWrapper2> fancyReturns = database.getURLsFromFacnyBarrel(word1);
 		Collections.sort(fancyReturns, Collections.reverseOrder());
 		
@@ -85,7 +85,7 @@ public class QueryProcessWrapper {
 	
 	public List<String> searchTwoWords(String word1, String word2) {
 		String conbine = word1 + " " + word2;
-//		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
+		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
 		List<ItemWrapper2> fancyReturns = database.getURLsFromFacnyBarrel(conbine);
 		Collections.sort(fancyReturns, Collections.reverseOrder());
 		List<String> result = new ArrayList<String>();
@@ -135,7 +135,7 @@ public class QueryProcessWrapper {
 	public List<String> searchThreeWords(String word1, String word2, String word3) {
 		String combine1 = word1 + " " + word2;
 		String combine2 = word2 + " " + word3;
-//		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
+		DynamoDBDatabase database = DynamoDBDatabase.getInstance();
 		Set<ItemWrapper2> topSet11 = new HashSet<ItemWrapper2>(database.getURLsFromFacnyBarrel(combine1));
 		Set<ItemWrapper2> topSet12 = new HashSet<ItemWrapper2>(database.getURLsFromFacnyBarrel(word3));
 		topSet11.retainAll(topSet12);

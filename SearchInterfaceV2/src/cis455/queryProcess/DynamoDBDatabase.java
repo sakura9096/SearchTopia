@@ -6,8 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
@@ -21,6 +25,7 @@ public class DynamoDBDatabase {
 	
 	private static DynamoDBDatabase database = null;
 	static AmazonDynamoDBClient dynamoDB;
+	//private static final Logger logger = LogManager.getLogger(DynamoDBDatabase.class);
 	
 	private DynamoDBDatabase() {
 		
@@ -29,6 +34,7 @@ public class DynamoDBDatabase {
 	public static DynamoDBDatabase getInstance () {
 		if (database == null) {
 			database = new DynamoDBDatabase();
+			//logger.debug("enter database");
 			try {
 				init();
 			} catch (Exception e) {
@@ -46,17 +52,23 @@ public class DynamoDBDatabase {
          * credential profile by reading from the credentials file located at
          * (/Users/fanglinlu/.aws/credentials).
          */
+		
         AWSCredentials credentials = null;
         try {
             credentials = new ProfileCredentialsProvider("default").getCredentials();
+        	//credentials = new BasicAWSCredentials("{AKIAJP6I2VRK5QIYQVQQ}", "{cPyM/DXo+c7ufkVL1toQztsVfmh4+ZsI6QJy8whC}");
+            
         } catch (Exception e) {
-            throw new AmazonClientException(
-                    "Cannot load the credentials from the credential profiles file. " +
-                    "Please make sure that your credentials file is at the correct " +
-                    "location (/Users/fanglinlu/.aws/credentials), and is in valid format.",
-                    e);
+//            logger.debug(
+//                    "Cannot load the credentials from the credential profiles file. " +
+//                    "Please make sure that your credentials file is at the correct " +
+//                    "location (/Users/fanglinlu/.aws/credentials), and is in valid format.",
+//                    e);
         }
         dynamoDB = new AmazonDynamoDBClient(credentials);
+        if (dynamoDB == null) {
+        	//logger.debug("dynamoDB is null");
+        }
         Region usEast = Region.getRegion(Regions.US_EAST_1);
         dynamoDB.setRegion(usEast);
 	 }
@@ -68,9 +80,15 @@ public class DynamoDBDatabase {
 		 
 		 DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);
 		 
+
+		 if (dynamoDB == null) {
+			 throw new NullPointerException("DynamoDB is Null");
+		 }
+		 
 		 //FancyBarrel fb = mapper.load(FancyBarrel.class, word);
 		 
 		 Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		 
 		 
 		 eav.put(":val1", new AttributeValue().withS(word));
 		 
@@ -121,8 +139,7 @@ public class DynamoDBDatabase {
 	 }
 	 
 	 public List<ItemWrapper2> getURLsFromNormalBarrel (String word) {
-//			TableKeysAndAttributes tableKeysAndAttributes = new TableKeysAndAttributes ("Fancy-Bareel");
-//			tableKeysAndAttributes.addHashOnlyPrimaryKeys( , , );
+
 			 List<ItemWrapper2> result = new ArrayList<ItemWrapper2> ();
 			 
 			 DynamoDBMapper mapper = new DynamoDBMapper (dynamoDB);

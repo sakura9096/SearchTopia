@@ -23,8 +23,8 @@ public class YelpHelper {
 				+ "<thead>"
 				+ "<tr>"
 				+ "<th>Name</th>"
-				+ "<th>Phone</th>"
 				+ "<th>Rating</th>"
+				+ "<th>Phone</th>"
 				+ "</tr>"
 				+ "</thead><tbody>");
 		for (int i = 0; i < array.size(); ++i) {

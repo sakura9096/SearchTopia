@@ -93,7 +93,7 @@ public class WelcomeServlet extends HttpServlet {
 			}
 			
 			if (!spellmsg.equals("") && !spellmsg.equals(firstQuery)) {
-				finalQuery = spellmsg;
+				firstQuery = spellmsg;
 			}
 		} else {
 			finalQuery = secondQuery.trim();
@@ -101,6 +101,7 @@ public class WelcomeServlet extends HttpServlet {
 		
 		
 		/********************************************TO DO**********************************/
+		System.out.println("finalQuery:    " + finalQuery);
 		List<String> results = processQuery(finalQuery);
 		if (results.size() != 100) {
 			for (int i = results.size(); i < 100; i++) {
@@ -199,7 +200,7 @@ public class WelcomeServlet extends HttpServlet {
 				+ "<form action=\"welcome\" method=\"post\" align=\"center\">"
 				+ "<input class=\"ui-widget\" id=\"tags\" type=\"text\" placeholder=\"Please enter your query\" name=\"query\" style=\"width: 500px; height: 40px\">"
 				+ "<button type=\"submit\" class=\"btn btn-secondary-outline btn-md\">Search</button></form></div></nav>");
-		if (!spellmsg.equals(firstQuery) && !spellmsg.equals("") ) {
+		if (!spellmsg.equals(finalQuery) && !spellmsg.equals("") ) {
 			pw.println("<h4 style = \"font-family: sans-serif\">Displaying results for " + finalQuery + ".  "
 					+ "<form name='myform' action=\"welcome\" method=\"post\">Do you still want to search: <input type=\"hidden\" name=\"decide\" value='" + firstQuery + "'><span onclick=\"document.myform.submit();\"><u><strong>" + firstQuery +  "</strong></u></span></form></h4>");
 			
