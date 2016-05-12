@@ -56,7 +56,6 @@ public class DynamoDBDatabase {
         AWSCredentials credentials = null;
         try {
             credentials = new ProfileCredentialsProvider("default").getCredentials();
-        	//credentials = new BasicAWSCredentials("{AKIAJP6I2VRK5QIYQVQQ}", "{cPyM/DXo+c7ufkVL1toQztsVfmh4+ZsI6QJy8whC}");
             
         } catch (Exception e) {
 //            logger.debug(
