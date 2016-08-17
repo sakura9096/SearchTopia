@@ -23,11 +23,14 @@
 </ul>
 
 ### Screenshots
-
+<span float="left">
 <strong>Front Page</strong><br>
-<img src="https://github.com/sakura9096/SearchTopia/blob/master/G02_0_FrontPage.png" width="350px" float="left">
+<img src="https://github.com/sakura9096/SearchTopia/blob/master/G02_0_FrontPage.png" width="350px">
+</span>
+<span float="left">
 <strong>Search Page</strong><br>
-<img src="https://github.com/sakura9096/SearchTopia/blob/master/G02_2.png" width="350px" float="left">
+<img src="https://github.com/sakura9096/SearchTopia/blob/master/G02_2.png" width="350px">
+</span>
 
 ### Detailed instructions on how to install and run the project
 
