@@ -52,7 +52,6 @@ Compile the MapReduce project into a JAR file. Run EMR using the output of FileM
 <p>Compile the PageRank project into a JAR file. (make sure that all the libraries in PageRank/lib/* are included in the build path).</p>
 <p>To run on EMR, upload the JAR file into S3, take notes of the input directory (the S3 directory containing all the anchor files), create an output directory. Then add the customer JAR file as a new step, provide the following command line arguments:</p>
 <p>PageRank s3://<bucket_name>/input s3://<bucket_name>/output s3://<bucket_name>/intermediate</p>
-
 <p>Once finished, the results can be found in the s3://<bucket_name>/output folder. </p>
 
 4. Search Engine:
