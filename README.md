@@ -1,4 +1,4 @@
-# SearchTopia
+# SearchTopia (mini-Google Search Engine)
 
 ### A description of all features implemented
 
@@ -23,6 +23,7 @@
 ### Screenshots
 <strong>Front Page</strong><br>
 ![front page screenshot](https://github.com/sakura9096/SearchTopia/blob/master/G02_0_FrontPage.png)
+<br>
 <strong>Search Page</strong><br>
 ![search page screenshot](https://github.com/sakura9096/SearchTopia/blob/master/G02_2.png)
 
