@@ -1,5 +1,5 @@
 # SearchTopia
--------
+
 ### A description of all features implemented
 
 1. <strong>Distributed multi-threaded crawler: </strong>
@@ -21,7 +21,9 @@
 </ul>
 
 ### Screenshots
+<strong>Front Page</strong><br>
 ![front page screenshot](https://github.com/sakura9096/SearchTopia/blob/master/G02_0_FrontPage.png)
+<strong>Search Page</strong><br>
 ![search page screenshot](https://github.com/sakura9096/SearchTopia/blob/master/G02_2.png)
 
 ### Detailed instructions on how to install and run the project
