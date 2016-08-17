@@ -2,7 +2,7 @@
 
 ### A description of our architecture
 
-<img src="https://github.com/sakura9096/SearchTopia/blob/master/Picture1.png" width="250px">
+<img src="https://github.com/sakura9096/SearchTopia/blob/master/Picture1.png" width="500px">
 
 1. <strong>Distributed multi-threaded crawler: </strong>
 <p>The multi-threaded distributed web crawler crawled over 1,000,000 web pages. The crawler was Mercator-style and each crawling peer was responsible for a subset of domains and each thread kept its own url frontier. The extracted urls from crawled pages were periodically shuffled and pushed to the nodes responsible for them via REST-style messages. The crawler also checked to prevent crawling duplicated pages and non-English pages.</p>
@@ -23,12 +23,11 @@
 </ul>
 
 ### Screenshots
+
 <strong>Front Page</strong><br>
-<img src="https://github.com/sakura9096/SearchTopia/blob/master/G02_0_FrontPage.png" width="250px">
-
-
+<img src="https://github.com/sakura9096/SearchTopia/blob/master/G02_0_FrontPage.png" width="350px" float="left">
 <strong>Search Page</strong><br>
-<img src="https://github.com/sakura9096/SearchTopia/blob/master/G02_2.png" width="250px">
+<img src="https://github.com/sakura9096/SearchTopia/blob/master/G02_2.png" width="350px" float="left">
 
 ### Detailed instructions on how to install and run the project
 
